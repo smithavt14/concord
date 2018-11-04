@@ -6,7 +6,14 @@ export default {
 
   data() {
     return {
+      isActive: '',
     };
+  },
+
+  methods: {
+    toggleActive(e) {
+      this.isActive = e.target.dataset.position
+    },
   },
 
   beforeMount() {
@@ -23,7 +30,7 @@ export default {
       <a href="">EXPERIENCE</a>
       <a href="">PROGRAMS</a>
       <a href="">APPLY</a>
-      <div class="HomeNavBar__language-selector">中文</div>
+      <div class="HomeNavBar__language-selector" data-position="language" v-bind:class="{active: isActive === 'language'}" v-on:click="toggleActive">中文</div>
     </div>
   </div>
 </template>
@@ -55,11 +62,14 @@ export default {
   justify-content: space-around;
   margin: 0 20px;
   a {
-  color: black;
+  color: $half-black;
   text-decoration: none;
   margin: 0 20px
   }
+}
 
+.active {
+  color: black;
 }
 
 </style>
