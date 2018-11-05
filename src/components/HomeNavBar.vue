@@ -1,4 +1,7 @@
 <script>
+import translation from '@/translations/translation';
+import globalData from '@/main';
+
 export default {
   name: 'HomeNavBar',
   props: {
@@ -7,16 +10,22 @@ export default {
   data() {
     return {
       isActive: '',
+      translation: {},
     };
   },
 
   methods: {
     toggleActive(e) {
-      this.isActive = e.target.dataset.position
+      this.isActive = e.target.dataset.position;
+    },
+    changeLanguage() {
+      globalData.language = globalData.language === 'English' ? 'Chinese' : 'English';
+      this.translation = translation.about[globalData.language];
     },
   },
 
   beforeMount() {
+    this.translation = translation.about[globalData.language];
   },
 };
 </script>
@@ -25,13 +34,14 @@ export default {
   <div class="HomeNavBar__wrapper">
     <div class="HomeNavBar__logo"></div>
     <div class="HomeNavBar__tabs">
-      <router-link to="/">HOME</router-link>
-      <router-link to="/about">ABOUT</router-link>
-      <a href="">EXPERIENCE</a>
-      <a href="">PROGRAMS</a>
-      <a href="">APPLY</a>
-      <div class="HomeNavBar__language-selector" data-position="language" v-bind:class="{active: isActive === 'language'}" v-on:click="toggleActive">中文</div>
+      <router-link to="/" class="active">{{translation.home}}</router-link>
+      <router-link to="/about">{{translation.about}}</router-link>
+      <router-link to="/experience">{{translation.experience}}</router-link>
+      <router-link to="/programs">{{translation.programs}}</router-link>
+      <router-link to="/apply">{{translation.apply}}</router-link>
+      <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
     </div>
+
   </div>
 </template>
 
@@ -40,7 +50,7 @@ export default {
 
 .HomeNavBar__wrapper {
   height: 150px;
-  width: 100vw;
+  width: 100%;
   background: $concord-orange;
   display: flex;
   justify-content: space-between;
@@ -59,17 +69,30 @@ export default {
 
 .HomeNavBar__tabs {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 20px;
+  align-items: center;
+
   a {
   color: $half-black;
   text-decoration: none;
-  margin: 0 20px
+  margin: 20px;
+  }
+  a:hover {
+    color: black;
+  }
+}
+
+.HomeNavBar__language-selector {
+  color: $half-black;
+  margin: 20px;
+  &:hover {
+    color: black;
   }
 }
 
 .active {
-  color: black;
+  color: black !important;
 }
 
 </style>

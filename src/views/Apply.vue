@@ -2,15 +2,15 @@
 import translation from '@/translations/translation';
 
 export default {
-  name: 'about',
+  name: 'apply',
   components: {
   },
 };
 </script>
 
 <template>
-  <div class="about__wrapper">
-    <h1>This is an about page</h1>
+  <div class="apply__wrapper">
+    <h1>This is an application page</h1>
   </div>
 </template>
 
