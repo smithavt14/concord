@@ -1,32 +1,36 @@
 <script>
-import translation from '@/translations/translation';
-import globalData from '@/main';
+import translation from '@/translations/translation'
+import globalData from '@/main'
 
 export default {
   name: 'HomeNavBar',
   props: {
   },
 
-  data() {
+  computed: {
+    translation () {
+      return translation.navbar[globalData.language]
+    }
+  },
+
+  data () {
     return {
       isActive: '',
-      translation: {},
-    };
+      showNavbar: false
+    }
   },
 
   methods: {
-    toggleActive(e) {
-      this.isActive = e.target.dataset.position;
+    toggleActive (e) {
+      this.isActive = e.target.dataset.position
     },
-    changeLanguage() {
-      globalData.language = globalData.language === 'English' ? 'Chinese' : 'English';
-      this.translation = translation.about[globalData.language];
+    changeLanguage () {
+      globalData.language = globalData.language === 'English' ? 'Chinese' : 'English'
     },
-  },
-
-  beforeMount() {
-    this.translation = translation.about[globalData.language];
-  },
+    pagePosition (e) {
+      console.log(e)
+    }
+  }
 };
 </script>
 
@@ -51,10 +55,12 @@ export default {
 .HomeNavBar__wrapper {
   height: 150px;
   width: 100%;
-  background: $concord-orange;
+  background: $opaque;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 10;
 }
 
 .HomeNavBar__logo {
@@ -76,7 +82,7 @@ export default {
   a {
   color: $half-black;
   text-decoration: none;
-  margin: 20px;
+  margin: 15px;
   }
   a:hover {
     color: black;
