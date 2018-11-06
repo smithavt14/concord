@@ -15,23 +15,12 @@ export default {
       return translation.home[globalData.language]
     }
   },
-
-  data () {
-    return {}
-  },
-
-  methods: {
-    pagePosition (e) {
-      console.log(e, 'hello')
-    }
-  }
 };
 
 </script>
 
 <template>
   <div class="home__wrapper" v-on:scroll.passive="pagePosition">
-    <HomeNavBar></HomeNavBar>
     <div class="home__banner">
       <div class="home__banner-bar">
         <div class="home__banner-bar-title">{{translation.bannerBarTitle}}</div>

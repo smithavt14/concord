@@ -3,7 +3,7 @@ import translation from '@/translations/translation'
 import globalData from '@/main'
 
 export default {
-  name: 'HomeNavBar',
+  name: 'BootstrapNavBar',
   props: {
   },
 
@@ -26,23 +26,28 @@ export default {
     },
     changeLanguage () {
       globalData.language = globalData.language === 'English' ? 'Chinese' : 'English'
+    },
+    pagePosition (e) {
+      console.log(e)
     }
   }
 };
 </script>
 
 <template>
-  <div class="HomeNavBar__wrapper">
-    <div class="HomeNavBar__logo"></div>
-    <div class="HomeNavBar__tabs">
-      <router-link to="/" class="active">{{translation.home}}</router-link>
-      <router-link to="/about">{{translation.about}}</router-link>
-      <router-link to="/experience">{{translation.experience}}</router-link>
-      <router-link to="/programs">{{translation.programs}}</router-link>
-      <router-link to="/apply">{{translation.apply}}</router-link>
-      <b-button class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</b-button>
-    </div>
-  </div>
+  <b-navbar class="HomeNavBar__wrapper">
+    <b-navbar-brand class="HomeNavBar__logo"></b-navbar-brand>
+    <b-collapse is-nav>
+      <b-navbar-nav class="HomeNavBar__tabs">
+        <b-nav-item to="/">{{translation.home}}</b-nav-item>
+        <b-nav-item to="/about">{{translation.about}}</b-nav-item>
+        <b-nav-item to="/experience">{{translation.experience}}</b-nav-item>
+        <b-nav-item to="/programs">{{translation.programs}}</b-nav-item>
+        <b-nav-item to="/apply">{{translation.apply}}</b-nav-item>
+        <b-button class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</b-button>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <style lang="scss">
@@ -52,11 +57,8 @@ export default {
   height: 150px;
   width: 100%;
   background: $opaque;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 10;
+  display: flex !important;
+  justify-content: space-between !important;
 }
 
 .HomeNavBar__logo {
@@ -70,11 +72,9 @@ export default {
 }
 
 .HomeNavBar__tabs {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 20px;
-  align-items: center;
-
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-direction: row !important;
   a {
   color: $half-black;
   text-decoration: none !important;
