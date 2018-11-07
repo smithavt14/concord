@@ -35,10 +35,11 @@ export default {
 </script>
 
 <template>
-  <b-navbar class="HomeNavBar__wrapper">
+  <b-navbar toggleable="lg" class="HomeNavBar__wrapper">
     <b-navbar-brand class="HomeNavBar__logo"></b-navbar-brand>
-    <b-collapse is-nav>
-      <b-navbar-nav class="HomeNavBar__tabs">
+    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+    <b-collapse is-nav id="nav_collapse">
+      <b-navbar-nav class="HomeNavBar__tabs" id="tabs">
         <b-nav-item to="/">{{translation.home}}</b-nav-item>
         <b-nav-item to="/about">{{translation.about}}</b-nav-item>
         <b-nav-item to="/experience">{{translation.experience}}</b-nav-item>
@@ -53,9 +54,12 @@ export default {
 <style lang="scss">
 @import '../assets/styles.scss';
 
+.navbar-collapse {
+  flex-grow: 0 !important;
+}
+
 .HomeNavBar__wrapper {
   height: 150px;
-  width: 100%;
   background: $opaque;
   display: flex !important;
   justify-content: space-between !important;
@@ -90,6 +94,11 @@ export default {
   color: white !important;
   border: none !important;
   margin: 20px;
+}
+
+#nav_collapse {
+  display: flex;
+  flex-direction: column;
 }
 
 .active {

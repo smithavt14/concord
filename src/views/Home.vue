@@ -46,6 +46,7 @@ export default {
 .home__banner {
   background-image: url('../assets/images/home-banner.jpeg');
   background-size: cover;
+  background-position: center;
   height: calc(100vh - 100px);
   width: 100%;
 }
