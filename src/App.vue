@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <BootstrapNavBar id="navbar"></BootstrapNavBar>
+    <HomeNavBar id="navbar"></HomeNavBar>
     <router-view/>
   </div>
 </template>
@@ -21,14 +21,12 @@
 
 <script>
 import HomeNavBar from '@/components/HomeNavBar.vue'
-import BootstrapNavBar from '@/components/BootstrapNavBar.vue'
 
 export default {
   name: 'app',
 
   components: {
-    HomeNavBar,
-    BootstrapNavBar
+    HomeNavBar
   }
 };
 </script>

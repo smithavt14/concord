@@ -1,14 +1,9 @@
 <script>
 import translation from '@/translations/translation'
-import HomeNavBar from '@/components/HomeNavBar.vue'
 import globalData from '@/main'
 
 export default {
   name: 'home',
-
-  components: {
-    HomeNavBar
-  },
 
   computed: {
     translation () {
@@ -29,7 +24,6 @@ export default {
       </div>
     </div>
     <div class="home__container">
-
     </div>
   </div>
 </template>

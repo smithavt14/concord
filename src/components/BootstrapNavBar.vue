@@ -20,6 +20,12 @@ export default {
     }
   },
 
+  event: {
+    hidden(e) {
+      console.log(e)
+    }
+  },
+
   methods: {
     toggleActive (e) {
       this.isActive = e.target.dataset.position
@@ -27,7 +33,7 @@ export default {
     changeLanguage () {
       globalData.language = globalData.language === 'English' ? 'Chinese' : 'English'
     },
-    pagePosition (e) {
+    hidden (e) {
       console.log(e)
     }
   }
@@ -37,8 +43,8 @@ export default {
 <template>
   <b-navbar toggleable="lg" class="HomeNavBar__wrapper">
     <b-navbar-brand class="HomeNavBar__logo"></b-navbar-brand>
-    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-collapse is-nav id="nav_collapse">
+    <b-navbar-toggle target="other_nav_collapse" class="HomeNavBar__collapse"></b-navbar-toggle>
+    <b-collapse is-nav id="nav_collapse" v-on:focus="hidden">
       <b-navbar-nav class="HomeNavBar__tabs" id="tabs">
         <b-nav-item to="/">{{translation.home}}</b-nav-item>
         <b-nav-item to="/about">{{translation.about}}</b-nav-item>
@@ -94,6 +100,10 @@ export default {
   color: white !important;
   border: none !important;
   margin: 20px;
+}
+
+.navbar-toggler {
+  border: 1px solid $concord-orange;
 }
 
 #nav_collapse {
