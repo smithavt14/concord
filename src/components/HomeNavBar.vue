@@ -24,7 +24,7 @@ export default {
       globalData.language = globalData.language === 'English' ? 'Chinese' : 'English'
     },
     toggleNavBar () {
-      this.showNavBar = !this.showNavBar
+      this.showNavbar = !this.showNavbar
     }
   }
 };
@@ -35,19 +35,30 @@ export default {
     <div class="HomeNavBar__logo"></div>
     <!-- Large Devices -->
     <div class="HomeNavBar__tabs">
-      <router-link to="/" class="active">{{translation.home}}</router-link>
+      <router-link to="/">{{translation.home}}</router-link>
       <router-link to="/about">{{translation.about}}</router-link>
       <router-link to="/experience">{{translation.experience}}</router-link>
       <router-link to="/programs">{{translation.programs}}</router-link>
       <router-link to="/apply">{{translation.apply}}</router-link>
-      <b-button class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</b-button>
+      <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
     </div>
+    <!------------------>
+
     <!-- Small Devices -->
     <div class="HomeNavBar__navbar-toggle"></div>
     <img src="../assets/images/hamburger-menu.svg" class="HomeNavBar__hamburger-icon" @click="toggleNavBar">
     <div v-if="showNavbar" class="HomeNavBar__mobile-navbar">
-      <img src="../assets/images/times-solid.svg" class="HomeNavBar__mobile-navbar-exit" @click="toggleNavBar">
+      <img src="../assets/images/cross-out.svg" class="HomeNavBar__mobile-navbar-exit" @click="toggleNavBar">
+      <router-link to="/">{{translation.home}}</router-link>
+      <router-link to="/about">{{translation.about}}</router-link>
+      <router-link to="/experience">{{translation.experience}}</router-link>
+      <router-link to="/programs">{{translation.programs}}</router-link>
+      <router-link to="/apply">{{translation.apply}}</router-link>
+      <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
     </div>
+    </div>
+    <!------------------>
+
   </div>
 </template>
 
@@ -76,12 +87,12 @@ export default {
   margin: 0 20px;
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 751px) {
 
   .HomeNavBar__tabs {
     display: flex;
     justify-content: space-between;
-    margin: 0 20px;
+    margin-right: 20px;
     align-items: center;
     a {
       color: $half-black;
@@ -94,10 +105,11 @@ export default {
   }
 
   .HomeNavBar__language-selector {
-    background-color: $concord-orange !important;
-    color: white !important;
-    border: none !important;
-    margin: 20px;
+    background: $concord-orange;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    margin: 0 10px;
   }
 
   .active {
@@ -113,47 +125,69 @@ export default {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
   .HomeNavBar__tabs {
     display: none;
   }
 
   .HomeNavBar__navbar-toggle {
     position: absolute;
-    top: -100px;
-    right: -100px;
+    top: -75px;
+    right: -75px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     background-color: $concord-orange;
   }
 
   .HomeNavBar__hamburger-icon {
     position: absolute;
-    top: 25px;
-    right: 25px;
-    height: 25px;
-    width: 25px;
+    top: 20px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
   }
 
-  .HomeNavBar__mobile-navbar {
+  .HomeNavBar__mobile-navbar{
     height: 100vh;
-    width: 80vw;
+    width: 250px;
     position: fixed;
     background-color: $concord-orange;
     top: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-top: 40px;
+    animation-name: expand;
+    animation-duration: 1s;
+    a {
+      color: white;
+      text-decoration: none !important;
+      margin: 15px;
+      font-size: 25px;
+    }
+    a:hover {
+      color: black;
+    }
+  }
+
+  .HomeNavBar__language-selector {
+    color: white;
+    margin: 15px;
+    font-size: 25px;
   }
 
   .HomeNavBar__mobile-navbar-exit {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
+    fill: white;
   }
 }
 

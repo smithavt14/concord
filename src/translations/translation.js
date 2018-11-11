@@ -5,7 +5,7 @@ import home from '@/translations/home';
 const translation = {
   about,
   navbar,
-  home,
+  home
 };
 
 export default translation;
