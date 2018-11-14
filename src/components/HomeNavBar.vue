@@ -32,8 +32,9 @@ export default {
 
 <template>
   <div class="HomeNavBar__wrapper">
-    <div class="HomeNavBar__logo"></div>
+
     <!-- Large Devices -->
+    <div class="HomeNavBar__logo"></div>
     <div class="HomeNavBar__tabs">
       <router-link to="/">{{translation.home}}</router-link>
       <router-link to="/about">{{translation.about}}</router-link>
@@ -42,11 +43,10 @@ export default {
       <router-link to="/apply">{{translation.apply}}</router-link>
       <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
     </div>
-    <!------------------>
 
     <!-- Small Devices -->
     <div class="HomeNavBar__navbar-toggle"></div>
-    <img src="../assets/images/hamburger-menu.svg" class="HomeNavBar__hamburger-icon" @click="toggleNavBar">
+    <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1542156723/concord-logo-white.png" class="HomeNavBar__hamburger-icon" @click="toggleNavBar">
     <div v-if="showNavbar" class="HomeNavBar__mobile-navbar">
       <img src="../assets/images/cross-out.svg" class="HomeNavBar__mobile-navbar-exit" @click="toggleNavBar">
       <router-link to="/">{{translation.home}}</router-link>
@@ -57,7 +57,6 @@ export default {
       <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
     </div>
     </div>
-    <!------------------>
 
   </div>
 </template>
@@ -126,6 +125,10 @@ export default {
 }
 
 @media screen and (max-width: 750px) {
+  .HomeNavBar__logo {
+    display: none;
+  }
+
   .HomeNavBar__tabs {
     display: none;
   }
@@ -145,10 +148,9 @@ export default {
 
   .HomeNavBar__hamburger-icon {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    height: 20px;
-    width: 20px;
+    top: 10px;
+    right: 0px;
+    height: 40px;
   }
 
   .HomeNavBar__mobile-navbar{

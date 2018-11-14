@@ -8,12 +8,15 @@ export default {
   computed: {
     translation () {
       return translation.home[globalData.language]
+    },
+    translatedProgramLinks () {
+      return this.programLinks[globalData.language]
     }
   },
 
   data () {
     return {
-      links: [
+      WeChatlinks: [
         {
           title: 'Piano Solo Recital: A Night of Spanish Music',
           date: 'November 11, 2018',
@@ -42,8 +45,69 @@ export default {
           photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542026430/article_110218.png',
           id: 4
         }
-
-      ]
+      ],
+      programLinks: {
+        English: [
+          {
+            title: 'Private 1-on-1 Lessons',
+            age: 'Ages 3+',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542113380/BA4A1634.jpg',
+            description: 'We offer a well-rounded musical experience in our private lessons which cover 5 fundamental elements of music learning: performing skills, music theory, music history and appreciation, ear training, and sight-reading.',
+            id: 1
+          },
+          {
+            title: 'Little Notes Music Foundation',
+            age: 'Ages 3 - 4',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542113738/BA4A1598.jpg',
+            description: 'This is a fun introduction to music for children aged 3-4. The goal of the course is to instil an early interest in music and to give the students a solid music foundation.',
+            id: 2
+          },
+          {
+            title: 'Group Classes for Children',
+            age: 'All ages',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/group-classes.jpg',
+            description: 'Group classes provide opportunities for ensemble playing and group activities which not only encourage social interaction, but can also boost leadership spirit, discipline, and good attitude towards sharing and team work.',
+            id: 3
+          },
+          {
+            title: 'Concord Choir',
+            age: 'Ages 6+',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/Concord-singing.jpg',
+            description: 'Concord welcomes all singing lovers to join our choir! This is a long-term project to cultivate an interest in singing. Training includes sight singing, ear training, breathing exercise, diction and harmonisation singing.',
+            id: 4
+          }
+        ],
+        Chinese: [
+          {
+            title: '私人 一对一的课',
+            age: '3岁+',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542113380/BA4A1634.jpg',
+            description: '我们的私教课程为孩子提供全面的音乐体验，它涵盖了5个音乐学习要素：表演技巧、音乐理论、音乐史与欣赏、听力训练和视奏能力.',
+            id: 1
+          },
+          {
+            title: '“小小音符” 音乐启蒙课',
+            age: '3 - 4岁',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542113738/BA4A1598.jpg',
+            description: '小小音符音乐启蒙课程为3-4岁的孩子打开音乐之殿的大门，激发幼孩的音乐兴趣，作为1对1乐器课程前的铺垫和启蒙，让孩子以快乐的方式开始他们的音乐兴趣。',
+            id: 2
+          },
+          {
+            title: '儿童团课',
+            age: '2岁多',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/group-classes.jpg',
+            description: '集体课为孩子提供合奏与互动的机会，这不仅促进沟通还能增强孩子的领导能力、纪律、分享及合作精神.',
+            id: 3
+          },
+          {
+            title: '搿艺合唱团',
+            age: '6岁多',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/Concord-singing.jpg',
+            description: '搿艺欢迎爱唱歌的小朋友加入搿艺合唱! 这是搿艺为了培养歌唱兴趣的一个长期计划。学生在学习过程中，除了学会歌唱技巧，也可以培养团体精神。训练内容包括：视唱练耳、呼吸练习、语音能力训练和和声训练。',
+            id: 4
+          }
+        ]
+      }
     }
   }
 };
@@ -51,13 +115,15 @@ export default {
 </script>
 
 <template>
-  <div class="home__wrapper" v-on:scroll.passive="pagePosition">
+  <div class="home__wrapper">
     <div class="home__banner"></div>
     <div class="home__banner-bar">
       <div class="home__banner-bar-title">{{translation.bannerBarTitle}}</div>
       <div class="home__banner-bar-text">{{translation.bannerBarText}}</div>
       <router-link to="/programs" class="home__banner-bar-btn">{{translation.bannerBarBtn}}</router-link>
     </div>
+
+    <!-- Who Are We -->
     <div class="home__WAW-container">
       <div class="home__WAW-container-left">
         <div class="home__WAW-container-left-subtitle">{{translation.WAWsubtitle}}</div>
@@ -69,15 +135,34 @@ export default {
         <img src="../assets/images/instruments.jpeg" alt="" class="home__WAW-container-right-instruments">
       </div>
     </div>
+
+    <!-- From our WeChat Account -->
     <div class="home__FOB-container">
       <div class="home__FOB-title">{{translation.FOBtitle}}</div>
       <div class="home__FOB-card-container">
-        <div v-for="post in links" :key="post.id" class="home__FOB-card">
+        <div v-for="post in WeChatlinks" :key="post.id" class="home__FOB-card">
           <a :href="post.link"><img :src="post.photo" :href="post.link" class="home__FOB-card-photo"></a>
           <div class="home__FOB-card-title">{{ post.title }}</div>
           <div class="home__FOB-card-date">{{ post.date }}</div>
         </div>
       </div>
+    </div>
+
+    <!-- Our Programs -->
+    <div class="home__OP-container">
+      <div class="home__OP-title">{{translation.OPtitle}}</div>
+      <b-container class="home__OP-programs-container">
+        <b-row>
+          <b-col v-for="program in translatedProgramLinks" :key="program.id" sm="12" md="6">
+            <div class="home__OP-program">
+              <img :src="program.photo" class="home__OP-program-photo">
+              <div class="home__OP-program-title">{{program.title}}</div>
+              <div class="home__OP-program-age">{{program.age}}</div>
+              <div class="home__OP-program-description">{{program.description}}</div>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
     </div>
   </div>
 </template>
@@ -98,7 +183,7 @@ export default {
   background-image: url('../assets/images/home-banner.jpeg');
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 130px);
   width: 100%;
 }
 
@@ -134,10 +219,10 @@ export default {
 
 @media screen and (min-width: 751px) {
   .home__WAW-container {
-    width: 80vw;
+    width: 90vw;
     height: 500px;
     background-color: $light-gray;
-    margin-top: 50px;
+    margin: 25px 0;
     display: flex;
   }
 
@@ -163,9 +248,9 @@ export default {
 
 @media screen and (max-width: 750px) {
   .home__WAW-container {
-    width: 80vw;
+    width: 90vw;
     background-color: $light-gray;
-    margin-top: 50px;
+    margin: 25px 0;
     display: flex;
     flex-direction: column;
   }
@@ -253,7 +338,7 @@ export default {
 
 .home__FOB-container {
   width: 100vw;
-  margin: 50px;
+  margin: 25px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -298,6 +383,46 @@ export default {
 .home__FOB-card-date {
   font-size: 15px;
   color: $concord-orange;
+}
+
+.home__OP-container {
+  background-color: $light-gray;
+  width: 90vw;
+  margin: 25px 0;
+}
+
+.home__OP-program {
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.home__OP-program-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.home__OP-title {
+  color: $concord-orange;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.home__OP-program-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.home__OP-program-age {
+  font-size: 15px;
+  color: $concord-orange;
+}
+
+.home__OP-program-description {
+  font-size: 15px;
+  color: $half-black;
 }
 
 </style>
