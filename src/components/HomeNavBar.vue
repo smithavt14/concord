@@ -15,7 +15,8 @@ export default {
 
   data () {
     return {
-      showNavbar: false
+      showNavbar: false,
+      background: false
     }
   },
 
@@ -23,15 +24,37 @@ export default {
     changeLanguage () {
       globalData.language = globalData.language === 'English' ? 'Chinese' : 'English'
     },
+
     toggleNavBar () {
       this.showNavbar = !this.showNavbar
+    },
+
+    handleScroll (event) {
+      var page = event.srcElement.URL
+      if (page === 'http://localhost:8080/') {
+        window.scrollY > window.innerHeight ? this.background = true : this.background = false
+      } else {
+        this.background = true
+      }
     }
+  },
+
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+
+  beforeMount () {
+    console.log(window)
   }
 };
 </script>
 
 <template>
-  <div class="HomeNavBar__wrapper">
+  <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__active': background }">
 
     <!-- Large Devices -->
     <div class="HomeNavBar__logo"></div>
@@ -74,6 +97,10 @@ export default {
   position: fixed;
   z-index: 10;
   overflow: hidden;
+}
+
+.HomeNavBar__active {
+  background: white;
 }
 
 .HomeNavBar__logo {
@@ -129,6 +156,10 @@ export default {
     display: none;
   }
 
+  .HomeNavBar__active {
+    background: none;
+  }
+
   .HomeNavBar__tabs {
     display: none;
   }
@@ -154,9 +185,9 @@ export default {
   }
 
   .HomeNavBar__mobile-navbar{
-    height: 100vh;
     width: 250px;
     position: fixed;
+    border-radius: 0 0 0 5px;
     background-color: $concord-orange;
     top: 0;
     right: 0;

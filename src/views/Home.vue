@@ -184,7 +184,7 @@ export default {
 @import '../assets/styles.scss';
 
 .home__wrapper {
-  background-image: url('../assets/images/funkylines.png');
+  background-image: url('../assets/images/symphony.png');
   background-repeat: repeat;
   display: flex;
   flex-direction: column;
