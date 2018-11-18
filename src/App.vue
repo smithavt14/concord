@@ -2,6 +2,7 @@
   <div id="app">
     <HomeNavBar id="navbar"></HomeNavBar>
     <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -21,12 +22,14 @@
 
 <script>
 import HomeNavBar from '@/components/HomeNavBar.vue'
+import Footer from '@/components/footer.vue'
 
 export default {
   name: 'app',
 
   components: {
-    HomeNavBar
+    HomeNavBar,
+    Footer
   }
 };
 </script>

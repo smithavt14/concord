@@ -1,6 +1,7 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
+import {Howl, Howler} from 'howler';
 
 export default {
   name: 'home',
@@ -11,6 +12,17 @@ export default {
     },
     translatedProgramLinks () {
       return this.programLinks[globalData.language]
+    }
+  },
+
+  methods: {
+    playMusic() {
+      var sound = new Howl({
+        src: ['https://res.cloudinary.com/dbbfpai4q/video/upload/v1542508252/The_J.B._s_-_Gimme_Some_More_Single_Version.mp3'],
+        html5: true,
+
+      })
+
     }
   },
 
@@ -94,14 +106,14 @@ export default {
           },
           {
             title: '儿童团课',
-            age: '2岁多',
+            age: '2岁+',
             photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/group-classes.jpg',
             description: '集体课为孩子提供合奏与互动的机会，这不仅促进沟通还能增强孩子的领导能力、纪律、分享及合作精神.',
             id: 3
           },
           {
             title: '搿艺合唱团',
-            age: '6岁多',
+            age: '6岁+',
             photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/Concord-singing.jpg',
             description: '搿艺欢迎爱唱歌的小朋友加入搿艺合唱! 这是搿艺为了培养歌唱兴趣的一个长期计划。学生在学习过程中，除了学会歌唱技巧，也可以培养团体精神。训练内容包括：视唱练耳、呼吸练习、语音能力训练和和声训练。',
             id: 4
@@ -120,7 +132,7 @@ export default {
     <div class="home__banner-bar">
       <div class="home__banner-bar-title">{{translation.bannerBarTitle}}</div>
       <div class="home__banner-bar-text">{{translation.bannerBarText}}</div>
-      <router-link to="/programs" class="home__banner-bar-btn">{{translation.bannerBarBtn}}</router-link>
+      <router-link to="/programs" class="home__banner-bar-btn">{{translation.learnMore}}</router-link>
     </div>
 
     <!-- Who Are We -->
@@ -159,6 +171,7 @@ export default {
               <div class="home__OP-program-title">{{program.title}}</div>
               <div class="home__OP-program-age">{{program.age}}</div>
               <div class="home__OP-program-description">{{program.description}}</div>
+              <router-link to="/programs" class="home__OP-program-btn">{{translation.learnMore}}</router-link>
             </div>
           </b-col>
         </b-row>
@@ -423,6 +436,44 @@ export default {
 .home__OP-program-description {
   font-size: 15px;
   color: $half-black;
+}
+
+.home__OP-program-btn {
+  font-size: 14px;
+  border: 1px solid $concord-orange;
+  padding: 10px;
+  width: 100px;
+  margin: 10px 0;
+  color: $concord-orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  text-decoration: none;
+  &:hover {
+    background-color: $concord-orange;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.home__test-audio {
+  font-size: 14px;
+  border: 1px solid $concord-orange;
+  padding: 10px;
+  width: 100px;
+  margin: 100px 0;
+  color: $concord-orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  text-decoration: none;
+  &:hover {
+    background-color: $concord-orange;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 </style>
