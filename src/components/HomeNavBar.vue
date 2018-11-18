@@ -30,12 +30,7 @@ export default {
     },
 
     handleScroll (event) {
-      var page = event.srcElement.URL
-      if (page === 'http://localhost:8080/') {
         window.scrollY > window.innerHeight ? this.background = true : this.background = false
-      } else {
-        this.background = true
-      }
     }
   },
 
@@ -46,10 +41,6 @@ export default {
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll);
   },
-
-  beforeMount () {
-    console.log(window)
-  }
 };
 </script>
 

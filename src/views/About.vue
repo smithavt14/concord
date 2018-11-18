@@ -39,7 +39,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 150vh;
 }
 
 .about__banner {
@@ -48,7 +47,6 @@ export default {
   background-position: center;
   height: 33vh;
   width: 100%;
-  margin-top: 150px;
 }
 
 .about__banner-bar {
