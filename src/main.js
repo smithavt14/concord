@@ -4,8 +4,13 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import BaiduMap from 'vue-baidu-map'
 
 Vue.use(BootstrapVue)
+
+Vue.use(BaiduMap, {
+  ak: 'sFgM150Y1IqNbx6BvXEGcHOt9tui9DaY'
+})
 
 const globalData = new Vue({
   data: {

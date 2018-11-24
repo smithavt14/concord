@@ -16,7 +16,8 @@ export default {
   data () {
     return {
       showNavbar: false,
-      background: false
+      pagePosition: 0,
+      hideNavbar: false
     }
   },
 
@@ -30,7 +31,9 @@ export default {
     },
 
     handleScroll (event) {
-        window.scrollY > window.innerHeight ? this.background = true : this.background = false
+        window.scrollY > this.pagePosition ? this.hideNavbar = true : this.hideNavbar = false
+        this.pagePosition = window.scrollY
+        // window.scrollY > window.innerHeight ? this.background = true : this.background = false
     }
   },
 
@@ -45,8 +48,7 @@ export default {
 </script>
 
 <template>
-  <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__active': background }">
-
+  <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar }">
     <!-- Large Devices -->
     <div class="HomeNavBar__logo"></div>
     <div class="HomeNavBar__tabs">
@@ -90,10 +92,6 @@ export default {
   overflow: hidden;
 }
 
-.HomeNavBar__active {
-  background: white;
-}
-
 .HomeNavBar__logo {
   background-image: url('../assets/images/logo.png');
   height: 150px;
@@ -105,6 +103,20 @@ export default {
 }
 
 @media screen and (min-width: 751px) {
+
+  .HomeNavBar__hidden {
+    animation-name: slideUp;
+    animation-duration: .25s;
+    animation-timing-function: linear;
+    margin-top: -150px;
+  }
+
+  .HomeNavBar__show {
+    animation-name: slideDown;
+    animation-duration: .25s;
+    animation-timing-function: linear;
+    margin-top: 0;
+  }
 
   .HomeNavBar__tabs {
     display: flex;
@@ -212,6 +224,24 @@ export default {
     top: 20px;
     left: 20px;
     fill: white;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    margin-top: -100px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -100px;
   }
 }
 

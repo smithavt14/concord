@@ -13,7 +13,7 @@ export default {
     }
   },
 
-  data() {
+  data () {
     return {
       activeInfo: '',
       modal: {
@@ -26,13 +26,12 @@ export default {
   },
 
   methods: {
-    showIcon(event) {
+    showIcon (event) {
       var id = event.target.dataset.id
       this.activeInfo === id ? this.activeInfo = null : this.activeInfo = id
     }
   }
-
-};
+}
 </script>
 
 <template>
@@ -121,6 +120,4 @@ export default {
 #left-align {
   text-align: left;
 }
-
-
 </style>

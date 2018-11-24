@@ -22,9 +22,18 @@ export default {
         html5: true,
 
       })
-
     }
   },
+  // https请求方式: GET
+  // https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
+
+  // APP ID: wx697043c8d4552e7a
+  // APP Secret: f20236e55dd9783b264d6d515bb09cd7
+
+  // http请求方式: POST
+  // https://api.weixin.qq.com/cgi-bin/material/batchget_material?access_token=ACCESS_TOKEN
+
+  // Help Link: https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1444738734
 
   data () {
     return {
