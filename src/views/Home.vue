@@ -20,10 +20,21 @@ export default {
       var sound = new Howl({
         src: ['https://res.cloudinary.com/dbbfpai4q/video/upload/v1542508252/The_J.B._s_-_Gimme_Some_More_Single_Version.mp3'],
         html5: true,
-
       })
-    }
+    },
+
+    getAppSecret() {
+      console.log('Launch getAppSecret')
+      const apiBase = 'https://cors-anywhere.herokuapp.com'
+      fetch(`${apiBase}/https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${this.appId}&appsecret=${this.appSecret}`)
+        .then(data => console.log(JSON.stringify(data)))
+    },
+
+    getWeChatArticles() {
+      fetch('')
+    },
   },
+
   // https请求方式: GET
   // https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
 
@@ -37,6 +48,8 @@ export default {
 
   data () {
     return {
+      appId: 'wx697043c8d4552e7a',
+      appSecret: 'f20236e55dd9783b264d6d515bb09cd7',
       WeChatlinks: [
         {
           title: 'Piano Solo Recital: A Night of Spanish Music',

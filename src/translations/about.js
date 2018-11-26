@@ -8,7 +8,9 @@ const about = {
     partners: 'AFFILIATED PARTNERS',
     OPsubtitle: 'OUR PHILOSOPHY',
     OPtitle: 'A Unique Teaching Philosophy',
-    OPcontent: 'Concord Music is a music school with a unique teaching philosophy. We strive to provide a high level of music education that encourages students of all ages and levels to develop their interest in music. Our faculty consists of world-class musicians who have graduated from the world\'s most prestigious conservatories and are able to bring in their Western teaching expertise for the benefit of the Shanghai community. We are passionate about helping those who dream of learning a music instrument. Our philosophy is to adapt the heritage of classical music to the 21st century by using innovative teaching methods.'
+    OPcontent: 'Concord Music is a music school with a unique teaching philosophy. We strive to provide a high level of music education that encourages students of all ages and levels to develop their interest in music. Our faculty consists of world-class musicians who have graduated from the world\'s most prestigious conservatories and are able to bring in their Western teaching expertise for the benefit of the Shanghai community. We are passionate about helping those who dream of learning a music instrument. Our philosophy is to adapt the heritage of classical music to the 21st century by using innovative teaching methods.',
+    mapTitle: 'OUR LOCATION',
+    reasonsTitle: '5 REASONS TO CHOOSE US'
   },
   Chinese: {
     philosophy: '要翻译',
@@ -19,7 +21,9 @@ const about = {
     partners: '要翻译',
     OPsubtitle: '要翻译',
     OPtitle: '要翻译',
-    OPcontent: '要翻译'
+    OPcontent: '要翻译',
+    mapTitle: '我们地址', 
+    reasonsTitle: '选择搿艺的5个理由'
   }
 }
 

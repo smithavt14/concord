@@ -37,22 +37,22 @@ export default {
 <template>
   <div class="footer__container">
     <div class="footer__icon location" @click="modal.location = !modal.location"></div>
-    <b-modal ok-only centered v-model="modal.location" title="Our Location | 我们地址" id="left-align">
+    <b-modal ok-only centered v-model="modal.location" title="Our Location | 我们地址" id="left-align" size="sm">
       <div class="footer__location-photo"></div>
       <div><strong>{{translation.addressTitle}}</strong>{{translation.addressContent}}</div>
       <div><strong>{{translation.metroTitle}}</strong>{{translation.metroContent}}</div>
       <div><strong>{{translation.parkingTitle}}</strong>{{translation.parkingContent}}</div>
     </b-modal>
     <div class="footer__icon wechat" @click="modal.wechat = !modal.wechat"></div>
-    <b-modal ok-only centered v-model="modal.wechat" title="Our WeChat | 我们微信">
+    <b-modal ok-only centered v-model="modal.wechat" title="Our WeChat | 我们微信" size="sm">
       <div class="footer__wechat-qr"></div>
     </b-modal>
     <div class="footer__icon phone" @click="modal.phone = !modal.phone"></div>
-      <b-modal ok-only centered v-model="modal.phone" title="Our Phone | 我们电话" id="left-align">
+      <b-modal ok-only centered v-model="modal.phone" title="Our Phone | 我们电话" id="left-align" size="sm">
         <div><strong>Phone: </strong>021-5235-7398 / 156-1839-1413</div>
       </b-modal>
     <div class="footer__icon email" @click="modal.email = !modal.email"></div>
-      <b-modal ok-only centered v-model="modal.email" title="Our Email | 我们邮箱" id="left-align">
+      <b-modal ok-only centered v-model="modal.email" title="Our Email | 我们邮箱" id="left-align" size="sm">
         <div><strong>{{translation.emailContent}}</strong>info@concord-music.com</div>
       </b-modal>
   </div>
