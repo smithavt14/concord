@@ -220,7 +220,7 @@ export default {
       <div class="about__banner-bar-link">{{translation.offsite}}</div>
       
       <!-- Mobile Banner Link -->
-      <div class="about__banner-bar-link">{{translation.dropDown}}</div>
+      <div class="about__banner-bar-link dropDown">{{translation.dropDown}}</div>
       <div></div>
     </div>
 
@@ -249,6 +249,16 @@ export default {
           </div>
         </bm-info-window>
       </bm-marker>
+      <div class="about__map-overlay">
+        <div class="about__map-overlay-title">Concord Music</div>
+        <div><strong>Address: </strong></div>
+        <div>Gubei Lu 678, Tongquan Building, Suite 803</div>
+        <div><strong>地址: </strong></div>
+        <div>古北路678号，同诠大厦，803室</div>
+        <div><strong>Contact Us / 联系我们: </strong></div>
+        <div>021-5235-7398</div>
+        <div>156-1839-1413</div>
+      </div>
     </baidu-map>
 
     <!-- 5 Reasons to Choose Concord -->
@@ -282,6 +292,18 @@ export default {
           </b-col>  
         </b-row>
       </b-container>
+    </div>
+
+    <!-- OUR PARTNERSHIPS -->
+    <div class="about__OPA-wrapper">
+      <div class="about__OPA-left">
+        <div class="about__OPA-left-subtitle">{{translation.OPAsubtitle}}</div>
+        <div class="about__OPA-left-title">{{translation.OPAtitle}}</div>
+        <div class="about__OPA-left-content">{{translation.OPAcontent}}</div>
+      </div>
+      <div class="about__OPA-right">
+        <div class="about__OPA-right-image"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -349,6 +371,22 @@ export default {
       border-bottom: 3px solid white;
     }
   }
+
+  .dropDown {
+    display: none;
+  }
+
+  .about__map-overlay {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    background: white;
+    border-radius: 5px;
+    text-align: left;
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -377,7 +415,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+  }
+
+  .about__banner-bar {
+    justify-content: center;
   }
 
   .about__banner-bar-link {
@@ -386,9 +427,16 @@ export default {
       border-bottom: 3px solid white;
     }
   }
+
+  .about__map-overlay {
+   display: none;
+  }
+
+  .dropDown {
+    display: flex;
+    font-size: 25px;
+  }
 }
-
-
 
 .about__OP-container-right-image {
   background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/teacher_with_student.jpg');
@@ -397,7 +445,7 @@ export default {
   background-repeat: no-repeat;
   height: 90%;
   width: 90%;
-  }
+}
 
 .about__OP-container-left-subtitle {
   color: $concord-orange;
@@ -420,6 +468,7 @@ export default {
   margin: 25px 0;
   height: 300px;
   width: 90vw;
+  position: relative;
 }
 
 .about__map-title {
@@ -430,6 +479,11 @@ export default {
 .about__map-container-title  {
   color: $concord-orange;
   font-size: 15px;
+}
+
+.about__map-overlay-title {
+  color: $concord-orange;
+  font-size: 20px;
 }
 
 .about__5R-wrapper {
@@ -522,6 +576,97 @@ export default {
 .about__OT-item-bio {
   font-size: 12px;
   color: gray;
+  height: 70%;
+  overflow: auto;
+}
+
+
+@media screen and (min-width: 751px) {
+
+  .about__OPA-wrapper {
+    width: 90vw;
+    height: 500px;
+    display: flex;
+    background-color: $light-gray;
+    margin: 25px 0;
+  }
+
+  .about__OPA-left {
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .about__OPA-right {
+    height: 100%;
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  
+  .about__OPA-wrapper {
+    width: 90vw;
+    background-color: $light-gray;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__OPA-left {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about__OPA-right {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+.about__OPA-left-subtitle {
+  color: $concord-orange;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.about__OPA-left-title {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.about__OPA-left-content {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.about__OPA-right-image {
+  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1543409153/Group_2_3.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
 }
 
 </style>
