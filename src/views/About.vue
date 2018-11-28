@@ -88,9 +88,9 @@ export default {
           },
           {
             id: 1,
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1543363849/Fei.jpg',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1543384678/Fei.jpg',
             name: 'Fei',
-            role: 'Founder / Executive Director',
+            role: 'Founder / Director',
             bio: 'Feifan is the founder and Executive Director of Concord Music. As a graduate of New York’s Manhattan School of Music (Bachelor of Music) and New York University (Master of Music), she is not only a passionate piano pedagogue, but also an active concert pianist who has performed across the globe (USA, Europe, the Philippines and Malaysia). Based on her experience as a piano instructor for the keyboard harmonization and improvisation class at New York University, she wrote and published My Musical Animals; a unique method book for piano and keyboard group lessons catering to the needs of young children. She leads the teaching team of Concord Music by providing trainings to teachers with goal to carry out the slogan which is to make the school a space where musical interests are nurtured by professionals. '
           },
           {
@@ -104,7 +104,7 @@ export default {
             id: 3,
             photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1543363849/Maggie.jpg',
             name: 'Maggie',
-            role: 'Flute / Piano / Music Foundations',
+            role: 'Flute & Piano Instructor',
             bio: 'Maggie, born and raised in Taiwan, studied classical flute at the age of 11. She was admitted to Tainan University of Technology in 2009 with a Bachelor degree of Music, majored in flute and minored in piano. She had been touring around East Asia with the orchestra during the years of her studying in the college. At 2014, she went to Berkelee College of Music in US to pursue a higher education, majored in the Professional Music degree program which has covered the areas of Film Scoring, Performance and Music Education.'
           },
           {
@@ -125,7 +125,7 @@ export default {
             id: 6,
             photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1543363850/PG.jpg',
             name: 'PG',
-            role: 'Guitar / Ukelele Instructor',
+            role: 'Guitar Instructor',
             bio: 'PG, an accomplished Taiwanese jazz guitarist who has studied with famous guitar maestros such as John Wilkins, Richie Hart and Tim Miller. He studied in the United States since year 2013 and graduated with best grade award at Berkeley College of Music where he earned his Master in Guitar Performance. After her graduation, he moved to New York for a year and worked as a freelance performer and often jammed with famous musicians, including Peter Bernstein.'
           },
         ],
@@ -139,7 +139,7 @@ export default {
           },
           {
             id: 1,
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1543363849/Fei.jpg',
+            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1543384678/Fei.jpg',
             name: 'Fei',
             role: '创始人',
             bio: '胡老师是搿艺音乐的创始人兼行政总监。她毕业于曼哈顿音乐学院（音乐学士）和纽约大学（音乐硕士）。她不仅是一名充满激情的钢琴教育家，同时也是世界级的钢琴演奏家（美国、欧洲、菲律宾和马来西亚）。基于在纽约大学作为一名电子琴合奏和即兴课堂的钢琴指导经验下，她撰写并发表《我的音乐宠物》一书，一本迎合4-6岁儿童需要的的钢琴和电子琴集体课的教科书。'
@@ -202,13 +202,6 @@ export default {
     },
     infoWindowClose () {
       this.show = false
-    },
-    openInfo (e) {
-      var key = e.target.dataset.key.toString()
-      console.log(key, 'target key')
-      this.showInfo === key ? this.showInfo = null : this.showInfo = key.toString()
-      console.log(this.showInfo, 'showInfo value')
-      console.log(this.showInfo === key)
     }
   }
 };
@@ -225,7 +218,10 @@ export default {
       <div class="about__banner-bar-link">{{translation.reasons}}</div>
       <div class="about__banner-bar-link">{{translation.team}}</div>
       <div class="about__banner-bar-link">{{translation.offsite}}</div>
-      <div class="about__banner-bar-link">{{translation.partners}}</div>
+      
+      <!-- Mobile Banner Link -->
+      <div class="about__banner-bar-link">{{translation.dropDown}}</div>
+      <div></div>
     </div>
 
     <!-- Our Philosophy -->
@@ -274,9 +270,9 @@ export default {
       <div class="about__OT-title">OUR TEAM</div>
       <b-container class="about__OT-container">
         <b-row class="about__OT-bootstrap-row">
-          <b-col v-for="item in translatedTeam" :key="item.id" class="about__OT-item" sm="12" md="6">
+          <b-col v-for="item in translatedTeam" :key="item.id" class="about__OT-item" sm="12" md="6" lg="4">
             <div class="about__OT-item-container">
-              <img :src="item.photo" class="about__OT-item-photo" @click="openInfo" :data-key="item.id">
+              <img :src="item.photo" class="about__OT-item-photo" :data-key="item.id">
               <div class="about__OT-item-info-container">
                 <div class="about__OT-item-name">{{item.name}}</div>
                 <div class="about__OT-item-role">{{item.role}}</div>
@@ -320,12 +316,6 @@ export default {
   align-items: center;
 }
 
-.about__banner-bar-link {
-  &:hover {
-    border-bottom: 3px solid white;
-  }
-}
-
 @media screen and (min-width: 751px) {
   .about__OP-container {
     width: 90vw;
@@ -352,6 +342,12 @@ export default {
     align-items: center;
     justify-content: center;
     position: relative;
+  }
+
+  .about__banner-bar-link {
+    &:hover {
+      border-bottom: 3px solid white;
+    }
   }
 }
 
@@ -383,7 +379,16 @@ export default {
     justify-content: center;
     position: relative;
   }
+
+  .about__banner-bar-link {
+    display: none;
+    &:hover {
+      border-bottom: 3px solid white;
+    }
+  }
 }
+
+
 
 .about__OP-container-right-image {
   background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/teacher_with_student.jpg');
@@ -484,19 +489,21 @@ export default {
 
 .about__OT-item-container {
   display: flex;
-  margin: 20px 10px;
+  margin: 20px 0;
+  background: $light-gray;
+  padding: 10px;
 }
 
 .about__OT-item-photo {
-  width: 200px;
-  height: 250px;
+  width: 125px;
+  height: 200px;
   object-fit: cover;
   object-position: center;
   border-radius: 5px;
 }
 
 .about__OT-item-info-container {
-  width: 200px;
+  width: 185px;
   height: 200px;
   text-align: left;
   margin-left: 10px;
@@ -516,6 +523,5 @@ export default {
   font-size: 12px;
   color: gray;
 }
-
 
 </style>
