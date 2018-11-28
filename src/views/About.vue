@@ -541,6 +541,12 @@ export default {
   justify-content: center;
 }
 
+.about__OT-title {
+  color: $concord-orange;
+  font-size: 15px;
+  margin: 15px 0;
+}
+
 .about__OT-item-container {
   display: flex;
   margin: 20px 0;
