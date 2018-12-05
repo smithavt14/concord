@@ -221,7 +221,6 @@ export default {
       
       <!-- Mobile Banner Link -->
       <div class="about__banner-bar-link dropDown">{{translation.dropDown}}</div>
-      <div></div>
     </div>
 
     <!-- Our Philosophy -->
@@ -329,12 +328,12 @@ export default {
 }
 
 .about__banner-bar {
-  height: 100px;
+  height: 80px;
   width: 100vw;
   background-color: $concord-orange;
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-aroun;
   align-items: center;
 }
 

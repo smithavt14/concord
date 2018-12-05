@@ -1,7 +1,7 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
-import {Howl, Howler} from 'howler';
+import {Howl, Howler} from 'howler'
 
 export default {
   name: 'home',
@@ -24,15 +24,26 @@ export default {
     },
 
     getAppSecret() {
+      const appId = 'wx697043c8d4552e7a'
+      const appSecret = 'f20236e55dd9783b264d6d515bb09cd7'
       console.log('Launch getAppSecret')
       const apiBase = 'https://cors-anywhere.herokuapp.com'
-      fetch(`${apiBase}/https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${this.appId}&appsecret=${this.appSecret}`)
+      fetch(`${apiBase}/https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${appId}&appsecret=${appSecret}`, {
+        method: 'GET',
+        mode: "cors",
+        dataType: 'jsonp',
+        headers: {  'Access-Control-Allow-Origin': '54.159.160.145' }
+      })
         .then(data => console.log(JSON.stringify(data)))
     },
 
     getWeChatArticles() {
       fetch('')
     },
+  },
+
+  created() {
+    this.getAppSecret()
   },
 
   // https请求方式: GET
@@ -373,7 +384,8 @@ export default {
 
 .home__FOB-container {
   width: 100vw;
-  margin: 25px 0;
+  background-color: $light-gray;
+  padding: 25px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
