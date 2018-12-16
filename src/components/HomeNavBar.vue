@@ -33,7 +33,6 @@ export default {
     handleScroll (event) {
         window.scrollY > this.pagePosition ? this.hideNavbar = true : this.hideNavbar = false
         this.pagePosition = window.scrollY
-        // window.scrollY > window.innerHeight ? this.background = true : this.background = false
     }
   },
 
@@ -48,32 +47,35 @@ export default {
 </script>
 
 <template>
-  <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar }">
+  <div>
     <!-- Large Devices -->
-    <div class="HomeNavBar__logo"></div>
-    <div class="HomeNavBar__tabs">
-      <router-link to="/">{{translation.home}}</router-link>
-      <router-link to="/about">{{translation.about}}</router-link>
-      <router-link to="/experience">{{translation.experience}}</router-link>
-      <router-link to="/programs">{{translation.programs}}</router-link>
-      <router-link to="/apply">{{translation.apply}}</router-link>
-      <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
+    <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar }">
+      <div class="HomeNavBar__logo"></div>
+      <div class="HomeNavBar__tabs">
+        <router-link to="/">{{translation.home}}</router-link>
+        <router-link to="/about">{{translation.about}}</router-link>
+        <router-link to="/experience">{{translation.experience}}</router-link>
+        <router-link to="/programs">{{translation.programs}}</router-link>
+        <router-link to="/apply">{{translation.apply}}</router-link>
+        <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
+      </div>
     </div>
 
     <!-- Small Devices -->
-    <div class="HomeNavBar__navbar-toggle"></div>
-    <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1542156723/concord-logo-white.png" class="HomeNavBar__hamburger-icon" @click="toggleNavBar">
-    <div v-if="showNavbar" class="HomeNavBar__mobile-navbar">
-      <img src="../assets/images/cross-out.svg" class="HomeNavBar__mobile-navbar-exit" @click="toggleNavBar">
-      <router-link to="/">{{translation.home}}</router-link>
-      <router-link to="/about">{{translation.about}}</router-link>
-      <router-link to="/experience">{{translation.experience}}</router-link>
-      <router-link to="/programs">{{translation.programs}}</router-link>
-      <router-link to="/apply">{{translation.apply}}</router-link>
-      <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
-    </div>
-    </div>
-
+    <label for="checkbox">
+      <input type="checkbox" id="checkbox" v-model="checked">
+      <span class="menu">
+        <span class="HomeNavBar__hamburger-icon"></span>
+      </span>
+      <ul>
+        <li><router-link to="/">{{translation.home}}</router-link></li>
+        <li><router-link to="/about">{{translation.about}}</router-link></li>
+        <li><router-link to="/experience">{{translation.experience}}</router-link></li>
+        <li><router-link to="/programs">{{translation.programs}}</router-link></li>
+        <li><router-link to="/apply">{{translation.apply}}</router-link></li>
+        <li @click="changeLanguage">{{translation.language}}</li>
+      </ul>
+    </label>
   </div>
 </template>
 
@@ -83,6 +85,7 @@ export default {
 .HomeNavBar__wrapper {
   height: 150px;
   width: 100%;
+  max-width: 1220px;
   background: $opaque;
   display: flex;
   justify-content: space-between;
@@ -103,6 +106,10 @@ export default {
 }
 
 @media screen and (min-width: 751px) {
+
+  label {
+    display: none !important;
+  }
 
   .HomeNavBar__hidden {
     animation-name: slideUp;
@@ -145,7 +152,7 @@ export default {
     color: black !important;
   }
 
-  .HomeNavBar__navbar-toggle {
+  .menu {
     display: none;
   }
 
@@ -167,63 +174,97 @@ export default {
     display: none;
   }
 
-  .HomeNavBar__navbar-toggle {
+  .menu {
     position: absolute;
-    top: -75px;
-    right: -75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background-color: $concord-orange;
+    right: -100px;
+    top: -100px;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: #FFF;
+    border-radius: 50% 50% 50% 50%;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    cursor: pointer;
   }
 
   .HomeNavBar__hamburger-icon {
     position: absolute;
-    top: 10px;
-    right: 0px;
-    height: 40px;
-  }
-
-  .HomeNavBar__mobile-navbar{
-    width: 250px;
-    position: fixed;
-    border-radius: 0 0 0 5px;
-    background-color: $concord-orange;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    padding-top: 40px;
-    animation-name: expand;
-    animation-duration: 1s;
-    a {
-      color: white;
-      text-decoration: none !important;
-      margin: 15px;
-      font-size: 25px;
+    top: 135px;
+    left: 50px;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    display: block;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+    &:after,
+    &:before {
+      transition: .5s ease-in-out;
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #000;
     }
-    a:hover {
-      color: black;
+    &:before {
+      top: -10px;
+    } 
+    &:after {
+      bottom: -10px;
     }
   }
 
-  .HomeNavBar__language-selector {
-    color: white;
-    margin: 15px;
-    font-size: 25px;
+  input {
+    display: none;
   }
 
-  .HomeNavBar__mobile-navbar-exit {
-    height: 20px;
-    width: 20px;
+  input:checked + .menu {
+    box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+    border-radius: 0;
+    .HomeNavBar__hamburger-icon {
+      transform: rotate(45deg);
+      &:after {
+        transform: rotate(90deg);
+        bottom: 0;
+      }
+      &:before {
+        transform: rotate(90deg);
+        top: 0;
+      }
+    }
+  }
+
+  input:checked + .menu + ul {
+    opacity: 1;
+  }
+
+  ul {
+    z-index: 200;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    fill: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: .25s 0s ease-in-out;
+    height: 100vh;
+  }
+
+  a {
+    margin-bottom: 1em;
+    display: block;
+    color: #000;
+    text-decoration: none;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    text-align: center;
   }
 }
 

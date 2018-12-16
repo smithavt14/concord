@@ -217,24 +217,27 @@ export default {
 @import '../assets/styles.scss';
 
 .home__wrapper {
-  background-image: url('../assets/images/symphony.png');
-  background-repeat: repeat;
+  width: 100vw;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .home__banner {
   background-image: url('../assets/images/home-banner.jpeg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   height: calc(100vh - 130px);
+  max-height: 750px;
   width: 100%;
 }
 
 .home__banner-bar {
-  width: 100vw;
+  width: 100%;
   height: 130px;
   display: flex;
   align-items: center;
@@ -265,7 +268,7 @@ export default {
 
 @media screen and (min-width: 751px) {
   .home__WAW-container {
-    width: 90vw;
+    width: 95%;
     height: 500px;
     background-color: $light-gray;
     margin: 25px 0;
@@ -294,7 +297,7 @@ export default {
 
 @media screen and (max-width: 750px) {
   .home__WAW-container {
-    width: 90vw;
+    width: 95%;
     background-color: $light-gray;
     margin: 25px 0;
     display: flex;
@@ -383,7 +386,7 @@ export default {
 }
 
 .home__FOB-container {
-  width: 100vw;
+  width: 100%;
   background-color: $light-gray;
   padding: 25px 0;
   display: flex;
@@ -396,7 +399,8 @@ export default {
   text-align: left;
   display: flex;
   overflow: auto;
-  width: 100vw;
+  width: 100%;
+  max-width: 1220px;
 }
 
 .home__FOB-card {
@@ -414,12 +418,12 @@ export default {
   height: 225px;
   width: 300px;
   object-fit: cover;
-  box-shadow: 2px 2px 10px grey;
+  box-shadow: 2px 2px 10px gray;
   margin-bottom: 10px;
 }
 
 .home__FOB-card-photo:hover {
-  box-shadow: 5px 5px 20px grey;
+  box-shadow: 5px 5px 20px gray;
 }
 
 .home__FOB-card-title {
@@ -434,7 +438,7 @@ export default {
 
 .home__OP-container {
   background-color: $light-gray;
-  width: 90vw;
+  width: 95%;
   margin: 25px 0;
 }
 

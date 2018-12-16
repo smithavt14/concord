@@ -311,12 +311,13 @@ export default {
 @import '../assets/styles.scss';
 
 .about__wrapper {
-  background-image: url('../assets/images/symphony.png');
-  background-repeat: repeat;
+  width: 100vw;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .about__banner {
@@ -324,23 +325,24 @@ export default {
   background-size: cover;
   background-position: center;
   height: 50vh;
+  max-height: 750px;
   width: 100%;
 }
 
 .about__banner-bar {
   height: 80px;
-  width: 100vw;
+  width: 100%;
   background-color: $concord-orange;
   color: white;
   display: flex;
-  justify-content: space-aroun;
+  justify-content: space-around;
   align-items: center;
 }
 
 @media screen and (min-width: 751px) {
   .about__OP-container {
-    width: 90vw;
-    height: 500px;
+    width: 90%;
+    height: 400px;
     background-color: $light-gray;
     margin: 25px 0;
     display: flex;
@@ -390,7 +392,7 @@ export default {
 
 @media screen and (max-width: 750px) {
   .about__OP-container {
-    width: 90vw;
+    width: 90%;
     background-color: $light-gray;
     margin: 25px 0;
     display: flex;
@@ -466,7 +468,7 @@ export default {
 .about__map-container {
   margin: 25px 0;
   height: 300px;
-  width: 90vw;
+  width: 90%;
   position: relative;
 }
 
@@ -487,7 +489,7 @@ export default {
 
 .about__5R-wrapper {
   background:$light-gray;
-  width: 100vw;
+  width: 100%;
   margin: 15px;
 }
 
@@ -589,7 +591,7 @@ export default {
 @media screen and (min-width: 751px) {
 
   .about__OPA-wrapper {
-    width: 90vw;
+    width: 90%;
     height: 500px;
     display: flex;
     background-color: $light-gray;
@@ -620,7 +622,7 @@ export default {
 @media screen and (max-width: 750px) {
   
   .about__OPA-wrapper {
-    width: 90vw;
+    width: 90%;
     background-color: $light-gray;
     margin: 25px 0;
     display: flex;
