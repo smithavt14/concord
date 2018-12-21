@@ -48,7 +48,7 @@ export default {
         <div class="experience__testimonials-container-side">
           <div class="experience__testimonial left-container">
             <div class="experience__testimonial-photo left-photo"></div>
-            <div class="experience__testimonial-name">Caroline Zhao</div>
+            <div class="experience__testimonial-name">Caroline</div>
             <div class="experience__testimonial-role">Private Violin Student</div>
             <div class="experience__testimonial-time">Fall 2018</div>
             <div class="experience__testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -62,7 +62,7 @@ export default {
             <div class="experience__testimonial-photo right-photo"></div>
             <div class="experience__testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             <div class="experience__testimonial-parent right-content">- Mary Zhao (Mother)</div>
-            <div class="experience__testimonial-name">Caroline Zhao</div>
+            <div class="experience__testimonial-name">Caroline</div>
             <div class="experience__testimonial-role">Private Violin Student</div>
             <div class="experience__testimonial-time">Fall 2018</div>
           </div>
@@ -285,14 +285,14 @@ export default {
 
 .right-photo {
   position: absolute;
-  bottom: -30px;
-  right: -30px;
+  bottom: -20px;
+  right: -5px;
 }
 
 .left-photo {
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: -20px;
+  left: 5px;
 }
 
 .right-shadow {

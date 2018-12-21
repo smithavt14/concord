@@ -17,7 +17,8 @@ export default {
     return {
       showNavbar: false,
       pagePosition: 0,
-      hideNavbar: false
+      hideNavbar: false,
+      checked: undefined
     }
   },
 
@@ -33,6 +34,11 @@ export default {
     handleScroll (event) {
         window.scrollY > this.pagePosition ? this.hideNavbar = true : this.hideNavbar = false
         this.pagePosition = window.scrollY
+    },
+
+    closeMobileMenu () {
+      this.checked = false
+      console.log(this.checked)
     }
   },
 
@@ -49,7 +55,7 @@ export default {
 <template>
   <div>
     <!-- Large Devices -->
-    <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar }">
+    <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar, 'HomeNavBar__mobile': checked }">
       <div class="HomeNavBar__logo"></div>
       <div class="HomeNavBar__tabs">
         <router-link to="/">{{translation.home}}</router-link>
@@ -63,17 +69,17 @@ export default {
 
     <!-- Small Devices -->
     <label for="checkbox">
-      <input type="checkbox" id="checkbox" v-model="checked">
+      <input type="checkbox" id="checkbox" v-model="checked" class="checkbox">
       <span class="menu">
         <span class="HomeNavBar__hamburger-icon"></span>
       </span>
-      <ul>
-        <li><router-link to="/">{{translation.home}}</router-link></li>
-        <li><router-link to="/about">{{translation.about}}</router-link></li>
-        <li><router-link to="/experience">{{translation.experience}}</router-link></li>
-        <li><router-link to="/programs">{{translation.programs}}</router-link></li>
-        <li><router-link to="/apply">{{translation.apply}}</router-link></li>
-        <li @click="changeLanguage">{{translation.language}}</li>
+      <ul v-if="checked">
+        <li @click="closeMobileMenu"><router-link to="/" class="HomeNavBar__link">{{translation.home}}</router-link></li>
+        <li @click="closeMobileMenu"><router-link to="/about" class="HomeNavBar__link">{{translation.about}}</router-link></li>
+        <li @click="closeMobileMenu"><router-link to="/experience" class="HomeNavBar__link">{{translation.experience}}</router-link></li>
+        <li @click="closeMobileMenu"><router-link to="/programs" class="HomeNavBar__link">{{translation.programs}}</router-link></li>
+        <li @click="closeMobileMenu"><router-link to="/apply" class="HomeNavBar__link">{{translation.apply}}</router-link></li>
+        <li @click="changeLanguage" class="HomeNavBar__link">{{translation.language}}</li>
       </ul>
     </label>
   </div>
@@ -84,8 +90,9 @@ export default {
 
 .HomeNavBar__wrapper {
   height: 150px;
-  width: 100%;
+  width: 100vw;
   max-width: 1220px;
+  margin: 0 auto;
   background: $opaque;
   display: flex;
   justify-content: space-between;
@@ -93,6 +100,11 @@ export default {
   position: fixed;
   z-index: 10;
   overflow: hidden;
+}
+
+.HomeNavBar__mobile {
+  height: 100vh;
+  position: relative;
 }
 
 .HomeNavBar__logo {
@@ -162,6 +174,7 @@ export default {
 }
 
 @media screen and (max-width: 750px) {
+
   .HomeNavBar__logo {
     display: none;
   }
@@ -186,6 +199,16 @@ export default {
     transition: .5s ease-in-out;
     box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
     cursor: pointer;
+  }
+
+  .HomeNavBar__link {
+    font-size: 30px;
+    color: $concord-orange;
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.05);
+      color: black;
+    }
   }
 
   .HomeNavBar__hamburger-icon {
@@ -248,7 +271,10 @@ export default {
     transform: translate(-50%,-50%);
     opacity: 0;
     transition: .25s 0s ease-in-out;
-    height: 100vh;
+  }
+
+  li {
+    list-style-type: none;
   }
 
   a {

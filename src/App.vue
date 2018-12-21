@@ -1,3 +1,17 @@
+<script>
+  import HomeNavBar from '@/components/HomeNavBar.vue'
+  import Footer from '@/components/footer.vue'
+
+  export default {
+    name: 'app',
+
+    components: {
+      HomeNavBar,
+      Footer
+    }
+  };
+</script>
+
 <template>
   <div id="app">
     <HomeNavBar id="navbar"></HomeNavBar>
@@ -19,24 +33,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 #navbar {
   position: fixed;
   top: 0;
+  width: 100vw;
+  z-index: 10;
 }
+
 </style>
-
-<script>
-import HomeNavBar from '@/components/HomeNavBar.vue'
-import Footer from '@/components/footer.vue'
-
-export default {
-  name: 'app',
-
-  components: {
-    HomeNavBar,
-    Footer
-  }
-};
-</script>
