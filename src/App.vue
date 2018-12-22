@@ -39,7 +39,11 @@
 #navbar {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100vw;
+  max-width: 1220px;
+  margin: 0 auto;
   z-index: 10;
 }
 

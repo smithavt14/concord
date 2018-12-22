@@ -5,11 +5,36 @@ import globalData from '@/main'
 export default {
   name: 'experience',
 
+  data () {
+    return {
+      photos: {
+        classroom: ['1a', '2', '3', '4', '5', '6', '7', '8'],
+        environment: ['1b', '2', '3', '4', '5', '6', '7', '8'],
+        teachers: ['1c', '2', '3', '4', '5', '6', '7', '8'], 
+        students: ['1d', '2', '3', '4', '5', '6', '7', '8'],
+        events: ['1e', '2', '3', '4', '5', '6', '7', '8']
+      },
+      active: 'classroom'
+    }
+  },
+
   computed: {
     translation () {
       return translation.experience[globalData.language]
+    },
+    activePhotos () {
+      return this.photos[this.active]
+      console.log(this.photos[this.active])
+    }
+  },
+
+  methods: {
+    changeActivePhotos (e) {
+      this.active = e.target.dataset.id
+      console.log(this.photos[this.active])
     }
   }
+
 };
 </script>
 
@@ -29,7 +54,7 @@ export default {
     <!-- Experience -->
     <div class="experience__EX-container">
       <div class="experience__EX-container-left">
-        <div class="experience__EX-container-left-subtitle">{{translation.exsubtitle}}</div>
+        <div class="experience__subtitle">{{translation.exsubtitle}}</div>
         <div class="experience__EX-container-left-title">{{translation.extitle}}</div>
         <div class="experience__EX-container-left-content">{{translation.excontent}}</div>
       </div>
@@ -40,7 +65,7 @@ export default {
 
     <!-- Testimonials -->
     <div class="experience__testimonials-wrapper">
-      <div class="experience__testimonials-subtitle">TESTIMONIALS</div>
+      <div class="experience__subtitle">TESTIMONIALS</div>
       <div class="experience__testimonials-title">What do students and parents have to say about us?</div>
       <div class="experience__testimonials-container">
 
@@ -70,7 +95,44 @@ export default {
       </div>
     </div>
 
-  
+    <!-- Photos -->
+    <div class="experience__photos-wrapper">
+      <div class="experience__subtitle" style="margin: 20px;">PHOTOS</div>
+      <div class="expereince__container">
+
+        <!-- Side Bar -->
+        <div class="experience__photos-side-bar">
+          <div class="experience__photos-side-bar-selection" data-id="classroom" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'classroom' }">
+            CLASSROOM
+          </div>
+          <div class="experience__photos-side-bar-selection" data-id="environment" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'environment' }">
+            ENVIRONMENT
+          </div>
+          <div class="experience__photos-side-bar-selection" data-id="teachers" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'teachers' }">
+            TEACHERS
+          </div>
+          <div class="experience__photos-side-bar-selection" data-id="students" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'students' }">
+            STUDENTS
+          </div>
+          <div class="experience__photos-side-bar-selection" data-id="events" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'events' }">
+            EVENTS
+          </div>
+        </div>
+
+        <!-- Photos section -->
+        <b-container class="experience__photos-photos">
+          <b-row class="experience-photos-bootstrap-row">
+            <b-col v-for="photo in activePhotos" id="photo" sm="6" md="3">
+              <div class="experience__photos-photo">
+                {{photo}}
+              </div>
+            </b-col>
+          </b-row>
+        </b-container>
+      
+      </div>  
+    </div>
+
 	</div>
 </template>
 
@@ -196,12 +258,6 @@ export default {
   width: 90%;
 }
 
-.experience__EX-container-left-subtitle {
-  color: $concord-orange;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
 .experience__EX-container-left-title {
   font-size: 25px;
   margin-bottom: 5px;
@@ -218,12 +274,6 @@ export default {
   margin: 25px 0;
   padding: 25px;
   background-color: white;
-}
-
-.experience__testimonials-subtitle {
-  color: $concord-orange;
-  font-size: 15px;
-  margin: 5px;
 }
 
 .experience__testimonials-title {
@@ -251,7 +301,7 @@ export default {
   .experience__testimonials-container {
       display: flex;
       justify-content: center;
-      max-width: 1440px;
+      max-width: 1220px;
     }
 
   .experience__testimonials-container-side {
@@ -332,6 +382,54 @@ export default {
 .experience__testimonial-parent {
   font-size: 15px;
   color: $concord-orange;
+}
+
+.experience__photos-wrapper {
+  width: 100%;
+  border: 25px solid $concord-orange;
+  background: white;
+  margin: 25px 0;
+}
+
+.experience__subtitle {
+  color: $concord-orange;
+  font-size: 15px;
+  margin: 5px;
+}
+
+.expereince__container {
+  display: flex;
+  margin: 25px 0px;
+  padding: 0 20px;
+}
+
+.experience__photos-side-bar {
+  height: 100%;
+  width: 25%;
+  text-align: left;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.experience__photos-side-bar-selection {
+  width: 80%;
+  margin: 10px 0;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.side-bar-selection-active {
+  border-left: 5px solid $concord-orange;
+  padding-left: 5px;
+  font-weight: bolder;
+  color: $concord-orange;
+}
+
+.experience__photos-photo {
+  height: 100px;
+  background: black;
+  color: white;
+  margin: 10px 0;
 }
 
 </style>

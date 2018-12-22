@@ -312,7 +312,7 @@ export default {
 
 .about__wrapper {
   width: 100vw;
-  max-width: 1440px;
+  max-width: 1220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
