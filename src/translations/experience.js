@@ -13,7 +13,7 @@ const experience = {
     videos: '要翻译',
     exsubtitle: '要翻译',
     extitle: '要翻译',
-    excontent: '要翻译',
+    excontent: '要翻译'
   }
 }
 export default experience

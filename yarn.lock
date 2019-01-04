@@ -3222,6 +3222,14 @@ fstream@^1.0.0, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
+fullcalendar@^3.9.0:
+  version "3.9.0"
+  resolved "http://registry.npm.taobao.org/fullcalendar/download/fullcalendar-3.9.0.tgz#b608a9989f3416f0b1d526c6bdfeeaf2ac79eda5"
+  integrity sha1-tgipmJ80FvCx1SbGvf7q8qx57aU=
+  dependencies:
+    jquery "2 - 3"
+    moment "^2.20.1"
+
 function-bind@^1.0.2, function-bind@^1.1.0, function-bind@^1.1.1:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/function-bind/download/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -4052,6 +4060,11 @@ joi@^13.0.0:
     isemail "3.x.x"
     topo "3.x.x"
 
+"jquery@2 - 3":
+  version "3.3.1"
+  resolved "http://registry.npm.taobao.org/jquery/download/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+  integrity sha1-lYzinoHJeQ8xvneS311NlfxX+8o=
+
 js-base64@^2.1.8:
   version "2.4.9"
   resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.4.9.tgz#748911fb04f48a60c4771b375cac45a80df11c03"
@@ -4603,6 +4616,11 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   resolved "http://registry.npm.taobao.org/mkdirp/download/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+moment@^2.20.1:
+  version "2.23.0"
+  resolved "http://registry.npm.taobao.org/moment/download/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
+  integrity sha1-dZ6kkayX1UusWtd2mW4qWMwbwiU=
 
 move-concurrently@^1.0.1:
   version "1.0.1"

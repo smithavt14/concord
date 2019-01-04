@@ -32,8 +32,8 @@ export default {
     },
 
     handleScroll (event) {
-        window.scrollY > this.pagePosition ? this.hideNavbar = true : this.hideNavbar = false
-        this.pagePosition = window.scrollY
+      this.hideNavbar = window.scrollY > this.pagePosition
+      this.pagePosition = window.scrollY
     },
 
     closeMobileMenu () {
@@ -43,13 +43,14 @@ export default {
   },
 
   created () {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   },
 
   destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-};
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+}
+
 </script>
 
 <template>
@@ -170,6 +171,7 @@ export default {
 
   .HomeNavBar__hamburger-icon {
     display: none;
+
   }
 }
 
@@ -217,7 +219,7 @@ export default {
     left: 50px;
     width: 30px;
     height: 2px;
-    background: #000;
+    background: $concord-orange;
     display: block;
     transform-origin: center;
     transition: .5s ease-in-out;
@@ -229,11 +231,13 @@ export default {
       display: block;
       width: 100%;
       height: 100%;
-      background: #000;
+      background: $concord-orange;
     }
+
     &:before {
       top: -10px;
-    } 
+    }
+
     &:after {
       bottom: -10px;
     }

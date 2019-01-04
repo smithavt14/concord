@@ -7,7 +7,7 @@ export default {
 
   data () {
     return {
-      center: {lng: 121.399865, lat: 31.204689},
+      center: { lng: 121.399865, lat: 31.204689 },
       zoom: 15,
       show: false,
       showInfo: null,
@@ -127,7 +127,7 @@ export default {
             name: 'PG',
             role: 'Guitar Instructor',
             bio: 'PG, an accomplished Taiwanese jazz guitarist who has studied with famous guitar maestros such as John Wilkins, Richie Hart and Tim Miller. He studied in the United States since year 2013 and graduated with best grade award at Berkeley College of Music where he earned his Master in Guitar Performance. After her graduation, he moved to New York for a year and worked as a freelance performer and often jammed with famous musicians, including Peter Bernstein.'
-          },
+          }
         ],
         Chinese: [
           {
@@ -193,8 +193,8 @@ export default {
     },
     translatedTeam () {
       return this.team[globalData.language]
-    },
-  }, 
+    }
+  },
 
   methods: {
     infoWindowOpen () {
@@ -204,7 +204,8 @@ export default {
       this.show = false
     }
   }
-};
+}
+
 </script>
 
 <template>
@@ -218,7 +219,7 @@ export default {
       <div class="about__banner-bar-link">{{translation.reasons}}</div>
       <div class="about__banner-bar-link">{{translation.team}}</div>
       <div class="about__banner-bar-link">{{translation.offsite}}</div>
-      
+
       <!-- Mobile Banner Link -->
       <div class="about__banner-bar-link dropDown">{{translation.dropDown}}</div>
     </div>
@@ -269,7 +270,7 @@ export default {
             <img :src="item.icon" class="about__5R-item-icon">
             <div class="about__5R-item-title">{{item.title}}</div>
             <div class="about__5R-item-description">{{item.description}}</div>
-          </b-col>  
+          </b-col>
         </b-row>
       </b-container>
     </div>
@@ -285,10 +286,10 @@ export default {
               <div class="about__OT-item-info-container">
                 <div class="about__OT-item-name">{{item.name}}</div>
                 <div class="about__OT-item-role">{{item.role}}</div>
-                <div class="about__OT-item-bio">{{item.bio}}</div>  
+                <div class="about__OT-item-bio">{{item.bio}}</div>
               </div>
             </div>
-          </b-col>  
+          </b-col>
         </b-row>
       </b-container>
     </div>
@@ -587,7 +588,6 @@ export default {
   overflow: auto;
 }
 
-
 @media screen and (min-width: 751px) {
 
   .about__OPA-wrapper {
@@ -620,7 +620,7 @@ export default {
 }
 
 @media screen and (max-width: 750px) {
-  
+
   .about__OPA-wrapper {
     width: 90%;
     background-color: $light-gray;

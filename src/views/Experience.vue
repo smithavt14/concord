@@ -10,7 +10,7 @@ export default {
       photos: {
         classroom: ['1a', '2', '3', '4', '5', '6', '7', '8'],
         environment: ['1b', '2', '3', '4', '5', '6', '7', '8'],
-        teachers: ['1c', '2', '3', '4', '5', '6', '7', '8'], 
+        teachers: ['1c', '2', '3', '4', '5', '6', '7', '8'],
         students: ['1d', '2', '3', '4', '5', '6', '7', '8'],
         events: ['1e', '2', '3', '4', '5', '6', '7', '8']
       },
@@ -24,22 +24,20 @@ export default {
     },
     activePhotos () {
       return this.photos[this.active]
-      console.log(this.photos[this.active])
     }
   },
 
   methods: {
     changeActivePhotos (e) {
       this.active = e.target.dataset.id
-      console.log(this.photos[this.active])
     }
   }
+}
 
-};
 </script>
 
 <template>
- 	<div class="experience__wrapper">
+  <div class="experience__wrapper">
     <!-- Banner -->
     <div class="experience__banner"></div>
     <div class="experience__banner-bar">
@@ -122,18 +120,16 @@ export default {
         <!-- Photos section -->
         <b-container class="experience__photos-photos">
           <b-row class="experience-photos-bootstrap-row">
-            <b-col v-for="photo in activePhotos" id="photo" sm="6" md="3">
+            <b-col v-for="photo in activePhotos" :key="photo" id="photo" sm="6" md="3">
               <div class="experience__photos-photo">
                 {{photo}}
               </div>
             </b-col>
           </b-row>
         </b-container>
-      
-      </div>  
+      </div>
     </div>
-
-	</div>
+  </div>
 </template>
 
 <style lang="scss">
@@ -168,30 +164,16 @@ export default {
   align-items: center;
 }
 
-.experience__banner-bar-link {
-  margin: 0 25px;
-}
-
 .expereince__banner-bar-link-active {
   border-bottom: 3px solid white;
 }
 
-.experience__banner-bar-btn {
-  width: 120px;
-  font-size: 18px;
-  padding: 10px 0;
-  border: 2px solid white;
-  border-radius: 50px;
-  text-decoration: none;
-  color: white;
-  &:hover {
-    background-color: white;
-    color: $concord-orange;
-    text-decoration: none;
-  }
-}
-
 @media screen and (min-width: 751px) {
+
+  .experience__banner-bar-link {
+    margin: 0 25px;
+  }
+
   .experience__EX-container {
     width: 90vw;
     height: 400px;
@@ -221,6 +203,11 @@ export default {
 }
 
 @media screen and (max-width: 750px) {
+
+  .experience__banner-bar-link {
+    margin: 0 10px;
+  }
+
   .experience__EX-container {
     width: 90vw;
     background-color: $light-gray;
@@ -345,10 +332,6 @@ export default {
   left: 5px;
 }
 
-.right-shadow {
-  
-}
-
 .experience__testimonial-photo {
   background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1534483118/pgpo4l14din9tnsroiai.jpg');
   background-size: cover;
@@ -397,32 +380,58 @@ export default {
   margin: 5px;
 }
 
-.expereince__container {
-  display: flex;
-  margin: 25px 0px;
-  padding: 0 20px;
+@media screen and (min-width: 751px) {
+
+  .expereince__container {
+    display: flex;
+    margin: 25px 0px;
+    padding: 0 20px;
+  }
+
+  .experience__photos-side-bar {
+    height: 100%;
+    width: 25%;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .experience__photos-side-bar-selection {
+    width: 80%;
+    margin: 10px 0;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .side-bar-selection-active {
+    border-left: 5px solid $concord-orange;
+    padding-left: 5px;
+    font-weight: bolder;
+    color: $concord-orange;
+  }
+
 }
 
-.experience__photos-side-bar {
-  height: 100%;
-  width: 25%;
-  text-align: left;
-  align-items: center;
-  padding-left: 20px;
-}
+@media screen and (max-width: 750px) {
 
-.experience__photos-side-bar-selection {
-  width: 80%;
-  margin: 10px 0;
-  padding-left: 10px;
-  text-align: left;
-}
+  .expereince__container {
+    margin: 25px 0px;
+    padding: 0 20px;
+  }
 
-.side-bar-selection-active {
-  border-left: 5px solid $concord-orange;
-  padding-left: 5px;
-  font-weight: bolder;
-  color: $concord-orange;
+  .experience__photos-side-bar {
+    align-items: center;
+  }
+
+  .experience__photos-side-bar-selection {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .side-bar-selection-active {
+    font-weight: bolder;
+    color: $concord-orange;
+  }
 }
 
 .experience__photos-photo {
