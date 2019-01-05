@@ -24,7 +24,7 @@ export default {
         right: 'today, prev,next'
       },
       defaultView: 'month',
-      height: 415,
+      height: 415,dep
       eventSources: [
         {
           events: [
