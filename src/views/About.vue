@@ -237,33 +237,35 @@ export default {
     </div>
 
     <!-- Map of Concord -->
-    <div class="about__map-container-title">{{translation.mapTitle}}</div>
-    <baidu-map :center="center" :zoom="zoom" class="about__map-container">
-      <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
-      <bm-marker :position="center" :dragging="true" @click="infoWindowOpen">
-        <bm-info-window :show="show" @close="infoWindowClose" @open="infoWindowOpen">
-          <div class="about__map-title">Concord Music</div>
-          <div class="about__map-content">
-            <div><strong>Address: </strong>Gubei Lu 678, Tongquan Building, Suite 803</div>
-            <div><strong>地址: </strong>古北路678号，同诠大厦，803室</div>
-          </div>
-        </bm-info-window>
-      </bm-marker>
-      <div class="about__map-overlay">
-        <div class="about__map-overlay-title">Concord Music</div>
-        <div><strong>Address: </strong></div>
-        <div>Gubei Lu 678, Tongquan Building, Suite 803</div>
-        <div><strong>地址: </strong></div>
-        <div>古北路678号，同诠大厦，803室</div>
-        <div><strong>Contact Us / 联系我们: </strong></div>
-        <div>021-5235-7398</div>
-        <div>156-1839-1413</div>
-      </div>
-    </baidu-map>
+    <div class="about__map-wrapper">
+      <div class="about__subtitle">{{translation.mapTitle}}</div>
+      <baidu-map :center="center" :zoom="zoom" class="about__map-container">
+        <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
+        <bm-marker :position="center" :dragging="true" @click="infoWindowOpen">
+          <bm-info-window :show="show" @close="infoWindowClose" @open="infoWindowOpen">
+            <div class="about__map-title">Concord Music</div>
+            <div class="about__map-content">
+              <div><strong>Address: </strong>Gubei Lu 678, Tongquan Building, Suite 803</div>
+              <div><strong>地址: </strong>古北路678号，同诠大厦，803室</div>
+            </div>
+          </bm-info-window>
+        </bm-marker>
+        <div class="about__map-overlay">
+          <div class="about__map-overlay-title">Concord Music</div>
+          <div><strong>Address: </strong></div>
+          <div>Gubei Lu 678, Tongquan Building, Suite 803</div>
+          <div><strong>地址: </strong></div>
+          <div>古北路678号，同诠大厦，803室</div>
+          <div><strong>Contact Us / 联系我们: </strong></div>
+          <div>021-5235-7398</div>
+          <div>156-1839-1413</div>
+        </div>
+      </baidu-map>
+    </div>
 
     <!-- 5 Reasons to Choose Concord -->
     <div class="about__5R-wrapper">
-      <div class="about__5R-title">{{translation.reasonsTitle}}</div>
+      <div class="about__subtitle">{{translation.reasonsTitle}}</div>
       <b-container class="about__5R-container">
         <b-row class="about__5R-bootstrap-row">
           <b-col v-for="item in translatedReasons" :key="item.id" class="about__5R-item" sm="6" md="4" lg="2">
@@ -277,7 +279,7 @@ export default {
 
     <!-- OUR TEAM -->
     <div class="about__OT-wrapper">
-      <div class="about__OT-title">OUR TEAM</div>
+      <div class="about__subtitle">OUR TEAM</div>
       <b-container class="about__OT-container">
         <b-row class="about__OT-bootstrap-row">
           <b-col v-for="item in translatedTeam" :key="item.id" class="about__OT-item" sm="12" md="6" lg="4">
@@ -340,104 +342,10 @@ export default {
   align-items: center;
 }
 
-@media screen and (min-width: 751px) {
-  .about__OP-container {
-    width: 90%;
-    height: 400px;
-    background-color: $light-gray;
-    margin: 25px 0;
-    display: flex;
-  }
-
-  .about__OP-container-left {
-    height: 100%;
-    width: 50%;
-    padding: 20px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .about__OP-container-right {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .about__banner-bar-link {
-    &:hover {
-      border-bottom: 3px solid white;
-    }
-  }
-
-  .dropDown {
-    display: none;
-  }
-
-  .about__map-overlay {
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    left: 20px;
-    top: 25px;
-    background: white;
-    border-radius: 5px;
-    text-align: left;
-    padding: 10px;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .about__OP-container {
-    width: 90%;
-    background-color: $light-gray;
-    margin: 25px 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about__OP-container-left {
-    height: 100%;
-    padding: 20px;
-    width: 100%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .about__OP-container-right {
-    height: 100%;
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .about__banner-bar {
-    justify-content: center;
-  }
-
-  .about__banner-bar-link {
-    display: none;
-    &:hover {
-      border-bottom: 3px solid white;
-    }
-  }
-
-  .about__map-overlay {
-   display: none;
-  }
-
-  .dropDown {
-    display: flex;
-    font-size: 25px;
-  }
+.about__subtitle {
+  color: $concord-orange;
+  font-size: 15px;
+  margin: 15px;
 }
 
 .about__OP-container-right-image {
@@ -466,8 +374,19 @@ export default {
   margin-bottom: 10px;
 }
 
+.about__map-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 5px 5px 50px #EEEEEE;
+  margin: 15px 0;
+}
+
 .about__map-container {
-  margin: 25px 0;
+  margin-bottom: 30px;
   height: 300px;
   width: 90%;
   position: relative;
@@ -478,20 +397,16 @@ export default {
   font-weight: bold;
 }
 
-.about__map-container-title  {
-  color: $concord-orange;
-  font-size: 15px;
-}
-
 .about__map-overlay-title {
   color: $concord-orange;
   font-size: 20px;
 }
 
 .about__5R-wrapper {
-  background:$light-gray;
+  background: white;
+  box-shadow: 5px 5px 50px #EEEEEE;
   width: 100%;
-  margin: 15px;
+  margin: 15px 0;
 }
 
 .about__5R-container {
@@ -543,6 +458,13 @@ export default {
   justify-content: center;
 }
 
+.about__OT-wrapper {
+  width: 100%;
+  background: white;
+  box-shadow: 5px 5px 50px #EEEEEE;
+  margin: 15px 0;
+}
+
 .about__OT-title {
   color: $concord-orange;
   font-size: 15px;
@@ -588,19 +510,103 @@ export default {
   overflow: auto;
 }
 
+.about__OPA-left-subtitle {
+  color: $concord-orange;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.about__OPA-left-title {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.about__OPA-left-content {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.about__OPA-right-image {
+  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1543409153/Group_2_3.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+}
+
+/*--------------- Large Screen Style ---------------*/
+
 @media screen and (min-width: 751px) {
+  .about__OP-container {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 5px 5px 50px #EEEEEE;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  .about__OP-container-left {
+    height: 100%;
+    width: 50%;
+    max-width: 450px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about__OP-container-right {
+    height: 100%;
+    width: 50%;
+    max-width: 450px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .about__banner-bar-link {
+    &:hover {
+      border-bottom: 3px solid white;
+    }
+  }
+
+  .dropDown {
+    display: none;
+  }
+
+  .about__map-overlay {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    background: white;
+    border-radius: 5px;
+    text-align: left;
+    padding: 10px;
+  }
 
   .about__OPA-wrapper {
-    width: 90%;
+    width: 100%;
     height: 500px;
     display: flex;
-    background-color: $light-gray;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 5px 5px 50px #EEEEEE;
     margin: 25px 0;
   }
 
   .about__OPA-left {
     height: 100%;
     width: 50%;
+    max-width: 450px;
     padding: 20px;
     text-align: left;
     display: flex;
@@ -612,6 +618,7 @@ export default {
   .about__OPA-right {
     height: 100%;
     width: 50%;
+    max-width: 450px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -619,11 +626,62 @@ export default {
   }
 }
 
+/*--------------------------------------------------*/
+
+/*--------------- Small Screen Style ---------------*/
+
 @media screen and (max-width: 750px) {
+  .about__OP-container {
+    width: 95%;
+    background-color: white;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__OP-container-left {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about__OP-container-right {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__banner-bar {
+    justify-content: center;
+  }
+
+  .about__banner-bar-link {
+    display: none;
+    &:hover {
+      border-bottom: 3px solid white;
+    }
+  }
+
+  .about__map-overlay {
+   display: none;
+  }
+
+  .dropDown {
+    display: flex;
+    font-size: 25px;
+  }
 
   .about__OPA-wrapper {
-    width: 90%;
-    background-color: $light-gray;
+    width: 95%;
+    background-color: white;
+    box-shadow: 5px 5px 50px #EEEEEE;
     margin: 25px 0;
     display: flex;
     flex-direction: column;
@@ -650,30 +708,6 @@ export default {
   }
 }
 
-.about__OPA-left-subtitle {
-  color: $concord-orange;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
-.about__OPA-left-title {
-  font-size: 25px;
-  margin-bottom: 5px;
-}
-
-.about__OPA-left-content {
-  font-size: 15px;
-  color: gray;
-  margin-bottom: 10px;
-}
-
-.about__OPA-right-image {
-  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1543409153/Group_2_3.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 90%;
-  width: 90%;
-}
+/*--------------------------------------------------*/
 
 </style>

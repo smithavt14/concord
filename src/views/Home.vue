@@ -1,7 +1,6 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
-import {Howl, Howler} from 'howler'
 
 export default {
   name: 'home',
@@ -16,12 +15,6 @@ export default {
   },
 
   methods: {
-    playMusic() {
-      var sound = new Howl({
-        src: ['https://res.cloudinary.com/dbbfpai4q/video/upload/v1542508252/The_J.B._s_-_Gimme_Some_More_Single_Version.mp3'],
-        html5: true,
-      })
-    },
 
     // getAppSecret() {
     //   const appId = 'wx697043c8d4552e7a'
@@ -37,12 +30,12 @@ export default {
     //     .then(data => console.log(JSON.stringify(data)))
     // },
 
-    getWeChatArticles() {
+    getWeChatArticles () {
       fetch('')
-    },
+    }
   },
 
-  created() {
+  created () {
     // this.getAppSecret()
   },
 
@@ -280,7 +273,7 @@ export default {
   .home__WAW-container-left {
     height: 90%;
     width: 50%;
-    max-width: 500px;
+    max-width: 450px;
     padding: 20px;
     text-align: left;
     display: flex;
@@ -291,7 +284,7 @@ export default {
   .home__WAW-container-right {
     height: 100%;
     width: 50%;
-    max-width: 500px;
+    max-width: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -372,7 +365,6 @@ export default {
 }
 
 .home__WAW-container-right-instruments {
-  height: 90%;
   width: 90%;
 }
 
