@@ -425,11 +425,11 @@ export default {
 /* ----------------- Small Screen Styles ------------------ */
 
 @media screen and (max-width: 750px) {
-  .home__WAW-container {
-    width: 95%;
+  .home__WAW-wrapper {
+    width: 100%;
     background-color: white;
     box-shadow: 5px 5px 50px #EEEEEE;
-    margin: 25px 0;
+    margin: 15px 0;
     display: flex;
     flex-direction: column;
   }
