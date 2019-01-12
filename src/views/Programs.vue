@@ -3,6 +3,7 @@ import translation from '@/translations/translation'
 import globalData from '@/main'
 import $ from 'jquery'
 import 'fullcalendar'
+import events from '@/utilities/events'
 
 export default {
   name: 'programs',
@@ -15,7 +16,7 @@ export default {
     }
   },
 
-  mounted() {
+  mounted () {
     $('#calendar').fullCalendar({
       aspectRatio: 1,
       header: {
@@ -24,70 +25,8 @@ export default {
         right: 'today, prev,next'
       },
       defaultView: 'month',
-      height: 415,dep
-      eventSources: [
-        {
-          events: [
-            {
-              title: 'Holiday',
-              start: '2019-02-02',
-              end: '2019-02-10'
-            },
-            {
-              title: 'Holiday',
-              start: '2019-05-01'
-            },
-            {
-              title: 'Holiday',
-              start: '2019-06-07'
-            },
-            {
-              title: 'Holiday',
-              start: '2019-07-22',
-              end: '2019-08-04'
-            }
-          ],
-          color: 'red',
-          textColor: 'white'
-        },
-        {
-          events: [
-            {
-              title: 'Spring Music Camp',
-              start: '2019-04-01',
-              end: '2019-04-05'
-            }
-          ],
-          color: 'orange',
-          textColor: 'white'
-        },
-        {
-          events: [
-            {
-              title: 'Recitals',
-              start: '2019-05-26'
-            }
-          ],
-          color: 'blue',
-          textColor: 'white'
-        },
-        {
-          events: [
-            {
-              title: 'Summer Music Camp',
-              start: '2019-06-24',
-              end: '2019-07-19'
-            },
-            {
-              title: 'Summer Music Camp',
-              start: '2019-08-05',
-              end: '2019-08-16'
-            }
-          ],
-          color: 'green',
-          textColor: 'white'
-        }
-      ]
+      height: 415,
+      eventSources: events.eventSources
     })
   }
 }
@@ -107,7 +46,7 @@ export default {
     </div>
     <div class="programs__calendar dynamic-width">
       <div class="programs__calendar-title">{{translation.calendarTitle}}</div>
-      <div id='calendar'></div>  
+      <div id='calendar'></div>
     </div>
   </div>
 </template>
@@ -117,8 +56,7 @@ export default {
 @import '../assets/fullcalendar.css';
 
 .programs__wrapper {
-  background-image: url('../assets/images/symphony.png');
-  background-repeat: repeat;
+  background-color: #FAFAFA;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,7 +102,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $light-gray;
+  background: white;
 }
 
 @media screen and (min-width: 751px) {

@@ -268,16 +268,19 @@ export default {
 
 @media screen and (min-width: 751px) {
   .home__WAW-container {
-    width: 95%;
+    width: 100%;
     height: 500px;
-    background-color: $light-gray;
+    background-color: white;
     margin: 25px 0;
     display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 50px #EEEEEE;
   }
 
   .home__WAW-container-left {
-    height: 100%;
+    height: 90%;
     width: 50%;
+    max-width: 500px;
     padding: 20px;
     text-align: left;
     display: flex;
@@ -288,6 +291,7 @@ export default {
   .home__WAW-container-right {
     height: 100%;
     width: 50%;
+    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,7 +302,8 @@ export default {
 @media screen and (max-width: 750px) {
   .home__WAW-container {
     width: 95%;
-    background-color: $light-gray;
+    background-color: white;
+    box-shadow: 5px 5px 50px #EEEEEE;
     margin: 25px 0;
     display: flex;
     flex-direction: column;
@@ -387,12 +392,13 @@ export default {
 
 .home__FOB-container {
   width: 100%;
-  background-color: $light-gray;
+  background-color: white;
   padding: 25px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 5px 5px 50px #EEEEEE;
 }
 
 .home__FOB-card-container {
@@ -437,8 +443,9 @@ export default {
 }
 
 .home__OP-container {
-  background-color: $light-gray;
-  width: 95%;
+  background-color: white;
+  width: 100%;
+  box-shadow: 5px 5px 50px #EEEEEE;
   margin: 25px 0;
 }
 
@@ -458,7 +465,7 @@ export default {
 .home__OP-title {
   color: $concord-orange;
   font-size: 20px;
-  margin: 10px;
+  margin: 20px 0 0 10px;
 }
 
 .home__OP-program-title {

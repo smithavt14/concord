@@ -1,15 +1,15 @@
 <script>
-  import HomeNavBar from '@/components/HomeNavBar.vue'
-  import Footer from '@/components/footer.vue'
+import HomeNavBar from '@/components/HomeNavBar.vue'
+import Footer from '@/components/footer.vue'
 
-  export default {
-    name: 'app',
+export default {
+  name: 'app',
 
-    components: {
-      HomeNavBar,
-      Footer
-    }
-  };
+  components: {
+    HomeNavBar,
+    Footer
+  }
+}
 </script>
 
 <template>
@@ -27,8 +27,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: url('assets/images/symphony.png');
-  background-repeat: repeat;
+  background-color: #FAFAFA;
   display: flex;
   flex-direction: column;
   justify-content: center;
