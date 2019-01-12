@@ -264,7 +264,6 @@ export default {
   display: flex;
   overflow: auto;
   width: 100%;
-  max-width: 1220px;
 }
 
 .home__FOB-card {

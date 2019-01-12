@@ -136,6 +136,8 @@ export default {
 @import '../assets/styles.scss';
 
 .experience__wrapper {
+  width: 100vw;
+  max-width: 1220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,7 +145,7 @@ export default {
 }
 
 .experience__banner {
-  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.25)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
   background-size: cover;
   background-position: center;
   height: 25vh;
@@ -197,7 +199,7 @@ export default {
 /* ----- Testimonials ----- */
 
 .experience__testimonials-wrapper {
-  width: 100vw;
+  width: 100%;
   padding: 25px;
   background-color: white;
   box-shadow: 5px 5px 50px #EEEEEE;

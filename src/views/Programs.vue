@@ -63,7 +63,7 @@ export default {
 }
 
 .programs__banner {
-  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1546515353/girl_reading.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.25)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1546515353/girl_reading.jpg');
   background-size: cover;
   background-position: center;
   height: 25vh;

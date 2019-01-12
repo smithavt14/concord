@@ -158,7 +158,7 @@ export default {
 }
 
 .about__banner {
-  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/front_desk.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.25)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/front_desk.jpg');
   background-size: cover;
   background-position: center;
   height: 25vh;
