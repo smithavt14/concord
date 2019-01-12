@@ -44,7 +44,7 @@ export default {
       <div class="programs__banner-bar-link">{{translation.groupLessons}}</div>
       <div class="programs__banner-bar-link">{{translation.camps}}</div>
     </div>
-    <div class="programs__calendar dynamic-width">
+    <div class="programs__calendar">
       <div class="programs__calendar-title">{{translation.calendarTitle}}</div>
       <div id='calendar'></div>
     </div>
@@ -56,7 +56,6 @@ export default {
 @import '../assets/fullcalendar.css';
 
 .programs__wrapper {
-  background-color: #FAFAFA;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +66,7 @@ export default {
   background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1546515353/girl_reading.jpg');
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 25vh;
   width: 100%;
   max-width: 1220px;
 }
@@ -94,7 +93,6 @@ export default {
 }
 
 .programs__calendar {
-  margin: 25px 0;
   width: 100vw;
   height: 500px;
   max-width: 1220px;
@@ -103,7 +101,11 @@ export default {
   justify-content: center;
   align-items: center;
   background: white;
+  box-shadow: 5px 5px 50px #EEEEEE;
+  margin: 15px 0;
 }
+
+/* ---------- Large Screen Styles ----------*/
 
 @media screen and (min-width: 751px) {
   .programs__banner-bar-link {
@@ -114,11 +116,9 @@ export default {
     width: 75%;
     overflow: hidden;
   }
-
-  .dynamic-width {
-    width: 80vw;
-  }
 }
+
+/* ---------- Small Screen Styles ----------*/
 
 @media screen and (max-width: 750px) {
   .programs__banner-bar-link {
@@ -126,12 +126,7 @@ export default {
   }
 
   #calendar {
-    width: 95%;
-  }
-
-  .dynamic-width {
-    width: 100vw;
-    border: 0;
+    width: 90%;
   }
 }
 

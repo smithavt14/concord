@@ -136,8 +136,6 @@ export default {
 @import '../assets/styles.scss';
 
 .experience__wrapper {
-  background-image: url('../assets/images/symphony.png');
-  background-repeat: repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,7 +146,7 @@ export default {
   background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 25vh;
   width: 100%;
   max-width: 1220px;
 }
@@ -168,73 +166,13 @@ export default {
   border-bottom: 3px solid white;
 }
 
-@media screen and (min-width: 751px) {
-
-  .experience__banner-bar-link {
-    margin: 0 25px;
-  }
-
-  .experience__EX-container {
-    width: 90vw;
-    height: 400px;
-    background-color: $light-gray;
-    margin: 25px 0;
-    display: flex;
-  }
-
-  .experience__EX-container-left {
-    height: 100%;
-    width: 50%;
-    padding: 20px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .experience__EX-container-right {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
+.experience__subtitle {
+  color: $concord-orange;
+  font-size: 15px;
+  margin: 5px 0;
 }
 
-@media screen and (max-width: 750px) {
-
-  .experience__banner-bar-link {
-    margin: 0 10px;
-  }
-
-  .experience__EX-container {
-    width: 90vw;
-    background-color: $light-gray;
-    margin: 25px 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .experience__EX-container-left {
-    height: 100%;
-    padding: 20px;
-    width: 100%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .experience__EX-container-right {
-    height: 100%;
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
+/* ----- Experience ----- */
 
 .experience__EX-container-right-image {
   background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Child_Reading.jpg');
@@ -256,48 +194,19 @@ export default {
   margin-bottom: 10px;
 }
 
+/* ----- Testimonials ----- */
+
 .experience__testimonials-wrapper {
   width: 100vw;
-  margin: 25px 0;
   padding: 25px;
   background-color: white;
+  box-shadow: 5px 5px 50px #EEEEEE;
+  margin: 15px 0;
 }
 
 .experience__testimonials-title {
   font-size: 25px;
   margin: 5px;
-}
-
-@media screen and (max-width: 750px) {
-  .experience__testimonials-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .experience__testimonials-container-side {
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 751px) {
-  .experience__testimonials-container {
-      display: flex;
-      justify-content: center;
-      max-width: 1220px;
-    }
-
-  .experience__testimonials-container-side {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 .experience__testimonial {
@@ -369,18 +278,70 @@ export default {
 
 .experience__photos-wrapper {
   width: 100%;
-  border: 25px solid $concord-orange;
   background: white;
-  margin: 25px 0;
+  box-shadow: 5px 5px 50px #EEEEEE;
+  margin: 15px 0;
 }
 
-.experience__subtitle {
-  color: $concord-orange;
-  font-size: 15px;
-  margin: 5px;
+.experience__photos-photo {
+  height: 100px;
+  background: black;
+  color: white;
+  margin: 10px 0;
 }
+
+/* ---------- Large Screen Styles ----------*/
 
 @media screen and (min-width: 751px) {
+
+  .experience__banner-bar-link {
+    margin: 0 25px;
+  }
+
+  .experience__EX-container {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    box-shadow: 5px 5px 50px #EEEEEE;
+  }
+
+  .experience__EX-container-left {
+    height: 100%;
+    width: 50%;
+    max-width: 450px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .experience__EX-container-right {
+    height: 100%;
+    width: 50%;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .experience__testimonials-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1220px;
+  }
+
+  .experience__testimonials-container-side {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .expereince__container {
     display: flex;
@@ -408,10 +369,57 @@ export default {
     font-weight: bolder;
     color: $concord-orange;
   }
-
 }
 
+/* ---------- Small Screen Styles ----------*/
+
 @media screen and (max-width: 750px) {
+
+  .experience__banner-bar-link {
+    margin: 0 10px;
+  }
+
+  .experience__EX-container {
+    width: 100vw;
+    background-color: white;
+    box-shadow: 5px 5px 50px #EEEEEE;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experience__EX-container-left {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .experience__EX-container-right {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .experience__testimonials-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .experience__testimonials-container-side {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .expereince__container {
     margin: 25px 0px;
@@ -432,13 +440,6 @@ export default {
     font-weight: bolder;
     color: $concord-orange;
   }
-}
-
-.experience__photos-photo {
-  height: 100px;
-  background: black;
-  color: white;
-  margin: 10px 0;
 }
 
 </style>

@@ -1,6 +1,7 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
+import programs from '@/utilities/programs'
 
 export default {
   name: 'home',
@@ -84,68 +85,7 @@ export default {
           id: 4
         }
       ],
-      programLinks: {
-        English: [
-          {
-            title: 'Private 1-on-1 Lessons',
-            age: 'Ages 3+',
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542113380/BA4A1634.jpg',
-            description: 'We offer a well-rounded musical experience in our private lessons which cover 5 fundamental elements of music learning: performing skills, music theory, music history and appreciation, ear training, and sight-reading.',
-            id: 1
-          },
-          {
-            title: 'Little Notes Music Foundation',
-            age: 'Ages 3 - 4',
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542113738/BA4A1598.jpg',
-            description: 'This is a fun introduction to music for children aged 3-4. The goal of the course is to instil an early interest in music and to give the students a solid music foundation.',
-            id: 2
-          },
-          {
-            title: 'Group Classes for Children',
-            age: 'All ages',
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/group-classes.jpg',
-            description: 'Group classes provide opportunities for ensemble playing and group activities which not only encourage social interaction, but can also boost leadership spirit, discipline, and good attitude towards sharing and team work.',
-            id: 3
-          },
-          {
-            title: 'Concord Choir',
-            age: 'Ages 6+',
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/Concord-singing.jpg',
-            description: 'Concord welcomes all singing lovers to join our choir! This is a long-term project to cultivate an interest in singing. Training includes sight singing, ear training, breathing exercise, diction and harmonisation singing.',
-            id: 4
-          }
-        ],
-        Chinese: [
-          {
-            title: '私人 一对一的课',
-            age: '3岁+',
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542113380/BA4A1634.jpg',
-            description: '我们的私教课程为孩子提供全面的音乐体验，它涵盖了5个音乐学习要素：表演技巧、音乐理论、音乐史与欣赏、听力训练和视奏能力.',
-            id: 1
-          },
-          {
-            title: '“小小音符” 音乐启蒙课',
-            age: '3 - 4岁',
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542113738/BA4A1598.jpg',
-            description: '小小音符音乐启蒙课程为3-4岁的孩子打开音乐之殿的大门，激发幼孩的音乐兴趣，作为1对1乐器课程前的铺垫和启蒙，让孩子以快乐的方式开始他们的音乐兴趣。',
-            id: 2
-          },
-          {
-            title: '儿童团课',
-            age: '2岁+',
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/group-classes.jpg',
-            description: '集体课为孩子提供合奏与互动的机会，这不仅促进沟通还能增强孩子的领导能力、纪律、分享及合作精神.',
-            id: 3
-          },
-          {
-            title: '搿艺合唱团',
-            age: '6岁+',
-            photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542114344/Concord-singing.jpg',
-            description: '搿艺欢迎爱唱歌的小朋友加入搿艺合唱! 这是搿艺为了培养歌唱兴趣的一个长期计划。学生在学习过程中，除了学会歌唱技巧，也可以培养团体精神。训练内容包括：视唱练耳、呼吸练习、语音能力训练和和声训练。',
-            id: 4
-          }
-        ]
-      }
+      programLinks: programs
     }
   }
 };
@@ -162,7 +102,7 @@ export default {
     </div>
 
     <!-- Who Are We -->
-    <div class="home__WAW-container">
+    <div class="home__WAW-wrapper">
       <div class="home__WAW-container-left">
         <div class="home__WAW-container-left-subtitle">{{translation.WAWsubtitle}}</div>
         <div class="home__WAW-container-left-title">{{translation.WAWtitle}}</div>
@@ -175,7 +115,7 @@ export default {
     </div>
 
     <!-- From our WeChat Account -->
-    <div class="home__FOB-container">
+    <div class="home__FOB-wrapper">
       <div class="home__FOB-title">{{translation.FOBtitle}}</div>
       <div class="home__FOB-card-container">
         <div v-for="post in WeChatlinks" :key="post.id" class="home__FOB-card">
@@ -187,7 +127,7 @@ export default {
     </div>
 
     <!-- Our Programs -->
-    <div class="home__OP-container">
+    <div class="home__OP-wrapper">
       <div class="home__OP-title">{{translation.OPtitle}}</div>
       <b-container class="home__OP-programs-container">
         <b-row>
@@ -259,70 +199,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 751px) {
-  .home__WAW-container {
-    width: 100%;
-    height: 500px;
-    background-color: white;
-    margin: 25px 0;
-    display: flex;
-    justify-content: center;
-    box-shadow: 5px 5px 50px #EEEEEE;
-  }
-
-  .home__WAW-container-left {
-    height: 90%;
-    width: 50%;
-    max-width: 450px;
-    padding: 20px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .home__WAW-container-right {
-    height: 100%;
-    width: 50%;
-    max-width: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .home__WAW-container {
-    width: 95%;
-    background-color: white;
-    box-shadow: 5px 5px 50px #EEEEEE;
-    margin: 25px 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .home__WAW-container-left {
-    height: 100%;
-    padding: 20px;
-    width: 100%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .home__WAW-container-right {
-    height: 100%;
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-}
+/*----- Who Are We ----- */
 
 .home__WAW-container-left-subtitle {
   color: $concord-orange;
@@ -368,21 +245,9 @@ export default {
   width: 90%;
 }
 
-@media screen and (min-width: 750px) {
+/* ----- From Our Blog ----- */
 
-  .home__banner-bar-text {
-    width: 50%;
-    text-align: left;
-  }
-}
-
-@media screen and (max-width: 749px) {
-  .home__banner-bar-text {
-    display: none;
-  }
-}
-
-.home__FOB-container {
+.home__FOB-wrapper {
   width: 100%;
   background-color: white;
   padding: 25px 0;
@@ -391,6 +256,7 @@ export default {
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px 50px #EEEEEE;
+  margin: 15px 0;
 }
 
 .home__FOB-card-container {
@@ -434,11 +300,13 @@ export default {
   color: $concord-orange;
 }
 
-.home__OP-container {
+/* ----- Our Programs ----- */
+
+.home__OP-wrapper {
   background-color: white;
   width: 100%;
   box-shadow: 5px 5px 50px #EEEEEE;
-  margin: 25px 0;
+  margin: 15px 0;
 }
 
 .home__OP-program {
@@ -512,5 +380,86 @@ export default {
     text-decoration: none;
   }
 }
+
+/* ----------------- Large Screen Styles ------------------ */
+
+@media screen and (min-width: 751px) {
+  .home__WAW-wrapper {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 50px #EEEEEE;
+    margin: 15px 0;
+  }
+
+  .home__WAW-container-left {
+    height: 90%;
+    width: 50%;
+    max-width: 450px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .home__WAW-container-right {
+    height: 100%;
+    width: 50%;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .home__banner-bar-text {
+    width: 50%;
+    text-align: left;
+  }
+}
+
+/* -------------------------------------------------------- */
+
+/* ----------------- Small Screen Styles ------------------ */
+
+@media screen and (max-width: 750px) {
+  .home__WAW-container {
+    width: 95%;
+    background-color: white;
+    box-shadow: 5px 5px 50px #EEEEEE;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home__WAW-container-left {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .home__WAW-container-right {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .home__banner-bar-text {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------- */
 
 </style>

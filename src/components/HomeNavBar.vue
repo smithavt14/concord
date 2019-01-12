@@ -199,7 +199,9 @@ export default {
     background: #FFF;
     border-radius: 50% 50% 50% 50%;
     transition: .5s ease-in-out;
-    box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    /*box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;*/
+    box-shadow: 0 0 25px #FEFEFEFE;
+
     cursor: pointer;
   }
 
