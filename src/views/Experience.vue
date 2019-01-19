@@ -162,6 +162,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .expereince__banner-bar-link-active {

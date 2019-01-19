@@ -65,10 +65,12 @@ export default {
   background-color: $concord-orange;
   height: 80px;
   width: 100vw;
+  max-width: 1220px;
   display: flex;
   align-items: center;
   justify-content: right;
   flex-direction: row-reverse;
+  margin-top: 15px;
 }
 
 .footer__address {

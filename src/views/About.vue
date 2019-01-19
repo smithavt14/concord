@@ -174,6 +174,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .about__subtitle {

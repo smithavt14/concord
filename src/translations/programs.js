@@ -5,7 +5,8 @@ const programs = {
     privateLessons: 'PRIVATE LESSONS',
     groupLessons: 'GROUP LESSONS',
     camps: 'CAMPS',
-    calendarTitle: 'CALENDAR'
+    calendarTitle: 'CALENDAR',
+    signup: 'Sign Up'
   },
   Chinese: {
     calendar: '日历',
@@ -13,7 +14,8 @@ const programs = {
     privateLessons: '要翻译',
     groupLessons: '要翻译',
     camps: '要翻译',
-    calendarTitle: '日历'
+    calendarTitle: '日历',
+    signup: '申请'
   }
 }
 

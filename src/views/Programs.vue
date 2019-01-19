@@ -51,10 +51,14 @@ export default {
       <div class="programs__banner-bar-link">{{translation.groupLessons}}</div>
       <div class="programs__banner-bar-link">{{translation.camps}}</div>
     </div>
+
+    <!-- Calendar -->
     <div class="programs__calendar-wrapper">
       <div class="programs__subtitle">{{translation.calendarTitle}}</div>
       <div id='calendar'></div>
     </div>
+
+    <!-- Courses -->
     <div class="programs__courses-wrapper">
       <div class="programs__subtitle">OUR COURSES</div>
       <div class="programs__OC-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, repellendus voluptas quod odio consequuntur ducimus dolorum non, quis, veniam voluptatibus commodi!</div>
@@ -64,17 +68,67 @@ export default {
       <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296645/foundation2.png" alt="" class="programs__OC-category-image">
       <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296649/supplemental.png" alt="" class="programs__OC-category-image">
     </div>
-    <div class="programs__private-lessons-wrapper">
-      <div class="programs__private-lessons-banner">
-        <div class="programs__private-lessons-banner-content">1-1 PRIVATE LESSONS</div>
+
+    <!-- Private Lessons -->
+    <div class="programs__lessons-wrapper">
+      <div class="programs__lessons-banner">
+        <div class="programs__lessons-banner-content">1-1 PRIVATE LESSONS</div>
       </div>
-      <div class="programs__subtitle">INSTRUMENTS</div>
-      <div class="programs__private-lessons-instrument-container">
-        <div v-for="instrument in instruments" class="programs__private-lessons" :key="instrument.id">
-          <img :src="instrument.img" alt="" class="programs__private-lessons-img">
+      <div class="programs__subtitle left">INSTRUMENTS</div>
+      <div class="programs__lessons-instrument-container">
+        <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
+          <div class="programs__lessons-img-container">
+            <img :src="instrument.img" alt="" class="programs__lessons-img">  
+          </div>
+          <div class="programs__lessons-title">{{instrument.name}}</div>
         </div>
       </div>
+      <div class="programs__lessons-description">
+        1-on-1 private lessons allow students to interact with the teacher in the most direct way. It also allows teachers to personalise a long-term learning plan around the child's character and interest, making the weekly lessons fun but also productive! With student's interest as goal of our teachers, our professional team is able to bring in rich resources with each teacher's own experience to help each child develop their musicality and interest.
+      </div>
+      <div class="programs__lessons-description">
+        We offer a well-rounded musical experience in our private lessons which cover 5 fundamental elements of music learning: performing skills, music theory, music history and appreciation, ear training, and sight-reading.
+      </div>
+      <div class="programs__lessons-description">
+        Every child has a different attention span, so the best way to determine a lesson length is to schedule a trial lesson with us and our teachers may recommend the lesson length based on their experience. To maintain your child's interest in the instrument and based on children's limited attention span, we recommend the following:
+      </div>
+      <div class="programs__lessons-age-time-container">
+        <div class="programs__lessons-age-time">
+          <div class="programs__lessons-age">Age 3-7</div>
+          <div class="programs__lessons-time">30 minutes</div>
+        </div>
+        <div class="programs__lessons-age-time">
+          <div class="programs__lessons-age">Age 8+</div>
+          <div class="programs__lessons-time">45 minutes</div>
+        </div>
+        <div class="programs__lessons-age-time">
+          <div class="programs__lessons-age">Adult</div>
+          <div class="programs__lessons-time">60 minutes</div>
+        </div>
+      </div>
+      <router-link to="/apply" class="programs__lessons-signup">{{translation.signup}}</router-link>
     </div>
+
+    <!-- Group Lessons -->
+    <div class=programs__lessons-wrapper>
+      <div class="programs__group-lessons-banner">
+        <div class="programs__lessons-banner-content">GROUP LESSONS</div>
+      </div>
+      <div class="programs__subtitle left">INSTRUMENTS</div>
+      <div class="programs__lessons-instrument-container">
+        <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
+          <div class="programs__lessons-img-container">
+            <img :src="instrument.img" alt="" class="programs__lessons-img">  
+          </div>
+          <div class="programs__lessons-title">{{instrument.name}}</div>
+        </div>
+      </div>
+      <div class="programs__lessons-description">
+        Group classes provide opportunities for ensemble playing and group activities which not only encourage social interaction, but can also boost leadership spirit, discipline, and good attitude towards sharing and team work. Our group class teaching methods improve the musicality, interest and appreciation of young students by stimulating different senses (visual, verbal, auditory and movements). Group classes can be a fun start for young children (aged 2-4), planting seeds of interest before the chid is ready for 1-on-1 lessons.
+      </div>
+      <router-link to="/apply" class="programs__lessons-signup">{{translation.signup}}</router-link>
+    </div>
+
   </div>
 </template>
 
@@ -109,6 +163,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .programs__banner-bar-link-active {
@@ -119,6 +174,12 @@ export default {
   color: $concord-orange;
   font-size: 15px;
   margin: 5px;
+}
+
+.left {
+  width: 75%;
+  text-align: left;
+  margin: 15px 0px;
 }
 
 .programs__calendar-wrapper {
@@ -143,6 +204,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px 0px;
 }
 
 .programs__OC-description {
@@ -167,7 +229,7 @@ export default {
   margin: 15px 0;
 }
 
-.programs__private-lessons-wrapper {
+.programs__lessons-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -178,7 +240,7 @@ export default {
   margin: 15px 0;
 }
 
-.programs__private-lessons-banner {
+.programs__lessons-banner {
   width: 100%;
   height: 15vh;
   background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1547298621/BA4A1645_1.png');
@@ -190,22 +252,114 @@ export default {
   justify-content: center;
 }
 
-.programs__private-lessons-banner-content {
+.programs__group-lessons-banner {
+  width: 100%;
+  height: 15vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1547875702/BA4A1584.jpg');
+  background-size: cover;
+  background-position: 10% 25%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.programs__lessons-banner-content {
   font-size: 25px;
   color: white;
   font-weight: bold;
 }
 
-.programs__private-lessons-instrument-container {
+.programs__lessons-instrument-container {
   display: flex;
   width: 75%;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.programs__private-lessons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.programs__lessons-img-container {
+  height: 55px;
+  width: 55px;
+  border-radius: 50px;
+  background: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.programs__lessons-img {
+  height: 35px;
+  margin: 0 15px;
+}
+
+.programs__lessons-description {
+  width: 75%;
+  text-align: left;
   margin: 15px 0;
 }
 
-.programs__private-lessons-img {
-  height: 40px;
-  margin: 0 15px;
+.programs__lessons-age-time-container {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.programs__lessons-age-time {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.programs__lessons-age {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.programs__lessons-time {
+  width: 100%;
+  height: 50px;
+  border-top: 2px solid $concord-orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.programs__lessons-signup {
+  padding: 10px 20px;
+  color: $concord-orange;
+  border: 2px solid $concord-orange;
+  border-radius: 50px;
+  width: 115px;
+  margin: 15px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background: $concord-orange;
+  }
+}
+
+.programs__lessons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
 
 

@@ -176,7 +176,8 @@ export default {
   align-items: center;
   justify-content: space-around;
   background-color: $concord-orange;
-  color: white
+  color: white;
+  margin-bottom: 15px;
 }
 
 .home__banner-bar-title {
