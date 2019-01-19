@@ -1,4 +1,4 @@
-const programs = {
+const homePrograms = {
   English: [
     {
       title: 'Private 1-on-1 Lessons',
@@ -61,4 +61,4 @@ const programs = {
   ]
 }
 
-export default programs
+export default homePrograms

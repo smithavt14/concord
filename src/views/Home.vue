@@ -1,7 +1,7 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
-import programs from '@/utilities/programs'
+import homePrograms from '@/utilities/home_programs'
 
 export default {
   name: 'home',
@@ -85,7 +85,7 @@ export default {
           id: 4
         }
       ],
-      programLinks: programs
+      programLinks: homePrograms
     }
   }
 };

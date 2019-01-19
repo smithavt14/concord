@@ -5,6 +5,7 @@ import $ from 'jquery'
 import 'fullcalendar'
 import events from '@/utilities/events'
 import instruments from '@/utilities/instruments'
+import programs from '@/utilities/programs_programs'
 
 export default {
   name: 'programs',
@@ -20,6 +21,10 @@ export default {
   computed: {
     translation () {
       return translation.programs[globalData.language]
+    },
+
+    translatedPrograms() {
+      return programs[globalData.language]
     }
   },
 
@@ -72,7 +77,7 @@ export default {
     <!-- Private Lessons -->
     <div class="programs__lessons-wrapper">
       <div class="programs__lessons-banner">
-        <div class="programs__lessons-banner-content">1-1 PRIVATE LESSONS</div>
+        <div class="programs__banner-content">1-1 PRIVATE LESSONS</div>
       </div>
       <div class="programs__subtitle left">INSTRUMENTS</div>
       <div class="programs__lessons-instrument-container">
@@ -112,7 +117,7 @@ export default {
     <!-- Group Lessons -->
     <div class=programs__lessons-wrapper>
       <div class="programs__group-lessons-banner">
-        <div class="programs__lessons-banner-content">GROUP LESSONS</div>
+        <div class="programs__banner-content">GROUP LESSONS</div>
       </div>
       <div class="programs__subtitle left">INSTRUMENTS</div>
       <div class="programs__lessons-instrument-container">
@@ -127,6 +132,21 @@ export default {
         Group classes provide opportunities for ensemble playing and group activities which not only encourage social interaction, but can also boost leadership spirit, discipline, and good attitude towards sharing and team work. Our group class teaching methods improve the musicality, interest and appreciation of young students by stimulating different senses (visual, verbal, auditory and movements). Group classes can be a fun start for young children (aged 2-4), planting seeds of interest before the chid is ready for 1-on-1 lessons.
       </div>
       <router-link to="/apply" class="programs__lessons-signup">{{translation.signup}}</router-link>
+    </div>
+
+    <!-- Early Years -->
+    <div class="programs__early-years-wrapper">
+      <div class="programs__early-years-banner">
+        <div class="programs__banner-content">EARLY YEARS</div>
+      </div>
+      <div class="programs__early-years-program-container">
+        <div v-for="program in translatedPrograms" class="programs__program-container" :key="program.id">
+          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}"></div>
+          <div>
+            {{program.title}}
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -264,7 +284,7 @@ export default {
   justify-content: center;
 }
 
-.programs__lessons-banner-content {
+.programs__banner-content {
   font-size: 25px;
   color: white;
   font-weight: bold;
@@ -360,6 +380,51 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center
+}
+
+.programs__early-years-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 5px 5px 50px #EEEEEE;
+  margin: 15px 0;
+}
+
+.programs__early-years-banner {
+  width: 100%;
+  height: 15vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
+  background-size: cover;
+  background-position: 10% 25%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.programs__early-years-program-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  width: 100%;
+  overflow: auto;
+}
+
+.programs__program-container {
+  border: 1px solid black;
+  margin: 15px 50px;
+  flex-shrink: 0;
+}
+
+.programs__program-container-img {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: cover;
+  overflow: hidden;
 }
 
 
