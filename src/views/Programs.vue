@@ -51,13 +51,13 @@ export default {
     <div class="programs__banner"></div>
     <div class="programs__banner-bar">
       <div class="programs__banner-bar-link">{{translation.calendar}}</div>
-      <div class="programs__banner-bar-link">{{translation.earlyYears}}</div>
+      <div class="programs__banner-bar-link">{{translation.earlyYearsPrograms}}</div>
       <div class="programs__banner-bar-link">{{translation.privateLessons}}</div>
       <div class="programs__banner-bar-link">{{translation.groupLessons}}</div>
       <div class="programs__banner-bar-link">{{translation.camps}}</div>
 
       <!-- Mobile Banner Title -->
-      <div class="programs__mobile-banner-title">PROGRAMS</div>
+      <div class="programs__mobile-banner-title">{{translation.programs}}</div>
     </div>
 
     <!-- Calendar -->
@@ -68,9 +68,9 @@ export default {
 
     <!-- Courses -->
     <div class="programs__courses-wrapper">
-      <div class="programs__subtitle">OUR COURSES</div>
+      <div class="programs__subtitle">{{translation.ourPrograms}}</div>
       <div class="programs__OC-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, repellendus voluptas quod odio consequuntur ducimus dolorum non, quis, veniam voluptatibus commodi!</div>
-      <div class="programs__OC-category-title">Early Years Music Programs</div>
+      <div class="programs__OC-category-title">{{translation.ocTitle}}</div>
       <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296631/early-years.png" alt="" class="programs__OC-category-image">
       <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296635/foundation.png" alt="" class="programs__OC-category-image">
       <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296645/foundation2.png" alt="" class="programs__OC-category-image">
@@ -80,10 +80,10 @@ export default {
     <!-- Private Lessons -->
     <div class="programs__lessons-wrapper">
       <div class="programs__lessons-banner">
-        <div class="programs__banner-content">1-1 PRIVATE LESSONS</div>
+        <div class="programs__banner-content">{{translation.privateLessonsTitle}}</div>
       </div>
       <div class="programs__subtitle left">
-        INSTRUMENTS
+        {{translation.instruments}}
 
         <!-- Mobile Scroll Indicator -->
         <div class="scroll-indicator-container instruments-title-right">
@@ -100,27 +100,21 @@ export default {
           <div class="programs__lessons-title">{{instrument.name}}</div>
         </div>
       </div>
-      <div class="programs__lessons-description">
-        1-on-1 private lessons allow students to interact with the teacher in the most direct way. It also allows teachers to personalise a long-term learning plan around the child's character and interest, making the weekly lessons fun but also productive! With student's interest as goal of our teachers, our professional team is able to bring in rich resources with each teacher's own experience to help each child develop their musicality and interest.
-      </div>
-      <div class="programs__lessons-description">
-        We offer a well-rounded musical experience in our private lessons which cover 5 fundamental elements of music learning: performing skills, music theory, music history and appreciation, ear training, and sight-reading.
-      </div>
-      <div class="programs__lessons-description">
-        Every child has a different attention span, so the best way to determine a lesson length is to schedule a trial lesson with us and our teachers may recommend the lesson length based on their experience. To maintain your child's interest in the instrument and based on children's limited attention span, we recommend the following:
-      </div>
+      <div class="programs__lessons-description">{{translation.privateLessonsDescription1}}</div>
+      <div class="programs__lessons-description">{{translation.privateLessonsDescription2}}</div>
+      <div class="programs__lessons-description">{{translation.privateLessonsDescription3}}</div>
       <div class="programs__lessons-age-time-container">
         <div class="programs__lessons-age-time">
-          <div class="programs__lessons-age">Age 3-7</div>
-          <div class="programs__lessons-time">30 minutes</div>
+          <div class="programs__lessons-age">{{translation.age1}}</div>
+          <div class="programs__lessons-time">{{translation.minutes1}}</div>
         </div>
         <div class="programs__lessons-age-time">
-          <div class="programs__lessons-age">Age 8+</div>
-          <div class="programs__lessons-time">45 minutes</div>
+          <div class="programs__lessons-age">{{translation.age2}}</div>
+          <div class="programs__lessons-time">{{translation.minutes2}}</div>
         </div>
         <div class="programs__lessons-age-time">
-          <div class="programs__lessons-age">Adult</div>
-          <div class="programs__lessons-time">60 minutes</div>
+          <div class="programs__lessons-age">{{translation.age3}}</div>
+          <div class="programs__lessons-time">{{translation.minutes2}}</div>
         </div>
       </div>
       <router-link to="/apply" class="programs__lessons-signup">{{translation.signup}}</router-link>
@@ -129,10 +123,10 @@ export default {
     <!-- Group Lessons -->
     <div class=programs__lessons-wrapper>
       <div class="programs__group-lessons-banner">
-        <div class="programs__banner-content">GROUP LESSONS</div>
+        <div class="programs__banner-content">{{translation.groupTitle}}</div>
       </div>
       <div class="programs__subtitle left">
-        INSTRUMENTS
+        {{translation.instruments}}
 
         <!-- Mobile Scroll Indicator -->
         <div class="scroll-indicator-container instruments-title-right">
@@ -149,21 +143,19 @@ export default {
           <div class="programs__lessons-title">{{instrument.name}}</div>
         </div>
       </div>
-      <div class="programs__lessons-description">
-        Group classes provide opportunities for ensemble playing and group activities which not only encourage social interaction, but can also boost leadership spirit, discipline, and good attitude towards sharing and team work. Our group class teaching methods improve the musicality, interest and appreciation of young students by stimulating different senses (visual, verbal, auditory and movements). Group classes can be a fun start for young children (aged 2-4), planting seeds of interest before the chid is ready for 1-on-1 lessons.
-      </div>
+      <div class="programs__lessons-description">{{translation.groupDescription}}</div>
       <router-link to="/apply" class="programs__lessons-signup">{{translation.signup}}</router-link>
     </div>
 
     <!-- Early Years -->
     <div class="programs__early-years-wrapper">
       <div class="programs__early-years-banner">
-        <div class="programs__banner-content">EARLY YEARS</div>
+        <div class="programs__banner-content">{{translation.earlyYearsTitle}}</div>
       </div>
 
       <!-- Program Cards -->
       <div class="programs__early-years-title programs__subtitle">
-        PROGRAM LIST
+        {{translation.programs}}
 
         <!-- Mobile Scroll Indicator -->
         <div class="scroll-indicator-container instruments-title-right">
@@ -180,9 +172,9 @@ export default {
             </div>
           </div>
           <div class="programs__program-container-bottom">
-            <div class="programs__program-container-subtitle programs__subtitle">Age</div>
+            <div class="programs__program-container-subtitle programs__subtitle">{{translation.ageTitle}}</div>
             <div class="programs__program-container-age">{{program.age}}</div>
-            <div class="programs__program-container-subtitle programs__subtitle">DESCRIPTION</div>
+            <div class="programs__program-container-subtitle programs__subtitle">{{translation.descriptionTitle}}</div>
             <div class="programs__program-container-description">{{program.description}}</div>
             <router-link to="/apply" class="programs__lessons-signup container-bottom">{{translation.signup}}</router-link>
           </div>
@@ -379,7 +371,6 @@ export default {
 }
 
 .programs__lessons-age-time {
-  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -624,6 +615,10 @@ $animation-delay: .1s;
   }
 
   .programs__early-years-program-container {
+    width: 90%;
+  }
+
+  .programs__lessons-age-time-container {
     width: 90%;
   }
 }
