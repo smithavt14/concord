@@ -65,7 +65,7 @@ export default {
   background-color: $concord-orange;
   height: 80px;
   width: 100vw;
-  max-width: 1220px;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: right;

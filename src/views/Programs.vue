@@ -139,11 +139,22 @@ export default {
       <div class="programs__early-years-banner">
         <div class="programs__banner-content">EARLY YEARS</div>
       </div>
+
+      <!-- Program Cards -->
+      <div class="programs__early-years-title programs__subtitle">PROGRAM LIST</div>
       <div class="programs__early-years-program-container">
         <div v-for="program in translatedPrograms" class="programs__program-container" :key="program.id">
-          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}"></div>
-          <div>
-            {{program.title}}
+          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
+            <div class="programs__program-container-name">
+              {{program.title}}
+            </div>
+          </div>
+          <div class="programs__program-container-bottom">
+            <div class="programs__program-container-subtitle programs__subtitle">Age</div>
+            <div class="programs__program-container-age">{{program.age}}</div>
+            <div class="programs__program-container-subtitle programs__subtitle">DESCRIPTION</div>
+            <div class="programs__program-container-description">{{program.description}}</div>
+            <router-link to="/apply" class="programs__lessons-signup container-bottom">{{translation.signup}}</router-link>
           </div>
         </div>
       </div>
@@ -162,7 +173,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  max-width: 1220px;
+  max-width: 1440px;
 }
 
 .programs__banner {
@@ -262,7 +273,7 @@ export default {
 
 .programs__lessons-banner {
   width: 100%;
-  height: 15vh;
+  height: 25vh;
   background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1547298621/BA4A1645_1.png');
   background-size: cover;
   background-position: center;
@@ -274,7 +285,7 @@ export default {
 
 .programs__group-lessons-banner {
   width: 100%;
-  height: 15vh;
+  height: 25vh;
   background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1547875702/BA4A1584.jpg');
   background-size: cover;
   background-position: 10% 25%;
@@ -368,6 +379,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   &:hover {
     text-decoration: none;
     color: white;
@@ -395,7 +407,7 @@ export default {
 
 .programs__early-years-banner {
   width: 100%;
-  height: 15vh;
+  height: 25vh;
   background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
   background-size: cover;
   background-position: 10% 25%;
@@ -408,25 +420,70 @@ export default {
 .programs__early-years-program-container {
   display: flex;
   justify-content: space-between;
-  margin: 15px 0;
   width: 100%;
   overflow: auto;
 }
 
 .programs__program-container {
-  border: 1px solid black;
+  border: 1px solid $light-gray;
+  border-radius: 6px;
+  overflow: hidden;
   margin: 15px 50px;
   flex-shrink: 0;
+  width: 450px;
+  box-shadow: 5px 5px 25px #EEEEEE;
 }
 
 .programs__program-container-img {
-  height: 250px;
-  width: 250px;
+  height: 150px;
   background-size: cover;
-  background-position: cover;
+  background-position: center;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 8px;
 }
 
+.programs__program-container-name {
+  font-size: 18px;
+  color: white;
+  width: 95%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.programs__early-years-title {
+  margin: 15px 0 0 0;
+}
+
+.programs__program-container-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
+}
+
+.programs__program-container-subtitle {
+  width: 95%;
+  text-align: left;
+  margin: 15px 0 0 0;
+}
+
+.programs__program-container-description {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  text-align: left;
+}
+
+.programs__program-container-age {
+  width: 95%;
+  text-align: left;
+}
 
 /* ---------- Large Screen Styles ----------*/
 

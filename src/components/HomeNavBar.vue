@@ -92,7 +92,7 @@ export default {
 .HomeNavBar__wrapper {
   height: 150px;
   width: 100vw;
-  max-width: 1220px;
+  max-width: 1440px;
   margin: 0 auto;
   background: $opaque;
   display: flex;

@@ -41,7 +41,7 @@ export default {
   left: 0;
   right: 0;
   width: 100vw;
-  max-width: 1220px;
+  max-width: 1440px;
   margin: 0 auto;
   z-index: 10;
 }
