@@ -2,6 +2,7 @@
 import translation from '@/translations/translation'
 import globalData from '@/main'
 import homePrograms from '@/utilities/home_programs'
+import Swiper from 'swiper'
 
 export default {
   name: 'home',
@@ -15,46 +16,8 @@ export default {
     }
   },
 
-  methods: {
-
-    // getAppSecret() {
-    //   const appId = 'wx697043c8d4552e7a'
-    //   const appSecret = 'f20236e55dd9783b264d6d515bb09cd7'
-    //   console.log('Launch getAppSecret')
-    //   const apiBase = 'https://cors-anywhere.herokuapp.com'
-    //   fetch(`${apiBase}/https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${appId}&appsecret=${appSecret}`, {
-    //     method: 'GET',
-    //     mode: "cors",
-    //     dataType: 'jsonp',
-    //     headers: {  'Access-Control-Allow-Origin': '54.159.160.145' }
-    //   })
-    //     .then(data => console.log(JSON.stringify(data)))
-    // },
-
-    getWeChatArticles () {
-      fetch('')
-    }
-  },
-
-  created () {
-    // this.getAppSecret()
-  },
-
-  // https请求方式: GET
-  // https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
-
-  // APP ID: wx697043c8d4552e7a
-  // APP Secret: f20236e55dd9783b264d6d515bb09cd7
-
-  // http请求方式: POST
-  // https://api.weixin.qq.com/cgi-bin/material/batchget_material?access_token=ACCESS_TOKEN
-
-  // Help Link: https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1444738734
-
   data () {
     return {
-      appId: 'wx697043c8d4552e7a',
-      appSecret: 'f20236e55dd9783b264d6d515bb09cd7',
       WeChatlinks: [
         {
           title: 'Piano Solo Recital: A Night of Spanish Music',
@@ -87,8 +50,22 @@ export default {
       ],
       programLinks: homePrograms
     }
+  },
+
+  mounted() {
+    var mySwiper = new Swiper ('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 2000,
+      }
+    })
   }
-};
+
+}
 
 </script>
 
@@ -121,15 +98,21 @@ export default {
     <!-- From our WeChat Account -->
     <div class="home__FOB-wrapper">
       <div class="home__FOB-title">{{translation.FOBtitle}}</div>
-      <div class="home__FOB-card-container">
-        <div v-for="post in WeChatlinks" :key="post.id" class="home__FOB-card">
-          <a :href="post.link"><img :src="post.photo" :href="post.link" class="home__FOB-card-photo"></a>
-          <div class="home__FOB-card-title">{{ post.title }}</div>
-          <div class="home__FOB-card-date">{{ post.date }}</div>
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <div v-for="post in WeChatlinks" :key="post.id" class="swiper-slide">
+            <a :href="post.link"><img :src="post.photo" :href="post.link" class="home__FOB-card-photo"></a>
+            <div class="home__FOB-card-title">{{ post.title }}</div>
+            <div class="home__FOB-card-date">{{ post.date }}</div>
+          </div>
         </div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-prev orange"></div>
+        <div class="swiper-button-next orange"></div>
       </div>
     </div>
-
     <!-- Our Programs -->
     <div class="home__OP-wrapper">
       <div class="home__OP-title">{{translation.OPtitle}}</div>
@@ -152,6 +135,16 @@ export default {
 
 <style lang="scss">
 @import '../assets/styles.scss';
+@import '../assets/swiper.css';
+
+.orange {
+  color: orange;
+}
+
+.swiper-container {
+  width: 90vw;
+  height: 300px;
+}
 
 .home__wrapper {
   width: 100vw;
@@ -263,8 +256,7 @@ export default {
 }
 
 .home__FOB-card-photo {
-  height: 225px;
-  width: 300px;
+  height: 75%;
   object-fit: cover;
   box-shadow: 2px 2px 10px gray;
   margin-bottom: 10px;
@@ -448,6 +440,10 @@ export default {
 
   .home__banner-bar-btn {
     display: none
+  }
+
+  .home__FOB-card-photo {
+    width: 100%;
   }
 
   .home__WAW-wrapper {

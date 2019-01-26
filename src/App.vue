@@ -11,7 +11,6 @@ export default {
   }
 }
 </script>
-
 <template>
   <div id="app">
     <HomeNavBar id="navbar"></HomeNavBar>
