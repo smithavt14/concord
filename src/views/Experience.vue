@@ -46,7 +46,7 @@ export default {
       <div class="experience__banner-bar-link">{{translation.videos}}</div>
 
       <!-- Mobile Banner Link -->
-      <div class="experience__banner-bar-link dropDown">{{translation.dropDown}}</div>
+      <div class="experience__mobile-banner-title">{{translation.experience}}</div>
     </div>
 
     <!-- Experience -->
@@ -297,6 +297,10 @@ export default {
 
 @media screen and (min-width: 751px) {
 
+  .experience__mobile-banner-title {
+    display: none;
+  }
+
   .experience__banner-bar-link {
     margin: 0 25px;
   }
@@ -378,8 +382,13 @@ export default {
 
 @media screen and (max-width: 750px) {
 
+  .experience__mobile-banner-title {
+    color: white;
+    font-size: 25px;
+  }
+
   .experience__banner-bar-link {
-    margin: 0 10px;
+    display: none;
   }
 
   .experience__EX-container {

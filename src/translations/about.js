@@ -1,5 +1,6 @@
 const about = {
   English: {
+    about: 'ABOUT',
     dropDown: 'Read More',
     philosophy: 'PHILOSOPHY',
     location: 'LOCATION',
@@ -17,6 +18,7 @@ const about = {
     OPAcontent: 'Concord has the experience of working with international institutions to provide 1-on-1 instrument program and after-school music program. We have the experience of helping a school to establish a professional music program and our team is highly professional in maintaining our lesson quality. Based on your group\'s demand and interest, we are also able to personalise our program to suit your schools philosophy and vision. Please contact us if you are interested in collaborating with us.'
   },
   Chinese: {
+    about: '关于我们',
     dropDown: 'Read More',
     philosophy: '要翻译',
     location: '要翻译',

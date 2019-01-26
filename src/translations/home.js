@@ -1,5 +1,6 @@
 const home = {
   English: {
+    bannerMobileTitle: 'Concord Music',
     bannerBarTitle: 'Music Programs',
     bannerBarText: 'Concord Music is Shanghai’s leading provider of private 1-on-1 music lessons to children under the age of 12 years.',
     learnMore: 'Learn More',
@@ -11,6 +12,7 @@ const home = {
     OPtitle: 'OUR PROGRAMS'
   },
   Chinese: {
+    bannerMobileTitle: '搿艺音乐',
     bannerBarTitle: '音乐项目',
     bannerBarText: '(还没翻译)',
     learnMore: '了解',

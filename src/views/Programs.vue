@@ -55,6 +55,9 @@ export default {
       <div class="programs__banner-bar-link">{{translation.privateLessons}}</div>
       <div class="programs__banner-bar-link">{{translation.groupLessons}}</div>
       <div class="programs__banner-bar-link">{{translation.camps}}</div>
+
+      <!-- Mobile Banner Title -->
+      <div class="programs__mobile-banner-title">PROGRAMS</div>
     </div>
 
     <!-- Calendar -->
@@ -79,7 +82,16 @@ export default {
       <div class="programs__lessons-banner">
         <div class="programs__banner-content">1-1 PRIVATE LESSONS</div>
       </div>
-      <div class="programs__subtitle left">INSTRUMENTS</div>
+      <div class="programs__subtitle left">
+        INSTRUMENTS
+
+        <!-- Mobile Scroll Indicator -->
+        <div class="scroll-indicator-container instruments-title-right">
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
       <div class="programs__lessons-instrument-container">
         <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
           <div class="programs__lessons-img-container">
@@ -119,7 +131,16 @@ export default {
       <div class="programs__group-lessons-banner">
         <div class="programs__banner-content">GROUP LESSONS</div>
       </div>
-      <div class="programs__subtitle left">INSTRUMENTS</div>
+      <div class="programs__subtitle left">
+        INSTRUMENTS
+
+        <!-- Mobile Scroll Indicator -->
+        <div class="scroll-indicator-container instruments-title-right">
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
       <div class="programs__lessons-instrument-container">
         <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
           <div class="programs__lessons-img-container">
@@ -141,7 +162,16 @@ export default {
       </div>
 
       <!-- Program Cards -->
-      <div class="programs__early-years-title programs__subtitle">PROGRAM LIST</div>
+      <div class="programs__early-years-title programs__subtitle">
+        PROGRAM LIST
+
+        <!-- Mobile Scroll Indicator -->
+        <div class="scroll-indicator-container instruments-title-right">
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
       <div class="programs__early-years-program-container">
         <div v-for="program in translatedPrograms" class="programs__program-container" :key="program.id">
           <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
@@ -167,6 +197,11 @@ export default {
 @import '../assets/styles.scss';
 @import '../assets/fullcalendar.css';
 
+.programs__OT-bootstrap-row {
+  display: flex;
+  justify-content: space-around;
+}
+
 .programs__wrapper {
   display: flex;
   flex-direction: column;
@@ -182,13 +217,13 @@ export default {
   background-position: center;
   height: 25vh;
   width: 100%;
-  max-width: 1220px;
+  max-width: 1440px;
 }
 
 .programs__banner-bar {
   height: 80px;
   width: 100%;
-  max-width: 1220px;
+  max-width: 1440px;
   background-color: $concord-orange;
   color: white;
   display: flex;
@@ -205,6 +240,8 @@ export default {
   color: $concord-orange;
   font-size: 15px;
   margin: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .left {
@@ -216,7 +253,7 @@ export default {
 .programs__calendar-wrapper {
   width: 100%;
   height: 500px;
-  max-width: 1220px;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -247,11 +284,6 @@ export default {
 .programs__OC-category-title {
   font-size: 15px;
   color: $concord-orange;
-  margin: 15px 0;
-}
-
-.programs__OC-image {
-  height: 500px;
   margin: 15px 0;
 }
 
@@ -306,6 +338,8 @@ export default {
   width: 75%;
   justify-content: space-between;
   margin-bottom: 15px;
+  position: relative;
+  align-items: start;
 }
 
 .programs__private-lessons {
@@ -333,7 +367,7 @@ export default {
 .programs__lessons-description {
   width: 75%;
   text-align: left;
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
 
 .programs__lessons-age-time-container {
@@ -420,7 +454,7 @@ export default {
 .programs__early-years-program-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 75%;
   overflow: auto;
 }
 
@@ -428,7 +462,7 @@ export default {
   border: 1px solid $light-gray;
   border-radius: 6px;
   overflow: hidden;
-  margin: 15px 50px;
+  margin: 15px 25px;
   flex-shrink: 0;
   width: 450px;
   box-shadow: 5px 5px 25px #EEEEEE;
@@ -456,6 +490,8 @@ export default {
 
 .programs__early-years-title {
   margin: 15px 0 0 0;
+  width: 75%;
+  text-align: center;
 }
 
 .programs__program-container-bottom {
@@ -478,11 +514,29 @@ export default {
   justify-content: center;
   width: 95%;
   text-align: left;
+  overflow: auto;
 }
 
 .programs__program-container-age {
   width: 95%;
   text-align: left;
+}
+
+$animation-delay: .1s;
+
+.scroll-arrow {
+  width: 12px;
+  height: 12px;
+  transform: rotate(-45deg);
+  border-right: 2px solid $concord-orange;
+  border-bottom: 2px solid $concord-orange;
+  animation: arrow-wave 1s infinite;
+  animation-direction: alternate;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-delay: $animation-delay*$i;
+    }
+  }
 }
 
 /* ---------- Large Screen Styles ----------*/
@@ -492,9 +546,17 @@ export default {
     margin: 0 25px;
   }
 
+  .programs__mobile-banner-title {
+    display: none;
+  }
+
   #calendar {
     width: 75%;
     overflow: hidden;
+  }
+
+  .scroll-indicator-container {
+    display: none;
   }
 }
 
@@ -505,8 +567,76 @@ export default {
     display: none;
   }
 
+  .programs__mobile-banner-title {
+    color: white;
+    font-size: 25px;
+  }
+
   #calendar {
     width: 90%;
+  }
+
+  .programs__OC-description {
+    width: 90%;
+  }
+
+  .programs__OC-category-image {
+    width: 95%;
+    margin: 15px 0;
+  }
+
+  .left {
+    width: 90%;
+  }
+
+  .programs__lessons-instrument-container {
+    overflow: auto;
+    width: 90%;
+  }
+
+  .programs__lessons {
+    margin: 0 15px;
+  }
+
+  .programs__lessons-description {
+    width: 90%;
+  }
+
+  .programs__program-container {
+    width: 350px;
+    margin: 15px 15px 15px 0;
+  }
+
+  .scroll-indicator-container {
+    display: flex;
+  }
+
+  .instruments-title-right {
+    position: absolute;
+    right: 15px;
+  }
+
+  .programs__early-years-title {
+    width: 90%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  .programs__early-years-program-container {
+    width: 90%;
+  }
+}
+
+@keyframes arrow-wave {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

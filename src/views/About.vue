@@ -54,8 +54,8 @@ export default {
       <div class="about__banner-bar-link">{{translation.team}}</div>
       <div class="about__banner-bar-link">{{translation.offsite}}</div>
 
-      <!-- Mobile Banner Link -->
-      <div class="about__banner-bar-link dropDown">{{translation.dropDown}}</div>
+      <!-- Mobile Banner Title -->
+      <div class="about__mobile-banner-title">{{translation.about}}</div>
     </div>
 
     <!-- Our Philosophy -->
@@ -416,6 +416,10 @@ export default {
     }
   }
 
+  .about__mobile-banner-title {
+    display: none;
+  }
+
   .dropDown {
     display: none;
   }
@@ -465,8 +469,6 @@ export default {
   }
 }
 
-/*--------------------------------------------------*/
-
 /*--------------- Small Screen Style ---------------*/
 
 @media screen and (max-width: 750px) {
@@ -512,6 +514,11 @@ export default {
     }
   }
 
+  .about__mobile-banner-title {
+    font-size: 25px;
+    color: white;
+  }
+
   .about__map-overlay {
    display: none;
   }
@@ -550,7 +557,5 @@ export default {
     position: relative;
   }
 }
-
-/*--------------------------------------------------*/
 
 </style>

@@ -99,6 +99,10 @@ export default {
       <div class="home__banner-bar-title">{{translation.bannerBarTitle}}</div>
       <div class="home__banner-bar-text">{{translation.bannerBarText}}</div>
       <router-link to="/programs" class="home__banner-bar-btn">{{translation.learnMore}}</router-link>
+
+      <!-- Mobile Banner Title -->
+      <div class="home__mobile-banner-logo"></div>
+      <div class="home__mobile-banner-title">{{translation.bannerMobileTitle}}</div>
     </div>
 
     <!-- Who Are We -->
@@ -178,26 +182,6 @@ export default {
   background-color: $concord-orange;
   color: white;
   margin-bottom: 15px;
-}
-
-.home__banner-bar-title {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.home__banner-bar-btn {
-  width: 120px;
-  font-size: 18px;
-  padding: 10px 0;
-  border: 2px solid white;
-  border-radius: 50px;
-  text-decoration: none;
-  color: white;
-  &:hover {
-    background-color: white;
-    color: $concord-orange;
-    text-decoration: none;
-  }
 }
 
 /*----- Who Are We ----- */
@@ -394,6 +378,26 @@ export default {
     margin: 15px 0;
   }
 
+  .home__banner-bar-title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .home__banner-bar-btn {
+    width: 120px;
+    font-size: 18px;
+    padding: 10px 0;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: $concord-orange;
+      text-decoration: none;
+    }
+  }
+
   .home__WAW-container-left {
     height: 90%;
     width: 50%;
@@ -421,11 +425,31 @@ export default {
   }
 }
 
-/* -------------------------------------------------------- */
-
 /* ----------------- Small Screen Styles ------------------ */
 
 @media screen and (max-width: 750px) {
+  .home__mobile-banner-title {
+    font-size: 25px;
+    // display: none;
+  }
+
+  .home__banner {
+    height: calc(100vh - 80px)
+  }
+
+  .home__banner-bar {
+    height: 80px;
+    justify-content: center;
+  }
+
+  .home__banner-bar-title {
+    display: none;
+  }
+
+  .home__banner-bar-btn {
+    display: none
+  }
+
   .home__WAW-wrapper {
     width: 100%;
     background-color: white;

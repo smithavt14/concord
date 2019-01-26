@@ -1,5 +1,6 @@
 const experience = {
   English: {
+    experience: 'EXPERIENCE',
     testimonials: 'TESTIMONIALS',
     photos: 'PHOTOS',
     videos: 'VIDEOS',
@@ -8,6 +9,7 @@ const experience = {
     excontent: 'lLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.lLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.'
   },
   Chinese: {
+    experience: '体验',
     testimonials: '要翻译',
     photos: '要翻译',
     videos: '要翻译',
