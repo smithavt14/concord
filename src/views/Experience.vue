@@ -1,49 +1,49 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
   name: 'experience',
 
+  components: {
+    swiper, 
+    swiperSlide
+  },
+
   data () {
     return {
-      photos: ['https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg'],
-      active: 'classroom'
+      photos: ['https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Child_Reading.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/front_desk.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/teacher_with_student.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1543409153/Group_2_3.png', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547298621/BA4A1645_1.png', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547875702/BA4A1584.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg'],
+      active: 'classroom',
+      swiperOptionTop: {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      },
+      swiperOptionThumbs: {
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        slideToClickedSlide: true
+      }
     }
   },
 
   computed: {
     translation () {
       return translation.experience[globalData.language]
-    },
-    activePhotos () {
-      return this.photos[this.active]
-    }
-  },
-
-  methods: {
-    changeActivePhotos (e) {
-      this.active = e.target.dataset.id
     }
   },
 
   mounted() {
-    var mySwiper = new Swiper ('.experience__swiper-container', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 2000,
-      },
-      thumbs: {
-        swiper: {
-          el: '.swiper-container-thumbs',
-          slidesPerView: 5
-        }
-      }
+    this.$nextTick(() => {
+      const swiperTop = this.$refs.swiperTop.swiper
+      const swiperThumbs = this.$refs.swiperThumbs.swiper
+      swiperTop.controller.control = swiperThumbs
+      swiperThumbs.controller.control = swiperTop
     })
   }
 }
@@ -110,63 +110,21 @@ export default {
     <!-- Photos -->
     <div class="experience__photos-wrapper">
       <div class="experience__subtitle" style="margin: 20px;">PHOTOS</div>
-      <div class="experience__container">
         <div class="experience__swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-          </div>
-            <div class="swiper-thumbs-wrapper">
-              <div class="swiper-thumb-slide"></div>
-              <div class="swiper-thumb-slide"></div>
-              <div class="swiper-thumb-slide"></div>
-              <div class="swiper-thumb-slide"></div>
-              <div class="swiper-thumb-slide"></div>
-              <div class="swiper-thumb-slide"></div>
-              <div class="swiper-thumb-slide"></div>
-            </div>
-          <!-- Navigation -->
-          <div class="swiper-button-prev orange"></div>
-          <div class="swiper-button-next orange"></div>
+          <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
+            <swiper-slide v-for="photo in photos" :key="photo">
+              <img :src="photo" class="experience__photos-slide">
+            </swiper-slide>
+            <div class="swiper-button-next swiper-button-black" slot="button-next"></div>
+            <div class="swiper-button-prev swiper-button-black" slot="button-prev"></div>
+          </swiper>
+          <!-- swiper2 Thumbs -->
+          <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs">
+            <swiper-slide v-for="photo in photos" :key="photo">
+              <img :src="photo" class="experience__photos-slide">
+            </swiper-slide>
+          </swiper>
         </div>
-
-        <!-- Side Bar -->
-
-
-        <!-- <div class="experience__photos-side-bar">
-          <div class="experience__photos-side-bar-selection" data-id="classroom" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'classroom' }">
-            CLASSROOM
-          </div>
-          <div class="experience__photos-side-bar-selection" data-id="environment" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'environment' }">
-            ENVIRONMENT
-          </div>
-          <div class="experience__photos-side-bar-selection" data-id="teachers" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'teachers' }">
-            TEACHERS
-          </div>
-          <div class="experience__photos-side-bar-selection" data-id="students" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'students' }">
-            STUDENTS
-          </div>
-          <div class="experience__photos-side-bar-selection" data-id="events" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'events' }">
-            EVENTS
-          </div>
-        </div>
- -->
-        <!-- Photos section -->
-        <!-- <b-container class="experience__photos-photos">
-          <b-row class="experience-photos-bootstrap-row">
-            <b-col v-for="photo in activePhotos" :key="photo" id="photo" sm="6" md="3">
-              <div class="experience__photos-photo">
-                {{photo}}
-              </div>
-            </b-col>
-          </b-row>
-        </b-container> -->
       </div>
     </div>
   </div>
@@ -174,26 +132,6 @@ export default {
 
 <style lang="scss">
 @import '../assets/styles.scss';
-
-/*Test Code*/
-
-.experience__swiper-container {
-  width: 90vw;
-  height: 300px;
-}
-
-.swiper-slide {
-  height: 100%;
-  width: 250px;
-  background-color: black;
-}
-
-.swiper-thumb-slide {
-  height: 100%;
-  background-color: white;
-}
-
-/* Test Code*/
 
 .experience__wrapper {
   width: 100vw;
@@ -208,7 +146,7 @@ export default {
   background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
   background-size: cover;
   background-position: center;
-  height: 25vh;
+  height: 50vh;
   width: 100%;
   max-width: 1440px;
 }
@@ -351,6 +289,46 @@ export default {
   background: black;
   color: white;
   margin: 10px 0;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.experience__photos-slide {
+  object-fit: contain;
+  height: 100%;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.gallery-top {
+  height: 80% !important;
+  width: 90%;
+  background: white;
+}
+
+.gallery-thumbs {
+  height: 20%!important;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: white;
+}
+
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-active {
+  opacity: 1;
+}
+
+.experience__swiper-container {
+  height: 500px;
+  width: 100%;
 }
 
 /* ---------- Large Screen Styles ----------*/
@@ -511,6 +489,12 @@ export default {
   .side-bar-selection-active {
     font-weight: bolder;
     color: $concord-orange;
+  }
+
+  .experience__photos-slide {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 }
 

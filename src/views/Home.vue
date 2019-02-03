@@ -18,6 +18,9 @@ export default {
     },
     translatedProgramLinks () {
       return this.programLinks[globalData.language]
+    },
+    swiper() {
+      return this.$refs.homeSwiper.swiper
     }
   },
 
@@ -58,9 +61,17 @@ export default {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
-        }
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: false
+        },
       }
     }
+  },
+
+  mounted () {
+    console.log('this is current swiper instance object', this.swiper)
   }
 }
 
@@ -95,9 +106,9 @@ export default {
     <!-- From our WeChat Account -->
     <div class="home__FOB-wrapper">
       <div class="home__FOB-title">{{translation.FOBtitle}}</div>
-      <div class="swiper-container">
-        <swiper :options="swiperOptions">
-          <swiper-slide v-for="post in WeChatlinks" :key="post.id">
+      <div class="home__FOB-swiper-container">
+        <swiper :options="swiperOptions" ref="homeSwiper">
+          <swiper-slide v-for="post in WeChatlinks" :key="post.id" class="FOB__swiper-slide">
             <a :href="post.link"><img :src="post.photo" :href="post.link" class="home__FOB-card-photo"></a>
             <div class="home__FOB-card-title">{{ post.title }}</div>
             <div class="home__FOB-card-date">{{ post.date }}</div>
@@ -105,6 +116,7 @@ export default {
           <!-- Navigation -->
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
+          <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
       </div>
     </div>
@@ -136,9 +148,15 @@ export default {
   color: orange;
 }
 
+.home__FOB-swiper-container {
+  width: 90%;
+  height: 400px;
+  background: white;
+}
+
 .swiper-container {
-  width: 90vw;
-  height: 300px;
+  height: 100%;
+  width: 100%;
 }
 
 .home__wrapper {
@@ -410,11 +428,16 @@ export default {
     width: 50%;
     text-align: left;
   }
+
+  .swiper-pagination {
+    display: none;
+  }
 }
 
 /* ----------------- Small Screen Styles ------------------ */
 
 @media screen and (max-width: 750px) {
+
   .home__mobile-banner-title {
     font-size: 25px;
     // display: none;
@@ -439,6 +462,7 @@ export default {
 
   .home__FOB-card-photo {
     width: 100%;
+    height: 100%;
   }
 
   .home__WAW-wrapper {
@@ -472,6 +496,26 @@ export default {
 
   .home__banner-bar-text {
     display: none;
+  }
+
+  .swiper-pagination {
+    display: inherit;
+  }
+
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
+
+  .FOB__swiper-slide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
   }
 }
 

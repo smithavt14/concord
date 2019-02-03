@@ -163,7 +163,7 @@ export default {
   background-position: center;
   height: 50vh;
   width: 100%;
-  max-width: 1220px;
+  max-width: 1440px;
 }
 
 .about__banner-bar {
@@ -384,10 +384,6 @@ export default {
     margin: 15px 0;
   }
 
-  .about__banner-dynamic-height {
-    height: 25vh;
-  }
-
   .about__OP-container-left {
     height: 100%;
     width: 50%;
@@ -478,10 +474,6 @@ export default {
     margin: 25px 0;
     display: flex;
     flex-direction: column;
-  }
-
-  .about__banner-dynamic-height {
-    height: 50vh;
   }
 
   .about__OP-container-left {
