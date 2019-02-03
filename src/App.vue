@@ -20,6 +20,8 @@ export default {
 </template>
 
 <style>
+@import 'assets/styles.scss';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -44,5 +46,4 @@ export default {
   margin: 0 auto;
   z-index: 10;
 }
-
 </style>

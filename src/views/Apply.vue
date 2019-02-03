@@ -9,11 +9,32 @@ export default {
 </script>
 
 <template>
-  <div class="apply__wrapper">
-    <h1>This is an application page</h1>
+  <div class="wrapper">
+    <div class="banner"></div>
+    <div class="banner-bar">
+    	<div class="banner-bar-link"></div>
+    </div>
+
   </div>
 </template>
 
 <style lang="scss">
+
+.apply-wrapper {
+}
+
+.banner {
+
+}
+
+.banner-bar {
+
+}
+
+.banner-bar-link {
+
+}
+
+
 
 </style>

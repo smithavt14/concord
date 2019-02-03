@@ -43,36 +43,38 @@ export default {
 </script>
 
 <template>
-  <div class="about__wrapper">
+  <div class="wrapper">
 
     <!-- Banner -->
-    <div class="about__banner about__banner-dynamic-height"></div>
-    <div class="about__banner-bar">
-      <div class="about__banner-bar-link">{{translation.philosophy}}</div>
-      <div class="about__banner-bar-link">{{translation.location}}</div>
-      <div class="about__banner-bar-link">{{translation.reasons}}</div>
-      <div class="about__banner-bar-link">{{translation.team}}</div>
-      <div class="about__banner-bar-link">{{translation.offsite}}</div>
+    <div class="banner about__banner"></div>
+    <div class="banner-bar">
+      <div class="banner-bar-link">{{translation.philosophy}}</div>
+      <div class="banner-bar-link">{{translation.location}}</div>
+      <div class="banner-bar-link">{{translation.reasons}}</div>
+      <div class="banner-bar-link">{{translation.team}}</div>
+      <div class="banner-bar-link">{{translation.offsite}}</div>
 
       <!-- Mobile Banner Title -->
-      <div class="about__mobile-banner-title">{{translation.about}}</div>
+      <div class="banner-bar-link-mobile">{{translation.about}}</div>
     </div>
 
     <!-- Our Philosophy -->
-    <div class="about__OP-container">
-      <div class="about__OP-container-left">
-        <div class="about__OP-container-left-subtitle">{{translation.OPsubtitle}}</div>
-        <div class="about__OP-container-left-title">{{translation.OPtitle}}</div>
-        <div class="about__OP-container-left-content">{{translation.OPcontent}}</div>
-      </div>
-      <div class="about__OP-container-right">
-        <div class="about__OP-container-right-image"></div>
+    <div class="content-wrapper">
+      <div class="about__OP-container">
+        <div class="about__OP-container-left">
+          <div class="subtitle">{{translation.OPsubtitle}}</div>
+          <div class="about__OP-container-left-title">{{translation.OPtitle}}</div>
+          <div class="about__OP-container-left-content">{{translation.OPcontent}}</div>
+        </div>
+        <div class="about__OP-container-right">
+          <div class="about__OP-container-right-image"></div>
+        </div>
       </div>
     </div>
 
     <!-- Map of Concord -->
-    <div class="about__map-wrapper">
-      <div class="about__subtitle">{{translation.mapTitle}}</div>
+    <div class="content-wrapper">
+      <div class="title">{{translation.mapTitle}}</div>
       <baidu-map :center="center" :zoom="zoom" class="about__map-container">
         <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
         <bm-marker :position="center" :dragging="true" @click="infoWindowOpen">
@@ -98,8 +100,8 @@ export default {
     </div>
 
     <!-- 5 Reasons to Choose Concord -->
-    <div class="about__5R-wrapper">
-      <div class="about__subtitle">{{translation.reasonsTitle}}</div>
+    <div class="content-wrapper">
+      <div class="title">{{translation.reasonsTitle}}</div>
       <b-container class="about__5R-container">
         <b-row class="about__5R-bootstrap-row">
           <b-col v-for="item in translatedReasons" :key="item.id" class="about__5R-item" sm="6" md="4" lg="2">
@@ -112,8 +114,8 @@ export default {
     </div>
 
     <!-- OUR TEAM -->
-    <div class="about__OT-wrapper">
-      <div class="about__subtitle">OUR TEAM</div>
+    <div class="content-wrapper">
+      <div class="title">OUR TEAM</div>
       <b-container class="about__OT-container">
         <b-row class="about__OT-bootstrap-row">
           <b-col v-for="item in translatedTeam" :key="item.id" class="about__OT-item" sm="12" md="6" lg="4">
@@ -131,14 +133,16 @@ export default {
     </div>
 
     <!-- OUR PARTNERSHIPS -->
-    <div class="about__OPA-wrapper">
-      <div class="about__OPA-left">
-        <div class="about__OPA-left-subtitle">{{translation.OPAsubtitle}}</div>
-        <div class="about__OPA-left-title">{{translation.OPAtitle}}</div>
-        <div class="about__OPA-left-content">{{translation.OPAcontent}}</div>
-      </div>
-      <div class="about__OPA-right">
-        <div class="about__OPA-right-image"></div>
+    <div class="content-wrapper">
+      <div class="about__OPA-content">
+        <div class="about__OPA-left">
+          <div class="subtitle">{{translation.OPAsubtitle}}</div>
+          <div class="about__OPA-left-title">{{translation.OPAtitle}}</div>
+          <div class="about__OPA-left-content">{{translation.OPAcontent}}</div>
+        </div>
+        <div class="about__OPA-right">
+          <div class="about__OPA-right-image"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -147,40 +151,8 @@ export default {
 <style lang="scss">
 @import '../assets/styles.scss';
 
-.about__wrapper {
-  width: 100vw;
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 .about__banner {
-  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/front_desk.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
-  width: 100%;
-  max-width: 1440px;
-}
-
-.about__banner-bar {
-  height: 80px;
-  width: 100%;
-  background-color: $concord-orange;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.about__subtitle {
-  color: $concord-orange;
-  font-size: 15px;
-  margin: 15px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/front_desk.jpg');
 }
 
 .about__OP-container-right-image {
@@ -192,12 +164,6 @@ export default {
   width: 90%;
 }
 
-.about__OP-container-left-subtitle {
-  color: $concord-orange;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
 .about__OP-container-left-title {
   font-size: 25px;
   margin-bottom: 5px;
@@ -207,17 +173,6 @@ export default {
   font-size: 15px;
   color: gray;
   margin-bottom: 10px;
-}
-
-.about__map-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  box-shadow: 5px 5px 50px #EEEEEE;
-  margin: 15px 0;
 }
 
 .about__map-container {
@@ -235,13 +190,6 @@ export default {
 .about__map-overlay-title {
   color: $concord-orange;
   font-size: 20px;
-}
-
-.about__5R-wrapper {
-  background: white;
-  box-shadow: 5px 5px 50px #EEEEEE;
-  width: 100%;
-  margin: 15px 0;
 }
 
 .about__5R-container {
@@ -293,19 +241,6 @@ export default {
   justify-content: center;
 }
 
-.about__OT-wrapper {
-  width: 100%;
-  background: white;
-  box-shadow: 5px 5px 50px #EEEEEE;
-  margin: 15px 0;
-}
-
-.about__OT-title {
-  color: $concord-orange;
-  font-size: 15px;
-  margin: 15px 0;
-}
-
 .about__OT-item-container {
   display: flex;
   margin: 20px 0;
@@ -345,12 +280,6 @@ export default {
   overflow: auto;
 }
 
-.about__OPA-left-subtitle {
-  color: $concord-orange;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
 .about__OPA-left-title {
   font-size: 25px;
   margin-bottom: 5px;
@@ -378,10 +307,8 @@ export default {
     width: 100%;
     height: 400px;
     background-color: white;
-    box-shadow: 5px 5px 50px #EEEEEE;
     display: flex;
     justify-content: center;
-    margin: 15px 0;
   }
 
   .about__OP-container-left {
@@ -406,12 +333,6 @@ export default {
     position: relative;
   }
 
-  .about__banner-bar-link {
-    &:hover {
-      border-bottom: 3px solid white;
-    }
-  }
-
   .about__mobile-banner-title {
     display: none;
   }
@@ -432,14 +353,12 @@ export default {
     padding: 10px;
   }
 
-  .about__OPA-wrapper {
+  .about__OPA-content {
     width: 100%;
     height: 500px;
     display: flex;
     justify-content: center;
     background-color: white;
-    box-shadow: 5px 5px 50px #EEEEEE;
-    margin: 25px 0;
   }
 
   .about__OPA-left {
@@ -499,18 +418,6 @@ export default {
     justify-content: center;
   }
 
-  .about__banner-bar-link {
-    display: none;
-    &:hover {
-      border-bottom: 3px solid white;
-    }
-  }
-
-  .about__mobile-banner-title {
-    font-size: 25px;
-    color: white;
-  }
-
   .about__map-overlay {
    display: none;
   }
@@ -520,11 +427,9 @@ export default {
     font-size: 25px;
   }
 
-  .about__OPA-wrapper {
+  .about__OPA-content {
     width: 95%;
     background-color: white;
-    box-shadow: 5px 5px 50px #EEEEEE;
-    margin: 25px 0;
     display: flex;
     flex-direction: column;
   }

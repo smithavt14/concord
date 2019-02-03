@@ -2,6 +2,7 @@
 import translation from '@/translations/translation'
 import globalData from '@/main'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import photos from '@/objects/photos'
 
 export default {
   name: 'experience',
@@ -13,7 +14,6 @@ export default {
 
   data () {
     return {
-      photos: ['https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Child_Reading.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/front_desk.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/teacher_with_student.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1543409153/Group_2_3.png', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547298621/BA4A1645_1.png', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547875702/BA4A1584.jpg', 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg'],
       active: 'classroom',
       swiperOptionTop: {
         spaceBetween: 10,
@@ -28,7 +28,8 @@ export default {
         slidesPerView: 'auto',
         touchRatio: 0.2,
         slideToClickedSlide: true
-      }
+      },
+      photos: photos
     }
   },
 
@@ -51,33 +52,35 @@ export default {
 </script>
 
 <template>
-  <div class="experience__wrapper">
+  <div class="wrapper">
     <!-- Banner -->
-    <div class="experience__banner"></div>
-    <div class="experience__banner-bar">
-      <div class="experience__banner-bar-link">{{translation.testimonials}}</div>
-      <div class="experience__banner-bar-link">{{translation.photos}}</div>
-      <div class="experience__banner-bar-link">{{translation.videos}}</div>
+    <div class="banner experience__banner"></div>
+    <div class="banner-bar">
+      <div class="banner-bar-link">{{translation.testimonials}}</div>
+      <div class="banner-bar-link">{{translation.photos}}</div>
+      <div class="banner-bar-link">{{translation.videos}}</div>
 
       <!-- Mobile Banner Link -->
-      <div class="experience__mobile-banner-title">{{translation.experience}}</div>
+      <div class="banner-bar-link-mobile">{{translation.experience}}</div>
     </div>
 
     <!-- Experience -->
-    <div class="experience__EX-container">
-      <div class="experience__EX-container-left">
-        <div class="experience__subtitle">{{translation.exsubtitle}}</div>
-        <div class="experience__EX-container-left-title">{{translation.extitle}}</div>
-        <div class="experience__EX-container-left-content">{{translation.excontent}}</div>
-      </div>
-      <div class="experience__EX-container-right">
-        <div class="experience__EX-container-right-image"></div>
+    <div class="content-wrapper">
+      <div class="experience__EX-container">
+        <div class="experience__EX-container-left">
+          <div class="subtitle">{{translation.exsubtitle}}</div>
+          <div class="experience__EX-container-left-title">{{translation.extitle}}</div>
+          <div class="experience__EX-container-left-content">{{translation.excontent}}</div>
+        </div>
+        <div class="experience__EX-container-right">
+          <div class="experience__EX-container-right-image"></div>
+        </div>
       </div>
     </div>
 
     <!-- Testimonials -->
-    <div class="experience__testimonials-wrapper">
-      <div class="experience__subtitle">TESTIMONIALS</div>
+    <div class="content-wrapper">
+      <div class="title">{{translation.testimonials}}</div>
       <div class="experience__testimonials-title">What do students and parents have to say about us?</div>
       <div class="experience__testimonials-container">
 
@@ -108,8 +111,8 @@ export default {
     </div>
 
     <!-- Photos -->
-    <div class="experience__photos-wrapper">
-      <div class="experience__subtitle" style="margin: 20px;">PHOTOS</div>
+    <div class="content-wrapper">
+      <div class="title">{{translation.photos}}</div>
         <div class="experience__swiper-container">
           <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
             <swiper-slide v-for="photo in photos" :key="photo">
@@ -133,44 +136,8 @@ export default {
 <style lang="scss">
 @import '../assets/styles.scss';
 
-.experience__wrapper {
-  width: 100vw;
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .experience__banner {
-  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
-  width: 100%;
-  max-width: 1440px;
-}
-
-.experience__banner-bar {
-  height: 80px;
-  width: 100vw;
-  max-width: 1440px;
-  background-color: $concord-orange;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.expereince__banner-bar-link-active {
-  border-bottom: 3px solid white;
-}
-
-.experience__subtitle {
-  color: $concord-orange;
-  font-size: 15px;
-  margin: 5px 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
 }
 
 /* ----- Experience ----- */
@@ -185,7 +152,7 @@ export default {
 }
 
 .experience__EX-container-left-title {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
@@ -196,19 +163,6 @@ export default {
 }
 
 /* ----- Testimonials ----- */
-
-.experience__testimonials-wrapper {
-  width: 100%;
-  padding: 25px;
-  background-color: white;
-  box-shadow: 5px 5px 50px #EEEEEE;
-  margin: 15px 0;
-}
-
-.experience__testimonials-title {
-  font-size: 25px;
-  margin: 5px;
-}
 
 .experience__testimonial {
   background-color: white;
@@ -284,6 +238,8 @@ export default {
   margin: 15px 0;
 }
 
+/* ---- Photos ----- */
+
 .experience__photos-photo {
   height: 100px;
   background: black;
@@ -349,8 +305,6 @@ export default {
     background-color: white;
     display: flex;
     justify-content: center;
-    margin: 15px 0;
-    box-shadow: 5px 5px 50px #EEEEEE;
   }
 
   .experience__EX-container-left {
@@ -386,6 +340,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 25px;
   }
 
   .experience__container {
@@ -432,8 +387,6 @@ export default {
   .experience__EX-container {
     width: 100vw;
     background-color: white;
-    box-shadow: 5px 5px 50px #EEEEEE;
-    margin: 25px 0;
     display: flex;
     flex-direction: column;
   }
