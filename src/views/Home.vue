@@ -1,7 +1,7 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
-import homePrograms from '@/utilities/home_programs'
+import homePrograms from '@/objects/home_programs'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {

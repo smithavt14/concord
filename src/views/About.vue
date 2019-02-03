@@ -1,8 +1,8 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
-import teachers from '@/utilities/teachers'
-import reasons from '@/utilities/reasons'
+import teachers from '@/objects/teachers'
+import reasons from '@/objects/reasons'
 
 export default {
   name: 'about',

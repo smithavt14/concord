@@ -3,9 +3,9 @@ import translation from '@/translations/translation'
 import globalData from '@/main'
 import $ from 'jquery'
 import 'fullcalendar'
-import events from '@/utilities/events'
-import instruments from '@/utilities/instruments'
-import programs from '@/utilities/programs_programs'
+import events from '@/objects/events'
+import instruments from '@/objects/instruments'
+import programs from '@/objects/programs_programs'
 
 export default {
   name: 'programs',
@@ -207,7 +207,7 @@ export default {
   background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1546515353/girl_reading.jpg');
   background-size: cover;
   background-position: center;
-  height: 25vh;
+  height: 50vh;
   width: 100%;
   max-width: 1440px;
 }
