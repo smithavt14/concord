@@ -2,9 +2,14 @@
 import translation from '@/translations/translation'
 import globalData from '@/main'
 import homePrograms from '@/utilities/home_programs'
-import Swiper from 'swiper'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
+  components: {
+    swiper, 
+    swiperSlide
+  },
+
   name: 'home',
 
   computed: {
@@ -48,23 +53,15 @@ export default {
           id: 4
         }
       ],
-      programLinks: homePrograms
-    }
-  },
-
-  mounted() {
-    var mySwiper = new Swiper ('.swiper-container', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 2000,
+      programLinks: homePrograms,
+      swiperOptions: {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
       }
-    })
+    }
   }
-
 }
 
 </script>
@@ -99,18 +96,16 @@ export default {
     <div class="home__FOB-wrapper">
       <div class="home__FOB-title">{{translation.FOBtitle}}</div>
       <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <div v-for="post in WeChatlinks" :key="post.id" class="swiper-slide">
+        <swiper :options="swiperOptions">
+          <swiper-slide v-for="post in WeChatlinks" :key="post.id">
             <a :href="post.link"><img :src="post.photo" :href="post.link" class="home__FOB-card-photo"></a>
             <div class="home__FOB-card-title">{{ post.title }}</div>
             <div class="home__FOB-card-date">{{ post.date }}</div>
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="swiper-button-prev orange"></div>
-        <div class="swiper-button-next orange"></div>
+          </swiper-slide>
+          <!-- Navigation -->
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
       </div>
     </div>
     <!-- Our Programs -->

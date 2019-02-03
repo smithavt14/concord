@@ -1,19 +1,14 @@
 <script>
 import translation from '@/translations/translation'
 import globalData from '@/main'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 export default {
   name: 'experience',
 
   data () {
     return {
-      photos: {
-        classroom: ['1a', '2', '3', '4', '5', '6', '7', '8'],
-        environment: ['1b', '2', '3', '4', '5', '6', '7', '8'],
-        teachers: ['1c', '2', '3', '4', '5', '6', '7', '8'],
-        students: ['1d', '2', '3', '4', '5', '6', '7', '8'],
-        events: ['1e', '2', '3', '4', '5', '6', '7', '8']
-      },
+      photos: ['https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg'],
       active: 'classroom'
     }
   },
@@ -31,6 +26,25 @@ export default {
     changeActivePhotos (e) {
       this.active = e.target.dataset.id
     }
+  },
+
+  mounted() {
+    var mySwiper = new Swiper ('.experience__swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 2000,
+      },
+      thumbs: {
+        swiper: {
+          el: '.swiper-container-thumbs',
+          slidesPerView: 5
+        }
+      }
+    })
   }
 }
 
@@ -96,10 +110,36 @@ export default {
     <!-- Photos -->
     <div class="experience__photos-wrapper">
       <div class="experience__subtitle" style="margin: 20px;">PHOTOS</div>
-      <div class="expereince__container">
+      <div class="experience__container">
+        <div class="experience__swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+          </div>
+            <div class="swiper-thumbs-wrapper">
+              <div class="swiper-thumb-slide"></div>
+              <div class="swiper-thumb-slide"></div>
+              <div class="swiper-thumb-slide"></div>
+              <div class="swiper-thumb-slide"></div>
+              <div class="swiper-thumb-slide"></div>
+              <div class="swiper-thumb-slide"></div>
+              <div class="swiper-thumb-slide"></div>
+            </div>
+          <!-- Navigation -->
+          <div class="swiper-button-prev orange"></div>
+          <div class="swiper-button-next orange"></div>
+        </div>
 
         <!-- Side Bar -->
-        <div class="experience__photos-side-bar">
+
+
+        <!-- <div class="experience__photos-side-bar">
           <div class="experience__photos-side-bar-selection" data-id="classroom" @click="changeActivePhotos" :class="{'side-bar-selection-active': active === 'classroom' }">
             CLASSROOM
           </div>
@@ -116,9 +156,9 @@ export default {
             EVENTS
           </div>
         </div>
-
+ -->
         <!-- Photos section -->
-        <b-container class="experience__photos-photos">
+        <!-- <b-container class="experience__photos-photos">
           <b-row class="experience-photos-bootstrap-row">
             <b-col v-for="photo in activePhotos" :key="photo" id="photo" sm="6" md="3">
               <div class="experience__photos-photo">
@@ -126,7 +166,7 @@ export default {
               </div>
             </b-col>
           </b-row>
-        </b-container>
+        </b-container> -->
       </div>
     </div>
   </div>
@@ -134,6 +174,26 @@ export default {
 
 <style lang="scss">
 @import '../assets/styles.scss';
+
+/*Test Code*/
+
+.experience__swiper-container {
+  width: 90vw;
+  height: 300px;
+}
+
+.swiper-slide {
+  height: 100%;
+  width: 250px;
+  background-color: black;
+}
+
+.swiper-thumb-slide {
+  height: 100%;
+  background-color: white;
+}
+
+/* Test Code*/
 
 .experience__wrapper {
   width: 100vw;
@@ -150,13 +210,13 @@ export default {
   background-position: center;
   height: 25vh;
   width: 100%;
-  max-width: 1220px;
+  max-width: 1440px;
 }
 
 .experience__banner-bar {
   height: 80px;
   width: 100vw;
-  max-width: 1220px;
+  max-width: 1440px;
   background-color: $concord-orange;
   color: white;
   display: flex;
@@ -350,7 +410,7 @@ export default {
     align-items: center;
   }
 
-  .expereince__container {
+  .experience__container {
     display: flex;
     margin: 25px 0px;
     padding: 0 20px;
