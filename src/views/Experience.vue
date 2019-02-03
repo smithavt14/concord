@@ -135,6 +135,7 @@ export default {
 
 <style lang="scss">
 @import '../assets/styles.scss';
+@import '../assets/swiper.css';
 
 .experience__banner {
   background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
@@ -250,6 +251,7 @@ export default {
 .swiper-slide {
   background-size: cover;
   background-position: center;
+  margin-bottom: 25px;
 }
 
 .experience__photos-slide {
