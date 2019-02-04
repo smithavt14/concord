@@ -13,6 +13,74 @@ export default {
     programs () {
       return applyPrograms[globalData.language]
     }
+  },
+
+  data() {
+    return {}
+  },
+
+  methods: {
+
+    post(url, body, callback) {
+      var req = new XMLHttpRequest()
+      req.open("POST", url, true)
+      req.setRequestHeader("Content-Type", "application/json")
+      req.addEventListener("load", function () {
+        if (req.status < 400) {
+          callback(null, JSON.parse(req.responseText));
+        } else {
+          callback(new Error("Request failed: " + req.statusText));
+        }
+      })
+      req.send(JSON.stringify(body))
+    },
+
+    success() {
+      const submit = document.getElementById('submit')
+      const form = document.getElementById('application')
+      
+      submit.disabled = false
+      submit.blur()
+      form.student_name.value = ''
+      form.age.value = ''
+      form.program.value = ''
+      form.parent_name.value = ''
+      form.parent_wechat.value = ''
+      form.parent_phone.value = ''
+      form.comments.value = ''
+    },
+
+    error(err) {
+      const submit = document.getElementById('submit')
+      alert('There was an error with sending your message, hold up until I fix it. Thanks for waiting.')
+      submit.disabled = false
+      console.log(err)
+    },
+
+    submit(e) {
+      var self = this
+
+      const submit = document.getElementById('submit')
+      const form = document.getElementById('application')
+      const url = 'https://u2lx33cvlh.execute-api.us-east-1.amazonaws.com/dev/email/send'
+
+      e.preventDefault()
+      alert('Sending')
+      submit.disabled = true
+      const payload = {
+        student_name: form.student_name.value,
+        age: form.age.value,
+        program: form.program.value,
+        parent_name: form.parent_name.value,
+        parent_wechat: form.parent_wechat.value,
+        parent_phone: form.parent_phone.value,
+        comments: form.comments.value
+      }
+      self.post(url, payload, function (err, res) {
+        if (err) { return self.error(err) }
+        self.success()
+      })
+    }
   }
 }
 </script>
@@ -29,11 +97,11 @@ export default {
       <div class="title">APPLY TO CONCORD MUSIC</div>
       <div class="apply__sub-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dicta provident eveniet eos, quasi sit corporis praesentium quam laboriosam, ea animi, dolores reprehenderit possimus fugiat perferendis. Fuga officiis fugit beatae!</div>
       <!-- Form -->
-      <form action="https://formspree.io/smithavt14@gmail.com" method="POST" style="display: flex; flex-direction: column; align-items: center">
+      <form id="application" action="" method="POST" style="display: flex; flex-direction: column; align-items: center">
         <div class="apply__form-container">
-          <!-- Name -->
+          <!-- Student Name -->
           <div class="apply__form-box">
-            <input type="text" name="name" id="name" class="apply__form-input" placeholder="Student's Full Name" required>  
+            <input type="text" name="student_name" id="student_name" class="apply__form-input" placeholder="Student's Full Name" required>  
           </div>
           <!-- Age -->
           <div class="apply__form-box">
@@ -41,7 +109,7 @@ export default {
           </div>
           <!-- Program -->
           <div class="apply__form-box">
-            <input type="text" name="age" id="program" class="apply__form-input" placeholder="Program of Interest" list="programs" required>
+            <input type="text" name="program" id="program" class="apply__form-input" placeholder="Program of Interest" list="programs" required>
             <datalist id="programs">
               <option v-for="program in programs">{{program.title}}</option>
             </datalist>
@@ -59,7 +127,8 @@ export default {
             <input type="tel" name="parent_phone" id="name" class="apply__form-input" placeholder="Phone Number" required>
           </div>
         </div>
-        <input type="submit" class="apply__bottom-banner-link orange" value="Submit">
+        <textarea id="comments" name="comments" rows="5" placeholder="Please put any additional comments here" class="apply__form-input textarea"></textarea>
+        <input id="submit" type="submit" class="apply__bottom-banner-link orange" value="Submit" @click="submit">
       </form>
     </div>
 
@@ -157,5 +226,12 @@ export default {
   &:focus {
     outline: none;
   }
+}
+
+.textarea {
+  width: 50%;
+  border: 2px solid $concord-orange;
+  border-radius: 5px;
+  padding: 10px;
 }
 </style>
