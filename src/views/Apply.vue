@@ -16,7 +16,12 @@ export default {
   },
 
   data() {
-    return {}
+    return {
+      modal: {
+        success: false,
+        error: false
+      }
+    }
   },
 
   methods: {
@@ -48,6 +53,7 @@ export default {
       form.parent_wechat.value = ''
       form.parent_phone.value = ''
       form.comments.value = ''
+      this.modal.success = true
     },
 
     error(err) {
@@ -65,7 +71,6 @@ export default {
       const url = 'https://u2lx33cvlh.execute-api.us-east-1.amazonaws.com/dev/email/send'
 
       e.preventDefault()
-      alert('Sending')
       submit.disabled = true
       const payload = {
         student_name: form.student_name.value,
@@ -92,6 +97,7 @@ export default {
     	<div class="banner-bar-link"></div>
     	<div class="banner-bar-link-mobile"></div>
     </div>
+    
     <!-- Application Form -->
     <div class="content-wrapper">
       <div class="title">APPLY TO CONCORD MUSIC</div>
@@ -131,7 +137,8 @@ export default {
         <input id="submit" type="submit" class="apply__bottom-banner-link orange" value="Submit" @click="submit">
       </form>
     </div>
-
+    
+    <!-- Bottom Banner -->
     <div class="content-wrapper">
       <div class="apply__bottom-banner">
         <div class="apply__bottom-banner-title">
@@ -140,6 +147,11 @@ export default {
         <router-link to="/programs" class="apply__bottom-banner-link">SEE COURSES</router-link>
       </div>
     </div>
+
+    <!-- Submission Success Modal -->
+    <b-modal v-model="modal.success">
+      Submission Success!
+    </b-modal>
   </div>
 </template>
 
