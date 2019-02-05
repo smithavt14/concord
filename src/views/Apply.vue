@@ -19,7 +19,7 @@ export default {
     return {
       modal: {
         success: false,
-        error: true
+        error: false
       }
     }
   },
