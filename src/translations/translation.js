@@ -4,6 +4,7 @@ import home from '@/translations/home'
 import footer from '@/translations/footer'
 import experience from '@/translations/experience'
 import programs from '@/translations/programs'
+import apply from '@/translations/apply'
 
 const translation = {
   about,
@@ -11,7 +12,8 @@ const translation = {
   home,
   footer,
   experience,
-  programs
+  programs,
+  apply
 }
 
 export default translation

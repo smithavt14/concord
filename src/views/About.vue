@@ -152,7 +152,8 @@ export default {
 @import '../assets/styles.scss';
 
 .about__banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/front_desk.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549173833/Concord/Student_Boy_Guitar_Teacher_2.jpg');
+  background-position: 25% 50%;
 }
 
 .about__OP-container-right-image {

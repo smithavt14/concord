@@ -86,8 +86,7 @@ export default {
       <router-link to="/programs" class="home__banner-bar-btn">{{translation.learnMore}}</router-link>
 
       <!-- Mobile Banner Title -->
-      <div class="home__mobile-banner-logo"></div>
-      <div class="home__mobile-banner-title">{{translation.bannerMobileTitle}}</div>
+      <div class="banner-bar-link-mobile">{{translation.bannerMobileTitle}}</div>
     </div>
 
     <!-- Who Are We -->
@@ -174,7 +173,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 230px);
   max-height: 750px;
   width: 100%;
 }
@@ -440,7 +439,6 @@ export default {
 
   .home__mobile-banner-title {
     font-size: 25px;
-    // display: none;
   }
 
   .home__banner {

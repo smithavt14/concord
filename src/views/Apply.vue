@@ -19,12 +19,17 @@ export default {
     return {
       modal: {
         success: false,
-        error: false
+        error: true
       }
     }
   },
 
   methods: {
+
+    closeModal() {
+      this.modal.success = false
+      this.modal.error = false
+    },
 
     post(url, body, callback) {
       var req = new XMLHttpRequest()
@@ -61,6 +66,7 @@ export default {
       alert('There was an error with sending your message, hold up until I fix it. Thanks for waiting.')
       submit.disabled = false
       console.log(err)
+      this.modal.error = true
     },
 
     submit(e) {
@@ -94,46 +100,47 @@ export default {
   <div class="wrapper">
     <div class="banner apply__banner"></div>
     <div class="banner-bar">
-    	<div class="banner-bar-link"></div>
-    	<div class="banner-bar-link-mobile"></div>
+    	<div class="banner-bar-link">{{translation.application_form}}</div>
+    	<div class="banner-bar-link-mobile">{{translation.application_form}}</div>
     </div>
     
     <!-- Application Form -->
     <div class="content-wrapper">
-      <div class="title">APPLY TO CONCORD MUSIC</div>
+      <!-- Success Alert -->
+      <div class="title">{{translation.title}}</div>
       <div class="apply__sub-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dicta provident eveniet eos, quasi sit corporis praesentium quam laboriosam, ea animi, dolores reprehenderit possimus fugiat perferendis. Fuga officiis fugit beatae!</div>
       <!-- Form -->
       <form id="application" action="" method="POST" style="display: flex; flex-direction: column; align-items: center">
         <div class="apply__form-container">
           <!-- Student Name -->
           <div class="apply__form-box">
-            <input type="text" name="student_name" id="student_name" class="apply__form-input" placeholder="Student's Full Name" required>  
+            <input type="text" name="student_name" id="student_name" class="apply__form-input" :placeholder="translation.student_name" required>  
           </div>
           <!-- Age -->
           <div class="apply__form-box">
-            <input type="number" name="age" id="age" class="apply__form-input" placeholder="Student's Age" required>
+            <input type="number" name="age" id="age" class="apply__form-input" :placeholder="translation.student_age" required>
           </div>
           <!-- Program -->
           <div class="apply__form-box">
-            <input type="text" name="program" id="program" class="apply__form-input" placeholder="Program of Interest" list="programs" required>
+            <input type="text" name="program" id="program" class="apply__form-input" :placeholder="translation.program" list="programs" required>
             <datalist id="programs">
               <option v-for="program in programs">{{program.title}}</option>
             </datalist>
           </div>
           <!-- Parent Name -->
           <div class="apply__form-box">
-            <input type="text" name="parent_name" id="name" class="apply__form-input" placeholder="Parent's Full Name" required>
+            <input type="text" name="parent_name" id="name" class="apply__form-input" :placeholder="translation.parent_name" required>
           </div>
           <!-- Parent WeChat -->
           <div class="apply__form-box">
-            <input type="text" name="parent_wechat" id="name" class="apply__form-input" placeholder="Parent's WeChat ID" required>
+            <input type="text" name="parent_wechat" id="name" class="apply__form-input" :placeholder="translation.parent_wechat" required>
           </div>
           <!-- Parent Phone -->
           <div class="apply__form-box">
-            <input type="tel" name="parent_phone" id="name" class="apply__form-input" placeholder="Phone Number" required>
+            <input type="tel" name="parent_phone" id="name" class="apply__form-input" :placeholder="translation.parent_phone" required>
           </div>
         </div>
-        <textarea id="comments" name="comments" rows="5" placeholder="Please put any additional comments here" class="apply__form-input textarea"></textarea>
+        <textarea id="comments" name="comments" rows="5" :placeholder="translation.comments" class="apply__form-input textarea"></textarea>
         <input id="submit" type="submit" class="apply__bottom-banner-link orange" value="Submit" @click="submit">
       </form>
     </div>
@@ -142,21 +149,48 @@ export default {
     <div class="content-wrapper">
       <div class="apply__bottom-banner">
         <div class="apply__bottom-banner-title">
-          Give your child a wonderful start with music
+          {{translation.bottom_banner_title}}
         </div>
-        <router-link to="/programs" class="apply__bottom-banner-link">SEE COURSES</router-link>
+        <router-link to="/programs" class="apply__bottom-banner-link">{{translation.see_courses}}</router-link>
       </div>
     </div>
 
     <!-- Submission Success Modal -->
-    <b-modal v-model="modal.success">
-      Submission Success!
+    <b-modal v-model="modal.success" centered hide-header hide-footer>
+      <div class="modal-icon">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" style="height: 100px; margin-bottom: 15px;" data-icon="check-circle" class="svg-inline--fa fa-check-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FA9914" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+      </div>
+      <div class="modal-title">Submission Success!</div>
+      <div class="modal-diretions">Thanks for your application, we'll be in touch with you shortly.</div>
+      <div class="apply__bottom-banner-link orange modal-btn" @click="closeModal">Got it</div>
+    </b-modal>
+
+    <!-- Submission Error Modal -->
+    <b-modal v-model="modal.error" centered hide-header hide-footer>
+      <div class="modal-icon">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" style="height: 100px; margin-bottom: 15px;" data-icon="exclamation-circle" class="svg-inline--fa fa-exclamation-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="red" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg>
+      </div>
+      <div class="modal-title">Submission Error!</div>
+      <div class="modal-diretions">Yikes, we've got an error. Please contact our staff directly to submit your application.</div>
+      <div class="apply__bottom-banner-link modal-btn cancel" @click="closeModal">Contact</div>
     </b-modal>
   </div>
 </template>
 
 <style lang="scss">
 @import '../assets/styles.scss';
+
+.modal-title {
+  font-size: 25px;
+}
+
+.modal-diretions {
+  margin-bottom: 25px;
+}
+
+.application-success-alert {
+  width: 100%;
+}
 
 .apply__banner {
   background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549173833/Concord/Student_Girl_Violen.jpg');
@@ -178,7 +212,8 @@ export default {
   color: white;
   font-size: 50px;
   font-weight: bold;
-  width: 50%;
+  width: 75%;
+  margin-bottom: 25px;
 }
 
 .apply__bottom-banner-link {
@@ -195,6 +230,11 @@ export default {
   }
 }
 
+.modal-btn {
+  width: 50%;
+  margin: 0 auto !important;
+}
+
 .orange {
   border: 2px solid $concord-orange;
   color: $concord-orange;
@@ -203,6 +243,19 @@ export default {
   background: white;
   &:hover {
     background-color: $concord-orange;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.cancel {
+  border: 2px solid red;
+  color: red;
+  margin: 15px 0;
+  padding: 15px 50px;
+  background: white;
+  &:hover {
+    background-color: red;
     color: white;
     text-decoration: none;
   }
@@ -246,4 +299,62 @@ export default {
   border-radius: 5px;
   padding: 10px;
 }
+
+/* ----- Small Screen Styles -----*/
+@media screen and (max-width: 750px) {
+  
+  .apply__form-container {
+    width: 95vw;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .apply__form-box {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .apply__form-input {
+    border: none;
+    border-bottom: 2px solid $concord-orange;
+    width: 90%;
+    margin: 30px 0;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .textarea {
+    width: 90%;
+    border: 2px solid $concord-orange;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .apply__bottom-banner {
+    height: 400px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549173834/Concord/Students_Violen_Teacher_2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .apply__bottom-banner-title {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 90%;
+  }
+
+
+}
+
 </style>

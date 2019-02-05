@@ -164,6 +164,7 @@ export default {
           <div class="scroll-arrow"></div>
         </div>
       </div>
+      <div class="programs__early-years-description">Below you'll find all of our program options for Early Learners and beyond. Please scroll through the list and click 'Sign Up' if you're interested in any one of them.</div>
       <div class="programs__early-years-program-container">
         <div v-for="program in translatedPrograms" class="programs__program-container" :key="program.id">
           <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
@@ -483,6 +484,11 @@ export default {
   margin: 15px 0 0 0;
   width: 75%;
   text-align: center;
+}
+
+.programs__early-years-description {
+  width: 75%;
+  text-align: left;
 }
 
 .programs__program-container-bottom {

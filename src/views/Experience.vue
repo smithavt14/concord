@@ -138,7 +138,7 @@ export default {
 @import '../assets/swiper.css';
 
 .experience__banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549173834/Concord/Student_Teacher_Reading.jpg');
 }
 
 /* ----- Experience ----- */

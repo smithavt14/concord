@@ -25,29 +25,11 @@ export default {
   methods: {
     changeLanguage () {
       globalData.language = globalData.language === 'English' ? 'Chinese' : 'English'
-    },
-
-    toggleNavBar () {
-      this.showNavbar = !this.showNavbar
-    },
-
-    handleScroll (event) {
-      this.hideNavbar = window.scrollY > this.pagePosition
-      this.pagePosition = window.scrollY
-    },
-
+    }, 
+    
     closeMobileMenu () {
       this.checked = false
-      console.log(this.checked)
     }
-  },
-
-  created () {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 
@@ -90,17 +72,16 @@ export default {
 @import '../assets/styles.scss';
 
 .HomeNavBar__wrapper {
-  height: 150px;
+  height: 100px;
   width: 100vw;
   max-width: 1440px;
-  margin: 0 auto;
-  background: $opaque;
+  background: white;
+  flex-direction: row-reverse;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   z-index: 10;
-  overflow: hidden;
+  position: relative;
 }
 
 .HomeNavBar__mobile {
@@ -110,13 +91,18 @@ export default {
 
 .HomeNavBar__logo {
   background-image: url('../assets/images/logo.png');
-  height: 150px;
-  width: 175px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  height: 150px;
+  width: 200px;
   margin: 0 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
+
+/* ----- Large Screen Styles ----- */
 
 @media screen and (min-width: 751px) {
 
@@ -150,6 +136,7 @@ export default {
     }
     a:hover {
       color: black;
+      transform: scale(1.1);
     }
   }
 
@@ -175,7 +162,13 @@ export default {
   }
 }
 
+/* ----- Small Screen Styles -----*/
+
 @media screen and (max-width: 750px) {
+
+  .HomeNavBar__wrapper {
+    background: $opaque;
+  }
 
   .HomeNavBar__logo {
     display: none;
@@ -199,7 +192,6 @@ export default {
     background: #FFF;
     border-radius: 50% 50% 50% 50%;
     transition: .5s ease-in-out;
-    /*box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;*/
     box-shadow: 0 0 25px #FEFEFEFE;
 
     cursor: pointer;
@@ -245,7 +237,7 @@ export default {
     }
   }
 
-  input {
+  #checkbox {
     display: none;
   }
 

@@ -36,14 +36,16 @@ export default {
   overflow: hidden;
 }
 
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  max-width: 1440px;
-  margin: 0 auto;
-  z-index: 10;
+@media screen and (max-width: 750px) {
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 10;
+  }  
 }
 </style>
