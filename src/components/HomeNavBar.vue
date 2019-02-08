@@ -90,7 +90,7 @@ export default {
 }
 
 .HomeNavBar__logo {
-  background-image: url('../assets/images/logo.png');
+  background-image: url('../assets/images/concord-logo-black.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

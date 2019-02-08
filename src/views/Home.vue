@@ -105,8 +105,9 @@ export default {
       </div>
     </div>
 
-    <!-- From our WeChat Account | SWIPER -->
-<!-- <div class="home__FOB-wrapper">
+    <!-- From our WeChat Account | SWIPER
+
+    <div class="home__FOB-wrapper">
       <div class="home__FOB-title">{{translation.FOBtitle}}</div>
       <div class="home__FOB-swiper-container">
         <swiper :options="swiperOptions" ref="homeSwiper">
@@ -119,14 +120,16 @@ export default {
           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
       </div>
-    </div> -->
+    </div> 
+    
+    ---------->
 
     <!-- From our WeChat | LIST -->
-    <div class="content-wrapper" style="min-height: 450px; padding-bottom: 25px">
+    <div class="content-wrapper" style="min-height: 450px; padding-bottom: 20px">
       <div class="title">{{translation.FOBtitle}}</div>
       <div v-if="!displayStories" class="loading-subtitle">{{translation.loading}}</div>
-      <div v-for="story in stories" :key="story.media_id" class="story_container">
-        <a :href="story.url" target="_blank">
+      <div v-for="(story, index) in stories" :key="story.media_id" class="story_container" :class="{'border-bottom': index !== 4}">
+        <a :href="story.url" target="_blank" class="story_link">
           <div class="story_title">{{story.title}}</div>
           <div class="story_date">{{story.update_time}}</div>
           <div class="story_digest">{{story.digest}}</div>
@@ -159,10 +162,14 @@ export default {
 @import '../assets/swiper.css';
 
 .story_container {
-  width: 75%;
+  width: 90%;
+  max-width: 900px;
   margin: 10px 0;
   text-align: left;
   padding-bottom: 20px;
+}
+
+.border-bottom {
   border-bottom: solid 2px $light-gray;
 }
 
@@ -180,7 +187,7 @@ export default {
   display: flex;
 }
 
-a {
+.story_link {
   color: unset !important;
   margin: 0;
   text-decoration: none !important;
