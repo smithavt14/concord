@@ -3,6 +3,7 @@ import translation from '@/translations/translation'
 import globalData from '@/main'
 import homePrograms from '@/objects/home_programs'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import strftime from 'strftime'
 
 export default {
   components: {
@@ -26,36 +27,6 @@ export default {
 
   data () {
     return {
-      WeChatlinks: [
-        {
-          title: 'Piano Solo Recital: A Night of Spanish Music',
-          date: 'November 11, 2018',
-          link: 'https://mp.weixin.qq.com/s/tAEMXO6vjO0pW3aTJDf2Vw',
-          photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542025192/article_111118.png',
-          id: 1
-        },
-        {
-          title: 'Concord Music Group Schedule (November Term)',
-          date: 'November 08, 2018',
-          link: 'https://mp.weixin.qq.com/s/lND74dEWY8A51A2ccqrpig',
-          photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542026420/article_110818.png',
-          id: 2
-        },
-        {
-          title: 'Piano Teachers Workshop | 钢琴教师工作坊',
-          date: 'November 06, 2018',
-          link: 'https://mp.weixin.qq.com/s/TuYBO9JRilsVY0gD6UcDJA',
-          photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542026420/article_110618.png',
-          id: 3
-        },
-        {
-          title: 'Little Symphony | 音乐赏析工作坊',
-          date: 'November 02, 2018',
-          link: 'https://mp.weixin.qq.com/s/R3zgQLnUuwTkenoWZixCtg',
-          photo: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1542026430/article_110218.png',
-          id: 4
-        }
-      ],
       programLinks: homePrograms,
       swiperOptions: {
         navigation: {
@@ -66,12 +37,44 @@ export default {
           el: '.swiper-pagination',
           clickable: false
         },
-      }
+      },
+      stories: [],
+      displayStories: false
+    }
+  },
+
+  methods: {
+    getWechatInfo() {
+      const self = this
+      fetch('https://r1rtg2nbcf.execute-api.us-east-1.amazonaws.com/dev/get/info', {
+        method: 'POST', 
+        headers: {"Content-Type": "application/json"}
+      })
+        .then(function(response) {
+          return response.json()
+      })
+        .then(function(myJson) {
+          self.processWechatInfo(myJson.item)
+      })
+    },
+
+    processWechatInfo(response) {
+      const self = this
+      response.forEach(function(item) {
+        var time, story
+        story = item.content.news_item[0]
+        time = new Date (item.content.update_time * 1000)
+        story.update_time = strftime('%A, %B %d', time)
+        story.media_id = item.media_id
+        self.stories.push(story)
+      })
+      console.log(self.stories)
+      self.displayStories = true
     }
   },
 
   mounted () {
-    console.log('this is current swiper instance object', this.swiper)
+    this.getWechatInfo()
   }
 }
 
@@ -102,23 +105,35 @@ export default {
       </div>
     </div>
 
-    <!-- From our WeChat Account -->
-    <div class="home__FOB-wrapper">
+    <!-- From our WeChat Account | SWIPER -->
+<!-- <div class="home__FOB-wrapper">
       <div class="home__FOB-title">{{translation.FOBtitle}}</div>
       <div class="home__FOB-swiper-container">
         <swiper :options="swiperOptions" ref="homeSwiper">
-          <swiper-slide v-for="post in WeChatlinks" :key="post.id" class="FOB__swiper-slide">
-            <a :href="post.link"><img :src="post.photo" :href="post.link" class="home__FOB-card-photo"></a>
-            <div class="home__FOB-card-title">{{ post.title }}</div>
-            <div class="home__FOB-card-date">{{ post.date }}</div>
+          <swiper-slide v-for="story in stories" :key="story.content.news_item.url" class="FOB__swiper-slide">
+            <a :href="story.content.news_item[0].url"><img :src="story.content.news_item[0].thumb_url" class="home__FOB-card-photo"></a>
+            <div class="home__FOB-card-title">{{ story.content.news_item[0].title }}</div>
           </swiper-slide>
-          <!-- Navigation -->
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
       </div>
+    </div> -->
+
+    <!-- From our WeChat | LIST -->
+    <div class="content-wrapper" style="min-height: 450px; padding-bottom: 25px">
+      <div class="title">{{translation.FOBtitle}}</div>
+      <div v-if="!displayStories" class="loading-subtitle">{{translation.loading}}</div>
+      <div v-for="story in stories" :key="story.media_id" class="story_container">
+        <a :href="story.url" target="_blank">
+          <div class="story_title">{{story.title}}</div>
+          <div class="story_date">{{story.update_time}}</div>
+          <div class="story_digest">{{story.digest}}</div>
+        </a>
+      </div>
     </div>
+
     <!-- Our Programs -->
     <div class="home__OP-wrapper">
       <div class="home__OP-title">{{translation.OPtitle}}</div>
@@ -142,6 +157,34 @@ export default {
 <style lang="scss">
 @import '../assets/styles.scss';
 @import '../assets/swiper.css';
+
+.story_container {
+  width: 75%;
+  margin: 10px 0;
+  text-align: left;
+  padding-bottom: 20px;
+  border-bottom: solid 2px $light-gray;
+}
+
+.story_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.story_date {
+  color: $concord-orange;
+  margin-bottom: 10px;
+}
+
+.story_box {
+  display: flex;
+}
+
+a {
+  color: unset !important;
+  margin: 0;
+  text-decoration: none !important;
+}
 
 .orange {
   color: orange;

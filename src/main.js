@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import BaiduMap from 'vue-baidu-map'
 
+
 Vue.use(BootstrapVue)
 
 Vue.use(BaiduMap, {
