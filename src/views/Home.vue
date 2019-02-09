@@ -223,7 +223,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: calc(100vh - 230px);
+  height: calc(100vh - 250px);
   max-height: 750px;
   width: 100%;
 }

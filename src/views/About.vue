@@ -99,6 +99,8 @@ export default {
       </baidu-map>
     </div>
 
+    <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=s0029bdvtfi" allowFullScreen="true"></iframe>
+
     <!-- 5 Reasons to Choose Concord -->
     <div class="content-wrapper">
       <div class="title">{{translation.reasonsTitle}}</div>

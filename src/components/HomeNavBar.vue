@@ -57,6 +57,7 @@ export default {
         <span class="HomeNavBar__hamburger-icon"></span>
       </span>
       <ul v-if="checked">
+        <div class="mobile-logo"></div>
         <li @click="closeMobileMenu"><router-link to="/" class="HomeNavBar__link">{{translation.home}}</router-link></li>
         <li @click="closeMobileMenu"><router-link to="/about" class="HomeNavBar__link">{{translation.about}}</router-link></li>
         <li @click="closeMobileMenu"><router-link to="/experience" class="HomeNavBar__link">{{translation.experience}}</router-link></li>
@@ -72,7 +73,7 @@ export default {
 @import '../assets/styles.scss';
 
 .HomeNavBar__wrapper {
-  height: 100px;
+  height: 120px;
   width: 100vw;
   max-width: 1440px;
   background: white;
@@ -90,16 +91,15 @@ export default {
 }
 
 .HomeNavBar__logo {
-  background-image: url('../assets/images/concord-logo-black.jpeg');
+  background-image: url('../assets/images/concord-logo-black.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 150px;
-  width: 200px;
+  height: 100px;
+  width: 175px;
   margin: 0 20px;
   position: absolute;
   left: 0;
-  top: 0;
 }
 
 /* ----- Large Screen Styles ----- */
@@ -172,6 +172,16 @@ export default {
 
   .HomeNavBar__logo {
     display: none;
+  }
+
+  .mobile-logo {
+    background-image: url('../assets/images/concord-logo-black.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 175px;
+    margin-bottom: 30px;
   }
 
   .HomeNavBar__active {
