@@ -78,37 +78,8 @@ export default {
       </div>
     </div>
 
-    <!-- Testimonials -->
-    <div class="content-wrapper">
-      <div class="title">{{translation.testimonials}}</div>
-      <div class="experience__testimonials-title">What do students and parents have to say about us?</div>
-      <div class="experience__testimonials-container">
-
-        <!-- Testimonial Left -->
-        <div class="experience__testimonials-container-side">
-          <div class="experience__testimonial left-container">
-            <div class="experience__testimonial-photo left-photo"></div>
-            <div class="experience__testimonial-name">Caroline</div>
-            <div class="experience__testimonial-role">Private Violin Student</div>
-            <div class="experience__testimonial-time">Fall 2018</div>
-            <div class="experience__testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-            <div class="experience__testimonial-parent">- Mary Zhao (Mother)</div>
-          </div>
-        </div>
-
-        <!-- Testimonial Right -->
-        <div class="experience__testimonials-container-side">
-          <div class="experience__testimonial right-container">
-            <div class="experience__testimonial-photo right-photo"></div>
-            <div class="experience__testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-            <div class="experience__testimonial-parent right-content">- Mary Zhao (Mother)</div>
-            <div class="experience__testimonial-name">Caroline</div>
-            <div class="experience__testimonial-role">Private Violin Student</div>
-            <div class="experience__testimonial-time">Fall 2018</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Video Testimonials -->
+    <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=s0029bdvtfi" allowFullScreen="true"></iframe>
 
     <!-- Photos -->
     <div class="content-wrapper">

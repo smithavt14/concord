@@ -91,7 +91,7 @@ export default {
 }
 
 .HomeNavBar__logo {
-  background-image: url('../assets/images/concord-logo-black.png');
+  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549705201/Concord/concord-logo-black.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -175,7 +175,7 @@ export default {
   }
 
   .mobile-logo {
-    background-image: url('../assets/images/concord-logo-black.png');
+    background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549705201/Concord/concord-logo-black.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

@@ -101,7 +101,7 @@ export default {
         <router-link to="/apply" class="home__WAW-container-left-signup">{{translation.WAWsignup}}</router-link>
       </div>
       <div class="home__WAW-container-right">
-        <img src="../assets/images/instruments.jpeg" alt="" class="home__WAW-container-right-instruments">
+        <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1549705175/Concord/instruments.jpg" alt="" class="home__WAW-container-right-instruments">
       </div>
     </div>
 
@@ -219,7 +219,7 @@ export default {
 }
 
 .home__banner {
-  background-image: url('../assets/images/home-banner.jpeg');
+  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549705175/Concord/home-banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
