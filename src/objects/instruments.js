@@ -2,47 +2,47 @@ const instruments = {
   English: [
     {
       name: 'Piano',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297424/piano.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/piano%202.png'
     }, 
     {
       name: 'Violin',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297423/violin_1.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/violin_1.png'
     },
     {
       name: 'Cello',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297423/violin_1.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/violin_1.png'
     },
     {
       name: 'Ukelele',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297424/ukelele.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/ukelele.png'
     },
     {
       name: 'Bass',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297423/electric-guitar.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/electric-guitar_1.png'
     },
     {
       name: 'Flute',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297423/piccolo.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/picollo.png'
     },
     {
       name: 'Clarinet',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297424/clarinet.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/clarinet.png'
     },
     {
       name: 'Vocal',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297423/microphone.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/microphone.png'
     },
     {
       name: 'Trumpet',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297423/trumpet.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/trumpet.png'
     },
     {
       name: 'Electric Drums',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297423/drum.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/drum.png'
     },
     {
       name: 'Guitar',
-      img: 'https://res.cloudinary.com/dbbfpai4q/image/upload/v1547297423/electric-guitar_1.png'
+      img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/electric-guitar.png'
     },
   ]
 }
