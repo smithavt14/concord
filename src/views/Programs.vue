@@ -71,10 +71,10 @@ export default {
       <div class="programs__subtitle">{{translation.ourPrograms}}</div>
       <div class="programs__OC-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, repellendus voluptas quod odio consequuntur ducimus dolorum non, quis, veniam voluptatibus commodi!</div>
       <div class="programs__OC-category-title">{{translation.ocTitle}}</div>
-      <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296631/early-years.png" alt="" class="programs__OC-category-image">
-      <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296635/foundation.png" alt="" class="programs__OC-category-image">
-      <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296645/foundation2.png" alt="" class="programs__OC-category-image">
-      <img src="https://res.cloudinary.com/dbbfpai4q/image/upload/v1547296649/supplemental.png" alt="" class="programs__OC-category-image">
+      <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-1.png" alt="" class="programs__OC-category-image">
+      <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-2.png" alt="" class="programs__OC-category-image">
+      <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-3.png" alt="" class="programs__OC-category-image">
+      <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-4.png" alt="" class="programs__OC-category-image">
     </div>
 
     <!-- Private Lessons -->
@@ -205,7 +205,7 @@ export default {
 }
 
 .programs__banner {
-  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1546515353/girl_reading.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__learning-at-concord.jpg');
   background-size: cover;
   background-position: center;
   height: 50vh;
@@ -299,7 +299,7 @@ export default {
 .programs__lessons-banner {
   width: 100%;
   height: 25vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1547298621/BA4A1645_1.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__fei-teaching.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -311,7 +311,7 @@ export default {
 .programs__group-lessons-banner {
   width: 100%;
   height: 25vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1547875702/BA4A1584.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/home__group-classes-kids.jpg');
   background-size: cover;
   background-position: 10% 25%;
   background-repeat: no-repeat;
@@ -434,9 +434,9 @@ export default {
 .programs__early-years-banner {
   width: 100%;
   height: 25vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Experience_Banner.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg');
   background-size: cover;
-  background-position: 10% 25%;
+  background-position: 0 -300px;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;

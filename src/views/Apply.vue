@@ -63,7 +63,7 @@ export default {
 
     error(err) {
       const submit = document.getElementById('submit')
-      alert('There was an error with sending your message, hold up until I fix it. Thanks for waiting.')
+      alert('There was an error with sending your message, hold up until we fix it. Thanks for waiting.')
       submit.disabled = false
       console.log(err)
       this.modal.error = true
@@ -193,13 +193,13 @@ export default {
 }
 
 .apply__banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549173833/Concord/Student_Girl_Violen.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/apply__experience__student-violen.jpg');
 }
 
 .apply__bottom-banner {
   height: 500px;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.30)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549173834/Concord/Students_Violen_Teacher_2.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.30)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/apply__student-violen-teacher.jpg');
   background-size: cover;
   background-position: center;
   display: flex;

@@ -88,9 +88,8 @@ export default {
         </bm-marker>
         <div class="about__map-overlay">
           <div class="about__map-overlay-title">Concord Music</div>
-          <div><strong>Address: </strong></div>
+          <div style="margin-top: 5px"><strong>Address / 地址 </strong></div>
           <div>Gubei Lu 678, Tongquan Building, Suite 803</div>
-          <div><strong>地址: </strong></div>
           <div>古北路678号，同诠大厦，803室</div>
           <div><strong>Contact Us / 联系我们: </strong></div>
           <div>021-5235-7398</div>
@@ -154,12 +153,12 @@ export default {
 @import '../assets/styles.scss';
 
 .about__banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549173833/Concord/Student_Boy_Guitar_Teacher_2.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/about__banner.jpg');
   background-position: 25% 50%;
 }
 
 .about__OP-container-right-image {
-  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1542545920/teacher_with_student.jpg');
+  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__maggie-flute.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -295,7 +294,7 @@ export default {
 }
 
 .about__OPA-right-image {
-  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1543409153/Group_2_3.png');
+  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/about__partnerships.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

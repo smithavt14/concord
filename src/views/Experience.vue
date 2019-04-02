@@ -109,13 +109,13 @@ export default {
 @import '../assets/swiper.css';
 
 .experience__banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1549173834/Concord/Student_Teacher_Reading.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/home__experience__banner__private-1-on-1.jpg');
 }
 
 /* ----- Experience ----- */
 
 .experience__EX-container-right-image {
-  background-image: url('https://res.cloudinary.com/dbbfpai4q/image/upload/v1544007919/Child_Reading.jpg');
+  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__learning-at-concord.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
