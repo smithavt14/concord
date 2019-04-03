@@ -1,6 +1,6 @@
 <script>
-import translation from '@/translations/translation'
-import globalData from '@/main'
+import translation from '../translations/translation'
+import globalData from '../main'
 
 export default {
   name: 'HomeNavBar',
@@ -25,8 +25,8 @@ export default {
   methods: {
     changeLanguage () {
       globalData.language = globalData.language === 'English' ? 'Chinese' : 'English'
-    }, 
-    
+    },
+
     closeMobileMenu () {
       this.checked = false
     }

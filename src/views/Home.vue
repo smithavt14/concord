@@ -1,13 +1,13 @@
 <script>
-import translation from '@/translations/translation'
-import globalData from '@/main'
-import homePrograms from '@/objects/home_programs'
+import translation from '../translations/translation'
+import globalData from '../main'
+import homePrograms from '../objects/home_programs'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import strftime from 'strftime'
 
 export default {
   components: {
-    swiper, 
+    swiper,
     swiperSlide
   },
 
@@ -20,7 +20,7 @@ export default {
     translatedProgramLinks () {
       return this.programLinks[globalData.language]
     },
-    swiper() {
+    swiper () {
       return this.$refs.homeSwiper.swiper
     }
   },
@@ -36,7 +36,7 @@ export default {
         pagination: {
           el: '.swiper-pagination',
           clickable: false
-        },
+        }
       },
       stories: [],
       displayStories: false
@@ -44,18 +44,18 @@ export default {
   },
 
   methods: {
-    getWechatInfo() {
+    getWechatInfo () {
       const self = this
       fetch('https://r1rtg2nbcf.execute-api.us-east-1.amazonaws.com/dev/get/info', {
-        method: 'POST', 
-        headers: {"Content-Type": "application/json"}
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
       })
-        .then(function(response) {
+        .then(function (response) {
           return response.json()
-      })
-        .then(function(myJson) {
+        })
+        .then(function (myJson) {
           self.processWechatInfo(myJson.item)
-      })
+        })
     },
 
     processWechatInfo(response) {

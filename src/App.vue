@@ -1,6 +1,6 @@
 <script>
-import HomeNavBar from '@/components/HomeNavBar.vue'
-import Footer from '@/components/footer.vue'
+import HomeNavBar from './components/HomeNavBar.vue'
+import Footer from './components/footer.vue'
 
 export default {
   name: 'app',
@@ -19,7 +19,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style lang="scss">
 @import 'assets/styles.scss';
 
 #app {
@@ -46,6 +46,6 @@ export default {
     max-width: 1440px;
     margin: 0 auto;
     z-index: 10;
-  }  
+  }
 }
 </style>

@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "webpack-dev-server"
   },
   "dependencies": {
     "babel": "^6.23.0",
@@ -15,7 +16,6 @@
     "jquery": "^3.3.1",
     "moment": "^2.24.0",
     "node-sass": "^4.10.0",
-    "sass-loader": "^7.1.0",
     "strftime": "^0.10.0",
     "swiper": "^4.4.6",
     "vue": "^2.5.17",
@@ -37,7 +37,13 @@
     "css-loader": "^2.1.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "file-loader": "^3.0.1",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"

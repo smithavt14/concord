@@ -1,7 +1,7 @@
 <script>
-import translation from '@/translations/translation'
-import globalData from '@/main'
-import applyPrograms from '@/objects/apply_programs'
+import translation from '../translations/translation'
+import globalData from '../main'
+import applyPrograms from '../objects/apply_programs'
 
 export default {
   name: 'apply',
@@ -15,7 +15,7 @@ export default {
     }
   },
 
-  data() {
+  data () {
     return {
       modal: {
         success: false,
@@ -26,29 +26,28 @@ export default {
 
   methods: {
 
-    closeModal() {
+    closeModal () {
       this.modal.success = false
       this.modal.error = false
     },
 
-    post(url, body, callback) {
+    post (url, body, callback) {
       var req = new XMLHttpRequest()
-      req.open("POST", url, true)
-      req.setRequestHeader("Content-Type", "application/json")
-      req.addEventListener("load", function () {
+      req.open('POST', url, true)
+      req.setRequestHeader('Content-Type', 'application/json')
+      req.addEventListener('load', function () {
         if (req.status < 400) {
-          callback(null, JSON.parse(req.responseText));
+          callback(null, JSON.parse(req.responseText))
         } else {
-          callback(new Error("Request failed: " + req.statusText));
+          callback(new Error('Request failed: ' + req.statusText))
         }
       })
       req.send(JSON.stringify(body))
     },
 
-    success() {
+    success () {
       const submit = document.getElementById('submit')
       const form = document.getElementById('application')
-      
       submit.disabled = false
       submit.blur()
       form.student_name.value = ''
@@ -61,7 +60,7 @@ export default {
       this.modal.success = true
     },
 
-    error(err) {
+    error (err) {
       const submit = document.getElementById('submit')
       alert('There was an error with sending your message, hold up until we fix it. Thanks for waiting.')
       submit.disabled = false
@@ -69,7 +68,7 @@ export default {
       this.modal.error = true
     },
 
-    submit(e) {
+    submit (e) {
       var self = this
 
       const submit = document.getElementById('submit')
@@ -100,10 +99,10 @@ export default {
   <div class="wrapper">
     <div class="banner apply__banner"></div>
     <div class="banner-bar">
-    	<div class="banner-bar-link">{{translation.application_form}}</div>
-    	<div class="banner-bar-link-mobile">{{translation.application_form}}</div>
+      <div class="banner-bar-link">{{translation.application_form}}</div>
+      <div class="banner-bar-link-mobile">{{translation.application_form}}</div>
     </div>
-    
+
     <!-- Application Form -->
     <div class="content-wrapper">
       <!-- Success Alert -->
@@ -114,7 +113,7 @@ export default {
         <div class="apply__form-container">
           <!-- Student Name -->
           <div class="apply__form-box">
-            <input type="text" name="student_name" id="student_name" class="apply__form-input" :placeholder="translation.student_name" required>  
+            <input type="text" name="student_name" id="student_name" class="apply__form-input" :placeholder="translation.student_name" required>
           </div>
           <!-- Age -->
           <div class="apply__form-box">
@@ -301,8 +300,7 @@ export default {
 }
 
 /* ----- Small Screen Styles -----*/
-@media screen and (max-width: 750px) {
-  
+@media screen and (max-width: 750px) {  
   .apply__form-container {
     width: 95vw;
     margin: 25px 0;
@@ -353,8 +351,5 @@ export default {
     font-weight: bold;
     width: 90%;
   }
-
-
 }
-
 </style>

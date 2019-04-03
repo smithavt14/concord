@@ -1,5 +1,5 @@
 {
-  mode: 'development',
+  mode: 'production',
   context: '/Users/alexandersmith/code/concord',
   devtool: 'cheap-module-eval-source-map',
   node: {

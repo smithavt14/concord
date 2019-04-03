@@ -1,6 +1,6 @@
 <script>
-import translation from '@/translations/translation'
-import globalData from '@/main'
+import translation from '../translations/translation.js'
+import globalData from '../main.js'
 
 export default {
   name: 'Footer',

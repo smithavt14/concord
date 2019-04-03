@@ -3,7 +3,7 @@ const instruments = {
     {
       name: 'Piano',
       img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/piano%202.png'
-    }, 
+    },
     {
       name: 'Violin',
       img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/violin_1.png'
@@ -43,7 +43,7 @@ const instruments = {
     {
       name: 'Guitar',
       img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/electric-guitar.png'
-    },
+    }
   ]
 }
 

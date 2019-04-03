@@ -1,11 +1,11 @@
 <script>
-import translation from '@/translations/translation'
-import globalData from '@/main'
+import translation from '../translations/translation'
+import globalData from '../main'
 import $ from 'jquery'
 import 'fullcalendar'
-import events from '@/objects/events'
-import instruments from '@/objects/instruments'
-import programs from '@/objects/programs_programs'
+import events from '../objects/events'
+import instruments from '../objects/instruments'
+import programs from '../objects/programs_programs'
 
 export default {
   name: 'programs',

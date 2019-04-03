@@ -5,7 +5,8 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import BaiduMap from 'vue-baidu-map'
-
+import Footer from './components/footer.vue'
+import HomeNavBar from './components/HomeNavBar.vue'
 
 Vue.use(BootstrapVue)
 

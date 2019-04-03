@@ -1,8 +1,8 @@
 <script>
-import translation from '@/translations/translation'
-import globalData from '@/main'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import photos from '@/objects/photos'
+import translation from '../translations/translation'
+import globalData from '../main'
+import swiper from 'vue-awesome-swiper'
+import photos from '../objects/photos'
 
 export default {
   name: 'experience',
