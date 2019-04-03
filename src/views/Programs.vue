@@ -14,7 +14,7 @@ export default {
 
   data () {
     return {
-     instruments: instruments[globalData.language]
+      instruments: instruments[globalData.language]
     }
   },
 
@@ -23,7 +23,7 @@ export default {
       return translation.programs[globalData.language]
     },
 
-    translatedPrograms() {
+    translatedPrograms () {
       return programs[globalData.language]
     }
   },
@@ -95,7 +95,7 @@ export default {
       <div class="programs__lessons-instrument-container">
         <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
           <div class="programs__lessons-img-container">
-            <img :src="instrument.img" alt="" class="programs__lessons-img">  
+            <img :src="instrument.img" alt="" class="programs__lessons-img">
           </div>
           <div class="programs__lessons-title">{{instrument.name}}</div>
         </div>
@@ -138,7 +138,7 @@ export default {
       <div class="programs__lessons-instrument-container">
         <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
           <div class="programs__lessons-img-container">
-            <img :src="instrument.img" alt="" class="programs__lessons-img">  
+            <img :src="instrument.img" alt="" class="programs__lessons-img">
           </div>
           <div class="programs__lessons-title">{{instrument.name}}</div>
         </div>

@@ -8,8 +8,7 @@ export default {
   name: 'experience',
 
   components: {
-    swiper, 
-    swiperSlide
+    swiper
   },
 
   data () {
@@ -39,7 +38,7 @@ export default {
     }
   },
 
-  mounted() {
+  mounted () {
     this.$nextTick(() => {
       const swiperTop = this.$refs.swiperTop.swiper
       const swiperThumbs = this.$refs.swiperThumbs.swiper
@@ -83,21 +82,20 @@ export default {
     <!-- Photos -->
     <div class="content-wrapper">
       <div class="title">{{translation.photos}}</div>
-        <div class="experience__swiper-container">
-          <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
-            <swiper-slide v-for="photo in photos" :key="photo">
-              <img :src="photo" class="experience__photos-slide">
-            </swiper-slide>
-            <div class="swiper-button-next swiper-button-black" slot="button-next"></div>
-            <div class="swiper-button-prev swiper-button-black" slot="button-prev"></div>
-          </swiper>
-          <!-- swiper2 Thumbs -->
-          <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs">
-            <swiper-slide v-for="photo in photos" :key="photo">
-              <img :src="photo" class="experience__photos-slide">
-            </swiper-slide>
-          </swiper>
-        </div>
+      <div class="experience__swiper-container">
+        <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
+          <swiper-slide v-for="photo in photos" :key="photo">
+            <img :src="photo" class="experience__photos-slide">
+          </swiper-slide>
+          <div class="swiper-button-next swiper-button-black" slot="button-next"></div>
+          <div class="swiper-button-prev swiper-button-black" slot="button-prev"></div>
+        </swiper>
+        <!-- swiper2 Thumbs -->
+        <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs">
+          <swiper-slide v-for="photo in photos" :key="photo">
+            <img :src="photo" class="experience__photos-slide">
+          </swiper-slide>
+        </swiper>
       </div>
     </div>
   </div>
