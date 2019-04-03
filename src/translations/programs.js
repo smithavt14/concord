@@ -9,6 +9,7 @@ const programs = {
     calendarTitle: 'CALENDAR',
     signup: 'Sign Up',
     ourPrograms: 'OUR PROGRAMS',
+    ourProgramsContent: 'Concord tailor our programs to meet different needs and interests, while provided a well rounded learning experience for all. We also offer students different modes of learning: 1-on-1, 1-on-2, 1-on-4 and group setting. Our step-by-step courses allow students to take one step a time while we work on the big picture to keep your interest going steadily! ',
     ocTitle: 'Early Years Music Programs',
     privateLessonsTitle: '1-1 PRIVATE LESSONS',
     instruments: 'INSTRUMENTS',
@@ -28,7 +29,7 @@ const programs = {
     descriptionTitle: 'DESCRIPTION'
   },
   Chinese: {
-    programs: '项目',
+    programs: '课程',
     calendar: '日历',
     earlyYearsPrograms: '儿童团体团课',
     privateLessons: '一对一私教课',
@@ -36,7 +37,8 @@ const programs = {
     camps: '',
     calendarTitle: '日历',
     signup: '申请',
-    ourPrograms: '我们的项目',
+    ourPrograms: '我们的课程',
+    ourProgramsContent: '搿艺按学生们不同的兴趣和需求，提供全面的音乐教育和课程选择。我们也提倡不同的学习模式：一对一，一对二，一对四和集体课。我们设置有系统化和一步接一步的课程，让学生们享受每个阶段的学习，同时不忘为您或您孩子规划一个长期的兴趣培养之道！',
     ocTitle: '儿童团体课',
     privateLessonsTitle: '一对一私教课',
     instruments: '乐器',

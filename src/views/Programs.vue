@@ -69,7 +69,7 @@ export default {
     <!-- Courses -->
     <div class="programs__courses-wrapper">
       <div class="programs__subtitle">{{translation.ourPrograms}}</div>
-      <div class="programs__OC-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, repellendus voluptas quod odio consequuntur ducimus dolorum non, quis, veniam voluptatibus commodi!</div>
+      <div class="programs__OC-description">{{translation.ourProgramsContent}}</div>
       <div class="programs__OC-category-title">{{translation.ocTitle}}</div>
       <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-1.png" alt="" class="programs__OC-category-image">
       <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-2.png" alt="" class="programs__OC-category-image">

@@ -69,7 +69,7 @@ const teachers = {
       id: 2,
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__michi.jpg',
       name: 'Michi',
-      role: '',
+      role: '声乐老师',
       bio: 'Michael Feigl曾出台参与音乐会和歌剧的表演。在2015到2016年间，他在上海音乐学院与陈琦连教授一起学习。他曾在上海音乐厅和上海交响乐大厅以主唱的身份参与表演。他学士学位的专业是音乐史和音乐分析。2017他以最佳成绩毕业于维也纳音乐和表演艺术大学。'
     },
     {

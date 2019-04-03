@@ -56,7 +56,6 @@ export default {
     <!-- Banner -->
     <div class="banner experience__banner"></div>
     <div class="banner-bar">
-      <div class="banner-bar-link">{{translation.testimonials}}</div>
       <div class="banner-bar-link">{{translation.photos}}</div>
       <div class="banner-bar-link">{{translation.videos}}</div>
 

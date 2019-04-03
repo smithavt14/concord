@@ -35,32 +35,32 @@ const reasons = {
     {
       id: 0,
       icon: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__one.jpg',
-      title: '专业的国际师资团队',
-      description: '为不同年龄段和水平的学生提供高质量的音乐教育'
+      title: '世界一流的师资团队',
+      description: '我们为不同年龄层次的学生提供高质量的音乐教育'
     },
     {
       id: 1,
       icon: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__two.jpg',
-      title: '我们独特的教学方式',
-      description: '结合西式教学和创新的教学方式'
+      title: '独特的教学风格',
+      description: '我们将传统的西方教学法与具有创新性的音乐教育相结合'
     },
     {
       id: 2,
       icon: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__three.jpg',
-      title: '丰富的课程选择',
-      description: '针对不同的兴趣，我们提供全面的学习经验'
+      title: '多样化的课程选择',
+      description: '为满足不同的需求和兴趣而量身定制我们的课程，同时为所有人提供最具全面的音乐学习体验。'
     },
     {
       id: 3,
       icon: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__four.jpg',
-      title: '演奏机会',
-      description: '为了提供更多的动力和鼓励，我们为每位学生提供足够的演奏机会'
+      title: '更多的演出机会',
+      description: '搿艺确保持续性的进步，让学生在整个的音乐学习过程中保持参与和灵感。'
     },
     {
       id: 4,
       icon: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__five.jpg',
-      title: '培育长期和有持续性的音乐兴趣',
-      description: '是我们团队的使命'
+      title: '将音乐作为终身的兴趣追求',
+      description: '搿艺致力于培养学生将音乐作为终身的兴趣追求'
     }
   ]
 }

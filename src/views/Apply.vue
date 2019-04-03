@@ -108,7 +108,7 @@ export default {
     <div class="content-wrapper">
       <!-- Success Alert -->
       <div class="title">{{translation.title}}</div>
-      <div class="apply__sub-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dicta provident eveniet eos, quasi sit corporis praesentium quam laboriosam, ea animi, dolores reprehenderit possimus fugiat perferendis. Fuga officiis fugit beatae!</div>
+      <div class="apply__sub-content">{{translation.content}}</div>
       <!-- Form -->
       <form id="application" action="" method="POST" style="display: flex; flex-direction: column; align-items: center">
         <div class="apply__form-container">

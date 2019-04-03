@@ -98,8 +98,6 @@ export default {
       </baidu-map>
     </div>
 
-    <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=s0029bdvtfi" allowFullScreen="true"></iframe>
-
     <!-- 5 Reasons to Choose Concord -->
     <div class="content-wrapper">
       <div class="title">{{translation.reasonsTitle}}</div>
@@ -116,7 +114,7 @@ export default {
 
     <!-- OUR TEAM -->
     <div class="content-wrapper">
-      <div class="title">OUR TEAM</div>
+      <div class="title">我们的团队</div>
       <b-container class="about__OT-container">
         <b-row class="about__OT-bootstrap-row">
           <b-col v-for="item in translatedTeam" :key="item.id" class="about__OT-item" sm="12" md="6" lg="4">
@@ -162,7 +160,7 @@ export default {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90%;
+  height: 100%;
   width: 90%;
 }
 
@@ -175,6 +173,7 @@ export default {
   font-size: 15px;
   color: gray;
   margin-bottom: 10px;
+  white-space: pre-line;
 }
 
 .about__map-container {
@@ -299,7 +298,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   height: 90%;
-  width: 90%;
+  width: 100%;
 }
 
 /*--------------- Large Screen Style ---------------*/
@@ -307,10 +306,11 @@ export default {
 @media screen and (min-width: 751px) {
   .about__OP-container {
     width: 100%;
-    height: 400px;
+    height: 500px;
     background-color: white;
     display: flex;
     justify-content: center;
+    position: relative;
   }
 
   .about__OP-container-left {
@@ -322,17 +322,15 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    white-space: pre-line;
   }
 
   .about__OP-container-right {
     height: 100%;
     width: 50%;
-    max-width: 450px;
-    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
   }
 
   .about__mobile-banner-title {
@@ -357,7 +355,7 @@ export default {
 
   .about__OPA-content {
     width: 100%;
-    height: 500px;
+    height: 550px;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -373,6 +371,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     padding: 15px;
+    white-space: pre-line;
   }
 
   .about__OPA-right {
@@ -408,8 +407,7 @@ export default {
   }
 
   .about__OP-container-right {
-    height: 100%;
-    padding: 20px;
+    height: 250px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -444,11 +442,11 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    white-space: pre-line;
   }
 
   .about__OPA-right {
-    height: 100%;
-    padding: 20px;
+    height: 375px;
     width: 100%;
     display: flex;
     align-items: center;
