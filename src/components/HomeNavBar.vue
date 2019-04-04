@@ -12,8 +12,7 @@ export default {
       return translation.navbar[globalData.language]
     },
     currentRoute() {
-      console.log(globalData.currentRoute, '<-- Current ROute')
-      return globalData.currentRoute
+      return this.$route.name
     }
   },
 
@@ -32,6 +31,9 @@ export default {
 
     closeMobileMenu () {
       this.checked = false
+    },
+    showPageRoute () {
+      console.log(this.currentRoute)
     }
   }
 } 
@@ -39,16 +41,16 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div v-on:click="showPageRoute">
     <!-- Large Devices -->
     <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar, 'HomeNavBar__mobile': checked }">
       <router-link to="/" class="HomeNavBar__logo"></router-link>
       <div class="HomeNavBar__tabs">
-        <router-link to="/" :class="{'HomeNavBar__tab_active': checked === 'concord/'}">{{translation.home}}</router-link>
-        <router-link to="/about">{{translation.about}}</router-link>
-        <router-link to="/experience">{{translation.experience}}</router-link>
-        <router-link to="/programs">{{translation.programs}}</router-link>
-        <router-link to="/apply">{{translation.apply}}</router-link>
+        <router-link to="/" :class="{'HomeNavBar__tab_active': currentRoute === 'home'}">{{translation.home}}</router-link>
+        <router-link to="/about" :class="{'HomeNavBar__tab_active': currentRoute === 'about'}">{{translation.about}}</router-link>
+        <router-link to="/experience" :class="{'HomeNavBar__tab_active': currentRoute === 'experience'}">{{translation.experience}}</router-link>
+        <router-link to="/programs" :class="{'HomeNavBar__tab_active': currentRoute === 'programs'}">{{translation.programs}}</router-link>
+        <router-link to="/apply" :class="{'HomeNavBar__tab_active': currentRoute === 'apply'}">{{translation.apply}}</router-link>
         <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
       </div>
     </div>
@@ -144,8 +146,8 @@ export default {
   }
 
   .HomeNavBar__tab_active {
-    color: black;
-    transform: scale(1.1);
+    color: black !important;
+    transform: scale(1.1) !important;
   }
 
   .HomeNavBar__language-selector {

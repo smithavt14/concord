@@ -16,7 +16,6 @@ Vue.use(BaiduMap, {
 const globalData = new Vue({
   data: {
     language: 'English',
-    currentRoute: window.location.pathname
   }
 })
 
