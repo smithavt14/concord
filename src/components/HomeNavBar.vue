@@ -10,13 +10,16 @@ export default {
   computed: {
     translation () {
       return translation.navbar[globalData.language]
+    },
+    currentRoute() {
+      console.log(globalData.currentRoute, '<-- Current ROute')
+      return globalData.currentRoute
     }
   },
 
   data () {
     return {
       showNavbar: false,
-      pagePosition: 0,
       hideNavbar: false,
       checked: undefined
     }
@@ -31,7 +34,7 @@ export default {
       this.checked = false
     }
   }
-}
+} 
 
 </script>
 
@@ -39,9 +42,9 @@ export default {
   <div>
     <!-- Large Devices -->
     <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar, 'HomeNavBar__mobile': checked }">
-      <div class="HomeNavBar__logo"></div>
+      <router-link to="/" class="HomeNavBar__logo"></router-link>
       <div class="HomeNavBar__tabs">
-        <router-link to="/">{{translation.home}}</router-link>
+        <router-link to="/" :class="{'HomeNavBar__tab_active': checked === 'concord/'}">{{translation.home}}</router-link>
         <router-link to="/about">{{translation.about}}</router-link>
         <router-link to="/experience">{{translation.experience}}</router-link>
         <router-link to="/programs">{{translation.programs}}</router-link>
@@ -138,6 +141,11 @@ export default {
       color: black;
       transform: scale(1.1);
     }
+  }
+
+  .HomeNavBar__tab_active {
+    color: black;
+    transform: scale(1.1);
   }
 
   .HomeNavBar__language-selector {

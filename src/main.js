@@ -9,14 +9,14 @@ import Footer from './components/footer.vue'
 import HomeNavBar from './components/HomeNavBar.vue'
 
 Vue.use(BootstrapVue)
-
 Vue.use(BaiduMap, {
   ak: 'sFgM150Y1IqNbx6BvXEGcHOt9tui9DaY'
 })
 
 const globalData = new Vue({
   data: {
-    language: 'English'
+    language: 'English',
+    currentRoute: window.location.pathname
   }
 })
 
