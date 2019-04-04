@@ -46,7 +46,11 @@ export default {
     <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar, 'HomeNavBar__mobile': checked }">
       <router-link to="/" class="HomeNavBar__logo"></router-link>
       <div class="HomeNavBar__tabs">
-        <router-link to="/" :class="{'HomeNavBar__tab_active': currentRoute === 'home'}">{{translation.home}}</router-link>
+        <router-link 
+        to="/" 
+        :class="{'HomeNavBar__tab_active': currentRoute === 'home'}">
+          {{translation.home}}
+        </router-link>
         <router-link to="/about" :class="{'HomeNavBar__tab_active': currentRoute === 'about'}">{{translation.about}}</router-link>
         <router-link to="/experience" :class="{'HomeNavBar__tab_active': currentRoute === 'experience'}">{{translation.experience}}</router-link>
         <router-link to="/programs" :class="{'HomeNavBar__tab_active': currentRoute === 'programs'}">{{translation.programs}}</router-link>
@@ -61,14 +65,15 @@ export default {
       <span class="menu">
         <span class="HomeNavBar__hamburger-icon"></span>
       </span>
-      <ul v-if="checked">
+      <div v-if="checked" class="HomeNavBar__mobile-wrapper">
         <div class="mobile-logo"></div>
-        <li @click="closeMobileMenu"><router-link to="/" class="HomeNavBar__link">{{translation.home}}</router-link></li>
-        <li @click="closeMobileMenu"><router-link to="/about" class="HomeNavBar__link">{{translation.about}}</router-link></li>
-        <li @click="closeMobileMenu"><router-link to="/experience" class="HomeNavBar__link">{{translation.experience}}</router-link></li>
-        <li @click="closeMobileMenu"><router-link to="/programs" class="HomeNavBar__link">{{translation.programs}}</router-link></li>
-        <li @click="closeMobileMenu"><router-link to="/apply" class="HomeNavBar__link">{{translation.apply}}</router-link></li>
-        <li @click="changeLanguage" class="HomeNavBar__link">{{translation.language}}</li>
+        <p @click="closeMobileMenu"><router-link to="/" :class="{'HomeNavBar__link_active': currentRoute === 'home'}">{{translation.home}}</router-link></p>
+        <p @click="closeMobileMenu"><router-link to="/about" :class="{'HomeNavBar__link_active': currentRoute === 'about'}">{{translation.about}}</router-link></p>
+        <p @click="closeMobileMenu"><router-link to="/experience" :class="{'HomeNavBar__link_active': currentRoute === 'experience'}">{{translation.experience}}</router-link></p>
+        <p @click="closeMobileMenu"><router-link to="/programs" :class="{'HomeNavBar__link_active': currentRoute === 'programs'}">{{translation.programs}}</router-link></p>
+        <p @click="closeMobileMenu"><router-link to="/apply" :class="{'HomeNavBar__link_active': currentRoute === 'apply'}">{{translation.apply}}</router-link></p>
+        <p @click="changeLanguage">{{translation.language}}</p>
+      </div>
       </ul>
     </label>
   </div>
@@ -138,16 +143,17 @@ export default {
       color: $half-black;
       text-decoration: none !important;
       margin: 15px;
+      padding-bottom: 3px;
     }
     a:hover {
-      color: black;
-      transform: scale(1.1);
+      text-decoration: none !important;
+      color: $half-black;
     }
   }
 
   .HomeNavBar__tab_active {
-    color: black !important;
-    transform: scale(1.1) !important;
+    padding-bottom: 0px !important;
+    border-bottom: 3px solid $concord-orange;
   }
 
   .HomeNavBar__language-selector {
@@ -180,6 +186,27 @@ export default {
     background: $opaque;
   }
 
+  .HomeNavBar__mobile-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: $half-black; 
+      font-size: 30px;
+    }
+    p {
+      color: $half-black; 
+      font-size: 30px;
+    }
+  }
+
   .HomeNavBar__logo {
     display: none;
   }
@@ -189,9 +216,11 @@ export default {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100px;
-    width: 175px;
-    margin-bottom: 30px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    height: 75px;
+    width: 150px;
   }
 
   .HomeNavBar__active {
@@ -213,18 +242,19 @@ export default {
     border-radius: 50% 50% 50% 50%;
     transition: .5s ease-in-out;
     box-shadow: 0 0 25px #FEFEFEFE;
-
     cursor: pointer;
   }
 
-  .HomeNavBar__link {
+  .HomeNavBar__link li {
     font-size: 30px;
-    color: $concord-orange;
-    &:hover {
-      text-decoration: none;
-      transform: scale(1.05);
-      color: black;
+    color: $half-black;
+    a {
+      color: $half-black; 
     }
+  }
+
+  .HomeNavBar__link_active {
+    color: $concord-orange !important;
   }
 
   .HomeNavBar__hamburger-icon {
