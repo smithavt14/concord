@@ -68,7 +68,6 @@ export default {
         story.media_id = item.media_id
         self.stories.push(story)
       })
-      console.log(self.stories)
       self.displayStories = true
     }
   },
