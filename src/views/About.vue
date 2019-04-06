@@ -9,8 +9,8 @@ export default {
 
   data () {
     return {
-      center: { lng: 121.399865, lat: 31.204689 },
-      zoom: 15,
+      center: { lng: 121.405962, lat: 31.21069 },
+      zoom: 13,
       show: false,
       showInfo: null,
       reasons: reasons,
@@ -76,8 +76,9 @@ export default {
     <div class="content-wrapper">
       <div class="title">{{translation.mapTitle}}</div>
       <baidu-map :center="center" :zoom="zoom" class="about__map-container">
+        <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
         <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
-        <bm-marker :position="center" :dragging="true" @click="infoWindowOpen">
+        <bm-marker :position="center"  @click="infoWindowOpen">
           <bm-info-window :show="show" @close="infoWindowClose" @open="infoWindowOpen">
             <div class="about__map-title">Concord Music</div>
             <div class="about__map-content">

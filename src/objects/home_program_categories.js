@@ -1,7 +1,7 @@
-const homePrograms = {
+const programCategories = {
   English: [
     {
-      title: 'Private 1-on-1 Lessons',
+      title: 'Early-Years Music Program',
       age: 'Ages 3+',
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/home__experience__banner__private-1-on-1.jpg',
       description: 'We offer a well-rounded musical experience in our private lessons which cover 5 fundamental elements of music learning: performing skills, music theory, music history and appreciation, ear training, and sight-reading.',
@@ -61,4 +61,4 @@ const homePrograms = {
   ]
 }
 
-export default homePrograms
+export default programCategories

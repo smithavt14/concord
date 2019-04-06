@@ -13,13 +13,15 @@ export default {
     },
     currentRoute() {
       return this.$route.name
+    },
+    activeLanguage() {
+      return globalData.language
     }
   },
 
   data () {
     return {
       showNavbar: false,
-      hideNavbar: false,
       checked: undefined
     }
   },
@@ -31,9 +33,6 @@ export default {
 
     closeMobileMenu () {
       this.checked = false
-    },
-    showPageRoute () {
-      console.log(this.currentRoute)
     }
   }
 } 
@@ -41,21 +40,20 @@ export default {
 </script>
 
 <template>
-  <div v-on:click="showPageRoute">
+  <div>
     <!-- Large Devices -->
-    <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__hidden': hideNavbar, 'HomeNavBar__show': !hideNavbar, 'HomeNavBar__mobile': checked }">
+    <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__mobile': checked }">
       <router-link to="/" class="HomeNavBar__logo"></router-link>
-      <div class="HomeNavBar__tabs">
-        <router-link 
-        to="/" 
-        :class="{'HomeNavBar__tab_active': currentRoute === 'home'}">
+      <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
+      <div class="HomeNavBar__tabs" :class="{'HomeNavBar__large': activeLanguage === 'English', 'HomeNavBar__medium': activeLanguage === 'Chinese'}">
+        <router-link to="/" id="one" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'home'}">
           {{translation.home}}
         </router-link>
-        <router-link to="/about" :class="{'HomeNavBar__tab_active': currentRoute === 'about'}">{{translation.about}}</router-link>
-        <router-link to="/experience" :class="{'HomeNavBar__tab_active': currentRoute === 'experience'}">{{translation.experience}}</router-link>
-        <router-link to="/programs" :class="{'HomeNavBar__tab_active': currentRoute === 'programs'}">{{translation.programs}}</router-link>
-        <router-link to="/apply" :class="{'HomeNavBar__tab_active': currentRoute === 'apply'}">{{translation.apply}}</router-link>
-        <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
+        <router-link to="/about" id="two" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'about'}">{{translation.about}}</router-link>
+        <router-link to="/experience" id="three" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'experience'}">{{translation.experience}}</router-link>
+        <router-link to="/programs" id="four" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'programs'}">{{translation.programs}}</router-link>
+        <router-link to="/apply" id="five" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'apply'}">{{translation.apply}}</router-link>
+        <div class="HomeNavBar__tab-underline" :class="{'active-tab__two': currentRoute === 'about', 'active-tab__three': currentRoute === 'experience', 'active-tab__four': currentRoute === 'programs', 'active-tab__five': currentRoute === 'apply'}"></div>
       </div>
     </div>
 
@@ -87,9 +85,8 @@ export default {
   width: 100vw;
   max-width: 1440px;
   background: white;
-  flex-direction: row-reverse;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row-reverse;
   align-items: center;
   z-index: 10;
   position: relative;
@@ -135,25 +132,76 @@ export default {
   }
 
   .HomeNavBar__tabs {
-    display: flex;
-    justify-content: space-between;
     margin-right: 20px;
-    align-items: center;
+    width: 50%;
+    /*text-align: right;*/
     a {
+      display: inline-block;
+      width: 20%;
       color: $half-black;
       text-decoration: none !important;
-      margin: 15px;
       padding-bottom: 3px;
     }
     a:hover {
       text-decoration: none !important;
-      color: $half-black;
+      color: $concord-orange;
+      animation: activeTab linear .5s;
     }
   }
 
+  .HomeNavBar__large {
+    width: 60%;
+  }
+
+  .HomeNavBar__medium {
+    width: 50%;
+  }
+
+  #one:hover ~ .HomeNavBar__tab-underline {
+    margin-left: 5%;
+  }
+
+  #two:hover ~ .HomeNavBar__tab-underline {
+    margin-left: 25%;
+  }
+  #three:hover ~ .HomeNavBar__tab-underline {
+    margin-left: 45%;
+  }
+  #four:hover ~ .HomeNavBar__tab-underline {
+    margin-left: 65%;
+  }
+  #five:hover ~ .HomeNavBar__tab-underline {
+    margin-left: 85%;
+  }
+
+  .HomeNavBar__tab-underline {
+    height: .10rem;
+    width: 10%;
+    margin: 0;
+    background: $concord-orange;
+    border: none;
+    transition: .3s ease-in-out;
+    margin-left: 5%;
+  }
+
+  .active-tab__two {
+    margin-left: 25%;
+  }
+
+  .active-tab__three {
+    margin-left: 45%;
+  }
+
+  .active-tab__four {
+    margin-left: 65%;
+  }
+
+  .active-tab__five {
+    margin-left: 85%;
+  }
+
   .HomeNavBar__tab_active {
-    padding-bottom: 0px !important;
-    border-bottom: 3px solid $concord-orange;
+    color: $concord-orange !important;
   }
 
   .HomeNavBar__language-selector {
@@ -357,6 +405,15 @@ export default {
   }
   to {
     margin-top: -100px;
+  }
+}
+
+@keyframes activeTab {
+  from {
+    color: $half-black;
+  }
+  to {
+    color: $concord-orange;
   }
 }
 

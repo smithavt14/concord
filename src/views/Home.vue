@@ -1,7 +1,7 @@
 <script>
 import translation from '../translations/translation'
 import globalData from '../main'
-import homePrograms from '../objects/home_programs'
+import programCategories from '../objects/home_program_categories'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import strftime from 'strftime'
 
@@ -17,8 +17,8 @@ export default {
     translation () {
       return translation.home[globalData.language]
     },
-    translatedProgramLinks () {
-      return this.programLinks[globalData.language]
+    translatedProgramCategories () {
+      return this.programCategories[globalData.language]
     },
     swiper () {
       return this.$refs.homeSwiper.swiper
@@ -27,7 +27,7 @@ export default {
 
   data () {
     return {
-      programLinks: homePrograms,
+      programCategories: programCategories,
       swiperOptions: {
         navigation: {
           nextEl: '.swiper-button-next',
@@ -123,7 +123,7 @@ export default {
     ---------->
 
     <!-- From our WeChat | LIST -->
-    <div class="content-wrapper" style="min-height: 450px; padding-bottom: 20px">
+<!--     <div class="content-wrapper" style="min-height: 450px; padding-bottom: 20px">
       <div class="title">{{translation.FOBtitle}}</div>
       <div v-if="!displayStories" class="loading-subtitle">{{translation.loading}}</div>
       <div v-for="(story, index) in stories" :key="story.media_id" class="story_container" :class="{'border-bottom': index !== 4}">
@@ -133,14 +133,14 @@ export default {
           <div class="story_digest">{{story.digest}}</div>
         </a>
       </div>
-    </div>
+    </div> -->
 
     <!-- Our Programs -->
     <div class="home__OP-wrapper">
       <div class="home__OP-title">{{translation.OPtitle}}</div>
       <b-container class="home__OP-programs-container">
         <b-row>
-          <b-col v-for="program in translatedProgramLinks" :key="program.id" sm="12" md="6">
+          <b-col v-for="program in translatedProgramCategories" :key="program.id" sm="12" md="6">
             <div class="home__OP-program">
               <img :src="program.photo" class="home__OP-program-photo">
               <div class="home__OP-program-title">{{program.title}}</div>
@@ -217,10 +217,10 @@ export default {
 }
 
 .home__banner {
-  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/home__banner.jpg');
+  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Teacher%20Flute.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 0 -30px;
   height: calc(100vh - 250px);
   max-height: 750px;
   width: 100%;
@@ -490,7 +490,9 @@ export default {
   }
 
   .home__banner {
-    height: calc(100vh - 80px)
+    height: calc(100vh - 80px);
+    background-position: -350px 0;
+    transform: scale(.9);
   }
 
   .home__banner-bar {

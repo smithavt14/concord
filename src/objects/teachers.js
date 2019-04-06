@@ -1,13 +1,6 @@
 const teachers = {
   English: [
     {
-      id: 0,
-      photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__joanne.jpg',
-      name: 'Joanne',
-      role: 'Piano Instructor',
-      bio: 'Joanne is an active pianist, educator and lecturer. She is born and raised in Taiwan and later earned her Master of Music degree at New York University and Bachelor of Music degree at Manhattan School of Music in New York on piano performance. She has performed in Taiwan, Malaysia, Spain, and the United States in addition to receiving distinguished awards from multiple piano competitions. Besides performing and teaching, Joanne also collaborates with artists from different fields as a composer. A former adjunct piano faculty at New York University and Tamkang High School in Taiwan, Joanne teaches students at all levels and all ages. Her teaching scope ranges from classical, pop, to improvisation. On top of building strong foundations, she encourages students to explore different music genres and art forms. Joanne believes learning the piano is a gateway to opening up new ways of thinking.'
-    },
-    {
       id: 1,
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__fei.jpg',
       name: 'Fei',
