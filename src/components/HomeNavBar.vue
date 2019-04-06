@@ -160,7 +160,6 @@ export default {
   #one:hover ~ .HomeNavBar__tab-underline {
     margin-left: 5%;
   }
-
   #two:hover ~ .HomeNavBar__tab-underline {
     margin-left: 25%;
   }
