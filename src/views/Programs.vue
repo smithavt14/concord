@@ -406,6 +406,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  transition: .3s ease-in-out;
   &:hover {
     text-decoration: none;
     color: white;

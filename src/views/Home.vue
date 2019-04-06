@@ -266,6 +266,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .3s ease-in-out;
   &:hover {
     text-decoration: none;
     color: white;
@@ -391,6 +392,7 @@ export default {
   align-items: center;
   border-radius: 50px;
   text-decoration: none;
+  transition: .3s ease-in-out;
   &:hover {
     background-color: $concord-orange;
     color: white;
@@ -443,6 +445,7 @@ export default {
     border-radius: 50px;
     text-decoration: none;
     color: white;
+    transition: .3s ease-in-out;
     &:hover {
       background-color: white;
       color: $concord-orange;

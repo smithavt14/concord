@@ -222,6 +222,7 @@ export default {
   border-radius: 50px;
   text-decoration: none;
   color: white;
+  transition: .3s ease-in-out;
   &:hover {
     background-color: white;
     color: $concord-orange;
