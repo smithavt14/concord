@@ -5,7 +5,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
   mode: 'production',
   entry: {
-    "main": "./src/main.js"
+    'main': './src/main.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -13,7 +13,7 @@ module.exports = {
     filename: 'build.js'
   },
   resolve: {
-      extensions: ['', '.js', '.vue']
+    extensions: ['', '.js', '.vue']
   },
   module: {
     rules: [
@@ -66,7 +66,7 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin()
-    ],
+  ],
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'

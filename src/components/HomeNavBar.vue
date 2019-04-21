@@ -11,10 +11,10 @@ export default {
     translation () {
       return translation.navbar[globalData.language]
     },
-    currentRoute() {
+    currentRoute () {
       return this.$route.name
     },
-    activeLanguage() {
+    activeLanguage () {
       return globalData.language
     }
   },
@@ -35,7 +35,7 @@ export default {
       this.checked = false
     }
   }
-} 
+}
 
 </script>
 
@@ -44,17 +44,27 @@ export default {
     <!-- Large Devices -->
     <div class="HomeNavBar__wrapper" :class="{'HomeNavBar__mobile': checked }">
       <router-link to="/" class="HomeNavBar__logo"></router-link>
-      <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
       <div class="HomeNavBar__tabs" :class="{'HomeNavBar__large': activeLanguage === 'English', 'HomeNavBar__medium': activeLanguage === 'Chinese'}">
-        <router-link to="/" id="one" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'home'}">
-          {{translation.home}}
-        </router-link>
-        <router-link to="/about" id="two" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'about'}">{{translation.about}}</router-link>
-        <router-link to="/experience" id="three" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'experience'}">{{translation.experience}}</router-link>
-        <router-link to="/programs" id="four" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'programs'}">{{translation.programs}}</router-link>
-        <router-link to="/apply" id="five" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'apply'}">{{translation.apply}}</router-link>
-        <div class="HomeNavBar__tab-underline" :class="{'active-tab__two': currentRoute === 'about', 'active-tab__three': currentRoute === 'experience', 'active-tab__four': currentRoute === 'programs', 'active-tab__five': currentRoute === 'apply'}"></div>
+        <div id="link-home" class="link-box">
+          <router-link to="/" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'home'}">
+            {{translation.home}}
+          </router-link>
+        </div>
+        <div id="link-about" class="link-box">
+          <router-link to="/about" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'about'}">{{translation.about}}</router-link>
+        </div>
+        <div class="link-box" id="link-experience">
+          <router-link to="/experience" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'experience'}">{{translation.experience}}</router-link>
+        </div>
+        <div class="link-box" id="link-programs">
+          <router-link to="/programs" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'programs'}">{{translation.programs}}</router-link>
+        </div>
+        <div class="link-box" id="link-apply">
+          <router-link to="/apply" class="HomeNavBar__tab" :class="{'HomeNavBar__tab_active': currentRoute === 'apply'}">{{translation.apply}}</router-link>
+        </div>
+        <div class="HomeNavBar__tab-underline" :class="{'underline-about-active': currentRoute === 'about', 'underline-experience-active': currentRoute === 'experience', 'underline-programs-active': currentRoute === 'programs', 'underline-apply-active': currentRoute === 'apply'}"></div>
       </div>
+      <div class="HomeNavBar__language-selector" @click="changeLanguage">{{translation.language}}</div>
     </div>
 
     <!-- Small Devices -->
@@ -72,7 +82,6 @@ export default {
         <p @click="closeMobileMenu"><router-link to="/apply" :class="{'HomeNavBar__link_active': currentRoute === 'apply'}">{{translation.apply}}</router-link></p>
         <p @click="changeLanguage">{{translation.language}}</p>
       </div>
-      </ul>
     </label>
   </div>
 </template>
@@ -83,10 +92,11 @@ export default {
 .HomeNavBar__wrapper {
   height: 120px;
   width: 100vw;
+  padding: 0 2.5vw;
   max-width: 1440px;
   background: white;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
   align-items: center;
   z-index: 10;
   position: relative;
@@ -133,20 +143,27 @@ export default {
 
   .HomeNavBar__tabs {
     margin-right: 20px;
-    width: 50%;
-    /*text-align: right;*/
+    height: 120px;
+    width: 50vw;
+    display: flex;
+    position: relative;
     a {
-      display: inline-block;
-      width: 20%;
       color: $half-black;
       text-decoration: none !important;
-      padding-bottom: 3px;
     }
     a:hover {
       text-decoration: none !important;
       color: $concord-orange;
       animation: activeTab linear .5s;
     }
+  }
+
+  .link-box {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .HomeNavBar__large {
@@ -157,46 +174,55 @@ export default {
     width: 50%;
   }
 
-  #one:hover ~ .HomeNavBar__tab-underline {
-    margin-left: 5%;
+  #link-home:hover ~ .HomeNavBar__tab-underline {
+    left: 0;
+    transition: .3s ease-in-out;
   }
-  #two:hover ~ .HomeNavBar__tab-underline {
-    margin-left: 25%;
+  #link-about:hover ~ .HomeNavBar__tab-underline {
+    left: 20%;
+    transition: .3s ease-in-out;
   }
-  #three:hover ~ .HomeNavBar__tab-underline {
-    margin-left: 45%;
+  #link-experience:hover ~ .HomeNavBar__tab-underline {
+    left: 40%;
+    transition: .3s ease-in-out;
   }
-  #four:hover ~ .HomeNavBar__tab-underline {
-    margin-left: 65%;
+  #link-programs:hover ~ .HomeNavBar__tab-underline {
+    left: 60%;
+    transition: .3s ease-in-out;
   }
-  #five:hover ~ .HomeNavBar__tab-underline {
-    margin-left: 85%;
+  #link-apply:hover ~ .HomeNavBar__tab-underline {
+    left: 80%;
+    transition: .3s ease-in-out;
   }
 
   .HomeNavBar__tab-underline {
-    height: .10rem;
-    width: 10%;
-    margin: 0;
+    height: 2px;
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     background: $concord-orange;
-    border: none;
     transition: .3s ease-in-out;
-    margin-left: 5%;
   }
 
-  .active-tab__two {
-    margin-left: 25%;
+  .underline-about-active {
+    left: 20%;
+    transition: .3s ease-in-out;
   }
 
-  .active-tab__three {
-    margin-left: 45%;
+  .underline-experience-active {
+    left: 40%;
+    transition: .3s ease-in-out;
   }
 
-  .active-tab__four {
-    margin-left: 65%;
+  .underline-programs-active {
+    left: 60%;
+    transition: .3s ease-in-out;
   }
 
-  .active-tab__five {
-    margin-left: 85%;
+  .underline-apply-active {
+    left: 80%;
+    transition: .3s ease-in-out;
   }
 
   .HomeNavBar__tab_active {
@@ -245,11 +271,11 @@ export default {
     justify-content: center;
     align-items: center;
     a {
-      color: $half-black; 
+      color: $half-black;
       font-size: 30px;
     }
     p {
-      color: $half-black; 
+      color: $half-black;
       font-size: 30px;
     }
   }
@@ -296,7 +322,7 @@ export default {
     font-size: 30px;
     color: $half-black;
     a {
-      color: $half-black; 
+      color: $half-black;
     }
   }
 

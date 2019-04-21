@@ -15,7 +15,7 @@ Vue.use(BaiduMap, {
 
 const globalData = new Vue({
   data: {
-    language: 'English',
+    language: 'English'
   }
 })
 

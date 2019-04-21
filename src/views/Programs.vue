@@ -23,7 +23,7 @@ export default {
       return translation.programs[globalData.language]
     },
 
-    translatedPrograms () {
+    programs () {
       return programs[globalData.language]
     }
   },
@@ -60,21 +60,145 @@ export default {
       <div class="programs__mobile-banner-title">{{translation.programs}}</div>
     </div>
 
-    <!-- Calendar -->
-    <div class="programs__calendar-wrapper">
-      <div class="programs__subtitle">{{translation.calendarTitle}}</div>
-      <div id='calendar'></div>
-    </div>
+  <!-- Video -->
+  <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=v0858ysdg5n" allowFullScreen="true"></iframe>
 
     <!-- Courses -->
-    <div class="programs__courses-wrapper">
+    <div class="content-wrapper">
       <div class="programs__subtitle">{{translation.ourPrograms}}</div>
       <div class="programs__OC-description">{{translation.ourProgramsContent}}</div>
-      <div class="programs__OC-category-title">{{translation.ocTitle}}</div>
-      <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-1.png" alt="" class="programs__OC-category-image">
-      <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-2.png" alt="" class="programs__OC-category-image">
-      <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-3.png" alt="" class="programs__OC-category-image">
-      <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__flow-4.png" alt="" class="programs__OC-category-image">
+      <img 
+      src="https://concord-assets.oss-cn-beijing.aliyuncs.com/Class%20Flow%20Chart.png" 
+      alt="concord-music-programs"
+      class="programs__program-chart">
+    </div>
+
+    <!-- Early Years -->
+    <div class="programs__early-years-wrapper">
+      <div class="programs__early-years-banner">
+        <div class="programs__banner-content">{{translation.earlyYearsTitle}}</div>
+      </div>
+
+      <!-- Early Years | Program Cards -->
+      <div class="programs__subtitle">{{translation.summary}}</div>
+      <div class="programs__early-years-description">{{translation.earlyYearsProgramsContent}}</div>
+      <div class="programs__early-years-title programs__subtitle">
+        {{translation.programs}}
+        <div class="scroll-indicator-container" style="display: flex;">
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+      <div class="programs__early-years-program-container">
+        <div v-for="program in programs.earlyYears" class="programs__program-container" :key="program.id">
+          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
+            <div class="programs__program-container-name">
+              {{program.title}}
+            </div>
+          </div>
+          <div class="programs__program-container-bottom">
+            <div class="programs__program-container-subtitle">{{translation.ageTitle}}</div>
+            <div class="programs__program-container-age">{{program.age}}</div>
+            <div class="programs__program-container-subtitle">{{translation.descriptionTitle}}</div>
+            <div class="programs__program-container-description">{{program.description}}</div>
+            <router-link to="/apply" class="programs__lessons-signup container-bottom">{{translation.signup}}</router-link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group Lessons -->
+    <div class=programs__lessons-wrapper>
+      <div class="programs__group-lessons-banner">
+        <div class="programs__banner-content">{{translation.groupTitle}}</div>
+      </div>
+      <div class="programs__subtitle left">
+        {{translation.instruments}}
+
+        <!-- Mobile Scroll Indicator -->
+        <div class="scroll-indicator-container instruments-title-right">
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+
+      <!-- Group | Instruments -->
+      <div class="programs__lessons-instrument-container">
+        <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
+          <div class="programs__lessons-img-container">
+            <img :src="instrument.img" alt="" class="programs__lessons-img">
+          </div>
+          <div class="programs__lessons-title">{{instrument.name}}</div>
+        </div>
+      </div>
+
+      <!-- Group | Summary -->
+      <div class="programs__subtitle left">{{translation.summary}}</div>
+      <div class="programs__lessons-description">{{translation.groupDescription}}</div>
+
+      <!-- Group | Programs -->
+      <div class="programs__early-years-title programs__subtitle">
+        {{translation.programs}}
+        <div class="scroll-indicator-container" style="display: flex;">
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+
+      <div class="programs__early-years-program-container">
+        <div v-for="program in programs.group" class="programs__program-container" :key="program.id">
+          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
+            <div class="programs__program-container-name">
+              {{program.title}}
+            </div>
+          </div>
+          <div class="programs__program-container-bottom">
+            <div class="programs__program-container-subtitle">{{translation.ageTitle}}</div>
+            <div class="programs__program-container-age">{{program.age}}</div>
+            <div class="programs__program-container-subtitle">{{translation.descriptionTitle}}</div>
+            <div class="programs__program-container-description">{{program.description}}</div>
+            <router-link to="/apply" class="programs__lessons-signup container-bottom">{{translation.signup}}</router-link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supplemental Group Courses -->
+    <div class="wrapper">
+      <div class="programs__supplemental-lessons-banner">
+        <div class="programs__banner-content">{{translation.supplementalTitle}}</div>
+      </div>
+      <div class="programs__subtitle left">{{translation.summary}}</div>
+      <div class="programs__lessons-description">{{translation.supplementalDescription}}</div>
+
+      <div class="programs__early-years-title programs__subtitle">
+        {{translation.programs}}
+        <div class="scroll-indicator-container" style="display: flex;">
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+
+      <div class="programs__early-years-program-container">
+        <div v-for="program in programs.supplemental" class="programs__program-container" :key="program.id">
+          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
+            <div class="programs__program-container-name">
+              {{program.title}}
+            </div>
+          </div>
+          <div class="programs__program-container-bottom">
+            <div class="programs__program-container-subtitle">{{translation.ageTitle}}</div>
+            <div class="programs__program-container-age">{{program.age}}</div>
+            <div class="programs__program-container-subtitle">{{translation.descriptionTitle}}</div>
+            <div class="programs__program-container-description">{{program.description}}</div>
+            <router-link to="/apply" class="programs__lessons-signup container-bottom">{{translation.signup}}</router-link>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Private Lessons -->
@@ -100,9 +224,15 @@ export default {
           <div class="programs__lessons-title">{{instrument.name}}</div>
         </div>
       </div>
-      <div class="programs__lessons-description">{{translation.privateLessonsDescription1}}</div>
-      <div class="programs__lessons-description">{{translation.privateLessonsDescription2}}</div>
-      <div class="programs__lessons-description">{{translation.privateLessonsDescription3}}</div>
+
+      <!-- Summary and Description -->
+      <div class="programs__subtitle left">{{translation.summary}}</div>
+      <div class="programs__lessons-description">{{translation.privateLessonsDescription}}</div>
+      <div class="programs__subtitle left">{{translation.privateLessonsDifferenceTitle}}</div>
+      <div class="programs__lessons-description">{{translation.privateLessonsDifferenceDescription}}</div>
+      <div class="programs__subtitle left">{{translation.privateLessonsRateTitle}}</div>
+      <div class="programs__lessons-description">{{translation.privateLessonsRateDescription}}</div>
+
       <div class="programs__lessons-age-time-container">
         <div class="programs__lessons-age-time">
           <div class="programs__lessons-age">{{translation.age1}}</div>
@@ -114,75 +244,11 @@ export default {
         </div>
         <div class="programs__lessons-age-time">
           <div class="programs__lessons-age">{{translation.age3}}</div>
-          <div class="programs__lessons-time">{{translation.minutes2}}</div>
+          <div class="programs__lessons-time">{{translation.minutes3}}</div>
         </div>
       </div>
       <router-link to="/apply" class="programs__lessons-signup">{{translation.signup}}</router-link>
     </div>
-
-    <!-- Group Lessons -->
-    <div class=programs__lessons-wrapper>
-      <div class="programs__group-lessons-banner">
-        <div class="programs__banner-content">{{translation.groupTitle}}</div>
-      </div>
-      <div class="programs__subtitle left">
-        {{translation.instruments}}
-
-        <!-- Mobile Scroll Indicator -->
-        <div class="scroll-indicator-container instruments-title-right">
-          <div class="scroll-arrow"></div>
-          <div class="scroll-arrow"></div>
-          <div class="scroll-arrow"></div>
-        </div>
-      </div>
-      <div class="programs__lessons-instrument-container">
-        <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
-          <div class="programs__lessons-img-container">
-            <img :src="instrument.img" alt="" class="programs__lessons-img">
-          </div>
-          <div class="programs__lessons-title">{{instrument.name}}</div>
-        </div>
-      </div>
-      <div class="programs__lessons-description">{{translation.groupDescription}}</div>
-      <router-link to="/apply" class="programs__lessons-signup">{{translation.signup}}</router-link>
-    </div>
-
-    <!-- Early Years -->
-    <div class="programs__early-years-wrapper">
-      <div class="programs__early-years-banner">
-        <div class="programs__banner-content">{{translation.earlyYearsTitle}}</div>
-      </div>
-
-      <!-- Program Cards -->
-      <div class="programs__early-years-title programs__subtitle">
-        {{translation.programs}}
-
-        <!-- Mobile Scroll Indicator -->
-        <div class="scroll-indicator-container instruments-title-right">
-          <div class="scroll-arrow"></div>
-          <div class="scroll-arrow"></div>
-          <div class="scroll-arrow"></div>
-        </div>
-      </div>
-      <div class="programs__early-years-description">Below you'll find all of our program options for Early Learners and beyond. Please scroll through the list and click 'Sign Up' if you're interested in any one of them.</div>
-      <div class="programs__early-years-program-container">
-        <div v-for="program in translatedPrograms" class="programs__program-container" :key="program.id">
-          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
-            <div class="programs__program-container-name">
-              {{program.title}}
-            </div>
-          </div>
-          <div class="programs__program-container-bottom">
-            <div class="programs__program-container-subtitle programs__subtitle">{{translation.ageTitle}}</div>
-            <div class="programs__program-container-age">{{program.age}}</div>
-            <div class="programs__program-container-subtitle programs__subtitle">{{translation.descriptionTitle}}</div>
-            <div class="programs__program-container-description">{{program.description}}</div>
-            <router-link to="/apply" class="programs__lessons-signup container-bottom">{{translation.signup}}</router-link>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </template>
 
@@ -232,9 +298,10 @@ export default {
 .programs__subtitle {
   color: $concord-orange;
   font-size: 15px;
-  margin: 5px;
+  margin: 15px 0;
   display: flex;
   align-items: center;
+  width: 75%;
 }
 
 .left {
@@ -269,9 +336,8 @@ export default {
 }
 
 .programs__OC-description {
-  font-size: 15px;
-  color: gray;
-  width: 70%;
+  width: 75%;
+  text-align: left;
 }
 
 .programs__OC-category-title {
@@ -302,7 +368,17 @@ export default {
   background: linear-gradient(rgba(0, 0, 0, 0.15)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__fei-teaching.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.programs__supplemental-lessons-banner {
+  width: 100%;
+  height: 25vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.25)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__drums.jpg');
+  background-size: cover;
+  background-position: 0 -200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,6 +437,7 @@ export default {
   width: 75%;
   text-align: left;
   margin-bottom: 15px;
+  white-space: pre-line;
 }
 
 .programs__lessons-age-time-container {
@@ -414,6 +491,14 @@ export default {
   }
 }
 
+.programs__program-chart {
+  width: 70%;
+  object-fit: contain;
+  object-position: center;
+  margin: 25px 0 0 0;
+  border-radius: 10px;
+}
+
 .programs__lessons {
   display: flex;
   flex-direction: column;
@@ -448,7 +533,8 @@ export default {
   display: flex;
   justify-content: space-between;
   width: 75%;
-  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .programs__program-container {
@@ -485,6 +571,8 @@ export default {
   margin: 15px 0 0 0;
   width: 75%;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .programs__early-years-description {
@@ -504,15 +592,20 @@ export default {
   width: 95%;
   text-align: left;
   margin: 15px 0 0 0;
+  color: $concord-orange;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .programs__program-container-description {
-  height: 200px;
+  height: 250px;
   display: flex;
   justify-content: center;
   width: 95%;
   text-align: left;
   overflow: auto;
+  white-space: pre-line;
 }
 
 .programs__program-container-age {
@@ -598,6 +691,7 @@ $animation-delay: .1s;
 
   .programs__lessons-description {
     width: 90%;
+    white-space: pre-line;
   }
 
   .programs__program-container {
@@ -627,6 +721,25 @@ $animation-delay: .1s;
 
   .programs__lessons-age-time-container {
     width: 90%;
+    flex-direction: column;
+    
+  }
+
+  .programs__early-years-description {
+    width: 90%;
+    text-align: left;
+  }
+
+  .programs__early-years-banner {
+    background-position: unset;
+  }
+
+  .programs__subtitle {
+    width: 90%;
+  }
+
+  .programs__program-chart {
+    width: 95%;
   }
 }
 

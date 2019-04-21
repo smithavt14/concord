@@ -143,7 +143,7 @@ export default {
         <input id="submit" type="submit" class="apply__bottom-banner-link orange" :value="translation.submit" @click="submit">
       </form>
     </div>
-    
+
     <!-- Bottom Banner -->
     <div class="content-wrapper">
       <div class="apply__bottom-banner">
@@ -301,7 +301,7 @@ export default {
 }
 
 /* ----- Small Screen Styles -----*/
-@media screen and (max-width: 750px) {  
+@media screen and (max-width: 750px) {
   .apply__form-container {
     width: 95vw;
     margin: 25px 0;

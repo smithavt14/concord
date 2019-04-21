@@ -29,6 +29,12 @@ export default {
         touchRatio: 0.2,
         slideToClickedSlide: true
       },
+      videoSwiperOptions: {
+        navigation: {
+          nextEl: '.video-swiper-button-next',
+          prevEl: '.video-swiper-button-previous'
+        }
+      },
       photos: photos
     }
   },
@@ -78,7 +84,26 @@ export default {
     </div>
 
     <!-- Video Testimonials -->
-    <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=s0029bdvtfi" allowFullScreen="true"></iframe>
+    <div class="content-wrapper">
+      <div class="title">{{translation.videos}}</div>
+      <div class="video-title">{{translation.videoSubtitle}}</div>
+      <swiper class="experience__video-swiper-container" :options="videoSwiperOptions">
+        <swiper-slide class="video-swiper-slide">
+          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=m0838k4968p" allowFullScreen="true"></iframe>
+        </swiper-slide>
+        <swiper-slide class="video-swiper-slide">
+          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=w0838dbxe5h" allowFullScreen="true"></iframe>
+        </swiper-slide>
+        <swiper-slide class="video-swiper-slide">
+          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=m0838pf3d52" allowFullScreen="true"></iframe>
+        </swiper-slide>
+        <swiper-slide class="video-swiper-slide">
+          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=z0838m4vh59" allowFullScreen="true"></iframe>
+        </swiper-slide>
+        <div class="swiper-button-next swiper-button-black video-swiper-button-next" slot="button-next"></div>
+        <div class="swiper-button-prev swiper-button-black video-swiper-button-previous" slot="button-prev"></div>
+      </swiper>
+    </div>
 
     <!-- Photos -->
     <div class="content-wrapper">
@@ -208,6 +233,25 @@ export default {
   margin: 15px 0;
 }
 
+/* ---- Videos ----- */
+
+.video-swiper-slide {
+  height: 400px; 
+  width: 80%;
+}
+
+.video-title {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.video-box {
+  height: 100%;
+  width: 80%;
+}
+
 /* ---- Photos ----- */
 
 .experience__photos-photo {
@@ -220,7 +264,6 @@ export default {
 .swiper-slide {
   background-size: cover;
   background-position: center;
-  margin-bottom: 25px;
 }
 
 .experience__photos-slide {
@@ -258,6 +301,12 @@ export default {
   width: 100%;
 }
 
+.experience__video-swiper-container {
+  height: 80%;
+  width: 90%;
+  margin: 25px 0;
+}
+
 /* ---------- Large Screen Styles ----------*/
 
 @media screen and (min-width: 751px) {
@@ -281,7 +330,6 @@ export default {
   .experience__EX-container-left {
     height: 100%;
     width: 50%;
-    max-width: 450px;
     padding: 20px;
     text-align: left;
     display: flex;

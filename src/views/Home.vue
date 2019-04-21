@@ -58,12 +58,12 @@ export default {
         })
     },
 
-    processWechatInfo(response) {
+    processWechatInfo (response) {
       const self = this
-      response.forEach(function(item) {
+      response.forEach(function (item) {
         var time, story
         story = item.content.news_item[0]
-        time = new Date (item.content.update_time * 1000)
+        time = new Date(item.content.update_time * 1000)
         story.update_time = strftime('%A, %B %d', time)
         story.media_id = item.media_id
         self.stories.push(story)
@@ -103,37 +103,6 @@ export default {
         <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/home__instruments.jpg" alt="instruments-icon" class="home__WAW-container-right-instruments">
       </div>
     </div>
-
-    <!-- From our WeChat Account | SWIPER
-
-    <div class="home__FOB-wrapper">
-      <div class="home__FOB-title">{{translation.FOBtitle}}</div>
-      <div class="home__FOB-swiper-container">
-        <swiper :options="swiperOptions" ref="homeSwiper">
-          <swiper-slide v-for="story in stories" :key="story.content.news_item.url" class="FOB__swiper-slide">
-            <a :href="story.content.news_item[0].url"><img :src="story.content.news_item[0].thumb_url" class="home__FOB-card-photo"></a>
-            <div class="home__FOB-card-title">{{ story.content.news_item[0].title }}</div>
-          </swiper-slide>
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
-          <div class="swiper-pagination" slot="pagination"></div>
-        </swiper>
-      </div>
-    </div> 
-    ---------->
-
-    <!-- From our WeChat | LIST -->
-<!--     <div class="content-wrapper" style="min-height: 450px; padding-bottom: 20px">
-      <div class="title">{{translation.FOBtitle}}</div>
-      <div v-if="!displayStories" class="loading-subtitle">{{translation.loading}}</div>
-      <div v-for="(story, index) in stories" :key="story.media_id" class="story_container" :class="{'border-bottom': index !== 4}">
-        <a :href="story.url" target="_blank" class="story_link">
-          <div class="story_title">{{story.title}}</div>
-          <div class="story_date">{{story.update_time}}</div>
-          <div class="story_digest">{{story.digest}}</div>
-        </a>
-      </div>
-    </div> -->
 
     <!-- Our Programs -->
     <div class="home__OP-wrapper">
@@ -368,6 +337,7 @@ export default {
 .home__OP-program-title {
   font-size: 25px;
   font-weight: bold;
+  margin: 10px 0;
 }
 
 .home__OP-program-age {

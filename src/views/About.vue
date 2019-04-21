@@ -115,7 +115,7 @@ export default {
 
     <!-- OUR TEAM -->
     <div class="content-wrapper">
-      <div class="title">我们的团队</div>
+      <div class="title">{{translation.team}}</div>
       <b-container class="about__OT-container">
         <b-row class="about__OT-bootstrap-row">
           <b-col v-for="item in translatedTeam" :key="item.id" class="about__OT-item" sm="12" md="6" lg="4">
