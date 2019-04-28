@@ -36,7 +36,7 @@ export default {
 
 <template>
   <div class="footer__container">
-    <div class="footer__copyright">© 2019 Concord Music. All Rights Reserved.</div>
+    <div class="footer__copyright">© 2019 Concord Music. All Rights Reserved. 沪ICP备19008777号</div>
     <div class="footer__icon-container">
       <div class="footer__icon location" @click="modal.location = !modal.location"></div>
       <div class="footer__icon wechat" @click="modal.wechat = !modal.wechat"></div>
