@@ -53,13 +53,18 @@ $light-gray: #F6F6F6;
 .subtitle {
   color: $concord-orange;
   font-size: 15px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .title {
-  color: $concord-orange;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.content {
   font-size: 15px;
-  margin: 15px 0;
+  color: gray;
+  margin-bottom: 10px;
 }
 
 .content-wrapper {

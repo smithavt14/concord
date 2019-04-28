@@ -104,9 +104,23 @@ export default {
       </div>
     </div>
 
+    <!-- Add our WeChat -->
+    <div class="content-wrapper">
+      <div class="container-left">
+        <!-- 公众号二维码 -->
+      </div>
+      <div class="container-right">
+        <div class="subtitle">
+          WECHAT OFFICIAL ACCOUNT
+        </div>
+        <div class="title">Keep Up To Date With Concord</div>
+        <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      </div>
+    </div>
+
     <!-- Our Programs -->
     <div class="home__OP-wrapper">
-      <div class="home__OP-title">{{translation.OPtitle}}</div>
+      <div class="subtitle">{{translation.OPtitle}}</div>
       <b-container class="home__OP-programs-container">
         <b-row>
           <b-col v-for="program in translatedProgramCategories" :key="program.id" sm="12" md="6">

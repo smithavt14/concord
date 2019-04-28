@@ -74,7 +74,7 @@ export default {
 
     <!-- Map of Concord -->
     <div class="content-wrapper">
-      <div class="title">{{translation.mapTitle}}</div>
+      <div class="subtitle">{{translation.mapTitle}}</div>
       <baidu-map :center="center" :zoom="zoom" class="about__map-container">
         <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
         <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
@@ -101,7 +101,7 @@ export default {
 
     <!-- 5 Reasons to Choose Concord -->
     <div class="content-wrapper">
-      <div class="title">{{translation.reasonsTitle}}</div>
+      <div class="subtitle">{{translation.reasonsTitle}}</div>
       <b-container class="about__5R-container">
         <b-row class="about__5R-bootstrap-row">
           <b-col v-for="item in translatedReasons" :key="item.id" class="about__5R-item" sm="6" md="4" lg="2">
@@ -115,7 +115,7 @@ export default {
 
     <!-- OUR TEAM -->
     <div class="content-wrapper">
-      <div class="title">{{translation.team}}</div>
+      <div class="subtitle">{{translation.team}}</div>
       <b-container class="about__OT-container">
         <b-row class="about__OT-bootstrap-row">
           <b-col v-for="item in translatedTeam" :key="item.id" class="about__OT-item" sm="12" md="6" lg="4">

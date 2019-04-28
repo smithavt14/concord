@@ -65,7 +65,7 @@ export default {
 
     <!-- Courses -->
     <div class="content-wrapper">
-      <div class="programs__subtitle">{{translation.ourPrograms}}</div>
+      <div class="subtitle">{{translation.ourPrograms}}</div>
       <div class="programs__OC-description">{{translation.ourProgramsContent}}</div>
       <img 
       src="https://concord-assets.oss-cn-beijing.aliyuncs.com/Class%20Flow%20Chart.png" 

@@ -85,14 +85,14 @@ export default {
 
     <!-- Video Testimonials -->
     <div class="content-wrapper">
-      <div class="title">{{translation.videos}}</div>
+      <div class="subtitle">{{translation.videos}}</div>
       <div class="video-title">{{translation.videoSubtitle}}</div>
       <swiper class="experience__video-swiper-container" :options="videoSwiperOptions">
         <swiper-slide class="video-swiper-slide">
-          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=m0838k4968p" allowFullScreen="true"></iframe>
+          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=w0838dbxe5h" allowFullScreen="true"></iframe>
         </swiper-slide>
         <swiper-slide class="video-swiper-slide">
-          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=w0838dbxe5h" allowFullScreen="true"></iframe>
+          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=m0838k4968p" allowFullScreen="true"></iframe>
         </swiper-slide>
         <swiper-slide class="video-swiper-slide">
           <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=m0838pf3d52" allowFullScreen="true"></iframe>
@@ -107,7 +107,7 @@ export default {
 
     <!-- Photos -->
     <div class="content-wrapper">
-      <div class="title">{{translation.photos}}</div>
+      <div class="subtitle">{{translation.photos}}</div>
       <div class="experience__swiper-container">
         <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
           <swiper-slide v-for="photo in photos" :key="photo">
