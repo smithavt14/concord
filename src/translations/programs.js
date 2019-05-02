@@ -3,7 +3,7 @@ const programs = {
     programs: 'PROGRAMS',
     calendar: 'CALENDAR',
     earlyYearsPrograms: 'EARLY-YEARS PROGRAM',
-    earlyYearsProgramsContent: 'Our Early-Year Music Program follows a systematic syllabus created by Concord director that are created with the aim to provide the environment and guidance to cultivate music interest from early ages. Created for toddlers or young children from 18 months up to age 5 in our Early-Years Music Program. Children absorbs like a sponge at their early age, so musicality and music foundations can be built naturally at these ages. Childhood is only once in a lifetime and it is a memorable one with music in it! ',
+    earlyYearsProgramsContent: 'Our Early Years Music Program follows a systematic syllabus created by Concord director that is created with the aim to cultivate music interest from early ages by. Our program offers variety of fun courses with content targeted for specific age groups of 18 months up to age 5. Children absorb information like a sponge at their early age, so musicality and music foundations can be built naturally at these ages. Childhood is only once in a lifetime and it is a memorable one with music in it!',
     summary: 'SUMMARY',
     privateLessons: 'PRIVATE LESSONS',
     groupLessons: 'GROUP LESSONS',
@@ -16,9 +16,9 @@ const programs = {
     privateLessonsTitle: '1-1 PRIVATE LESSONS',
     instruments: 'INSTRUMENTS',
     privateLessonsDescription: 'Concord 1-on-1 lessons are suitable for students who are sure of their interests and have decided to begin the concentrated studies. The lessons are conducted by professional teachers who have graduated from the top music conservatories who are highly experienced in helping different levels of students to achieve their goals. This course allow students to interact with teachers in the most direct way. Our professional teachers will be able to personalize the learning experience according to each individual’s interest, character and learning goal. \n\n Our private lessons provide you a systematical training from building a strong foundation to a higher level of musicianship: \n\n * SALP (Student Annual Learning Report)  will be provided after first month of learning to set clear learning goals for the year  \n * SPR (Student Progress Report)  which is given to parents and students by the end of each term will give clear feedbacks and comments regarding the student’s progress.  \n * Regular student recitals and camps are among those opportunities that student can take to create more learning motivation.',
-    privateLessonsDifferenceTitle: 'How does our private lessons differ from others?',
+    privateLessonsDifferenceTitle: 'HOW ARE WE DIFFERENT?',
     privateLessonsDifferenceDescription: '* Our teaching philosophy which is that all students should be guided with much space given to follow their interest and passion  \n * Musicality is also cultivated from the very beginning of our trainings  \n * Foreign-published method books and learning materials are used at Concord  \n* Professional teachers who are excellent musicians themselves have the charisma and ways to inspire the students. \n  * Our creative teaching offers the perfect balance of studies which is right between “just-for-fun” and “dead-serious”.  ',
-    privateLessonsRateTitle: 'Rate / Minutes ',
+    privateLessonsRateTitle: 'RATE / MINUTES',
     privateLessonsRateDescription: 'Our rate is charged based on the minutes of the lesson. Every student has a different attention span, so the best way to determine a lesson length is to schedule a trial lesson with us and our teachers will recommend the lesson length based on their experience.',
     age1: 'Ages 3 - 7 / Beginners',
     age2: 'Ages 8+ / Intermediate',
@@ -32,7 +32,8 @@ const programs = {
     ageTitle: 'AGE',
     descriptionTitle: 'DESCRIPTION',
     supplementalTitle: 'SUPPLEMENTAL GROUP COURSES',
-    supplementalDescription: 'The courses below are created as supplemental or add-on group courses that can be taken simultaneously with instrumental group lessons or private lessons. These courses will enhance the musicality of students, expand their knowledge and improve their understanding in music.'
+    supplementalDescription: 'The courses below are created as supplemental or add-on group courses that can be taken simultaneously with instrumental group lessons or private lessons. These courses will enhance the musicality of students, expand their knowledge and improve their understanding in music.',
+    newProgramsSubtitle: 'NEW PROGRAMS'
   },
   Chinese: {
     programs: '课程',
@@ -67,8 +68,8 @@ const programs = {
     ageTitle: '年龄',
     descriptionTitle: '课程介绍',
     supplementalTitle: '兴趣素养的额外课程',
-    supplementalDescription: '以下课程是在已有乐器组课或一对一音乐课程的基础上，额外拓展的音乐素养课程。这些课程主要用于辅助主课，是有必要同时进行的。这些课程将提高学生的音乐素养，扩大学生对音乐知识层面的认知，提高他们对音乐的理解。'
-
+    supplementalDescription: '以下课程是在已有乐器组课或一对一音乐课程的基础上，额外拓展的音乐素养课程。这些课程主要用于辅助主课，是有必要同时进行的。这些课程将提高学生的音乐素养，扩大学生对音乐知识层面的认知，提高他们对音乐的理解。',
+    newProgramsSubtitle: '新课程'
   }
 }
 

@@ -6,7 +6,7 @@ const about = {
     location: 'LOCATION',
     reasons: '5 REASONS TO CHOOSE US',
     team: 'OUR TEAM',
-    offsite: 'OFFSITE CLASSES',
+    partnerships: 'OUR PARTNERSHIPS',
     partners: 'AFFILIATED PARTNERS',
     OPsubtitle: 'OUR PHILOSOPHY',
     OPtitle: 'A Unique Teaching Philosophy',
@@ -24,7 +24,7 @@ const about = {
     location: '地理位置 ',
     reasons: '选择我们的5个理由',
     team: '我们的团队 ',
-    offsite: '要翻校外译',
+    partnerships: '合作伙伴',
     partners: '要翻译',
     OPsubtitle: '理念',
     OPtitle: '搿艺音乐的理念',

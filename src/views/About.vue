@@ -52,10 +52,16 @@ export default {
       <div class="banner-bar-link">{{translation.location}}</div>
       <div class="banner-bar-link">{{translation.reasons}}</div>
       <div class="banner-bar-link">{{translation.team}}</div>
-      <div class="banner-bar-link">{{translation.offsite}}</div>
+      <div class="banner-bar-link">{{translation.partnerships}}</div>
 
       <!-- Mobile Banner Title -->
       <div class="banner-bar-link-mobile">{{translation.about}}</div>
+    </div>
+
+    <div class="content-wrapper">
+      <div data-tockify-component="calendar" data-tockify-width="90%" data-tockify-calendar="alexs">
+        calendar
+      </div>
     </div>
 
     <!-- Our Philosophy -->
@@ -74,7 +80,7 @@ export default {
 
     <!-- Map of Concord -->
     <div class="content-wrapper">
-      <div class="title">{{translation.mapTitle}}</div>
+      <div class="subtitle">{{translation.mapTitle}}</div>
       <baidu-map :center="center" :zoom="zoom" class="about__map-container">
         <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
         <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
@@ -101,7 +107,7 @@ export default {
 
     <!-- 5 Reasons to Choose Concord -->
     <div class="content-wrapper">
-      <div class="title">{{translation.reasonsTitle}}</div>
+      <div class="subtitle">{{translation.reasonsTitle}}</div>
       <b-container class="about__5R-container">
         <b-row class="about__5R-bootstrap-row">
           <b-col v-for="item in translatedReasons" :key="item.id" class="about__5R-item" sm="6" md="4" lg="2">
@@ -115,7 +121,7 @@ export default {
 
     <!-- OUR TEAM -->
     <div class="content-wrapper">
-      <div class="title">{{translation.team}}</div>
+      <div class="subtitle">{{translation.team}}</div>
       <b-container class="about__OT-container">
         <b-row class="about__OT-bootstrap-row">
           <b-col v-for="item in translatedTeam" :key="item.id" class="about__OT-item" sm="12" md="6" lg="4">
@@ -157,7 +163,7 @@ export default {
 }
 
 .about__OP-container-right-image {
-  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__maggie-flute.jpg');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Boy%20Student%20Violen%202%20copy.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

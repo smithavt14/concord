@@ -3,7 +3,7 @@ const experience = {
     experience: 'EXPERIENCE',
     photos: 'PHOTOS',
     videos: 'VIDEOS',
-    videoSubtitle: 'Find out what Moanna Jiao, Dr. Agustin Muriago, O Ching, and Anges have to say about their experience with Concord.', 
+    videoSubtitle: 'Find out what Moanna Jiao, Dr. Agustin Muriago, Anges and O Ching have to say about their experience with Concord.', 
     exsubtitle: 'EXPERIENCE',
     extitle: 'What is learning like at Concord Music?',
     excontent: 'Many say that they can immediately feel the warmth when they first visit Concord; they can see that our students really enjoy their lessons and our teachers are warm, friendly and professional. We keep our passion going and we know that this will inspire our students to keep theirs going too! Concord has been growing through word-of-mouth and recommendation from one to another and we continue to strive to gain more trust through actual effort. So it is important for you to hear what others say about us too.'

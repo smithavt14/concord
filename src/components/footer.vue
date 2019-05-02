@@ -88,6 +88,10 @@ export default {
   margin-left: 15px;
 }
 
+.footer__icp {
+  color: white;
+}
+
 .footer__address {
   color: white;
 }

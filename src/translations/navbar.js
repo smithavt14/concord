@@ -12,8 +12,8 @@ const navbar = {
     home: '首页',
     about: '关于',
     experience: '体验',
-    programs: '体验课',
-    apply: '申请'
+    programs: '课程',
+    apply: '报名'
   }
 }
 export default navbar

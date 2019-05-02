@@ -5,6 +5,7 @@ import $ from 'jquery'
 import 'fullcalendar'
 import events from '../objects/events'
 import instruments from '../objects/instruments'
+import privateInstruments from '../objects/private_instruments'
 import programs from '../objects/programs_programs'
 
 export default {
@@ -14,7 +15,8 @@ export default {
 
   data () {
     return {
-      instruments: instruments[globalData.language]
+      instruments: instruments[globalData.language],
+      privateInstruments: privateInstruments
     }
   },
 
@@ -50,22 +52,21 @@ export default {
     <!-- Banner -->
     <div class="programs__banner"></div>
     <div class="programs__banner-bar">
-      <div class="programs__banner-bar-link">{{translation.calendar}}</div>
-      <div class="programs__banner-bar-link">{{translation.earlyYearsPrograms}}</div>
-      <div class="programs__banner-bar-link">{{translation.privateLessons}}</div>
-      <div class="programs__banner-bar-link">{{translation.groupLessons}}</div>
-      <div class="programs__banner-bar-link">{{translation.camps}}</div>
-
+      <div class="programs__banner-bar-link">{{translation.newProgramsSubtitle}}</div>
+      <div class="programs__banner-bar-link">{{translation.ourPrograms}}</div>
       <!-- Mobile Banner Title -->
       <div class="programs__mobile-banner-title">{{translation.programs}}</div>
     </div>
 
   <!-- Video -->
-  <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=v0858ysdg5n" allowFullScreen="true"></iframe>
-
+  <div class="content-wrapper">
+    <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
+    <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=v0858ysdg5n" allowFullScreen="true"></iframe>  
+  </div>
+  
     <!-- Courses -->
     <div class="content-wrapper">
-      <div class="programs__subtitle">{{translation.ourPrograms}}</div>
+      <div class="subtitle">{{translation.ourPrograms}}</div>
       <div class="programs__OC-description">{{translation.ourProgramsContent}}</div>
       <img 
       src="https://concord-assets.oss-cn-beijing.aliyuncs.com/Class%20Flow%20Chart.png" 
@@ -217,7 +218,7 @@ export default {
         </div>
       </div>
       <div class="programs__lessons-instrument-container">
-        <div v-for="instrument in instruments" class="programs__lessons" :key="instrument.id">
+        <div v-for="instrument in privateInstruments" class="programs__lessons" :key="instrument.id">
           <div class="programs__lessons-img-container">
             <img :src="instrument.img" alt="" class="programs__lessons-img">
           </div>
@@ -271,9 +272,9 @@ export default {
 }
 
 .programs__banner {
-  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__learning-at-concord.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__banner.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 0 -50px;
   height: 50vh;
   width: 100%;
   max-width: 1440px;
@@ -405,7 +406,7 @@ export default {
 .programs__lessons-instrument-container {
   display: flex;
   width: 75%;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 15px;
   position: relative;
   align-items: start;

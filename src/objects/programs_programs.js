@@ -5,7 +5,7 @@ const programs = {
         title: '“Baby Notes” Mommy & Me Music Lessons',
         age: '18 mos - 30 mos',
         description: '“Baby Notes” is a stepping stone to our Little Notes Music Foundation Class for age 3-4. “Baby Notes” give mommies and toddlers the space to explore different sound and music through catchy children tunes, percussion instruments, story telling and movements. Our teachers are experts on early music education who are able to connect with young children and our lessons are fun and filled with dynamic. Many activities in our class can be done at home with your child, bringing the interest of music beyond classroom to your home. ',
-        photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__baby-notes.jpg'
       }, 
       {
         title: '"Little Notes" Music Foundation',
@@ -17,13 +17,13 @@ const programs = {
         title: '"Little Notes" + ',
         age: 'Ages 3 - 4.5',
         description: 'This course runs as workshop-setting classes based on the “Little Notes” Music Foundation course syllabus but as a condensed 12-14 weeks course. It not only gives children a start in music in the way of exploration, it also involves parents in the classes and gives parents some ideas about how to extend the music interest beyond classroom and continues the interest cultivation at home. \n\n What’s the “+”? \n \n + more instrumental exploration \n + weekly parent-child home projects  \n+ instrument demonstration by teachers  \n+ selected favorite songs from “Little Notes”  ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-notes.png'
       }, 
       {
         title: '“Little Beethoven” Ear Training ',
         age: 'Ages 4 - 5',
         description: 'This course is designed to be completed in 18 weeks to open up the sensitivity of children’s natural ability in listening and to increase interest and appreciation for music. Upon the completion of this course, children will have the ability to sight-read on staff line, sight-sing and to recognize the directions of melodies. This is a foundation class prior to starting 1-on-1 instrument lessons, and it can also be a supplement course to 1-on-1 instrument lessons.',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/apply__student-violen-teacher.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg'
       }
     ],
     group: [
@@ -79,7 +79,7 @@ const programs = {
         title: '“宝贝音符“ 音乐亲子课',
         age: '18个月 - 30个月',
         description: '“宝贝音符” 是“小小音符”音乐启蒙课的入门课程。课程给孩子提供一个轻松愉快的空间去探索音乐和声音。通过有趣的歌曲鼓励孩子的早期音乐兴趣；通过打击乐器发现声音，通过故事和想象力去引导音乐赏析；通过律动和想象去感受音乐。课程的老师们都是音乐启蒙专家、拥有多年幼教育经验，通过小朋友喜欢的方式和，让音乐融入孩子们的成长过程中。我们的音乐课也是充满欢乐和乐趣的，让您和宝宝每周都期待过来社交的同时，一起分享音乐！此课程也教导妈妈们如何在家为孩子提供一个欢乐的音乐氛围，把音乐兴趣的种子带回家。',
-        photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__baby-notes.jpg'
       }, 
       {
         title: '“小小音符” 音乐启蒙课',
@@ -91,13 +91,13 @@ const programs = {
         title: '“小小音符” +',
         age: '3岁 - 4岁半',
         description: '这课程是个工作坊性质’ 课程，也是小小音符’音乐启蒙课程的浓缩课程。课程将在12-14周内完成，给予您孩子在音乐上有个探索性和自由去发掘的开始。小小音符+ 在上课时也有爸妈一同参与进行的缓解，宗旨是让兴趣培养作为是一家人一起去探索的一件事，让音乐的兴趣延伸到家里。\n\n ”+“ 了什么？\n\n+ 更多的乐器探索  \n+ 每周的亲子活动作业  \n+ 课堂里的live乐器示范和演奏  \n+ “小小音符”里最受孩子们喜爱的音乐 ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-notes.png'
       }, 
       {
         title: '“小小贝多芬”听力课',
         age: '4岁 - 5岁',
         description: '此课程为18周的训练，有效地帮助孩子开发听力潜能及培养音乐赏析和兴趣。课程训练核心为：视、听、唱。 在完成这个课程后，学生将具备视唱认识五线谱的能力，同时可以辨别对旋律以及和弦。此课程适于作为1对1乐器课前的启蒙，也可以和1对1乐器课同时进行，可以很大地辅助任何的乐器学习。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/apply__student-violen-teacher.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg'
       }
     ],
     group: [
