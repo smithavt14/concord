@@ -52,10 +52,16 @@ export default {
       <div class="banner-bar-link">{{translation.location}}</div>
       <div class="banner-bar-link">{{translation.reasons}}</div>
       <div class="banner-bar-link">{{translation.team}}</div>
-      <div class="banner-bar-link">{{translation.offsite}}</div>
+      <div class="banner-bar-link">{{translation.partnerships}}</div>
 
       <!-- Mobile Banner Title -->
       <div class="banner-bar-link-mobile">{{translation.about}}</div>
+    </div>
+
+    <div class="content-wrapper">
+      <div data-tockify-component="calendar" data-tockify-width="90%" data-tockify-calendar="alexs">
+        calendar
+      </div>
     </div>
 
     <!-- Our Philosophy -->
@@ -157,7 +163,7 @@ export default {
 }
 
 .about__OP-container-right-image {
-  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__maggie-flute.jpg');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Boy%20Student%20Violen%202%20copy.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

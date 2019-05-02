@@ -16,13 +16,13 @@ const reasons = {
       id: 2,
       icon: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__three.jpg',
       title: 'Diverse Course Options',
-      description: 'We tailor our programs to meet different needs and interests, while provided a well rounded learning experience for all.'
+      description: 'We tailor our programs to meet different interests and we provide a well-rounded learning experience for all.'
     },
     {
       id: 3,
       icon: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__four.jpg',
       title: 'More Performance Opportunities',
-      description: 'We ensure continued progress and keep our students engaged and inspired throughout their music studies.'
+      description: 'We ensure continued progress and we keep our students engaged and inspired.'
     },
     {
       id: 4,

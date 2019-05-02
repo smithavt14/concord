@@ -200,7 +200,7 @@ export default {
 }
 
 .home__banner {
-  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Teacher%20Flute.jpeg');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Boy%20Guitar%20Teacher.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -30px;

@@ -3,7 +3,7 @@ const programs = {
     programs: 'PROGRAMS',
     calendar: 'CALENDAR',
     earlyYearsPrograms: 'EARLY-YEARS PROGRAM',
-    earlyYearsProgramsContent: 'Our Early-Year Music Program follows a systematic syllabus created by Concord director that are created with the aim to provide the environment and guidance to cultivate music interest from early ages. Created for toddlers or young children from 18 months up to age 5 in our Early-Years Music Program. Children absorbs like a sponge at their early age, so musicality and music foundations can be built naturally at these ages. Childhood is only once in a lifetime and it is a memorable one with music in it! ',
+    earlyYearsProgramsContent: 'Our Early Years Music Program follows a systematic syllabus created by Concord director that is created with the aim to cultivate music interest from early ages by. Our program offers variety of fun courses with content targeted for specific age groups of 18 months up to age 5. Children absorb information like a sponge at their early age, so musicality and music foundations can be built naturally at these ages. Childhood is only once in a lifetime and it is a memorable one with music in it!',
     summary: 'SUMMARY',
     privateLessons: 'PRIVATE LESSONS',
     groupLessons: 'GROUP LESSONS',
@@ -32,7 +32,8 @@ const programs = {
     ageTitle: 'AGE',
     descriptionTitle: 'DESCRIPTION',
     supplementalTitle: 'SUPPLEMENTAL GROUP COURSES',
-    supplementalDescription: 'The courses below are created as supplemental or add-on group courses that can be taken simultaneously with instrumental group lessons or private lessons. These courses will enhance the musicality of students, expand their knowledge and improve their understanding in music.'
+    supplementalDescription: 'The courses below are created as supplemental or add-on group courses that can be taken simultaneously with instrumental group lessons or private lessons. These courses will enhance the musicality of students, expand their knowledge and improve their understanding in music.',
+    newProgramsSubtitle: 'NEW PROGRAMS'
   },
   Chinese: {
     programs: '课程',
@@ -67,8 +68,8 @@ const programs = {
     ageTitle: '年龄',
     descriptionTitle: '课程介绍',
     supplementalTitle: '兴趣素养的额外课程',
-    supplementalDescription: '以下课程是在已有乐器组课或一对一音乐课程的基础上，额外拓展的音乐素养课程。这些课程主要用于辅助主课，是有必要同时进行的。这些课程将提高学生的音乐素养，扩大学生对音乐知识层面的认知，提高他们对音乐的理解。'
-
+    supplementalDescription: '以下课程是在已有乐器组课或一对一音乐课程的基础上，额外拓展的音乐素养课程。这些课程主要用于辅助主课，是有必要同时进行的。这些课程将提高学生的音乐素养，扩大学生对音乐知识层面的认知，提高他们对音乐的理解。',
+    newProgramsSubtitle: '新课程'
   }
 }
 
