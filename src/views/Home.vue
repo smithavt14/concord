@@ -105,16 +105,16 @@ export default {
     </div>
 
     <!-- Add our WeChat -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" style="flex-direction: row; justify-content: center;">
       <div class="container-left">
-        <!-- 公众号二维码 -->
+        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/concord-qr.png" style="height: 100%;" alt="Concord QR">
       </div>
-      <div class="container-right">
+      <div class="container-right" style="align-items: flex-start;">
         <div class="subtitle">
           WECHAT OFFICIAL ACCOUNT
         </div>
-        <div class="title">Keep Up To Date With Concord</div>
-        <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="title">Keep Up With Concord</div>
+        <div class="content" style="text-align: left;">Interested in keeping up to date with Concord Music programs, camps, events, and news? Scan the QR code on the left to follow our WeChat Official Account.</div>
       </div>
     </div>
 
@@ -401,6 +401,28 @@ export default {
     color: white;
     text-decoration: none;
   }
+}
+
+.container-left {
+  width: 50%;
+  max-width: 450px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-right {
+  width: 50%;
+  max-width: 450px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ----------------- Large Screen Styles ------------------ */
