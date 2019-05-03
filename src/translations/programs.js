@@ -15,7 +15,13 @@ const programs = {
     ocTitle: 'Early Years Music Programs',
     privateLessonsTitle: '1-1 PRIVATE LESSONS',
     instruments: 'INSTRUMENTS',
-    privateLessonsDescription: 'Concord 1-on-1 lessons are suitable for students who are sure of their interests and have decided to begin the concentrated studies. The lessons are conducted by professional teachers who have graduated from the top music conservatories who are highly experienced in helping different levels of students to achieve their goals. This course allow students to interact with teachers in the most direct way. Our professional teachers will be able to personalize the learning experience according to each individual’s interest, character and learning goal. \n\n Our private lessons provide you a systematical training from building a strong foundation to a higher level of musicianship: \n\n * SALP (Student Annual Learning Report)  will be provided after first month of learning to set clear learning goals for the year  \n * SPR (Student Progress Report)  which is given to parents and students by the end of each term will give clear feedbacks and comments regarding the student’s progress.  \n * Regular student recitals and camps are among those opportunities that student can take to create more learning motivation.',
+    privateLessonsDescription: 'Concord 1-on-1 lessons are suitable for students who are sure of their interests and have decided to begin the concentrated studies. The lessons are conducted by professional teachers who have graduated from the top music conservatories who are highly experienced in helping different levels of students to achieve their goals. This course allow students to interact with teachers in the most direct way. Our professional teachers will be able to personalize the learning experience according to each individual’s interest, character and learning goal. \n\n Our private lessons provide you a systematical training from building a strong foundation to a higher level of musicianship: ',
+    salpTitle: 'SALP \n(Student Annual Learning Report)',
+    salpDescription: 'Provided after first month of learning to set clear learning goals for the year',
+    sprTitle: 'SPR \n (Student Progress Report)',
+    sprDescription: 'Given to parents and students by the end of each term will give clear feedbacks and comments regarding the student’s progress.',
+    recitalTitle: 'Regular Recitals and Camps',
+    recitalDescription: 'Recitals and camps  are among those opportunities that student can take to create more learning motivation.',
     privateLessonsDifferenceTitle: 'HOW ARE WE DIFFERENT?',
     privateLessonsDifferenceDescription: '* Our teaching philosophy which is that all students should be guided with much space given to follow their interest and passion  \n * Musicality is also cultivated from the very beginning of our trainings  \n * Foreign-published method books and learning materials are used at Concord  \n* Professional teachers who are excellent musicians themselves have the charisma and ways to inspire the students. \n  * Our creative teaching offers the perfect balance of studies which is right between “just-for-fun” and “dead-serious”.  ',
     privateLessonsRateTitle: 'RATE / MINUTES',
@@ -51,7 +57,13 @@ const programs = {
     ocTitle: '儿童团体课',
     privateLessonsTitle: '一对一私教课',
     instruments: '乐器',
-    privateLessonsDescription: '我们的专业一对一课适于那些想接受系统化乐器训练的学生，并拥有稳固的兴趣去接受这样的训练。搿艺一对一课的老师毕业于著名的音乐学院，拥有一定的经验去帮助不同水平的孩子去创造成就。一对一课提供师生一个最直接的互动环境。老师可按照不同学生的兴趣方向，性格和目标去定制适合每位学生的学习计划。 \n\n 我们的专业一对一课可以提供你一个系统化的训练，从基础至高级的音乐修养：\n\n * SALP／年度学习计划报告 老师将在每位学生第一个月的学习后提供这个学习计划报告，让学生知道一年内的学习计划和目标  \n * SPR／ 学习报告 每个学期末，老师讲以学习报告书面方式清楚提供反馈和学习的总结，并给予一些良好的建议  \n * 定期的学生汇报演出和音乐营 是学生们很好的额外学习机会，除了提升学习知识还可以为自己创造一个更有动力的学习环境 ',
+    privateLessonsDescription: '我们的专业一对一课适于那些想接受系统化乐器训练的学生，并拥有稳固的兴趣去接受这样的训练。搿艺一对一课的老师毕业于著名的音乐学院，拥有一定的经验去帮助不同水平的孩子去创造成就。一对一课提供师生一个最直接的互动环境。老师可按照不同学生的兴趣方向，性格和目标去定制适合每位学生的学习计划。 \n\n 我们的专业一对一课可以提供你一个系统化的训练，从基础至高级的音乐修养：',
+    salpTitle: 'SALP',
+    salpDescription: '年度学习计划报告 老师将在每位学生第一个月的学习后提供这个学习计划报告，让学生知道一年内的学习计划和目标 ',
+    sprTitle: 'SPR',
+    sprDescription: '学习报告 每个学期末，老师讲以学习报告书面方式清楚提供反馈和学习的总结，并给予一些良好的建议',
+    recitalTitle: '定期的学生汇报演出和音乐营 ',
+    recitalDescription: '定期的学生汇报演出和音乐营 是学生们很好的额外学习机会，除了提升学习知识还可以为自己创造一个更有动力的学习环境 ',
     privateLessonsDifferenceTitle: '我们的一对一课如何不一样？',
     privateLessonsDifferenceDescription: '* 我们的教学理念：学生们应该有足够的自由去探索他们的兴趣和热情 \n * 我们从一开始就培养学生的乐感，讲究音乐修养和理解多于机械的技巧掌握  \n * 采用国外的教材 \n* 具有专业精神，人格魅力，和独特教学方式的国际化师资团队 ',
     privateLessonsRateTitle: '费用 ／ 上课分钟',

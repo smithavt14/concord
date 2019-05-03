@@ -59,9 +59,8 @@ export default {
     </div>
 
     <div class="content-wrapper">
-      <div data-tockify-component="calendar" data-tockify-width="90%" data-tockify-calendar="alexs">
-        calendar
-      </div>
+      <div class="subtitle">OUR CALENDAR</div>
+      <div data-tockify-component="calendar" data-tockify-width="90%" data-tockify-calendar="concord">calendar</div>
     </div>
 
     <!-- Our Philosophy -->

@@ -61,15 +61,14 @@ export default {
   <!-- Video -->
   <div class="content-wrapper">
     <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
-    <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=v0858ysdg5n" allowFullScreen="true"></iframe>  
+    <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=v0858ysdg5n" allowFullScreen="true"></iframe>
   </div>
-  
     <!-- Courses -->
     <div class="content-wrapper">
       <div class="subtitle">{{translation.ourPrograms}}</div>
       <div class="programs__OC-description">{{translation.ourProgramsContent}}</div>
       <img 
-      src="https://concord-assets.oss-cn-beijing.aliyuncs.com/Class%20Flow%20Chart.png" 
+      src="https://concord-assets.oss-cn-beijing.aliyuncs.com/Class%20Flow%20Chart.png"
       alt="concord-music-programs"
       class="programs__program-chart">
     </div>
@@ -229,6 +228,21 @@ export default {
       <!-- Summary and Description -->
       <div class="programs__subtitle left">{{translation.summary}}</div>
       <div class="programs__lessons-description">{{translation.privateLessonsDescription}}</div>
+      <div class="programs__curriculum-container">
+        <div class="programs__curriculum-box">
+          <div class="programs__curriculum-title">{{translation.salpTitle}}</div>
+          <div class="programs__curriculum-description">{{translation.salpDescription}}</div>
+        </div>
+        <div class="programs__curriculum-box">
+          <div class="programs__curriculum-title">{{translation.sprTitle}}</div>
+          <div class="programs__curriculum-description">{{translation.sprDescription}}</div>
+        </div>
+        <div class="programs__curriculum-box">
+          <div class="programs__curriculum-title">{{translation.recitalTitle}}</div>
+          <div class="programs__curriculum-description">{{translation.recitalDescription}}</div>
+        </div>
+      </div>
+
       <div class="programs__subtitle left">{{translation.privateLessonsDifferenceTitle}}</div>
       <div class="programs__lessons-description">{{translation.privateLessonsDifferenceDescription}}</div>
       <div class="programs__subtitle left">{{translation.privateLessonsRateTitle}}</div>
@@ -255,7 +269,6 @@ export default {
 
 <style lang="scss">
 @import '../assets/styles.scss';
-@import '../assets/fullcalendar.css';
 
 .programs__OT-bootstrap-row {
   display: flex;
@@ -409,7 +422,7 @@ export default {
   justify-content: space-around;
   margin-bottom: 15px;
   position: relative;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .programs__private-lessons {
@@ -631,6 +644,46 @@ $animation-delay: .1s;
   }
 }
 
+.programs__curriculum-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.programs__curriculum-box {
+  height: 150px;
+  width: 150px;
+  background-color: $concord-orange;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: .2s linear;
+  &:hover {
+    background: white;
+    color: $concord-orange;
+    border: 2px solid $concord-orange;
+  }
+}
+
+.programs__curriculum-title {
+  font-weight: bold;
+  white-space: pre-line;  
+  .programs__curriculum-box:hover & {
+    display: none;
+  }
+}
+
+.programs__curriculum-description {
+  display: none;
+  font-size: 12px;
+  .programs__curriculum-box:hover & {
+    display: unset;
+  };
+}
+
 /* ---------- Large Screen Styles ----------*/
 
 @media screen and (min-width: 751px) {
@@ -723,7 +776,6 @@ $animation-delay: .1s;
   .programs__lessons-age-time-container {
     width: 90%;
     flex-direction: column;
-    
   }
 
   .programs__early-years-description {
