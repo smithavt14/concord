@@ -6,6 +6,7 @@ const about = {
     location: 'LOCATION',
     reasons: '5 REASONS TO CHOOSE US',
     team: 'OUR TEAM',
+    calendar: 'Our Calendar',
     partnerships: 'OUR PARTNERSHIPS',
     partners: 'AFFILIATED PARTNERS',
     OPsubtitle: 'OUR PHILOSOPHY',
@@ -24,6 +25,7 @@ const about = {
     location: '地理位置 ',
     reasons: '选择我们的5个理由',
     team: '我们的团队 ',
+    calendar: '我们的行事历',
     partnerships: '合作伙伴',
     partners: '要翻译',
     OPsubtitle: '理念',

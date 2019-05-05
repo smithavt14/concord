@@ -138,7 +138,7 @@ export default {
 /* ----- Experience ----- */
 
 .experience__EX-container-right-image {
-  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__learning-at-concord.jpg');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/girl-reading.jpeg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

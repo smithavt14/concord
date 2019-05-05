@@ -23,75 +23,6 @@ export default {
       }
     }
   },
-
-  methods: {
-
-    closeModal () {
-      this.modal.success = false
-      this.modal.error = false
-    },
-
-    post (url, body, callback) {
-      var req = new XMLHttpRequest()
-      req.open('POST', url, true)
-      req.setRequestHeader('Content-Type', 'application/json')
-      req.addEventListener('load', function () {
-        if (req.status < 400) {
-          callback(null, JSON.parse(req.responseText))
-        } else {
-          callback(new Error('Request failed: ' + req.statusText))
-        }
-      })
-      req.send(JSON.stringify(body))
-    },
-
-    success () {
-      const submit = document.getElementById('submit')
-      const form = document.getElementById('application')
-      submit.disabled = false
-      submit.blur()
-      form.student_name.value = ''
-      form.age.value = ''
-      form.program.value = ''
-      form.parent_name.value = ''
-      form.parent_wechat.value = ''
-      form.parent_phone.value = ''
-      form.comments.value = ''
-      this.modal.success = true
-    },
-
-    error (err) {
-      const submit = document.getElementById('submit')
-      alert('There was an error with sending your message, hold up until we fix it. Thanks for waiting.')
-      submit.disabled = false
-      console.log(err)
-      this.modal.error = true
-    },
-
-    submit (e) {
-      var self = this
-
-      const submit = document.getElementById('submit')
-      const form = document.getElementById('application')
-      const url = 'https://u2lx33cvlh.execute-api.us-east-1.amazonaws.com/dev/email/send'
-
-      e.preventDefault()
-      submit.disabled = true
-      const payload = {
-        student_name: form.student_name.value,
-        age: form.age.value,
-        program: form.program.value,
-        parent_name: form.parent_name.value,
-        parent_wechat: form.parent_wechat.value,
-        parent_phone: form.parent_phone.value,
-        comments: form.comments.value
-      }
-      self.post(url, payload, function (err, res) {
-        if (err) { return self.error(err) }
-        self.success()
-      })
-    }
-  }
 }
 </script>
 
@@ -140,7 +71,7 @@ export default {
           </div>
         </div>
         <textarea id="comments" name="comments" rows="5" :placeholder="translation.comments" class="apply__form-input textarea"></textarea>
-        <input id="submit" type="submit" class="apply__bottom-banner-link orange" :value="translation.submit" @click="submit">
+        <input id="submit" type="submit" class="apply__bottom-banner-link orange" :value="translation.submit">
       </form>
     </div>
 

@@ -32,7 +32,7 @@ const teachers = {
       id: 5,
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__annie.jpg',
       name: 'Xixi',
-      role: 'Violen Instructor',
+      role: 'Violin Instructor',
       bio: 'Xixi, a Malaysian-Chinese violinist, with musical training background from the Shanghai Conservatory of Music (Bachelor in Music) was a member of the Malaysian Philharmonic Youth Orchestra, led by Maestro Kevin Field. She has her own string quartet in Shanghai and performs actively around the city. She passed the ATCL examination of Trinity College with distinction, which is the highest credit. Wenxi - or also known as Ms. Xixi by her students - enjoys teaching violin and sharing her experience in violin, particularly with children. Her students enjoy studying with her because of her warm personality and energetic teaching style. Because of her nationality background, she is able to conduct lessons in both Chinese and English fluently.'
     },
     {
@@ -86,21 +86,14 @@ const teachers = {
     },
     {
       id: 13,
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/default%20user.jpg',
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Yong%20Wei%20Ho.jpeg',
       name: 'Yong-Wei Ho',
       role: 'Violin / Viola Instructor',
       bio: 'Yong-Wei or known as Wei by his students, was a regular member at the Malaysian Philharmonic Youth Orchestra (MPYO). He received his Bachelor of Music and Master in Music at Tunghai University (Taichung, Taiwan) at 2017. He studied viola performance with Professors Yih-Chyuan Wang and also served as the teaching assistant in various music history and music theory courses. Wei has played in various master classes, including those taught by professors Dao-Chang Yu ,Allie Su, Hausmann Quartet and Sayaka Kobuko. During summer 2017, Ho was invited to perform with Formosa Philharmonic Orchestra (Taiwan) in Les Rencontres Musicales de Chaon at France. In 2017, he was selected as a member of Thailand Philharmonic Orchestra. Wei is loved by his students for his patience and systematic approach in teaching while able to remain positive and encouraging.'
     },
     {
-      id: 14,
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/default%20user.jpg',
-      name: 'Rachel Luo ', 
-      role: 'Piano Instructor ',
-      bio: 'Rachel has won awards in piano competitions such as the Parsons Northeast China Piano Competition (1st  Prize, 2001), KAWAI Asia Piano Competition (1st Prize in provincial Preliminary; Rachel has accumulated teaching experience over five years and has helped many students build their interests in piano. She is known by her students to be an attentive and inspirational teacher who is able to see students’ individualistic characters and potentials. She is able to tailor her teaching according to students’ needs. With her studying experience in Finland and the UK, Rachel is able to give lessons in Mandarin and fluent English. She is also experienced in helping students to prepare for examinations and recitals.'
-    }, 
-    {
       id: 15,
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/default%20user.jpg',
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Kevin.jpeg',
       name: 'Kevin Marsh', 
       role: 'Guitar Instructor',
       bio: 'Canadian guitarist Kevin Marsh is an exquisite performer, teacher and composer. He formed the Rosette Guitar Duo and began composing, recording and performing their unique style of Canadian guitar music. He has also performed in notable venues such as the Chan Center for the Arts in Vancouver, British Columbia, The EPCOR Center in Calgary, Alberta and the Francis Ford Winspear Center in Edmonton. Kevin is a master teacher who has been joyfully educating students of the guitar for nearly twenty years. His passion for music and the guitar is exemplified through the success and accomplishments of his students. In 2013, Kevin was recognised and awarded by the Royal Conservatory of Music as an outstanding teacher, having one of his pupils receive a gold medal for highest marks on a performance exam.'
@@ -200,7 +193,7 @@ const teachers = {
     },
     {
       id: 11,
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/default%20user.jpg',
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Yong%20Wei%20Ho.jpeg',
       name: 'Yong-Wei Ho',
       role: '小提琴老师',
       bio: '出生于马来西亚，何永威于2010年至2011年曾担任马来西亚爱乐附属交响乐团中提琴演奏员。留学期间，永威的导师们包含王意权教授、张睿洲教授、王弈萱教授。永威也曾任教学助教的工作，其中教学科目包含西洋音乐史。永威于2017年获选为泰国爱乐乐团中提琴演奏员，同年随甫福尔摩沙爱乐管弦乐团到法国演出。留台期间与国内外音乐家合作，包括钢琴家Sandra Wright Shen、Daniel Petrica Ciobanu，低音管演奏家小山昭雄 (Akio Koyama)、小山莉绘 (Rie Koyama)、Sergio Azzolini等音乐家。 '
@@ -220,15 +213,8 @@ const teachers = {
       bio: 'Gavin老师来自英国苏格兰埃尔郡，从5岁开始学习音乐。赴爱丁堡纳皮尔大学和伯明翰艺术学院学习音乐之前他首先学习电子琴和钢琴。从爱丁堡纳皮尔大学（学士）毕业后，他便在埃尔郡从事钢琴家、伴奏家和教师的工作。他也受过最新的雅马哈教学法培训并在当地的雅马哈音乐学院授课。2013年9月，他受聘为巴林英国学校表演艺术学院的钢琴老师。他现在是搿艺音乐全职钢琴和集体课导师。他上课的目标是培养学生的技巧和知识以让他们成为一位独立的学习者。他坚信唯有通过富有创意性的音乐元素体验，我们才能完全建立起对音乐的理解。'
     },
     {
-      id: 14,
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/default%20user.jpg',
-      name: 'Rachel Luo ', 
-      role: 'Piano Instructor ',
-      bio: 'Rachel has won awards in piano competitions such as the Parsons Northeast China Piano Competition (1st  Prize, 2001), KAWAI Asia Piano Competition (1st Prize in provincial Preliminary; Rachel has accumulated teaching experience over five years and has helped many students build their interests in piano. She is known by her students to be an attentive and inspirational teacher who is able to see students’ individualistic characters and potentials. She is able to tailor her teaching according to students’ needs. With her studying experience in Finland and the UK, Rachel is able to give lessons in Mandarin and fluent English. She is also experienced in helping students to prepare for examinations and recitals.'
-    }, 
-    {
       id: 15,
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/default%20user.jpg',
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Kevin.jpeg',
       name: 'Kevin Marsh', 
       role: 'Guitar Instructor',
       bio: 'Canadian guitarist Kevin Marsh is an exquisite performer, teacher and composer. He formed the Rosette Guitar Duo and began composing, recording and performing their unique style of Canadian guitar music. He has also performed in notable venues such as the Chan Center for the Arts in Vancouver, British Columbia, The EPCOR Center in Calgary, Alberta and the Francis Ford Winspear Center in Edmonton. Kevin is a master teacher who has been joyfully educating students of the guitar for nearly twenty years. His passion for music and the guitar is exemplified through the success and accomplishments of his students. In 2013, Kevin was recognised and awarded by the Royal Conservatory of Music as an outstanding teacher, having one of his pupils receive a gold medal for highest marks on a performance exam.'

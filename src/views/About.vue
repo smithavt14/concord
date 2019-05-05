@@ -60,7 +60,10 @@ export default {
 
     <div class="content-wrapper">
       <div class="subtitle">OUR CALENDAR</div>
-      <div data-tockify-component="calendar" data-tockify-width="90%" data-tockify-calendar="concord">calendar</div>
+      <div 
+      data-tockify-component="calendar" 
+      data-tockify-calendar="concord" 
+      style="width: 90vw"> </div>
     </div>
 
     <!-- Our Philosophy -->
@@ -394,6 +397,7 @@ export default {
 /*--------------- Small Screen Style ---------------*/
 
 @media screen and (max-width: 750px) {
+
   .about__OP-container {
     width: 95%;
     background-color: white;

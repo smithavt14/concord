@@ -110,11 +110,9 @@ export default {
         <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/concord-qr.png" style="height: 100%;" alt="Concord QR">
       </div>
       <div class="container-right" style="align-items: flex-start;">
-        <div class="subtitle">
-          WECHAT OFFICIAL ACCOUNT
-        </div>
-        <div class="title">Keep Up With Concord</div>
-        <div class="content" style="text-align: left;">Interested in keeping up to date with Concord Music programs, camps, events, and news? Scan the QR code on the left to follow our WeChat Official Account.</div>
+        <div class="subtitle">{{translation.wechatSubtitle}}</div>
+        <div class="title">{{translation.wechatTitle}}</div>
+        <div class="content" style="text-align: left;">{{translation.wechatContent}}</div>
       </div>
     </div>
 

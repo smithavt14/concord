@@ -31,13 +31,13 @@ const programs = {
         title: 'Songs Around the World ',
         age: 'Ages 4 - 5',
         description: 'This is a course created to build little global citizens who would discover their interest in singing and to appreciate different cultures. Music is an universal language and through singing, children will explore different countries, cultures, people and language. They will be singing songs from different countries and express their understandings of the cultures through singing. Each week, they will have take-home lyrics and MP3. This class is taught by our professional choral expert from Vienna who seek to inspire children to sing with beautiful voice! ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__learning-at-concord.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/songs-around-the-world.jpeg'
       },
       {
         title: '1-on-4 Keyboard: My Musical Animals',
         age: 'Ages 3 - 4', 
         description: 'My Musical Animals is a method book written by Concord director for young beginners of age 3 to 4 to begin their interest in piano learning. With 1-on-4 group setting, each student will be getting guided hands-on experience on keyboard by our professional piano teacher. The learning scope of this course include pre-stave reading, listening, rhythm and playing technique. Off-piano activities in class makes the learning more dynamic and interactive as well, instead of just sitting for the whole lesson. The syllabus follows the 12 chapters in the method book (the book comes with a CD) which is easy for young children to follow and also quite user friendly for the parents to guide their child at home. After completing this course, students will acquire the basics of piano playing techniques which serves as a foundation to 1-on-1 piano studies. ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/keyboard-group.jpeg'
       },
       {
         title: '1-on-4 Violin',
@@ -63,7 +63,7 @@ const programs = {
         title: 'ABRSM Theory Group',
         age: 'Ages 7+',
         description: 'ABRSM Theory Class is a group class designed for students to follow the syllabus of ABRSM Theory Exam. The goal of this course is to prepare students for the examination, at the same time increase their understanding in music. Classes will be taught based on topics and grades. This would be suitable for students who have zero to little knowledges in theory but have not started the ABRSM syllabus before. Students will be learning concepts together in a group through interactive activities, followed by solidifying the concepts through worksheets and exercises, guided by teacher . Each week, students will be given take-home assignments to complete. Quiz will be given regularly to assess the students understanding. An assessment report will be given by end of each term to evaluate if the student is prepared to take the examination.',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__learning-at-concord.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg'
       },
       {
         title: 'Concord Choir',
@@ -105,13 +105,13 @@ const programs = {
         title: '唱响世界',
         age: '4岁 - 5岁',
         description: '该课程专为创建小小地球居民而设！他们将会通过音乐去探索自己的兴趣并共欣赏地球各个角落不一样的文化。音乐是这个地球的通用语，通过歌唱，居民们将会一起探索不一样的国家、文化、人文和语言。他们会学习各国民谣并通过音乐、律动、歌唱来表达他们对该文化的理解。每周，他们将把歌词和MP3带回家。该课程由来自维也纳的专业合唱导师授课，希望帮助孩子们学习如何唱的美，唱的动听。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__learning-at-concord.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/songs-around-the-world.jpeg'
       },
       {
         title: '1对4电子琴课：我的音乐动物',
         age: '3岁 - 4岁', 
         description: '《我的音乐动》是由搿艺音乐总监本人创作编辑的一本教材，专为幼龄孩子（3-4岁）提供快乐钢琴启蒙。在1对4的高质量学习环境下，老师将引导孩子们认识乐器，掌握技巧。学习范围包括：音符方向的阅读，听力训练，节奏和弹奏技巧。课堂将通过互动和游戏，让学习过程变得更有趣，而不是枯燥，只有静态的重复练习。教材（书自带CD）的12章学习内容允许孩子们有系统地接受基础训练，同时书里简易的’练琴指南’也帮助家长在家可进行督促。课程结束后，学生将有稳固的基础，为后续更专业的一对一钢琴学习做个重要的铺垫。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/keyboard-group.jpeg'
       },
       {
         title: '1对4小提琴课',
@@ -137,7 +137,7 @@ const programs = {
         title: 'ABRSM Theory Group',
         age: '7岁+',
         description: '英皇乐理课程是根据英皇乐理的考级大纲，为的是帮助学生为考试做好充分的准备，同时增加乐理知识和对音乐的认知。集体课课程以考级的级别和主题式展开，适合零乐理基础且未曾接触樱花乐理教学大纲的学生。课程以集体课方式授课，学生将通过集体互动学习乐理知识，后半部分将在导师指导下通过作业和练习巩固孩子的乐理知识。导师每周会布置家庭作业，课程期间也会有模拟考试来测试学生的吸收和领悟能力。每学期结束后导师将会提供专业的评估报告，让学生知道自己是否已经准备好接受考试的挑战。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__learning-at-concord.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg'
       },
       {
         title: '搿艺合唱团',

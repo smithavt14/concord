@@ -27,6 +27,10 @@ export default {
 
     programs () {
       return programs[globalData.language]
+    },
+
+    language () {
+      return globalData.language
     }
   },
 
@@ -67,9 +71,15 @@ export default {
     <div class="content-wrapper">
       <div class="subtitle">{{translation.ourPrograms}}</div>
       <div class="programs__OC-description">{{translation.ourProgramsContent}}</div>
-      <img 
-      src="https://concord-assets.oss-cn-beijing.aliyuncs.com/Class%20Flow%20Chart.png"
+      <img
+      v-if="language === 'English'"
+      src="https://concord-assets.oss-cn-beijing.aliyuncs.com/bubble-map-en.jpeg"
       alt="concord-music-programs"
+      class="programs__program-chart">
+      <img
+      v-else
+      src="https://concord-assets.oss-cn-beijing.aliyuncs.com/bubble-map-cn.jpeg"
+      alt="concord music programs"
       class="programs__program-chart">
     </div>
 
