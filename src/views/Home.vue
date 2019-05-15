@@ -105,14 +105,14 @@ export default {
     </div>
 
     <!-- Add our WeChat -->
-    <div class="content-wrapper" style="flex-direction: row; justify-content: center;">
-      <div class="container-left">
+    <div class="home__WX-content-wrapper">
+      <div class="home__WX-container-left">
         <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/concord-qr.png" style="height: 100%;" alt="Concord QR">
       </div>
-      <div class="container-right" style="align-items: flex-start;">
-        <div class="subtitle">{{translation.wechatSubtitle}}</div>
-        <div class="title">{{translation.wechatTitle}}</div>
-        <div class="content" style="text-align: left;">{{translation.wechatContent}}</div>
+      <div class="home__WX-container-right" style="align-items: flex-start;">
+        <div class="subtitle WX">{{translation.wechatSubtitle}}</div>
+        <div class="title WX">{{translation.wechatTitle}}</div>
+        <div class="content WX">{{translation.wechatContent}}</div>
       </div>
     </div>
 
@@ -265,58 +265,47 @@ export default {
   width: 90%;
 }
 
-/* ----- From Our Blog ----- */
+/* ----- WeChat Official Accont ----- */
 
-.home__FOB-wrapper {
+.home__WX-content-wrapper {
   width: 100%;
   background-color: white;
   padding: 25px 0;
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px 50px #EEEEEE;
   margin: 15px 0;
 }
 
-.home__FOB-card-container {
-  text-align: left;
+.home__WX-container-left {
+  width: 50%;
+  max-width: 450px;
+  padding: 20px;
+  height: 250px;
   display: flex;
-  overflow: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__WX-container-right {
+  width: 50%;
+  max-width: 450px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.WX {
   width: 100%;
+  text-align: left;
 }
 
-.home__FOB-card {
-  margin: 0 20px;
-  width: 300px;
-}
-
-.home__FOB-title {
-  color: $concord-orange;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.home__FOB-card-photo {
-  height: 75%;
-  object-fit: cover;
-  box-shadow: 2px 2px 10px gray;
-  margin-bottom: 10px;
-}
-
-.home__FOB-card-photo:hover {
-  box-shadow: 5px 5px 20px gray;
-}
-
-.home__FOB-card-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.home__FOB-card-date {
-  font-size: 15px;
-  color: $concord-orange;
-}
 
 /* ----- Our Programs ----- */
 
@@ -399,28 +388,6 @@ export default {
     color: white;
     text-decoration: none;
   }
-}
-
-.container-left {
-  width: 50%;
-  max-width: 450px;
-  padding: 20px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.container-right {
-  width: 50%;
-  max-width: 450px;
-  padding: 20px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /* ----------------- Large Screen Styles ------------------ */
@@ -571,6 +538,45 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
+  }
+
+  .home__WX-content-wrapper {
+    width: 100%;
+    background-color: white;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 50px #EEEEEE;
+    margin: 15px 0;
+  }
+
+  .home__WX-container-left {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home__WX-container-right {
+    width: 100%;
+    max-width: 450px;
+    padding: 0 20px;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .WX {
+    width: 100%;
+    text-align: left;
   }
 }
 

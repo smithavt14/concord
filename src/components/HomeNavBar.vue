@@ -74,7 +74,7 @@ export default {
         <span class="HomeNavBar__hamburger-icon"></span>
       </span>
       <div v-if="checked" class="HomeNavBar__mobile-wrapper">
-        <div class="mobile-logo"></div>
+        <div class="HomeNavBar__mobile-title">Concord Music</div>
         <p @click="closeMobileMenu"><router-link to="/" :class="{'HomeNavBar__link_active': currentRoute === 'home'}">{{translation.home}}</router-link></p>
         <p @click="closeMobileMenu"><router-link to="/about" :class="{'HomeNavBar__link_active': currentRoute === 'about'}">{{translation.about}}</router-link></p>
         <p @click="closeMobileMenu"><router-link to="/experience" :class="{'HomeNavBar__link_active': currentRoute === 'experience'}">{{translation.experience}}</router-link></p>
@@ -259,6 +259,13 @@ export default {
     background: $opaque;
   }
 
+  .HomeNavBar__mobile-title {
+    margin: 20px;
+    font-size: 40px;
+    font-weight: 100;
+    color: $concord-orange;
+  }
+
   .HomeNavBar__mobile-wrapper {
     height: 100vh;
     width: 100vw;
@@ -271,12 +278,12 @@ export default {
     justify-content: center;
     align-items: center;
     a {
-      color: $half-black;
-      font-size: 30px;
+      color: $concord-orange;
+      font-size: 25px;
     }
     p {
-      color: $half-black;
-      font-size: 30px;
+      color: $concord-orange;
+      font-size: 25px;
     }
   }
 
@@ -327,7 +334,7 @@ export default {
   }
 
   .HomeNavBar__link_active {
-    color: $concord-orange !important;
+    border-bottom: 1px solid $concord-orange;
   }
 
   .HomeNavBar__hamburger-icon {
@@ -399,7 +406,7 @@ export default {
   }
 
   a {
-    margin-bottom: 1em;
+    margin: 10px;
     display: block;
     color: #000;
     text-decoration: none;

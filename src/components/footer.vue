@@ -151,9 +151,30 @@ export default {
 
 @media screen and (max-width: 1000px) {
   .footer__container {
-    display: none;
+    height: unset;
   }
-  
+
+  .footer__container-top {
+    height: unset;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .footer__container-top-center {
+    width: 100%;
+  }
+
+  .footer__container-top-center-box {
+    width: 50%;
+    height: unset;
+    text-align: center;
+  }
+
+  .footer__container-top-right-qr {
+    height: 175px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
 }
 
 </style>

@@ -718,6 +718,10 @@ $animation-delay: .1s;
 /* ---------- Small Screen Styles ----------*/
 
 @media screen and (max-width: 750px) {
+  .programs__banner {
+    background-position: unset;
+  }
+
   .programs__banner-bar-link {
     display: none;
   }
