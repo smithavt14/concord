@@ -64,7 +64,7 @@ export default {
         data-tockify-component="calendar" 
         data-tockify-calendar="concord"
         data-tockify-width="90%"
-        class="tockify-calendar">
+        id="tockify-calendar">
       </div>
     </div>
 
@@ -310,10 +310,6 @@ export default {
   background-repeat: no-repeat;
   height: 90%;
   width: 100%;
-}
-
-.tockify-calendar {
-  width: 90vw !important;
 }
 
 /*--------------- Large Screen Style ---------------*/

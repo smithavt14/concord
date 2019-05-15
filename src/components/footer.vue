@@ -36,36 +36,50 @@ export default {
 
 <template>
   <div class="footer__container">
-    <div class="footer__copyright">© 2019 Concord Music. All Rights Reserved. 沪ICP备19008777号</div>
-    <div class="footer__icon-container">
-      <div class="footer__icon location" @click="modal.location = !modal.location"></div>
-      <div class="footer__icon wechat" @click="modal.wechat = !modal.wechat"></div>
-      <div class="footer__icon phone" @click="modal.phone = !modal.phone"></div>
-      <div class="footer__icon email" @click="modal.email = !modal.email"></div>
+    <div class="footer__container-top">
+      <div class="footer__container-top-left">{{translation.hello}}</div>
+      <div class="footer__container-top-center">
+        <div class="footer__container-top-center-box">
+          <div class="footer__container-top-center-box-header">
+            {{translation.phone}}
+          </div>
+          <div class="footer__container-top-center-box-subheader">
+            156-1839-1413
+          </div>
+        </div>
+        <div class="footer__container-top-center-box">
+          <div class="footer__container-top-center-box-header">
+            {{translation.wechat}}
+          </div>
+          <div class="footer__container-top-center-box-subheader">
+            ConcordMusic
+          </div>
+        </div>
+        <div class="footer__container-top-center-box">
+          <div class="footer__container-top-center-box-header">
+            {{translation.email}}
+          </div>
+          <div class="footer__container-top-center-box-subheader">
+            info@concord-music.com
+          </div>
+        </div>
+        <div class="footer__container-top-center-box">
+          <div class="footer__container-top-center-box-header">
+            {{translation.location}}
+          </div>
+          <div class="footer__container-top-center-box-subheader">
+            {{translation.address}}
+          </div>
+        </div>
+      </div>
+      <div class="footer__container-top-right">
+        <img class="footer__container-top-right-qr" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/concord-qr.png" alt="Concord QR">
+      </div>
     </div>
-
-    <!-- Modal | Address -->
-    <b-modal ok-only centered v-model="modal.location" title="Our Location | 我们地址" id="left-align" size="sm">
-      <div class="footer__location-photo"></div>
-      <div><strong>{{translation.addressTitle}}</strong>{{translation.addressContent}}</div>
-      <div><strong>{{translation.metroTitle}}</strong>{{translation.metroContent}}</div>
-      <div><strong>{{translation.parkingTitle}}</strong>{{translation.parkingContent}}</div>
-    </b-modal>
-
-    <!-- Modal | Email -->
-    <b-modal ok-only centered v-model="modal.email" title="Our Email | 我们邮箱" id="left-align" size="sm">
-      <div><strong>{{translation.emailContent}}</strong>info@concord-music.com</div>
-    </b-modal>
-
-    <!-- Modal | Phone -->
-    <b-modal ok-only centered v-model="modal.phone" title="Our Phone | 我们电话" id="left-align" size="sm">
-      <div><strong>Phone: </strong>021-5235-7398 / 156-1839-1413</div>
-    </b-modal>
-
-    <!-- Modal | WeChat -->
-    <b-modal ok-only centered v-model="modal.wechat" title="Our WeChat | 我们微信" size="sm">
-      <div class="footer__wechat-qr"></div>
-    </b-modal>
+    <div class="footer__container-bottom">
+      <div>© 2019 Concord Music.</div>
+      <div>沪ICP备19008777号</div>
+    </div>
   </div>
 </template>
 
@@ -74,81 +88,64 @@ export default {
 
 .footer__container {
   background-color: $concord-orange;
-  height: 80px;
+  height: 300px;
   width: 100vw;
   max-width: 1440px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   margin-top: 15px;
 }
 
-.footer__copyright {
-  color: white;
-  margin-left: 15px;
-}
-
-.footer__icp {
-  color: white;
-}
-
-.footer__address {
-  color: white;
-}
-
-.footer__location-photo {
-  background-image: url('../assets/images/locationphoto.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 250px;
-  margin-bottom: 10px;
-}
-
-.footer__icon-container {
-  position: absolute;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.footer__container-top {
+  height: 225px;
+  width: 90vw;
+  border-bottom: 1px solid white;
   display: flex;
-  width: 35%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__container-bottom {
+  height: 75px;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+}
+
+
+.footer__container-top-left {
+  color: white;
+  font-size: 60px;
+}
+
+.footer__container-top-center {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  width: 45%;
 }
 
-.footer__icon {
-  height: 30px;
-  width: 30px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0 20px;
-}
-
-.footer__wechat-qr {
-  background-image: url('../assets/images/concord-wechat.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 250px;
-}
-
-.location {
-  background-image: url('../assets/icons/location.svg');
-}
-
-.wechat {
-  background-image: url('../assets/icons/wechat.svg');
-}
-
-.phone {
-  background-image: url('../assets/icons/phone.svg');
-}
-
-.email {
-  background-image: url('../assets/icons/email.svg');
-}
-
-#left-align {
+.footer__container-top-center-box {
+  width: 50%;
+  margin: 10px 0;
+  height: 100%;
   text-align: left;
 }
+
+.footer__container-top-center-box-header {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.footer__container-top-right-qr {
+  height: 175px;
+  border-radius: 10px;
+}
+
 </style>
