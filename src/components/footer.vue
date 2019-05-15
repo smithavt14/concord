@@ -96,11 +96,12 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 15px;
+  position: relative;
 }
 
 .footer__container-top {
   height: 225px;
-  width: 90vw;
+  width: 90%;
   border-bottom: 1px solid white;
   display: flex;
   justify-content: space-between;
@@ -109,7 +110,7 @@ export default {
 
 .footer__container-bottom {
   height: 75px;
-  width: 90vw;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,6 +147,13 @@ export default {
 .footer__container-top-right-qr {
   height: 175px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer__container {
+    display: none;
+  }
+  
 }
 
 </style>
