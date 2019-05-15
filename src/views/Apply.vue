@@ -40,7 +40,7 @@ export default {
       <div class="title">{{translation.title}}</div>
       <div class="apply__sub-content">{{translation.content}}</div>
       <!-- Form -->
-      <form id="application" action="" method="POST" style="display: flex; flex-direction: column; align-items: center">
+      <form id="application" action="https://formspree.io/alex@zimadigital.io" method="POST" style="display: flex; flex-direction: column; align-items: center">
         <div class="apply__form-container">
           <!-- Student Name -->
           <div class="apply__form-box">
