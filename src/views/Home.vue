@@ -2,15 +2,8 @@
 import translation from '../translations/translation'
 import globalData from '../main'
 import programCategories from '../objects/home_program_categories'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import strftime from 'strftime'
 
 export default {
-  components: {
-    swiper,
-    swiperSlide
-  },
-
   name: 'home',
 
   computed: {
@@ -20,32 +13,15 @@ export default {
     translatedProgramCategories () {
       return this.programCategories[globalData.language]
     },
-    swiper () {
-      return this.$refs.homeSwiper.swiper
-    }
   },
 
   data () {
     return {
       programCategories: programCategories,
-      swiperOptions: {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: false
-        }
-      },
     }
   },
 
   methods: {},
-
-  mounted () {
-    
-  }
 }
 
 </script>

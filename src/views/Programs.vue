@@ -1,9 +1,6 @@
 <script>
 import translation from '../translations/translation'
 import globalData from '../main'
-import $ from 'jquery'
-import 'fullcalendar'
-import events from '../objects/events'
 import instruments from '../objects/instruments'
 import privateInstruments from '../objects/private_instruments'
 import programs from '../objects/programs_programs'
