@@ -42,20 +42,6 @@ export default {
 
       window.scrollTo(0, top)
     }
-  },
-
-  mounted () {
-    $('#calendar').fullCalendar({
-      aspectRatio: 1,
-      header: {
-        left: 'title',
-        center: '',
-        right: 'today, prev,next'
-      },
-      defaultView: 'month',
-      height: 415,
-      eventSources: events.eventSources
-    })
   }
 }
 </script>
