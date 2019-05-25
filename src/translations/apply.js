@@ -27,7 +27,7 @@ const apply = {
     content: '请提交您的申请表格，并告知我们您想报的课程。我们的课程咨询老师将在收到您的申请表格后尽快和您联系。您也可以直接和我们联系，进行咨询或报名。',
     student_name: '学生姓名',
     student_age: '学生年龄',
-    program: '项目',
+    program: '课程',
     parent_name: '家长姓名',
     parent_wechat: '家长微信账号',
     parent_phone: '家长手机号码',

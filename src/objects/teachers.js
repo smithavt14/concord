@@ -3,7 +3,7 @@ const teachers = {
     {
       id: 1,
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__fei.jpg',
-      name: 'Fei',
+      name: 'Feifan Oh',
       role: 'Founder / Director',
       bio: 'Fei is the founder and Executive Director of Concord Music. As a graduate of New York’s Manhattan School of Music (Bachelor of Music) and New York University (Master of Music), Fei is not only a passionate piano pedagogue but also an active concert pianist who has performed across the globe (USA, Europe, the Philippines and Malaysia). She has written and published My Musical Animals; a unique method book for piano and keyboard group lessons catering to the needs of young children. She is the leader of Concord teaching team and provides trainings to teachers with the goal to carry out the school’s core belief which is to make the school a space where musical interests are nurtured by professionals.'
     },
@@ -75,7 +75,7 @@ const teachers = {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Keego%20pic.jpg',
       name: 'Keegan Govender',
       role: 'Drums Instructor',
-      bio: ' Keego comes form a musical family. He started music at the age of 8 in his family band called Starlight Entertainers. He graduated at Sumbavanie School of Drum in December 2011 with prestigious results and at age of 29, he won the National Percussion Competition in South Africa. He has established himself as an excellent drum player with several awards in competitions such as the Soweto Jazz Festival. Keego is a versatile musician who can play different types of drums: Indian drums, African drums, jazz drums, etc. He is able to inspire students of different ages and throughout his many years of teaching, he has developed his own teaching materials and method. '
+      bio: 'Keego comes from a musical family. He started music at the age of 8 in his family band called Starlight Entertainers. He graduated at Sumbavanie School of Drum in December 2011 with prestigious results and at age of 29, he won the National Percussion Competition in South Africa. He has established himself as an excellent drum player with several awards in competitions such as the Soweto Jazz Festival. Keego is a versatile musician who can play different types of drums: Indian drums, African drums, jazz drums, etc. He is able to inspire students of different ages and throughout his many years of teaching, he has developed his own teaching materials and method. '
     },
     {
       id: 6,
@@ -96,21 +96,21 @@ const teachers = {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/beely.jpeg',
       name: 'Beely Lee', 
       role: 'Head of Administration & Branch Manager',
-      bio: 'Lee leads Concord team as the Head of Administration and Branch Manager. With her prior experience as ___, she is an experienced leader in team management and in administration. Lee helps each customer with understanding and offers fluent communication in Cantonese, Mandarin and English. She enjoys her work and being a great chef is her secret talent.'
+      bio: 'Lee leads Concord team as the Head of Administration and Branch Manager. With her previous experience as a language teacher and as the principal’s senior assistant of a 2000-students school, she is an experienced leader in team management and in education administration. Lee helps each customer with understanding and offers fluent communication in Cantonese, Mandarin and English. She enjoys her work and being a great chef is her secret talent.'
     }, 
     {
       id: 17, 
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Fiona.jpeg',
       name: 'Fiona Oung',
       role: 'Administration and Scheduling Manager',
-      bio: 'Fiona has worked as an admin and scheduling assistant for more than 4 years. Fiona offers fluent communication in Cantonese, Mandarin and English. She is quick and responsive in work, great with kids, enjoys rock climbing and extreme sports and she always smile!'
+      bio: 'Fiona has worked as an admin and scheduling assistant for more than 3 years. Fiona offers fluent communication in Cantonese, Mandarin and English. She is quick and responsive in work, great with kids, enjoys rock climbing and extreme sports and she always smile!'
     },
     {
       id: 18, 
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Leon.jpeg',
       name: 'Leon Chen',
       role: 'Admissions Advisor & Marketing Manager',
-      bio: 'Leon offers professional opinions to all new incoming students and help each parent and student in selecting course(s) that would meet their expectations and needs. He is also an experienced piano teacher and has taught for over ____ years. Other than that, he sings as a baritone and performs actively in his choral group name “____”. He works full-time at Concord and almost full-time at the gym too - he enjoys working out and marathon as his hobby.'
+      bio: 'Leon offers professional opinions to all new incoming students and help each parent and student in selecting course(s) that would meet their expectations and needs. He is also an experienced piano teacher and has taught for over 11 years. Other than that, he sings as a baritone and performs actively in his choral group name “Balance Vocal Band”. He works full-time at Concord and almost full-time at the gym too - he enjoys working out and marathon as his hobby.'
     }
   ],
   Chinese: [
@@ -138,7 +138,7 @@ const teachers = {
     {
       id: 13,
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__gavin.jpg',
-      name: 'Gavin Stewart ',
+      name: 'Gavin Stewart',
       role: '钢琴老师',
       bio: 'Gavin老师来自英国苏格兰埃尔郡，从5岁开始学习音乐。赴爱丁堡纳皮尔大学和伯明翰艺术学院学习音乐之前他首先学习电子琴和钢琴。从爱丁堡纳皮尔大学（学士）毕业后，他便在埃尔郡从事钢琴家、伴奏家和教师的工作。他也受过最新的雅马哈教学法培训并在当地的雅马哈音乐学院授课。2013年9月，他受聘为巴林英国学校表演艺术学院的钢琴老师。他现在是搿艺音乐全职钢琴和集体课导师。他上课的目标是培养学生的技巧和知识，以让他们成为一位独立的学习者。他坚信唯有通过富有创意性的音乐元素体验，才能完全建立起对音乐的理解。'
     },
@@ -166,7 +166,7 @@ const teachers = {
     {
       id: 7,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Jenny%20Wu.jpeg',
-      name: 'Jenny Wu',
+      name: '吳珀元',
       role: '单簧管老师',
       bio: '吴老师就读台湾实践大学音乐系、台南艺术大学民族音乐学研究所，以音乐人类学专业获得上海音学院博士学位。求学期间曾获各项优秀学生奖学金，与担任乐团单簧管首席，并以管乐第一名的优异成绩毕业于实践大学音乐系。'
     },
@@ -187,7 +187,7 @@ const teachers = {
     {
       id: 8,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Keego%20pic.jpg',
-      name: 'Keegan Govender ',
+      name: 'Keegan Govender',
       role: '架子鼓老师',
       bio: 'Keego老师出生于音乐世家。8岁时，他在他的家庭乐队“星光艺人”开始了他的音乐生涯。他在2011年12月以优秀的成绩毕业于世界著名的架子鼓学院 - Sumbavanied。在他29岁的那一年，成了全南非打击乐比赛的冠军。他获得了多个比赛冠军后成为了专业的鼓手，其中比赛包括著名的Soweto爵士音乐节。Keego老师是个多才多艺的老师，他掌握各种鼓种，如印度鼓，非洲鼓，爵士鼓等。并且他拥有多年教授不同年龄段的学生的教学经验，从中整合出自己一套独特的教学方式和教学系统。'
     },
@@ -208,8 +208,8 @@ const teachers = {
     {
       id: 16,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/beely.jpeg',
-      name: '吕率萱', 
-      role: '行政主管 ',
+      name: '吕率瑄', 
+      role: '行政主管',
       bio: '吕老师以行政主管和分公司经理的身份领导着搿艺团队。吕老师曾是位语言老师，也曾担任2000多学生学校的校长特助，因此她在团队管理和教育行政管理方面是一位经验丰富的领导者。吕老师负责帮助每一位客户理解所需要的内容，并可以提供流利的粤语、普通话和英文进行沟通。她非常热爱她的工作，励志成为一名伟大的厨师是她隐藏多年的秘密。'
     }, 
     {
@@ -224,7 +224,7 @@ const teachers = {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Leon.jpeg',
       name: '陈旭',
       role: '招生顾问 & 市场部经理',
-      bio: 'Leon老师为所有入学的新学生提供非常专业的课程意见，并帮助每一位家长和学生去选择符合他们所期望的课程。他也是一位经验丰富的钢琴老师，任教超过11年。除此之外，他以男中音的身份进行演唱和演出，并在他的阿卡贝拉乐团 - “Balance vocal band”中积极表演。他全职工作在搿艺音乐，也可能全职工作在健身房—他喜欢健身和马拉松作为他全部的业余爱好。 '
+      bio: 'Leon老师为所有入学的新学生提供非常专业的课程意见，并帮助每一位家长和学生去选择符合他们所期望的课程。他也是一位经验丰富的钢琴老师，任教超过11年。除此之外，他以男中音的身份进行演唱和演出，并在他的阿卡贝拉乐团 - “Balance vocal band”中积极表演。他全职工作在搿艺音乐，也可能全职工作在健身房—他喜欢健身和马拉松作为他全部的业余爱好。'
     }
   ]
 }

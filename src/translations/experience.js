@@ -3,9 +3,9 @@ const experience = {
     experience: 'EXPERIENCE',
     photos: 'PHOTOS',
     videos: 'VIDEOS',
-    videoSubtitle: 'Find out what Moanna Jiao, Dr. Agustin Muriago, Agnes Graglia and O Ching have to say about their experience with Concord.  ', 
-    video_moana: 'Moana Jiao (student of Concord Music)',
-    video_agustin: 'Dr. Agustin Muriago (Piano Professor of Kansas State University, USA) ',
+    videoSubtitle: 'Find out what Moanna Jiao, Dr. Agustin Muriago, Agnes Graglia and O Ching have to say about their experience with Concord.', 
+    video_moana: 'Moana Jiao, Anna Jiao (students of Concord Music)',
+    video_agustin: 'Dr. Agustin Muriago (Piano Professor of Kansas State University, USA)',
     video_agnes: 'Agnes Graglia (parent of Concord Music)',
     video_oching: 'O Ching (student of Concord Music)',
     video_nancy: 'Nancy (parent of Concord Music)',

@@ -200,6 +200,7 @@ export default {
 .home__WAW-container-left-title {
   font-size: 25px;
   margin-bottom: 5px;
+  white-space: pre-wrap;
 }
 
 .home__WAW-container-left-content {

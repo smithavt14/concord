@@ -1,48 +1,57 @@
 const applyPrograms = {
   English: [
     {
-      title: 'Private 1-on-1 Lessons'
+      title: '"Baby Notes" Mommy & Me Music Lessons'
     },
     {
-      title: 'Group Classes for Children'
+      title: '"Little Notes" Music Foundation'
     },
     {
-      title: 'Mommy and Me'
+      title: '"Little Notes" +'
     },
     {
-      title: 'Little Notes Music Foundation'
-    },
-    {
-      title: 'Little Beethoven'
+      title: '"Little Beethoven" Ear Training'
     },
     {
       title: 'Songs Around the World'
     },
     {
+      title: '1-on-4 Keyboard'
+    },
+    {
+      title: '1-on-4 Violin'
+    },
+    {
+      title: 'Poca a Poca Piano Foundation & Musicianship Class'
+    },
+    {
+      title: 'Ukelele Group Class'
+    },
+    {
+      title: '1-on-2 Instrumental Lessons'
+    },
+    {
+      title: 'Choir Preparatory Course'
+    },
+    {
       title: 'Concord Choir'
     },
     {
-      title: 'Ukelele Group'
+      title: 'Private Lessons'
     },
     {
-      title: 'ABRSM Theory Group'
+      title: 'Concord Music Summer Camp 2019'
     },
-    {
-      title: 'Little Symphony'
-    }
   ],
   Chinese: [
     {
-      title: '私人 一对一的课'
-    },
-    {
-      title: '儿童团课'
-    },
-    {
-      title: '音乐亲子课'
+      title: '“宝贝音符” 音乐亲子课'
     },
     {
       title: '“小小音符” 音乐启蒙课'
+    },
+    {
+      title: '“小小音符” +'
     },
     {
       title: '“小小贝多芬” 听力课'
@@ -51,17 +60,35 @@ const applyPrograms = {
       title: '唱响世界'
     },
     {
-      title: '搿艺合唱团'
+      title: '1对4电子琴课'
+    },
+    {
+      title: '“小步点” 钢琴启蒙'
+    },
+    {
+      title: '1对4小提琴课'
     },
     {
       title: '尤克里里集体课'
     },
     {
-      title: '英皇考级'
+      title: '一对二乐器课程'
     },
     {
-      title: '唱团'
-    }
+      title: 'ABRSM Theory Group'
+    },
+    {
+      title: '合唱预备班'
+    },
+    {
+      title: '搿艺合唱团'
+    },
+    {
+      title: '一对一乐器专业课'
+    },
+    {
+      title: '2019年搿艺音乐夏令营'
+    },
   ]
 }
 

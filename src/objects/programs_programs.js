@@ -69,14 +69,14 @@ const programs = {
         title: 'ABRSM Theory Group',
         age: 'Ages 7+',
         description: 'ABRSM Theory Class is a group class designed for students to follow the syllabus of ABRSM Theory Exam. The goal of this course is to prepare students for the examination, at the same time increase their understanding in music. Classes will be taught based on topics and grades. This would be suitable for students who have zero to little knowledges in theory but have not started the ABRSM syllabus before. Students will be learning concepts together in a group through interactive activities, followed by solidifying the concepts through worksheets and exercises, guided by teacher . Each week, students will be given take-home assignments to complete. Quiz will be given regularly to assess the students understanding. An assessment report will be given by end of each term to evaluate if the student is prepared to take the examination.',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg',
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/abrsm-theory.jpeg',
         id: 0
       },
       {
         title: 'Choir Preparatory Course',
         age: '(Age 5 to 6)',
         description: 'For those children who love singing and plan to eventually join a choir, this is a good preparation and also a good way to begin one’s interest in singing. Singing in an ensemble is more fun than singing alone! Children will listen better to each other and they will learn to gain confidence through peer encouragement. Under the guidance of our professional foreign teacher, children will learn proper technique in singing, to appreciate good voice and to enjoy expressing themselves through singing. Children will also be equipped with the choral foundational skills such as following conductor’s cue, simple score reading and feeling the rhythm before they will be ready to join a choir. ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/choir-prep.JPG'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/choir-prep-banner.jpeg'
       },
       {
         title: 'Concord Choir',
@@ -156,14 +156,14 @@ const programs = {
         title: 'ABRSM Theory Group',
         age: '7岁+',
         description: '英皇乐理课程是根据英皇乐理的考级大纲，为的是帮助学生为考试做好充分的准备，同时增加乐理知识和对音乐的认知。集体课课程以考级的级别和主题式展开，适合零乐理基础且未曾接触英皇乐理教学大纲的学生。课程以集体课方式授课，学生将通过集体互动学习乐理知识，后半部分将在导师指导下通过作业和练习巩固孩子的乐理知识。导师每周会布置家庭作业，课程期间也会有模拟考试来测试学生的吸收和领悟能力。每学期结束后导师将会提供专业的评估报告，让学生知道自己是否已经准备好接受考试的挑战。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg',
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/abrsm-theory.jpeg',
         id: 0
       },
       {
         title: '合唱预备班',
         age: '5岁至6岁',
         description: '对于那些热爱歌唱并今后想要加入合唱团的孩子们，这是奠定合唱兴趣的一个良好的开端。在众多歌唱形式中，合唱独唱更加的具有趣味性！他们可以更好地彼此倾听，并且通过同伴的鼓励和肯定获取更多的自信息，从而更好地表达自我，展现自我。在搿艺专业的外籍教师的指导下，孩子们将学习专业的歌唱技巧和方式，欣赏更加纯粹的声音，并通过歌唱表达自己。孩子们还将配备合唱基本技能，比如听从指挥的提示，跟随准确地节奏去进行读谱，为以后加入合唱团而做好准备。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/choir-prep.JPG'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/choir-prep-banner.jpeg'
       },
       {
         title: '搿艺合唱团',

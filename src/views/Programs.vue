@@ -62,6 +62,7 @@ export default {
   <!-- Video -->
   <div class="content-wrapper" id="new">
     <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
+    <div class="content">{{translation.pocoTitle}}</div>
     <video controls poster style="height: 400px;">
       <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov" type="video/mp4">
     </video>
@@ -194,7 +195,7 @@ export default {
 
       <div class="programs__early-years-program-container">
         <div v-for="program in programs.supplemental" class="programs__program-container" :key="program.id">
-          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}" :class="{'top': program.id === 0}" >
+          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
             <div class="programs__program-container-name">
               {{program.title}}
             </div>
@@ -276,7 +277,7 @@ export default {
 
     <!-- Camps -->
     <div class="content-wrapper">
-      <div class="programs__lessons-banner" style="background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/camps_banner.jpeg')">
+      <div class="programs__lessons-banner" style="background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/camps.jpeg'); background-position: 0 -120px;">
         <div class="programs__banner-content">{{translation.campsTitle}}</div>
       </div>
       <div class="programs__subtitle">{{translation.summary}}</div>
@@ -293,7 +294,7 @@ export default {
     <!-- Schedule -->
     <div class="content-wrapper" id="schedule">
       <div class="subtitle">{{translation.schedule}}</div>
-      <img style="width: 90%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/music-calendar.png" alt="Concord Programs Schedule">
+      <img style="width: 90%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/group-schedule-3-6-2019.png" alt="Concord Programs Schedule">
     </div>
   </div>
 </template>

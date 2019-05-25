@@ -65,14 +65,10 @@ export default {
       <div class="banner-bar-link-mobile">{{translation.about}}</div>
     </div>
 
+    <!-- Our Calendar -->
     <div class="content-wrapper">
       <div class="subtitle">OUR CALENDAR</div>
-      <div 
-        data-tockify-component="calendar" 
-        data-tockify-calendar="concord"
-        data-tockify-width="90%"
-        id="tockify-calendar">
-      </div>
+      <img style="width: 75%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/music-calendar-cropped.png" alt="Concord Programs Schedule">
     </div>
 
     <!-- Our Philosophy -->

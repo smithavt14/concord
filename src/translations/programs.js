@@ -11,11 +11,11 @@ const programs = {
     calendarTitle: 'CALENDAR',
     signup: 'Sign Up',
     ourPrograms: 'OUR PROGRAMS',
-    ourProgramsContent: 'Concord tailor our programs to meet different needs and interests, while provided a well rounded learning experience for all. We also offer students different modes of learning: 1-on-1, 1-on-2, 1-on-4 and group setting. Our step-by-step courses allow students to take one step a time while we work on the big picture to keep your interest going steadily! ',
+    ourProgramsContent: 'Concord tailor our programs to meet different needs and interests, while provided a well rounded learning experience for all. We also offer students different modes of learning: 1-on-1, 1-on-2, 1-on-4 and group setting. Our step-by-step courses allow students to take one step a time while we work on the big picture to keep your interest going steadily!',
     ocTitle: 'Early Years Music Programs',
     privateLessonsTitle: 'PRIVATE LESSONS',
     instruments: 'INSTRUMENTS',
-    privateLessonsDescription: 'Concord 1-on-1 lessons are suitable for students who are sure of their interests and have decided to begin the concentrated studies. The lessons are conducted by professional teachers who have graduated from the top music conservatories who are highly experienced in helping different levels of students to achieve their goals. This course allow students to interact with teachers in the most direct way. Our professional teachers will be able to personalize the learning experience according to each individual’s interest, character and learning goal. \n\n Our private lessons provide you a systematical training from building a strong foundation to a higher level of musicianship: ',
+    privateLessonsDescription: 'Concord 1-on-1 lessons are suitable for students who are sure of their interests and have decided to begin the concentrated studies. The lessons are conducted by professional teachers who have graduated from the top music conservatories who are highly experienced in helping different levels of students to achieve their goals. This course allow students to interact with teachers in the most direct way. Our professional teachers will be able to personalize the learning experience according to each individual’s interest, character and learning goal. \n\n Our private lessons provide you a systematical training from building a strong foundation to a higher level of musicianship:',
     salpTitle: 'SALP \n(Student Annual Learning Report)',
     salpDescription: 'Provided after first month of learning to set clear learning goals for the year',
     sprTitle: 'SPR \n (Student Progress Report)',
@@ -23,9 +23,9 @@ const programs = {
     recitalTitle: 'Regular Recitals and Camps',
     recitalDescription: 'Recitals and camps  are among those opportunities that student can take to create more learning motivation.',
     privateLessonsDifferenceTitle: 'HOW ARE WE DIFFERENT?',
-    privateLessonsDifferenceDescription: '* Our teaching philosophy which is that all students should be guided with much space given to follow their interest and passion  \n * Musicality is also cultivated from the very beginning of our trainings  \n * Foreign-published method books and learning materials are used at Concord  \n* Professional teachers who are excellent musicians themselves have the charisma and ways to inspire the students. \n  * Our creative teaching offers the perfect balance of studies which is right between “just-for-fun” and “dead-serious”.  ',
-    privateLessonsRateTitle: 'Rate / Minutes',
-    privateLessonsRateDescription: 'Our rate is charged based on the minutes of the lesson. Every student has a different attention span, so the best way to determine a lesson length is to schedule a trial lesson with us and our teachers will recommend the lesson length based on their experience. We usually recommend the following length of lesson per week：',
+    privateLessonsDifferenceDescription: '* Our teaching philosophy which is that all students should be guided with much space given to follow their interest and passion  \n * Musicality is also cultivated from the very beginning of our trainings  \n * Foreign-published method books and learning materials are used at Concord  \n * Professional teachers who are excellent musicians themselves have the charisma and ways to inspire the students. \n  * Our creative teaching offers the perfect balance of studies which is right between “just-for-fun” and “dead-serious”.',
+    privateLessonsRateTitle: 'RATE / MINUTES',
+    privateLessonsRateDescription: 'Our rate is charged based on the minutes of the lesson. Every student has a different attention span, so the best way to determine a lesson length is to schedule a trial lesson with us and our teachers will recommend the lesson length based on their experience. We usually recommend the following length of lesson per week: ',
     age1: 'Ages 3 - 7 / Beginners',
     age2: 'Ages 8+ / Intermediate',
     age3: 'Advanced',
@@ -33,7 +33,7 @@ const programs = {
     minutes2: '45 minutes',
     minutes3: '60 minutes',
     groupTitle: 'GROUP LESSONS',
-    groupDescription: 'Our group classes are suitable for young children who would like to get to know music or who have just begun exploring their interest in music. We have courses catered for specific age group to cultivate their natural appreciation for music, to create a good foundation in music and to connect with their senses and growth through music. \n\n Highlights of our group classes: \n\n * Small-group setting of 4-6 students \n * Interest cultivated by professional teachers with western teaching methods  \n* Taught in English or English/Mandarin \n * Fun and never boring!  ',
+    groupDescription: 'Our group classes are suitable for young children who would like to get to know music or who have just begun exploring their interest in music. We have courses catered for specific age group to cultivate their natural appreciation for music, to create a good foundation in music and to connect with their senses and growth through music. \n\n Highlights of our group classes: \n\n * Small-group setting of 4-6 students \n * Interest cultivated by professional teachers with western teaching methods  \n* Taught in English or English/Mandarin \n * Fun and never boring!',
     earlyYearsTitle: 'EARLY YEARS',
     ageTitle: 'AGE',
     descriptionTitle: 'DESCRIPTION',
@@ -42,11 +42,12 @@ const programs = {
     newProgramsSubtitle: 'NEW PROGRAMS',
     campsTitle: 'CAMPS',
     campsDescription: 'Concord Music offers Music Camps during winter, spring and summer season. We also run instrumental camps such as Ukulele Camp, Violin Camp and Piano Camp. Workshops are also offered seasonally.',
-    reasons: 'REASONS',
-    campsReasons: '5 reasons to choose Concord Music Camp \n\n 1. Fun and interesting theme for each week’s camp \n2. Small-group personalized learning \n3. Professional foreign music teachers, lessons conducted in English or bilingual \n4. Compacted content that instills music interest and ensures high quality of learning \n5. Our teaching philosophy is to cultivate music interest as a life-long interest',
+    reasons: '5 REASONS TO CHOOSE CONCORD MUSIC CAMP',
+    campsReasons: '1. Fun and interesting theme for each week’s camp \n2. Small-group personalized learning \n3. Professional foreign music teachers, lessons conducted in English or bilingual \n4. Compacted content that instills music interest and ensures high quality of learning \n5. Our teaching philosophy is to cultivate music interest as a life-long interest',
     campsSummer: 'Concord Music Summer Camp 2019',
     campsLearnMore: 'Scan to read more about Concord Music Summer Camp 2019',
-    schedule: 'SCHEDULE',
+    schedule: 'GROUP CLASS SCHEDULE | MARCH - JUNE 2019',
+    pocoTitle: '"Poco A Poco" Piano Foundations & Musicianship Class'
   },
   Chinese: {
     programs: '课程',
@@ -86,16 +87,17 @@ const programs = {
     earlyYearsTitle: '音乐启蒙课程计划',
     ageTitle: '年龄',
     descriptionTitle: '课程介绍',
-    supplementalTitle: '兴趣素养的额外课程',
+    supplementalTitle: '音乐素养拓展课程',
     supplementalDescription: '以下课程是在已有乐器组课或一对一音乐课程的基础上，额外拓展的音乐素养课程。这些课程主要用于辅助主课，是有必要同时进行的。这些课程将提高学生的音乐素养，扩大学生对音乐知识层面的认知，提高他们对音乐的理解。',
     newProgramsSubtitle: '新课程',
     campsTitle: '音乐营',
-    reasons: '原因',
+    reasons: '搿艺音乐营的五大亮点：',
     campsDescription: '搿艺在冬季，春季和夏季时提供音乐营。我们也有乐器营，如尤克里里营，小提琴营和钢琴营，还有季节性的工作坊。',
-    campsReasons:'搿艺音乐营的五大亮点：\n\n 1. 每个营有不同的主题和不同的内容 \n 2. 小组学习模式  \n3. 专业音乐外教, 英语或双语授课  \n4. 丰富的音乐内容激发音乐兴趣的同时保证学习的质量  \n5. 以激发音乐兴趣为教学宗旨',
+    campsReasons:'1. 每个营有不同的主题和不同的内容 \n 2. 小组学习模式  \n3. 专业音乐外教, 英语或双语授课  \n4. 丰富的音乐内容激发音乐兴趣的同时保证学习的质量  \n5. 以激发音乐兴趣为教学宗旨',
     campsSummer: '2019年搿艺音乐夏令营',
     campsLearnMore: '扫描阅读有关2019搿艺音乐夏令营',
     schedule: '音乐营',
+    pocoTitle: '“小步点” 钢琴启蒙'
   }
 }
 
