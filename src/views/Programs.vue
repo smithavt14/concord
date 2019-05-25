@@ -62,7 +62,9 @@ export default {
   <!-- Video -->
   <div class="content-wrapper" id="new">
     <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
-    <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=v0858ysdg5n" allowFullScreen="true"></iframe>
+    <video controls poster style="height: 400px;">
+      <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov" type="video/mp4">
+    </video>
   </div>
     <!-- Courses -->
     <div class="content-wrapper" id="programs">
