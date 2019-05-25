@@ -103,7 +103,7 @@ export default {
 }
 
 .apply__banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/apply__experience__student-violen.jpg');
+  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/apply__experience__student-violen.jpg');
 }
 
 .apply__bottom-banner {

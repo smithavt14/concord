@@ -320,7 +320,7 @@ export default {
 }
 
 .programs__banner {
-  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg');
+  background: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg');
   background-size: cover;
   background-position: center;
   height: 50vh;
