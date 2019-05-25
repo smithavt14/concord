@@ -45,6 +45,16 @@ export default {
     }
   },
 
+  methods: {
+    scrollToSection (e) {
+      let target = document.getElementById(e.target.dataset.id)
+      let rects = target.getClientRects()
+      let top = rects[0].top
+
+      window.scrollTo(0, top)
+    }
+  },
+
   mounted () {
     this.$nextTick(() => {
       const swiperTop = this.$refs.swiperTop.swiper
@@ -62,8 +72,8 @@ export default {
     <!-- Banner -->
     <div class="banner experience__banner"></div>
     <div class="banner-bar">
-      <div class="banner-bar-link">{{translation.photos}}</div>
-      <div class="banner-bar-link">{{translation.videos}}</div>
+      <div class="banner-bar-link" data-id="videos" @click="scrollToSection">{{translation.videos}}</div>
+      <div class="banner-bar-link" data-id="photos" @click="scrollToSection">{{translation.photos}}</div>
 
       <!-- Mobile Banner Link -->
       <div class="banner-bar-link-mobile">{{translation.experience}}</div>
@@ -84,29 +94,51 @@ export default {
     </div>
 
     <!-- Video Testimonials -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="videos">
       <div class="subtitle">{{translation.videos}}</div>
       <div class="video-title">{{translation.videoSubtitle}}</div>
-      <swiper class="experience__video-swiper-container" :options="videoSwiperOptions">
-        <swiper-slide class="video-swiper-slide">
-          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=w0838dbxe5h" allowFullScreen="true"></iframe>
-        </swiper-slide>
-        <swiper-slide class="video-swiper-slide">
-          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=m0838k4968p" allowFullScreen="true"></iframe>
-        </swiper-slide>
-        <swiper-slide class="video-swiper-slide">
-          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=m0838pf3d52" allowFullScreen="true"></iframe>
-        </swiper-slide>
-        <swiper-slide class="video-swiper-slide">
-          <iframe frameborder="0" class="video-box" src="https://v.qq.com/txp/iframe/player.html?vid=z0838m4vh59" allowFullScreen="true"></iframe>
-        </swiper-slide>
-        <div class="swiper-button-next swiper-button-black video-swiper-button-next" slot="button-next"></div>
-        <div class="swiper-button-prev swiper-button-black video-swiper-button-previous" slot="button-prev"></div>
-      </swiper>
+      <div class="experience_video-container">
+        <div class="experience_video-box">
+          <div class="experience_video-box-title">{{translation.video_moana}}</div>
+          <video controls poster class="experience_video">
+             <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_moana.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="experience_video-box">
+          <div class="experience_video-box-title">{{translation.video_agustin}}</div>
+          <video controls poster class="experience_video">
+             <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_agustin.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="experience_video-box">
+          <div class="experience_video-box-title">{{translation.video_agnes}}</div>
+          <video controls poster class="experience_video">
+             <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_agnes.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="experience_video-box">
+          <div class="experience_video-box-title">{{translation.video_oching}}</div>
+          <video controls poster class="experience_video">
+             <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_oching.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="experience_video-box">
+          <div class="experience_video-box-title">{{translation.video_nancy}}</div>
+          <video controls poster class="experience_video">
+             <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_nancy.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="experience_video-box">
+          <div class="experience_video-box-title">{{translation.video_grace}}</div>
+          <video controls poster class="experience_video">
+             <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_grace.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
     </div>
 
     <!-- Photos -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="photos">
       <div class="subtitle">{{translation.photos}}</div>
       <div class="experience__swiper-container">
         <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
@@ -132,7 +164,8 @@ export default {
 @import '../assets/swiper.css';
 
 .experience__banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/home__experience__banner__private-1-on-1.jpg');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Teacher%20Piano%202.jpeg');
+  background-position: center;
 }
 
 /* ----- Experience ----- */
@@ -250,6 +283,35 @@ export default {
 .video-box {
   height: 100%;
   width: 80%;
+}
+
+.experience_video-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.experience_video-box {
+  margin: 20px;
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.experience_video-box-title {
+  color: $concord-orange;
+}
+
+.experience_video {
+  margin: 20px;
+  background: gray;
+  width: 100%;
+  min-width: 300px;
 }
 
 /* ---- Photos ----- */
@@ -397,6 +459,10 @@ export default {
   .experience__mobile-banner-title {
     color: white;
     font-size: 25px;
+  }
+
+  .experience__banner {
+    background-position: right;
   }
 
   .experience__banner-bar-link {

@@ -44,7 +44,7 @@ export default {
             {{translation.phone}}
           </div>
           <div class="footer__container-top-center-box-subheader">
-            156-1839-1413
+            021-52357398
           </div>
         </div>
         <div class="footer__container-top-center-box">
@@ -52,7 +52,7 @@ export default {
             {{translation.wechat}}
           </div>
           <div class="footer__container-top-center-box-subheader">
-            ConcordMusic
+            concordmusicadmin
           </div>
         </div>
         <div class="footer__container-top-center-box">

@@ -34,6 +34,16 @@ export default {
     }
   },
 
+  methods: {
+    scrollToSection (e) {
+      let target = document.getElementById(e.target.dataset.id)
+      let rects = target.getClientRects()
+      let top = rects[0].top
+
+      window.scrollTo(0, top)
+    }
+  },
+
   mounted () {
     $('#calendar').fullCalendar({
       aspectRatio: 1,
@@ -56,19 +66,20 @@ export default {
     <!-- Banner -->
     <div class="programs__banner"></div>
     <div class="programs__banner-bar">
-      <div class="programs__banner-bar-link">{{translation.newProgramsSubtitle}}</div>
-      <div class="programs__banner-bar-link">{{translation.ourPrograms}}</div>
+      <div class="banner-bar-link" data-id="new" @click="scrollToSection">{{translation.newProgramsSubtitle}}</div>
+      <div class="banner-bar-link" data-id="programs" @click="scrollToSection">{{translation.ourPrograms}}</div>
+      <div class="banner-bar-link" data-id="schedule" @click="scrollToSection">{{translation.schedule}}</div>
       <!-- Mobile Banner Title -->
       <div class="programs__mobile-banner-title">{{translation.programs}}</div>
     </div>
 
   <!-- Video -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" id="new">
     <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
     <iframe frameborder="0" style="height: 400px; width: 90%;" src="https://v.qq.com/txp/iframe/player.html?vid=v0858ysdg5n" allowFullScreen="true"></iframe>
   </div>
     <!-- Courses -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="programs">
       <div class="subtitle">{{translation.ourPrograms}}</div>
       <div class="programs__OC-description">{{translation.ourProgramsContent}}</div>
       <img
@@ -274,6 +285,28 @@ export default {
       </div>
       <router-link to="/apply" class="programs__lessons-signup">{{translation.signup}}</router-link>
     </div>
+
+    <!-- Camps -->
+    <div class="content-wrapper">
+      <div class="programs__lessons-banner" style="background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/camps_banner.jpeg')">
+        <div class="programs__banner-content">{{translation.campsTitle}}</div>
+      </div>
+      <div class="programs__subtitle">{{translation.summary}}</div>
+      <div class="programs__lessons-description">{{translation.campsDescription}}</div>
+      <div class="programs__subtitle">{{translation.reasons}}</div>
+      <div class="programs__lessons-description">{{translation.campsReasons}}</div>
+      <div class="programs__subtitle">{{translation.campsSummer}}</div>
+      <img style="max-width: 90%; margin-bottom: 20px" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/programs_summer-camp.jpeg
+" alt="Concord Summer Program">
+      <div class="programs__lessons-description">{{translation.campsLearnMore}}</div>
+      <img style="max-height: 150px; margin-bottom: 20px; " src="https://concord-assets.oss-cn-beijing.aliyuncs.com/19-summer-h5-qr%20.png" alt="">
+    </div>
+
+    <!-- Schedule -->
+    <div class="content-wrapper" id="schedule">
+      <div class="subtitle">{{translation.schedule}}</div>
+      <img style="width: 90%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/music-calendar.png" alt="Concord Programs Schedule">
+    </div>
   </div>
 </template>
 
@@ -295,9 +328,9 @@ export default {
 }
 
 .programs__banner {
-  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__banner.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.20)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg');
   background-size: cover;
-  background-position: 0 -50px;
+  background-position: center;
   height: 50vh;
   width: 100%;
   max-width: 1440px;
@@ -389,7 +422,7 @@ export default {
 .programs__lessons-banner {
   width: 100%;
   height: 25vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__fei-teaching.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('hhttps://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Teacher%20Piano.jpeg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -657,10 +690,12 @@ $animation-delay: .1s;
 .programs__curriculum-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   width: 80%;
 }
 
 .programs__curriculum-box {
+  margin: 20px;
   height: 150px;
   width: 150px;
   background-color: $concord-orange;
@@ -672,6 +707,11 @@ $animation-delay: .1s;
   overflow: hidden;
   transition: .2s linear;
   &:hover {
+    background: white;
+    color: $concord-orange;
+    border: 2px solid $concord-orange;
+  }; 
+  &:active {
     background: white;
     color: $concord-orange;
     border: 2px solid $concord-orange;

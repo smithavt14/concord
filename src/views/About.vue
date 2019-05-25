@@ -36,6 +36,13 @@ export default {
     },
     infoWindowClose () {
       this.show = false
+    }, 
+    scrollToSection (e) {
+      let target = document.getElementById(e.target.dataset.id)
+      let rects = target.getClientRects()
+      let top = rects[0].top
+
+      window.scrollTo(0, top)
     }
   }
 }
@@ -48,11 +55,11 @@ export default {
     <!-- Banner -->
     <div class="banner about__banner"></div>
     <div class="banner-bar">
-      <div class="banner-bar-link">{{translation.philosophy}}</div>
-      <div class="banner-bar-link">{{translation.location}}</div>
-      <div class="banner-bar-link">{{translation.reasons}}</div>
-      <div class="banner-bar-link">{{translation.team}}</div>
-      <div class="banner-bar-link">{{translation.partnerships}}</div>
+      <div class="banner-bar-link" data-id="philosophy" @click="scrollToSection">{{translation.philosophy}}</div>
+      <div class="banner-bar-link" data-id="reasons" @click="scrollToSection">{{translation.reasons}}</div>
+      <div class="banner-bar-link" data-id="team" @click="scrollToSection">{{translation.team}}</div>
+      <div class="banner-bar-link" data-id="partnerships" @click="scrollToSection">{{translation.partnerships}}</div>
+      <div class="banner-bar-link" data-id="location" @click="scrollToSection">{{translation.location}}</div>
 
       <!-- Mobile Banner Title -->
       <div class="banner-bar-link-mobile">{{translation.about}}</div>
@@ -69,7 +76,7 @@ export default {
     </div>
 
     <!-- Our Philosophy -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="philosophy">
       <div class="about__OP-container">
         <div class="about__OP-container-left">
           <div class="subtitle">{{translation.OPsubtitle}}</div>
@@ -82,35 +89,8 @@ export default {
       </div>
     </div>
 
-    <!-- Map of Concord -->
-    <div class="content-wrapper">
-      <div class="subtitle">{{translation.mapTitle}}</div>
-      <baidu-map :center="center" :zoom="zoom" class="about__map-container">
-        <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
-        <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
-        <bm-marker :position="center"  @click="infoWindowOpen">
-          <bm-info-window :show="show" @close="infoWindowClose" @open="infoWindowOpen">
-            <div class="about__map-title">Concord Music</div>
-            <div class="about__map-content">
-              <div><strong>Address: </strong>Gubei Lu 678, Tongquan Building, Suite 803</div>
-              <div><strong>地址: </strong>古北路678号，同诠大厦，803室</div>
-            </div>
-          </bm-info-window>
-        </bm-marker>
-        <div class="about__map-overlay">
-          <div class="about__map-overlay-title">Concord Music</div>
-          <div style="margin-top: 5px"><strong>Address / 地址 </strong></div>
-          <div>Gubei Lu 678, Tongquan Building, Suite 803</div>
-          <div>古北路678号，同诠大厦，803室</div>
-          <div><strong>Contact Us / 联系我们: </strong></div>
-          <div>021-5235-7398</div>
-          <div>156-1839-1413</div>
-        </div>
-      </baidu-map>
-    </div>
-
     <!-- 5 Reasons to Choose Concord -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="reasons">
       <div class="subtitle">{{translation.reasonsTitle}}</div>
       <b-container class="about__5R-container">
         <b-row class="about__5R-bootstrap-row">
@@ -124,7 +104,7 @@ export default {
     </div>
 
     <!-- OUR TEAM -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="team">
       <div class="subtitle">{{translation.team}}</div>
       <b-container class="about__OT-container">
         <b-row class="about__OT-bootstrap-row">
@@ -143,7 +123,7 @@ export default {
     </div>
 
     <!-- OUR PARTNERSHIPS -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="partnerships">
       <div class="about__OPA-content">
         <div class="about__OPA-left">
           <div class="subtitle">{{translation.OPAsubtitle}}</div>
@@ -155,6 +135,37 @@ export default {
         </div>
       </div>
     </div>
+
+    <!-- Map of Concord -->
+    <div class="content-wrapper" id="location">
+      <div class="subtitle">{{translation.mapTitle}}</div>
+      <baidu-map :center="center" :zoom="zoom" class="about__map-container">
+        <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
+        <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
+        <bm-marker :position="center"  @click="infoWindowOpen">
+          <bm-info-window :show="show" @close="infoWindowClose" @open="infoWindowOpen">
+            <div class="about__map-title">Concord Music</div>
+            <div class="about__map-content">
+              <div><strong>Address: </strong>Gubei Road 678, Tong Quan Building, Suite 803</div>
+              <div><strong>地址: </strong>古北路678号同诠大厦803室（近仙霞路）</div>
+            </div>
+          </bm-info-window>
+        </bm-marker>
+        <div class="about__map-overlay">
+          <div class="about__map-overlay-title">Concord Music</div>
+          <div style="margin-top: 5px"><strong>Address / 地址 </strong></div>
+          <div>GGubei Road 678, Tong Quan Building, Suite 803</div>
+          <div>古北路678号同诠大厦803室（近仙霞路）</div>
+          <div><strong>Contact Us / 联系我们: </strong></div>
+          <div>Wechat: concordmusicadmin </div>
+          <div>Phone: 021-52357398</div>
+        </div>
+      </baidu-map>
+    </div>
+
+    
+
+    
   </div>
 </template>
 
@@ -162,7 +173,7 @@ export default {
 @import '../assets/styles.scss';
 
 .about__banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.20)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/about__banner.jpg');
+  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/about__banner.jpg');
   background-position: 25% 50%;
 }
 
@@ -304,7 +315,7 @@ export default {
 }
 
 .about__OPA-right-image {
-  background-image: url('http://concord-assets.oss-cn-beijing.aliyuncs.com/about__partnerships.png');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/partnerships.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
