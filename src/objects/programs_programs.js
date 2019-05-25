@@ -69,7 +69,8 @@ const programs = {
         title: 'ABRSM Theory Group',
         age: 'Ages 7+',
         description: 'ABRSM Theory Class is a group class designed for students to follow the syllabus of ABRSM Theory Exam. The goal of this course is to prepare students for the examination, at the same time increase their understanding in music. Classes will be taught based on topics and grades. This would be suitable for students who have zero to little knowledges in theory but have not started the ABRSM syllabus before. Students will be learning concepts together in a group through interactive activities, followed by solidifying the concepts through worksheets and exercises, guided by teacher . Each week, students will be given take-home assignments to complete. Quiz will be given regularly to assess the students understanding. An assessment report will be given by end of each term to evaluate if the student is prepared to take the examination.',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg',
+        id: 0
       },
       {
         title: 'Choir Preparatory Course',
@@ -155,7 +156,8 @@ const programs = {
         title: 'ABRSM Theory Group',
         age: '7岁+',
         description: '英皇乐理课程是根据英皇乐理的考级大纲，为的是帮助学生为考试做好充分的准备，同时增加乐理知识和对音乐的认知。集体课课程以考级的级别和主题式展开，适合零乐理基础且未曾接触英皇乐理教学大纲的学生。课程以集体课方式授课，学生将通过集体互动学习乐理知识，后半部分将在导师指导下通过作业和练习巩固孩子的乐理知识。导师每周会布置家庭作业，课程期间也会有模拟考试来测试学生的吸收和领悟能力。每学期结束后导师将会提供专业的评估报告，让学生知道自己是否已经准备好接受考试的挑战。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg',
+        id: 0
       },
       {
         title: '合唱预备班',

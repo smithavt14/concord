@@ -38,42 +38,13 @@ export default {
           clickable: false
         }
       },
-      stories: [],
-      displayStories: false
     }
   },
 
-  methods: {
-    getWechatInfo () {
-      const self = this
-      fetch('https://r1rtg2nbcf.execute-api.us-east-1.amazonaws.com/dev/get/info', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' }
-      })
-        .then(function (response) {
-          return response.json()
-        })
-        .then(function (myJson) {
-          self.processWechatInfo(myJson.item)
-        })
-    },
-
-    processWechatInfo (response) {
-      const self = this
-      response.forEach(function (item) {
-        var time, story
-        story = item.content.news_item[0]
-        time = new Date(item.content.update_time * 1000)
-        story.update_time = strftime('%A, %B %d', time)
-        story.media_id = item.media_id
-        self.stories.push(story)
-      })
-      self.displayStories = true
-    }
-  },
+  methods: {},
 
   mounted () {
-    this.getWechatInfo()
+    
   }
 }
 
@@ -198,7 +169,7 @@ export default {
 }
 
 .home__banner {
-  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Boy%20Guitar%20Teacher.jpg');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/home-banner-fei.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -30px;

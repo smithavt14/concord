@@ -206,7 +206,7 @@ export default {
 
       <div class="programs__early-years-program-container">
         <div v-for="program in programs.supplemental" class="programs__program-container" :key="program.id">
-          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
+          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}" :class="{'top': program.id === 0}" >
             <div class="programs__program-container-name">
               {{program.title}}
             </div>
@@ -298,7 +298,7 @@ export default {
       <div class="programs__subtitle">{{translation.campsSummer}}</div>
       <img style="max-width: 90%; margin-bottom: 20px" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/programs_summer-camp.jpeg
 " alt="Concord Summer Program">
-      <div class="programs__lessons-description">{{translation.campsLearnMore}}</div>
+      <div class="programs__lessons-description" style="text-align: center;">{{translation.campsLearnMore}}</div>
       <img style="max-height: 150px; margin-bottom: 20px; " src="https://concord-assets.oss-cn-beijing.aliyuncs.com/19-summer-h5-qr%20.png" alt="">
     </div>
 
@@ -312,6 +312,10 @@ export default {
 
 <style lang="scss">
 @import '../assets/styles.scss';
+
+.top {
+  background-position: top !important;
+}
 
 .programs__OT-bootstrap-row {
   display: flex;
@@ -422,7 +426,7 @@ export default {
 .programs__lessons-banner {
   width: 100%;
   height: 25vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('hhttps://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Teacher%20Piano.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Teacher%20Piano.jpeg');
   background-size: cover;
   background-position: center;
   display: flex;
