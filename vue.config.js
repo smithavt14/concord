@@ -1,5 +1,5 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'development'
-    ? '/concord/'
+  publicPath: process.env.NODE_ENV === 'development'
+    ? '/concord'
     : '/'
 }

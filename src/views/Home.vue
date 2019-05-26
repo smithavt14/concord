@@ -2,15 +2,8 @@
 import translation from '../translations/translation'
 import globalData from '../main'
 import programCategories from '../objects/home_program_categories'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import strftime from 'strftime'
 
 export default {
-  components: {
-    swiper,
-    swiperSlide
-  },
-
   name: 'home',
 
   computed: {
@@ -42,10 +35,6 @@ export default {
   },
 
   methods: {},
-
-  mounted () {
-    
-  }
 }
 
 </script>
