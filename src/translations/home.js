@@ -13,7 +13,8 @@ const home = {
     WAWsignup: 'Sign up',
     FOBtitle: 'FROM OUR WECHAT ACCOUNT',
     OPtitle: 'OUR PROGRAMS',
-    loading: 'Loading...'
+    loading: 'Loading...',
+    ourTeam: 'Check Out Our Team'
   },
   Chinese: {
     bannerMobileTitle: '搿艺音乐',
@@ -29,7 +30,8 @@ const home = {
     WAWsignup: '报名',
     FOBtitle: '来自于我们微信账号',
     OPtitle: '我们课程',
-    loading: '加载中...'
+    loading: '加载中...',
+    ourTeam: '了解师资团队'
   }
 }
 export default home

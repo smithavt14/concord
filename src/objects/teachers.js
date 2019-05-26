@@ -40,7 +40,7 @@ const teachers = {
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__michi.jpg',
       name: 'Michi',
       role: 'Vocal Instructor / Choir Conductor',
-      bio: 'Michi has performed in many different concerts and opera productions. In year 2015 to 2016 he studied at the Shanghai Conservatory of Music with Professor Chen Qilian. Special moments during this time were his appearance as a soloist for concerts at the Shanghai Music Hall and the Shanghai Symphony Hall. He has a bachelor degree in musicology from the University of Vienna, with a focus on music history and musical analysis. 2017 he graduated from the University of Music and Performing Arts Vienna with honours. Michi is also a professional choir conductor, he has led a children french choir “Petite Brise” to perform in several public venues in Shanghai. '
+      bio: 'Michi has performed in many different concerts and opera productions. In year 2015 to 2016 he studied at the Shanghai Conservatory of Music with Professor Chen Qilian. Special moments during this time were his appearance as a soloist for concerts at the Shanghai Music Hall and the Shanghai Symphony Hall. He has a bachelor degree in musicology from the University of Vienna, with a focus on music history and musical analysis. 2017 he graduated from the University of Music and Performing Arts Vienna with honours. Michi is also a professional choir conductor, he has led a children french choir “Petite Brise” to perform in several public venues in Shanghai.'
     },
     {
       id: 11,
@@ -152,7 +152,7 @@ const teachers = {
     {
       id: 3,
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__michi.jpg',
-      name: 'Michi老师',
+      name: 'Michi',
       role: '声乐老师 / 合唱指挥',
       bio: 'Michi老师曾出台参与音乐会和歌剧的表演。他是上海音乐学院陈琦连教授的学生，曾在上海音乐厅和上海交响乐大厅以主唱的身份参与表演。2017他以最佳成绩毕业于维也纳音乐和表演艺术大学，获取学士学位双专业文凭（专业为音乐史和音乐分析）。Michi老师也是合唱指挥，曾带领“小小分贝”少儿法语合唱在上海进行多次演出。'
     },

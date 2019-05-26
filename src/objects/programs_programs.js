@@ -67,7 +67,7 @@ const programs = {
     supplemental: [
       {
         title: 'ABRSM Theory Group',
-        age: 'Ages 7+',
+        age: '(Age 7+)',
         description: 'ABRSM Theory Class is a group class designed for students to follow the syllabus of ABRSM Theory Exam. The goal of this course is to prepare students for the examination, at the same time increase their understanding in music. Classes will be taught based on topics and grades. This would be suitable for students who have zero to little knowledges in theory but have not started the ABRSM syllabus before. Students will be learning concepts together in a group through interactive activities, followed by solidifying the concepts through worksheets and exercises, guided by teacher . Each week, students will be given take-home assignments to complete. Quiz will be given regularly to assess the students understanding. An assessment report will be given by end of each term to evaluate if the student is prepared to take the examination.',
         photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/abrsm-theory.jpeg',
         id: 0

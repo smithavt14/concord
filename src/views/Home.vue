@@ -44,7 +44,7 @@ export default {
         <div class="home__WAW-container-left-subtitle">{{translation.WAWsubtitle}}</div>
         <div class="home__WAW-container-left-title">{{translation.WAWtitle}}</div>
         <div class="home__WAW-container-left-content">{{translation.WAWcontent}}</div>
-        <router-link to="/apply" class="home__WAW-container-left-signup">{{translation.WAWsignup}}</router-link>
+        <router-link to="/about?#team" class="home__WAW-container-left-signup" style="width: 200px;">{{translation.ourTeam}}</router-link>
       </div>
       <div class="home__WAW-container-right">
         <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/home__instruments.jpg" alt="instruments-icon" class="home__WAW-container-right-instruments">
@@ -74,7 +74,7 @@ export default {
               <div class="home__OP-program-title">{{program.title}}</div>
               <div class="home__OP-program-age">{{program.age}}</div>
               <div class="home__OP-program-description">{{program.description}}</div>
-              <router-link to="/programs" class="home__OP-program-btn">{{translation.learnMore}}</router-link>
+              <router-link :to="program.route" class="home__OP-program-btn">{{translation.learnMore}}</router-link>
             </div>
           </b-col>
         </b-row>

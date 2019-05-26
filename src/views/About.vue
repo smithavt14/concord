@@ -56,8 +56,8 @@ export default {
     <div class="banner about__banner"></div>
     <div class="banner-bar">
       <div class="banner-bar-link" data-id="philosophy" @click="scrollToSection">{{translation.philosophy}}</div>
-      <div class="banner-bar-link" data-id="reasons" @click="scrollToSection">{{translation.reasons}}</div>
       <div class="banner-bar-link" data-id="team" @click="scrollToSection">{{translation.team}}</div>
+      <div class="banner-bar-link" data-id="reasons" @click="scrollToSection">{{translation.reasons}}</div>
       <div class="banner-bar-link" data-id="partnerships" @click="scrollToSection">{{translation.partnerships}}</div>
       <div class="banner-bar-link" data-id="location" @click="scrollToSection">{{translation.location}}</div>
 
@@ -85,20 +85,6 @@ export default {
       </div>
     </div>
 
-    <!-- 5 Reasons to Choose Concord -->
-    <div class="content-wrapper" id="reasons">
-      <div class="subtitle">{{translation.reasonsTitle}}</div>
-      <b-container class="about__5R-container">
-        <b-row class="about__5R-bootstrap-row">
-          <b-col v-for="item in translatedReasons" :key="item.id" class="about__5R-item" sm="6" md="4" lg="2">
-            <img :src="item.icon" class="about__5R-item-icon">
-            <div class="about__5R-item-title">{{item.title}}</div>
-            <div class="about__5R-item-description">{{item.description}}</div>
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
-
     <!-- OUR TEAM -->
     <div class="content-wrapper" id="team">
       <div class="subtitle">{{translation.team}}</div>
@@ -113,6 +99,20 @@ export default {
                 <div class="about__OT-item-bio">{{item.bio}}</div>
               </div>
             </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
+
+    <!-- 5 Reasons to Choose Concord -->
+    <div class="content-wrapper" id="reasons">
+      <div class="subtitle">{{translation.reasonsTitle}}</div>
+      <b-container class="about__5R-container">
+        <b-row class="about__5R-bootstrap-row">
+          <b-col v-for="item in translatedReasons" :key="item.id" class="about__5R-item" sm="6" md="4" lg="2">
+            <img :src="item.icon" class="about__5R-item-icon">
+            <div class="about__5R-item-title">{{item.title}}</div>
+            <div class="about__5R-item-description">{{item.description}}</div>
           </b-col>
         </b-row>
       </b-container>
@@ -281,6 +281,8 @@ export default {
   text-align: left;
   margin-left: 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__OT-item-name {
@@ -295,7 +297,6 @@ export default {
 .about__OT-item-bio {
   font-size: 12px;
   color: gray;
-  height: 70%;
   overflow: auto;
 }
 

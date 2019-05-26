@@ -81,7 +81,7 @@ export default {
     </div>
 
     <!-- Early Years -->
-    <div class="programs__early-years-wrapper">
+    <div class="programs__early-years-wrapper" id="earlyYears">
       <div class="programs__early-years-banner">
         <div class="programs__banner-content">{{translation.earlyYearsTitle}}</div>
       </div>
@@ -116,7 +116,7 @@ export default {
     </div>
 
     <!-- Group Lessons -->
-    <div class=programs__lessons-wrapper>
+    <div class=programs__lessons-wrapper id="group">
       <div class="programs__group-lessons-banner">
         <div class="programs__banner-content">{{translation.groupTitle}}</div>
       </div>
@@ -174,7 +174,7 @@ export default {
     </div>
 
     <!-- Supplemental Group Courses -->
-    <div class="wrapper">
+    <div class="wrapper" id="supplemental">
       <div class="programs__supplemental-lessons-banner">
         <div class="programs__banner-content">{{translation.supplementalTitle}}</div>
       </div>
@@ -209,7 +209,7 @@ export default {
     </div>
 
     <!-- Private Lessons -->
-    <div class="programs__lessons-wrapper">
+    <div class="programs__lessons-wrapper" id="private">
       <div class="programs__lessons-banner">
         <div class="programs__banner-content">{{translation.privateLessonsTitle}}</div>
       </div>

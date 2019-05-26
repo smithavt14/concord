@@ -18,7 +18,7 @@ const experience = {
     experience: '体验搿艺',
     photos: '图片',
     videos: '视频',
-    videoSubtitle: '来听听焦曼婷小朋友，Agustin博士，Agnes Graglia，Grace，Nancy和O Ching和搿艺音乐的故事... ',
+    videoSubtitle: '来听听搿艺的学员，Agustin博士和学员家长们分享他们与搿艺音乐的故事...',
     video_moana: '焦曼婷  (搿艺音乐的学员)',
     video_agustin: 'Agustin Muriago博士（美国堪萨斯州立大学的钢琴教授）',
     video_agnes: 'Agnes Graglia (搿艺音乐学员的母亲）',
