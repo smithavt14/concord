@@ -292,6 +292,7 @@ export default {
     <div class="content-wrapper" id="schedule">
       <div class="subtitle">{{translation.schedule}}</div>
       <img style="width: 90%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/group-schedule-3-6-2019.png" alt="Concord Programs Schedule">
+      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/music-calendar-cropped.png">Click here to see our school calendar</a>
     </div>
   </div>
 </template>

@@ -65,12 +65,6 @@ export default {
       <div class="banner-bar-link-mobile">{{translation.about}}</div>
     </div>
 
-    <!-- Our Calendar -->
-    <div class="content-wrapper">
-      <div class="subtitle">OUR CALENDAR</div>
-      <img style="width: 75%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/music-calendar-cropped.png" alt="Concord Programs Schedule">
-    </div>
-
     <!-- Our Philosophy -->
     <div class="content-wrapper" id="philosophy">
       <div class="about__OP-container">
