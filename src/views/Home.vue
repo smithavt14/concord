@@ -13,24 +13,11 @@ export default {
     translatedProgramCategories () {
       return this.programCategories[globalData.language]
     },
-    swiper () {
-      return this.$refs.homeSwiper.swiper
-    }
   },
 
   data () {
     return {
       programCategories: programCategories,
-      swiperOptions: {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: false
-        }
-      },
     }
   },
 

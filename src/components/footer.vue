@@ -48,12 +48,8 @@ export default {
           </div>
         </div>
         <div class="footer__container-top-center-box">
-          <div class="footer__container-top-center-box-header">
-            {{translation.wechat}}
-          </div>
-          <div class="footer__container-top-center-box-subheader">
-            concordmusicadmin
-          </div>
+          <div class="footer__container-top-center-box-header">{{translation.wechat}}</div>
+          <div class="footer__container-top-center-box-subheader">concordmusicadmin</div>
         </div>
         <div class="footer__container-top-center-box">
           <div class="footer__container-top-center-box-header">
