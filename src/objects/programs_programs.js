@@ -31,37 +31,43 @@ const programs = {
         title: 'Songs Around the World ',
         age: '(Age 4 to 5)',
         description: 'This is a course created to build little global citizens who would discover their interest in singing and to appreciate different cultures. Music is an universal language and through singing, children will explore different countries, cultures, people and language. They will be singing songs from different countries and express their understandings of the cultures through singing. Each week, they will have take-home lyrics and MP3. This class is taught by our professional choral expert from Vienna who seek to inspire children to sing with beautiful voice! ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/songs-around-the-world.jpeg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/songs-around-the-world.jpeg', 
+        id: 1
       },
       {
         title: '1-on-4 Keyboard',
         age: '(Age 3.5 to 4.5)', 
         description: 'My Musical Animals is a method book written by Concord director for young beginners of age 3 to 4 to begin their interest in piano learning. With 1-on-4 group setting, each student will be getting guided hands-on experience on keyboard by our professional piano teacher. The learning scope of this course include pre-stave reading, listening, rhythm and playing technique. Off-piano activities in class makes the learning more dynamic and interactive as well, instead of just sitting for the whole lesson. The syllabus follows the 12 chapters in the method book (the book comes with a CD) which is easy for young children to follow and also quite user friendly for the parents to guide their child at home. After completing this course, students will acquire the basics of piano playing techniques which serves as a foundation to 1-on-1 piano studies.',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/1-on-4-keyboard.JPG'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/1-on-4-keyboard.JPG', 
+        id: 2
       },
       {
         title: '1-on-4 Violin',
         age: '(Age 4 to 5) ',
         description: 'Children will be guided by our foreign teachers, using innovative western teaching method and materials to learn the basic foundations of violin. The course covers reading, basic technique and theory learning. Through ensemble playing and group motivation, this course is a perfect start for young beginners! Performing opportunity will be provided to increase students’ confidence too. This course will use a British method book published by ABRSM, combined with other supporting materials selected by the instructor. Student will be ready to continue with 1-on-1 lessons with better confidence and interest after completion of this course.',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/apply__student-violen-teacher.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/apply__student-violen-teacher.jpg', 
+        id: 3
       },
       {
         title: 'Poco a Poco Piano Foundation & Musicianship Class', 
         age: '(Age 4.5 to 6) ',
         description: 'A 24-weeks course that gives young children a start in piano learning that teaches not only on the foundational and playing skills but also to nurture little musicians who have good understanding of music. Just as Poco a poco means in Italian music term “little by little”, this course provides step-by-step learning in piano and music. Each 60-minutes lesson is divided into two parts: piano learning and musicianship learning. For piano foundational training, we will help students to earn the piano playing skills such as rhythm, reading music, playing and listening. For musicianship learning, students will maximize their musical potential through classical music, great paintings, movement, and creative activities. Each student will also receive extra 1-on-1 guidance from the teacher so the teacher can help with specific technical needs of each individual and provide detailed feedback about each student’s progress. The course philosophy is simple: a good pianist is first and foremost, a good musician.',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/poco-poco.JPG'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/poco-poco.JPG', 
+        id: 4
       },
       {
         title: 'Ukulele Group Class',
         age: '(Age 4 to 5)',
         description: 'Ukulele is a fun and relaxing instrument that is easy for young children to pick up. This class also serves as a foundation class for young children to establish a firm interest with foundation before beginning 1-on-1 ukulele and guitar lessons. Course will be conducted in a fun group setting for children to learn foundation skills such as reading skills, sing and strumming skill, music theory, rhythm exercise and ensemble skill. Classes are conducted in a fun and relaxing style, students will acquire basic foundations through fun songs. ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/about__banner.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/about__banner.jpg', 
+        id: 5
       },
       {
         title: '1-on-2 Instrumental Lessons',
         age: '(Age 4 to 5)',
         description: '1-on-2 instrumental studies is especially effective for young beginners aged 4 to 5. We encourage siblings of similar ages or best buddies to try this out. Off-instrument games and ensemble playing will be included to make the learning more interactive. Through sharing the learning process with another friend, it is also more fun and motivated. This can also work as parent-child lessons together!  \n\n 1-on-2 Instrument Courses: piano, violin, ukulele, guitar, vocal',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__annie-violen.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__annie-violen.jpg', 
+        id: 6
       }
     ],
     supplemental: [
@@ -118,37 +124,43 @@ const programs = {
         title: '唱响世界',
         age: '4岁至5岁',
         description: '该课程专为创建小小地球居民而设！他们将会通过音乐去探索自己的兴趣并共欣赏地球各个角落不一样的文化。音乐是这个地球的通用语，通过歌唱，居民们将会一起探索不一样的国家、文化、人文和语言。他们会学习各国民谣并通过音乐、律动、歌唱来表达他们对该文化的理解。每周，他们将把歌词和MP3带回家。该课程由来自维也纳的专业合唱导师授课，希望帮助孩子们学习如何唱的美，唱的动听。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/songs-around-the-world.jpeg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/songs-around-the-world.jpeg',
+        id: 1
       },
       {
         title: '1对4电子琴课',
         age: '3岁半至4岁半', 
         description: '《我的音乐动物园》是由搿艺音乐总监本人创作编辑的一本教材，专为幼龄孩子（3至4岁）提供快乐的钢琴启蒙。在1对4的高质量学习环境下，老师将引导孩子们认识乐器，掌握技巧。学习范围包括：音符方向的阅读，听力训练，节奏和弹奏技巧。课堂将通过互动和游戏，让学习过程变得更有趣，而不是枯燥，只有静态的重复练习。教材（书自带CD）的12章学习内容允许孩子们有系统地接受基础训练，同时书里简易的’练琴指南’也帮助家长在家可进行督促。课程结束后，学生将有稳固的基础，为后续更专业和全面的一对一钢琴学习奠定基础。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/1-on-4-keyboard.JPG'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/1-on-4-keyboard.JPG',
+        id: 2
       },
       {
         title: '“小步点” 钢琴启蒙', 
         age: '4岁半至6岁',
         description: '这是一个为期24周的全新课程，专门为4.5岁-6岁的儿童提供一个钢琴学习的良好开端。该课程不仅单单训练孩子们的钢琴基础和演奏技能，而且还着重培养孩子对音乐的理解，将每一位儿童变成一个理解音乐的“小小音乐家”。就像Poco a Poco在意大利语中的意思是“一点一点的”，这门课程将引导每一位学生一步一步的了解钢琴和音乐。这门课程每节课将分成两部分：钢琴学习和音乐修养。这两个部分其实是相互关联的，音乐的修养可以帮助学生更好地了解他们演奏的音乐。对于钢琴基础训练，老师会逐步去教孩子们在钢琴演奏所需要的弹奏的技巧、键盘的认知和节奏性的学习。对于音乐修养的学习，老师将通过古典音乐、画作、肢体语言和创新活动来激发学生们的音乐潜能。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/poco-poco.JPG'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/poco-poco.JPG',
+        id: 3
       },
       {
         title: '1对4小提琴课',
         age: '4岁至5岁',
         description: '孩子们将在外教的指导下，沿用创新的西方教学方法和教材学习小提琴的基本基础。课程包括阅读、基本技术和乐理知识。通过合奏和集体学习带来的动力，本课程是初学者完美的开始！同时也将提供表演机会，以增加学生的自信心。课程采用英皇出版社的英式教材，结合老师所挑选的其辅助教材。在完成这个课程后，学生将拥有充足的兴趣和信心去开始一对一的课程。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/apply__student-violen-teacher.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/apply__student-violen-teacher.jpg',
+        id: 4
       }, 
       {
         title: '尤克里里集体课',
         age: '4岁至5岁',
         description: '尤克里里是个即好玩又轻松的乐器，轻便携带，容易上手！课程可作为一对一吉他或尤克里里的课前启蒙。学生将通过和老师、朋友的互动去学习视谱、唱和拨弦技巧、乐理、节奏训练及合奏。课程氛围轻松愉快，通过好听的曲子掌握学习基础。 ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/about__banner.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/about__banner.jpg',
+        id: 5
       },
       {
         title: '一对二乐器课程',
         age: '4岁至5岁',
         description: '如果您想让孩子以较轻松的方式开始一个乐器的学习，不妨尝试一对二学习，尤其对幼龄孩子特别有效（4岁-5岁）。年龄相近的兄弟姐妹或是朋友可以通过游戏和合奏的方式，让学习的氛围更为轻松愉快。通过互相分享，孩子的学习也更有动力。这也可以作为亲子乐器课，与您的孩子一同学习一门乐器！\n\n一对二乐器课程：钢琴、小提琴、尤克里里、吉他、歌唱 ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__annie-violen.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__annie-violen.jpg',
+        id: 6
       }
     ],
     supplemental: [

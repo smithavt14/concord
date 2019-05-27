@@ -157,7 +157,7 @@ export default {
 
       <div class="programs__early-years-program-container">
         <div v-for="program in programs.group" class="programs__program-container" :key="program.id">
-          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}">
+          <div class="programs__program-container-img" :style="{backgroundImage: `url(${program.photo})`}" :class="{'middle-top': program.id === 2}">
             <div class="programs__program-container-name">
               {{program.title}}
             </div>
@@ -302,6 +302,10 @@ export default {
 
 .top {
   background-position: top !important;
+}
+
+.middle-top {
+  background-position: 0 -25px !important;
 }
 
 .programs__OT-bootstrap-row {

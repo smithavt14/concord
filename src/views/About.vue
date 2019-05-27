@@ -280,7 +280,7 @@ export default {
 }
 
 .about__OT-item-name {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .about__OT-item-role {
