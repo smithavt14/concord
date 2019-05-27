@@ -46,7 +46,7 @@ const programs = {
     campsReasons: '1. Fun and interesting theme for each week’s camp \n2. Small-group personalized learning \n3. Professional foreign music teachers, lessons conducted in English or bilingual \n4. Compacted content that instills music interest and ensures high quality of learning \n5. Our teaching philosophy is to cultivate music interest as a life-long interest',
     campsSummer: 'Concord Music Summer Camp 2019',
     campsLearnMore: 'Scan to read more about Concord Music Summer Camp 2019',
-    schedule: 'GROUP CLASS SCHEDULE | MARCH - JUNE 2019',
+    schedule: 'SCHEDULE',
     pocoTitle: '"Poco A Poco" Piano Foundations & Musicianship Class'
   },
   Chinese: {

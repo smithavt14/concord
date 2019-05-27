@@ -70,7 +70,7 @@ export default {
         <b-row>
           <b-col v-for="program in translatedProgramCategories" :key="program.id" sm="12" md="6">
             <div class="home__OP-program">
-              <img :src="program.photo" class="home__OP-program-photo" :class="{'top': program.id === 1}">
+              <img :src="program.photo" class="home__OP-program-photo" :class="{'top': program.route === '/programs#group', 'center': program.route === '/programs#supplemental'}">
               <div class="home__OP-program-title">{{program.title}}</div>
               <div class="home__OP-program-age">{{program.age}}</div>
               <div class="home__OP-program-description">{{program.description}}</div>
@@ -275,10 +275,15 @@ export default {
   height: 250px;
   width: 100%;
   object-fit: cover;
+  object-position: bottom;
 }
 
 .top {
   object-position: top;
+}
+
+.center {
+  object-position: center;
 }
 
 .home__OP-title {

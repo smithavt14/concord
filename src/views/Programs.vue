@@ -274,7 +274,7 @@ export default {
 
     <!-- Camps -->
     <div class="content-wrapper">
-      <div class="programs__lessons-banner" style="background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/camps.jpeg'); background-position: 0 -120px;">
+      <div class="programs__camps-banner">
         <div class="programs__banner-content">{{translation.campsTitle}}</div>
       </div>
       <div class="programs__subtitle">{{translation.summary}}</div>
@@ -419,6 +419,18 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.programs__camps-banner {
+  width: 100%;
+  height: 25vh;
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Boy%20Student%20Violen%202%20copy.jpg');
+  background-size: cover;
+  background-position: 0 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .programs__supplemental-lessons-banner {
@@ -568,9 +580,9 @@ export default {
 .programs__early-years-banner {
   width: 100%;
   height: 25vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/home__little-notes-music-foundation.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/early-years-banner.JPG');
   background-size: cover;
-  background-position: 0 -300px;
+  background-position: 0 25%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -830,6 +842,10 @@ $animation-delay: .1s;
 
   .programs__early-years-banner {
     background-position: unset;
+  }
+
+  .programs__camps-banner {
+    background-position: center;
   }
 
   .programs__subtitle {
