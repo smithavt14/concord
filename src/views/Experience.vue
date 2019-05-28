@@ -100,37 +100,37 @@ export default {
       <div class="experience_video-container">
         <div class="experience_video-box">
           <div class="experience_video-box-title">{{translation.video_moana}}</div>
-          <video controls poster class="experience_video">
+          <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-image-moana.png" class="experience_video">
              <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_moana.mp4" type="video/mp4">
           </video>
         </div>
         <div class="experience_video-box">
           <div class="experience_video-box-title">{{translation.video_agustin}}</div>
-          <video controls poster class="experience_video">
+          <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-image-augustin.png" class="experience_video">
              <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_agustin.mp4" type="video/mp4">
           </video>
         </div>
         <div class="experience_video-box">
           <div class="experience_video-box-title">{{translation.video_agnes}}</div>
-          <video controls poster class="experience_video">
+          <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-image-agnes.png" class="experience_video">
              <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_agnes.mp4" type="video/mp4">
           </video>
         </div>
         <div class="experience_video-box">
           <div class="experience_video-box-title">{{translation.video_oching}}</div>
-          <video controls poster class="experience_video">
+          <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-image-oching.png" class="experience_video">
              <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_oching.mp4" type="video/mp4">
           </video>
         </div>
         <div class="experience_video-box">
           <div class="experience_video-box-title">{{translation.video_nancy}}</div>
-          <video controls poster class="experience_video">
+          <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-image-nancy.png" class="experience_video">
              <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_nancy.mp4" type="video/mp4">
           </video>
         </div>
         <div class="experience_video-box">
           <div class="experience_video-box-title">{{translation.video_grace}}</div>
-          <video controls poster class="experience_video">
+          <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-image-grace.png" class="experience_video">
              <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_grace.mp4" type="video/mp4">
           </video>
         </div>

@@ -47,7 +47,7 @@ export default {
         <router-link to="/about?#team" class="home__WAW-container-left-signup" style="width: 200px;">{{translation.ourTeam}}</router-link>
       </div>
       <div class="home__WAW-container-right">
-        <img src="http://concord-assets.oss-cn-beijing.aliyuncs.com/home__instruments.jpg" alt="instruments-icon" class="home__WAW-container-right-instruments">
+        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/WAW-banner.jpeg" alt="instruments-icon" class="home__WAW-container-right-instruments">
       </div>
     </div>
 
@@ -210,7 +210,9 @@ export default {
 }
 
 .home__WAW-container-right-instruments {
-  width: 90%;
+  height: 350px;
+  width: 98%;
+  object-fit: cover;
 }
 
 /* ----- WeChat Official Accont ----- */

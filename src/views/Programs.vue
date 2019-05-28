@@ -51,6 +51,7 @@ export default {
     <div class="programs__banner-bar">
       <div class="banner-bar-link" data-id="new" @click="scrollToSection">{{translation.newProgramsSubtitle}}</div>
       <div class="banner-bar-link" data-id="programs" @click="scrollToSection">{{translation.ourPrograms}}</div>
+      <div class="banner-bar-link" data-id="camps" @click="scrollToSection">{{translation.campsTitle}}</div>
       <div class="banner-bar-link" data-id="schedule" @click="scrollToSection">{{translation.schedule}}</div>
       <!-- Mobile Banner Title -->
       <div class="programs__mobile-banner-title">{{translation.programs}}</div>
@@ -60,7 +61,7 @@ export default {
   <div class="content-wrapper" id="new">
     <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
     <div class="content">{{translation.pocoTitle}}</div>
-    <video controls poster style="height: 400px;">
+    <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-image-poco.png" style="height: 400px;">
       <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov" type="video/mp4">
     </video>
   </div>
@@ -273,7 +274,7 @@ export default {
     </div>
 
     <!-- Camps -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="camps">
       <div class="programs__camps-banner">
         <div class="programs__banner-content">{{translation.campsTitle}}</div>
       </div>
@@ -291,8 +292,9 @@ export default {
     <!-- Schedule -->
     <div class="content-wrapper" id="schedule">
       <div class="subtitle">{{translation.schedule}}</div>
+      <div class="content">{{translation.year}}</div>
       <img style="width: 90%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/group-schedule-3-6-2019.png" alt="Concord Programs Schedule">
-      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/music-calendar-cropped.png">Click here to see our school calendar</a>
+      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/music-calendar-cropped.png">{{translation.schoolCalendar}}</a>
     </div>
   </div>
 </template>
