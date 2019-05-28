@@ -49,7 +49,7 @@ const programs = {
     schedule: 'SCHEDULE',
     year: 'Year 2019 (March - June)',
     pocoTitle: '"Poco A Poco" Piano Foundations & Musicianship Class',
-    schoolCalendar: 'Click here to see our school calendar'
+    schoolCalendar: "Click here to see Concord's music calendar"
   },
   Chinese: {
     programs: '课程',
