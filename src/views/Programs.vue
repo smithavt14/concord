@@ -61,7 +61,7 @@ export default {
   <div class="content-wrapper" id="new">
     <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
     <div class="content">{{translation.pocoTitle}}</div>
-    <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-image-poco.png" style="height: 400px;">
+    <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-img-poco.png" style="height: 400px;">
       <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov" type="video/mp4">
     </video>
   </div>

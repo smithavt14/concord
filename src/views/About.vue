@@ -144,7 +144,7 @@ export default {
         <div class="about__map-overlay">
           <div class="about__map-overlay-title">Concord Music</div>
           <div style="margin-top: 5px"><strong>Address / 地址 </strong></div>
-          <div>GGubei Road 678, Tong Quan Building, Suite 803</div>
+          <div>Gubei Road 678, Tong Quan Building, Suite 803</div>
           <div>古北路678号同诠大厦803室（近仙霞路）</div>
           <div><strong>Contact Us / 联系我们: </strong></div>
           <div>Wechat: concordmusicadmin </div>

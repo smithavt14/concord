@@ -101,7 +101,7 @@ const programs = {
     schedule: '课表',
     year: '2019年课表 (3-6月)', 
     pocoTitle: '“小步点” 钢琴启蒙',
-    schoolCalendar: '点击此处，了解搿艺音乐日历'
+    schoolCalendar: '点击此处，了解搿艺音乐的校历'
   }
 }
 

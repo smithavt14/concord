@@ -210,7 +210,6 @@ export default {
 }
 
 .home__WAW-container-right-instruments {
-  height: 350px;
   width: 98%;
   object-fit: cover;
 }
