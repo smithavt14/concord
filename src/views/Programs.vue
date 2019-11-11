@@ -282,19 +282,17 @@ export default {
       <div class="programs__lessons-description">{{translation.campsDescription}}</div>
       <div class="programs__subtitle">{{translation.reasons}}</div>
       <div class="programs__lessons-description">{{translation.campsReasons}}</div>
-      <div class="programs__subtitle">{{translation.campsSummer}}</div>
-      <img style="max-width: 90%; margin-bottom: 20px" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/programs_summer-camp.jpeg
-" alt="Concord Summer Program">
-      <div class="programs__lessons-description" style="text-align: center;">{{translation.campsLearnMore}}</div>
-      <img style="max-height: 150px; margin-bottom: 20px; " src="https://concord-assets.oss-cn-beijing.aliyuncs.com/19-summer-h5-qr%20.png" alt="">
+      <div class="programs__subtitle">{{translation.campsWinter}}</div>
+      <img style="max-width: 60%; margin-bottom: 20px" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_winter_camp.png
+" alt="Concord Winter Program">
     </div>
 
     <!-- Schedule -->
     <div class="content-wrapper" id="schedule">
       <div class="subtitle">{{translation.schedule}}</div>
       <div class="content">{{translation.year}}</div>
-      <img style="width: 90%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/group-schedule-3-6-2019.png" alt="Concord Programs Schedule">
-      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/music-calendar-cropped.png">{{translation.schoolCalendar}}</a>
+      <img style="width: 90%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_calendar.png" alt="Concord Programs Schedule">
+      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_calendar.png">{{translation.schoolCalendar}}</a>
     </div>
   </div>
 </template>

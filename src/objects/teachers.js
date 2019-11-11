@@ -22,18 +22,32 @@ const teachers = {
       bio: 'Yong-Wei or known as Wei by his students, was a regular member at the Malaysian Philharmonic Youth Orchestra (MPYO). He received his Bachelor of Music and Master in Music at Tunghai University (Taichung, Taiwan) at 2017. He studied viola performance with Professors Yih-Chyuan Wang and also served as the teaching assistant in various music history and music theory courses. Wei has played in various master classes, including those taught by professors Dao-Chang Yu ,Allie Su, Hausmann Quartet and Sayaka Kobuko. During summer 2017, Ho was invited to perform with Formosa Philharmonic Orchestra (Taiwan) in Les Rencontres Musicales de Chaon at France. In 2017, he was selected as a member of Thailand Philharmonic Orchestra. Wei is loved by his students for his patience and systematic approach in teaching while able to remain positive and encouraging.'
     },
     {
-      id: 7,
-      photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__gavin.jpg',
-      name: 'Gavin Stewart',
-      role: 'Piano Instructor',
-      bio: 'Gavin, a Scottish pianist who began his musical education at age of five, initially studying keyboard and later piano before going on to study music at Edinburg Napier University and B.C.U Birmingham Conservatoire. After graduating with a graduate degree from Birminghan Conservatorie, he worked as a pianist, accompanist and teacher in and around Ayrshire. He was also trained in theYamaha method and began teaching at a local Yamaha music school. In September 2013, he was hired as a piano teacher at Academy of Performing Arts at the British School of Bahrain. He is now a full-time piano and group class instructor at Concord Music. Gavin’s aim is to empower students with the skills and knowledge they need in order to become independent learners.'
-    },
-    {
       id: 5,
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__annie.jpg',
       name: 'Xixi',
       role: 'Violin Instructor',
       bio: 'Xixi, a Malaysian-Chinese violinist, with musical training background from the Shanghai Conservatory of Music (Bachelor in Music) was a member of the Malaysian Philharmonic Youth Orchestra, led by Maestro Kevin Field. She has her own string quartet in Shanghai and performs actively around the city. She passed the ATCL examination of Trinity College with distinction, which is the highest credit. Wenxi - or also known as Ms. Xixi by her students - enjoys teaching violin and sharing her experience in violin, particularly with children. Her students enjoy studying with her because of her warm personality and energetic teaching style. Because of her nationality background, she is able to conduct lessons in both Chinese and English fluently.'
+    },
+    {
+      id: 20,
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_ryan.png',
+      name: 'Ryan Yeap',
+      role: 'Piano, Violin & Viola Instructor',
+      bio: 'Ryan pursuit his musical education at the University of Huddersfield in year 2014. Upon completing his Bachelor’s Degree with Piano Performance as his major, he went to the Royal Welsh College of Music and Drama (RWCMD) in Cardiff for his postgraduate studies, majored in Viola Performance and studied with Rebecca Jones, the principal violist of BBC National Orchestra of Wales. During his time in the UK, Ryan had the chance of performing with different orchestras including the BBC National Orchestra of Wales, Slaithwaite Philharmonic Orchestra, The National Video Game Orchestra of Wales, Young Musician Symphony Orchestra (YMSO) and Yorkshire Symphony Orchestra. Ryan also took part in different masterclasses by Rachel Podger, Jane Rogers, Dorothea Vogel of Allegri Quartet, as well as received coaching from Tamsin Waley-Cohen and Rosie Ventris of Albion Quartet. Ryan is now a piano, violin and viola instructor at Concord Music.'
+    },
+    {
+      id: 21,
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_jessa.png',
+      name: 'Jessa Xiao',
+      role: 'Early-years music teacher, Piano, and Vocal Instructor',
+      bio: 'Jessa Xiao received her Master’s Degree in Piano Performance at Mannes School of Music in New York City on May 2018. She was an exchange student at Peabody Conservatory at the Johns Hopkins University during the school year of 2014 to 2015 before she graduated from Wuhan Conservatory of Music in China with Bachelor’s Degree. Jessa has had many years of teaching experience. She has taught one-on-one piano and voice lessons, early childhood music course and music theory in both China and the USA. Her students’ age ranged from 3 to 18. Her 1-on-1 students have achieved distinction in ABRSM and RCM exams. Over time, she has developed a unique teaching method that approaches every student differently with passion, enthusiasm and profession. She is currently a full-time teacher teaching Early-Years music classes and 1-on-1 piano and vocal lessons at Concord Music. Jessa is now a early-years music teacher, piano, and vocal instructor at Concord Music.'
+    },
+    {
+      id: 22, 
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_max.png',
+      name: 'Max Gao',
+      role: 'Flute Instructor',
+      bio: 'Max has been instructed by Professor Carol Wencenc from the Juilliard School, Paolo Taballion, the flute principal of Bayerische Staatsope, Sarah Louvion, the flute principal of hr-Sinfonieorchester Frankfurt, famous Swiss Flutist Philippe Jundt, Korean flutist Joohee Lee, and flutist Yihui Lin from Taiwan, China. Besides his excellent performance in orchestras and learning experience with world-class flutists,  Xing Gao has also shown his capability in “Shengqi He International Flute Summer Camp”. He has won a first place in individual, a first place in group round, and a third place in the total ranking. Max served as a group class instructor for a year at Changdao Middle School, High School Affiliated to East China University of Political Science and Law, and Zicheng Experimental School. He also had 3 years of experience as a 1-1 individual program instructor.'
     },
     {
       id: 3,
@@ -55,13 +69,6 @@ const teachers = {
       name: 'Jenny Wu',
       role: 'Clarinet Instructor',
       bio: 'Jenny Wu studied music at University of the Arts of Tainan National Music Institute and is currently pursuing professional doctorate in Anthropology at Shanghai Conservatory of Music. She has been awarded scholarship for outstanding student  and served as principal Clarinet and Orchestra, and graduated with honorary award in Music Education.'
-    },
-    {
-      id: 8,
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Irene%20Huang.png',
-      name: 'Irene Huang', 
-      role: 'Flute Instructor',
-      bio: 'Irene Huang, majored in both flute and piano in Taiwan and has obtained her Master in Music degree at Shanghai Conservatory of Music. She received the CEYO European Youth Orchestra scholarship and performed with the Shanghai Philharmonic Orchestra to great acclaim.'
     },
     {
       id: 12,
@@ -97,13 +104,6 @@ const teachers = {
       name: 'Beely Lee', 
       role: 'Head of Administration & Branch Manager',
       bio: 'Lee leads Concord team as the Head of Administration and Branch Manager. With her previous experience as a language teacher and as the principal’s senior assistant of a 2000-students school, she is an experienced leader in team management and in education administration. Lee helps each customer with understanding and offers fluent communication in Cantonese, Mandarin and English. She enjoys her work and being a great chef is her secret talent.'
-    }, 
-    {
-      id: 17, 
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Fiona.jpeg',
-      name: 'Fiona Oung',
-      role: 'Administration and Scheduling Manager',
-      bio: 'Fiona has worked as an admin and scheduling assistant for more than 3 years. Fiona offers fluent communication in Cantonese, Mandarin and English. She is quick and responsive in work, great with kids, enjoys rock climbing and extreme sports and she always smile!'
     },
     {
       id: 18, 
@@ -111,6 +111,13 @@ const teachers = {
       name: 'Leon Chen',
       role: 'Admissions Advisor & Marketing Manager',
       bio: 'Leon offers professional opinions to all new incoming students and help each parent and student in selecting course(s) that would meet their expectations and needs. He is also an experienced piano teacher and has taught for over 11 years. Other than that, he sings as a baritone and performs actively in his choral group name “Balance Vocal Band”. He works full-time at Concord and almost full-time at the gym too - he enjoys working out and marathon as his hobby.'
+    },
+    {
+      id: 19,
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_evelyn.png',
+      name: 'Evelyn Lee',
+      role: 'Administration Manager',
+      bio: 'Evelyn has worked as an admin assistant for more than 3 years. She is in charge of all scheduling, payment and general communication with parents at Concord. Evelyn offers fluent communication in Malay, Hokkien, Mandarin and English. She is responsible in work, great with kids, and she carries great vibe!'
     }
   ],
   Chinese: [
@@ -136,18 +143,32 @@ const teachers = {
       bio: '出生于马来西亚，何永威于2010年至2011年曾担任马来西亚爱乐附属交响乐团中提琴演奏员。留学期间，永威的导师们包含王意权教授、张睿洲教授、王弈萱教授。永威也曾任教学助教的工作，其中教学科目包含西洋音乐史。永威于2017年获选为泰国爱乐乐团中提琴演奏员，同年随甫福尔摩沙爱乐管弦乐团到法国演出。留台期间与国内外音乐家合作，包括钢琴家Sandra Wright Shen、Daniel Petrica Ciobanu，低音管演奏家小山昭雄 (Akio Koyama)、小山莉绘 (Rie Koyama)、Sergio Azzolini等音乐家。永威老师因他耐心的态度和良好的教学体系深受学生们喜爱，并时刻保持着热诚，给予学生们鼓励。 '
     },
     {
-      id: 13,
-      photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__gavin.jpg',
-      name: 'Gavin Stewart',
-      role: '钢琴老师',
-      bio: 'Gavin老师来自英国苏格兰埃尔郡，从5岁开始学习音乐。赴爱丁堡纳皮尔大学和伯明翰艺术学院学习音乐之前他首先学习电子琴和钢琴。从爱丁堡纳皮尔大学（学士）毕业后，他便在埃尔郡从事钢琴家、伴奏家和教师的工作。他也受过最新的雅马哈教学法培训并在当地的雅马哈音乐学院授课。2013年9月，他受聘为巴林英国学校表演艺术学院的钢琴老师。他现在是搿艺音乐全职钢琴和集体课导师。他上课的目标是培养学生的技巧和知识，以让他们成为一位独立的学习者。他坚信唯有通过富有创意性的音乐元素体验，才能完全建立起对音乐的理解。'
-    },
-    {
       id: 5,
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__annie.jpg',
       name: 'Xixi',
       role: '小提琴老师',
       bio: 'Xixi（希希）老师是一位来自马来西亚的华裔小提琴家，毕业于上海音乐学院（音乐硕士），马来西亚爱乐青年管弦乐团成员，师从Maestro Kevin Field。她在上海拥有自己的弦乐四重奏室内乐团，活跃在沪上进行各类演出。她以优异的成绩通过三一学院的ATCL考试。Xixi老师非常喜欢教授小提琴并分享她在小提琴方面学习的经验。由于她充满温暖的个性和活力十足的教学风格，她的学生们非常喜欢与她一起学习和进步。由于Xixi老师的国籍背景，她能够用流利的英文或中文进行教学。'
+    },
+    {
+      id: 20,
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_ryan.png',
+      name: '叶柏恒',
+      role: '钢琴、小提琴及中提琴教学老师',
+      bio: 'Ryan 老师2014年开始在英国哈德斯菲尔德大学就读钢琴演奏，本科毕业后即前往卡尔迪夫就读皇家威尔士音乐戏剧学院(RWCMD)的硕士课程，并在英国广播公司威尔士国家管弦乐队(BBC National Orchestra of Wales)首席中提琴家Rebecca Jones的教导下学习中提琴演奏。Ryan老师在英国深造期间，曾加入许多海外知名弦乐团参与演出，包括英国广播公司威尔士国家管弦乐队(BBC National Orchestra of Wales)、斯莱维特爱乐乐团 (Slaithwaite Philharmonic Orchestra)、青年音乐家交响乐团(YMSO)、约克郡交响乐团(Yorkshire Symphony Orchestra)。Ryan 也曾在多位大师的教导下学习精进，包括Rachel Podger, Jane Rogers, Allegri四重奏的Dorothea Vogel of Allegri Quartet，Albon四重奏的Tamsin Waley-Cohen和Rosie Ventris。Ryan老师目前在Concord教学钢琴、小提琴及中提琴。'
+    },
+    {
+      id: 21,
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_jessa.png',
+      name: '肖杰予',
+      role: '钢琴、集体启蒙课教师',
+      bio: '作为⼀个非常有经验的教学者和演奏者，肖杰予老师于2018年五月从纽约曼尼斯⾳乐学院取得钢琴演奏硕⼠学位，她在2014⾄2015年期间被武汉⾳乐学院选拔前往⽪博迪音乐学院进⾏交换学习。肖老师在中美两地有多年的教学经验。她曾教授钢琴及声乐一对⼀课程，幼儿⾳乐启蒙课程以及乐理课程。她的学⽣包含各个年龄阶层。在她的辅导下，⼀些⼀对⼀学⽣在英国皇家⾳乐学院考级和加拿⼤皇家音乐学院考级中取得杰出的好成绩。对于音乐教学，她有⾃⼰理解。她善于因材施教，以及⽤兴趣作为⿎励去启发每⼀个学⽣。肖老师⽬前是搿艺⾳乐的全职老师，授课⾳乐启蒙课和⼀对⼀钢琴和声乐课。Jessa老师目前在Concord教学钢琴、声乐及幼儿启蒙课。'
+    },
+    {
+      id: 22, 
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_max.png',
+      name: '高兴',
+      role: '长笛教师',
+      bio: '他曾先后受到过茱莉亚音乐学院（The Juilliard School）教授 Carol Wencenc，巴伐利亚歌剧院交响乐团（Bayerische Staatsoper）长笛首席 Paolo Taballion，法兰克福广播交响乐团（hr-Sinfonieorchester Frankfurt）长笛首席 Sarah Louvion，著名瑞士长笛家 Philippe Jundt，中国台湾长笛家林薏蕙（Yihui Lin）老师，以及韩国长笛家 JooHee Lee 等长笛名家的指导。个人方面曾在何声奇长笛夏季训练营去的团体第一，个人独奏第一以及总分第三的成绩高兴老师在长岛中学，华东政法大学附属小学以及，莘城实验学校，担任集体课教师一年。同时也有三年一对一长笛课程的教学经验。'
     },
     {
       id: 3,
@@ -169,13 +190,6 @@ const teachers = {
       name: '吳珀元',
       role: '单簧管老师',
       bio: '吴老师就读台湾实践大学音乐系、台南艺术大学民族音乐学研究所，以音乐人类学专业获得上海音学院博士学位。求学期间曾获各项优秀学生奖学金，与担任乐团单簧管首席，并以管乐第一名的优异成绩毕业于实践大学音乐系。'
-    },
-    {
-      id: 6,
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Irene%20Huang.png',
-      name: '黃弈涵', 
-      role: '长笛老师',
-      bio: '黄老师来自台湾，主修长笛和钢琴，毕业于上海音乐学院并获得音乐硕士学位。她获得了CEYO欧洲青年管弦乐团的奖学金，并与上海爱乐乐团合作演出，获得众多好评。 '
     },
     {
       id: 10,
@@ -213,18 +227,18 @@ const teachers = {
       bio: '吕老师以行政主管和分公司经理的身份领导着搿艺团队。吕老师曾是位语言老师，也曾担任2000多学生学校的校长特助，因此她在团队管理和教育行政管理方面是一位经验丰富的领导者。吕老师负责帮助每一位客户理解所需要的内容，并可以提供流利的粤语、普通话和英文进行沟通。她非常热爱她的工作，励志成为一名伟大的厨师是她隐藏多年的秘密。'
     }, 
     {
-      id: 17, 
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Fiona.jpeg',
-      name: '翁清莉',
-      role: '行政经理 ',
-      bio: 'Fiona老师在日常行程和行政方面已经有3年多的经验。Fiona老师可以提供流利的粤语、普通话和英文进行交流。她在日常工作中反应迅速，与孩子相处融洽。她也热衷于攀岩和极限运动，并总是乐观开朗，面带微笑！'
-    },
-    {
       id: 18, 
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Leon.jpeg',
       name: '陈旭',
       role: '招生顾问 & 市场部经理',
       bio: 'Leon老师为所有入学的新学生提供非常专业的课程意见，并帮助每一位家长和学生去选择符合他们所期望的课程。他也是一位经验丰富的钢琴老师，任教超过11年。除此之外，他以男中音的身份进行演唱和演出，并在他的阿卡贝拉乐团 - “Balance vocal band”中积极表演。他全职工作在搿艺音乐，也可能全职工作在健身房—他喜欢健身和马拉松作为他全部的业余爱好。'
+    },
+    {
+      id: 19,
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_evelyn.png',
+      name: '李綵翎',
+      role: '行政经理',
+      bio: '綵翎老师在日常行程和行政方面已经有3年多的经验。李老师在搿艺负责所有排课，缴费和沟通。綵翎老师可以提供流利的马来语、闽南语、普通话和英文进行交流。她在日常工作中负责任，与孩子相处融洽，并总是乐观开朗！'
     }
   ]
 }

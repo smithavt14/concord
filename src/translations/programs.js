@@ -45,7 +45,8 @@ const programs = {
     reasons: '5 REASONS TO CHOOSE CONCORD MUSIC CAMP',
     campsReasons: '1. Fun and interesting theme for each week’s camp \n2. Small-group personalized learning \n3. Professional foreign music teachers, lessons conducted in English or bilingual \n4. Compacted content that instills music interest and ensures high quality of learning \n5. Our teaching philosophy is to cultivate music interest as a life-long interest',
     campsSummer: 'Concord Music Summer Camp 2019',
-    campsLearnMore: 'Scan to read more about Concord Music Summer Camp 2019',
+    campsWinter: 'Concord Music Winter Camp 2019',
+    campsLearnMore: 'Scan to read more about Concord Music Winter Camp 2019',
     schedule: 'SCHEDULE',
     year: 'Year 2019 (March - June)',
     pocoTitle: '"Poco A Poco" Piano Foundations & Musicianship Class',
@@ -97,7 +98,8 @@ const programs = {
     campsDescription: '搿艺在冬季，春季和夏季时提供音乐营。我们也有乐器营，如尤克里里营，小提琴营和钢琴营，还有季节性的工作坊。',
     campsReasons:'1. 每个营有不同的主题和不同的内容 \n 2. 小组学习模式  \n3. 专业音乐外教, 英语或双语授课  \n4. 丰富的音乐内容激发音乐兴趣的同时保证学习的质量  \n5. 以激发音乐兴趣为教学宗旨',
     campsSummer: '2019年搿艺音乐夏令营',
-    campsLearnMore: '扫描阅读有关2019搿艺音乐夏令营',
+    campsWinter: '2019年搿艺音乐圣诞⾳乐营', 
+    campsLearnMore: '扫描阅读有关2019搿艺音乐圣诞⾳乐营',
     schedule: '课表',
     year: '2019年课表 (3-6月)', 
     pocoTitle: '“小步点” 钢琴启蒙',
