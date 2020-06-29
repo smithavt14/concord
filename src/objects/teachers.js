@@ -8,7 +8,7 @@ const teachers = {
       bio: 'Fei is the founder and Executive Director of Concord Music. As a graduate of New York’s Manhattan School of Music (Bachelor of Music) and New York University (Master of Music), Fei is not only a passionate piano pedagogue but also an active concert pianist who has performed across the globe (USA, Europe, the Philippines and Malaysia). She has written and published My Musical Animals; a unique method book for piano and keyboard group lessons catering to the needs of young children. She is the leader of Concord teaching team and provides trainings to teachers with the goal to carry out the school’s core belief which is to make the school a space where musical interests are nurtured by professionals.'
     },
     {
-      id: 2, 
+      id: 2,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Diane%20Kim.jpeg',
       name: 'Dr. Diane Kim',
       role: 'Head of Piano Program',
@@ -20,13 +20,6 @@ const teachers = {
       name: 'Yong-Wei Ho',
       role: 'Violin/Viola Instructor',
       bio: 'Yong-Wei or known as Wei by his students, was a regular member at the Malaysian Philharmonic Youth Orchestra (MPYO). He received his Bachelor of Music and Master in Music at Tunghai University (Taichung, Taiwan) at 2017. He studied viola performance with Professors Yih-Chyuan Wang and also served as the teaching assistant in various music history and music theory courses. Wei has played in various master classes, including those taught by professors Dao-Chang Yu ,Allie Su, Hausmann Quartet and Sayaka Kobuko. During summer 2017, Ho was invited to perform with Formosa Philharmonic Orchestra (Taiwan) in Les Rencontres Musicales de Chaon at France. In 2017, he was selected as a member of Thailand Philharmonic Orchestra. Wei is loved by his students for his patience and systematic approach in teaching while able to remain positive and encouraging.'
-    },
-    {
-      id: 5,
-      photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__annie.jpg',
-      name: 'Xixi',
-      role: 'Violin Instructor',
-      bio: 'Xixi, a Malaysian-Chinese violinist, with musical training background from the Shanghai Conservatory of Music (Bachelor in Music) was a member of the Malaysian Philharmonic Youth Orchestra, led by Maestro Kevin Field. She has her own string quartet in Shanghai and performs actively around the city. She passed the ATCL examination of Trinity College with distinction, which is the highest credit. Wenxi - or also known as Ms. Xixi by her students - enjoys teaching violin and sharing her experience in violin, particularly with children. Her students enjoy studying with her because of her warm personality and energetic teaching style. Because of her nationality background, she is able to conduct lessons in both Chinese and English fluently.'
     },
     {
       id: 20,
@@ -43,25 +36,18 @@ const teachers = {
       bio: 'Jessa Xiao received her Master’s Degree in Piano Performance at Mannes School of Music in New York City on May 2018. She was an exchange student at Peabody Conservatory at the Johns Hopkins University during the school year of 2014 to 2015 before she graduated from Wuhan Conservatory of Music in China with Bachelor’s Degree. Jessa has had many years of teaching experience. She has taught one-on-one piano and voice lessons, early childhood music course and music theory in both China and the USA. Her students’ age ranged from 3 to 18. Her 1-on-1 students have achieved distinction in ABRSM and RCM exams. Over time, she has developed a unique teaching method that approaches every student differently with passion, enthusiasm and profession. She is currently a full-time teacher teaching Early-Years music classes and 1-on-1 piano and vocal lessons at Concord Music. Jessa is now a early-years music teacher, piano, and vocal instructor at Concord Music.'
     },
     {
-      id: 22, 
+      id: 22,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_max.png',
       name: 'Max Gao',
       role: 'Flute Instructor',
       bio: 'Max has been instructed by Professor Carol Wencenc from the Juilliard School, Paolo Taballion, the flute principal of Bayerische Staatsope, Sarah Louvion, the flute principal of hr-Sinfonieorchester Frankfurt, famous Swiss Flutist Philippe Jundt, Korean flutist Joohee Lee, and flutist Yihui Lin from Taiwan, China. Besides his excellent performance in orchestras and learning experience with world-class flutists,  Xing Gao has also shown his capability in “Shengqi He International Flute Summer Camp”. He has won a first place in individual, a first place in group round, and a third place in the total ranking. Max served as a group class instructor for a year at Changdao Middle School, High School Affiliated to East China University of Political Science and Law, and Zicheng Experimental School. He also had 3 years of experience as a 1-1 individual program instructor.'
     },
     {
-      id: 3,
-      photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__michi.jpg',
-      name: 'Michi',
-      role: 'Vocal Instructor / Choir Conductor',
-      bio: 'Michi has performed in many different concerts and opera productions. In year 2015 to 2016 he studied at the Shanghai Conservatory of Music with Professor Chen Qilian. Special moments during this time were his appearance as a soloist for concerts at the Shanghai Music Hall and the Shanghai Symphony Hall. He has a bachelor degree in musicology from the University of Vienna, with a focus on music history and musical analysis. 2017 he graduated from the University of Music and Performing Arts Vienna with honours. Michi is also a professional choir conductor, he has led a children french choir “Petite Brise” to perform in several public venues in Shanghai.'
-    },
-    {
       id: 11,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Travis%20Lu.jpeg',
       name: 'Travis Lu',
       role: 'Guitar Instructor',
-      bio: 'Travis has established himself as a jazz guitarist and is an active performer in the jazz scenes of Shanghai. He has appeared frequently in JZ Club, Wooden Box and 696 Bar. He has taken masterclasses with legendary bassist and Grammy award winner and other famous jazz musicians such as Eddie Gomez, Antonio Hart and Sefan Karisson. Travis also received trainings in voice, saxophone and jazz drum. He now focuses on jazz guitar and improvisation. He shares similar passion in teaching and he hopes to inspire his students in becoming musicians who would have their own styles.  '
+      bio: 'Travis has established himself as a jazz guitarist and is an active performer in the jazz scenes of Shanghai. He has appeared frequently in JZ Club, Wooden Box and 696 Bar. He has taken masterclasses with legendary bassist and Grammy award winner and other famous jazz musicians such as Eddie Gomez, Antonio Hart and Sefan Karisson. Travis also received trainings in voice, saxophone and jazz drum. He now focuses on jazz guitar and improvisation. He shares similar passion in teaching and he hopes to inspire his students in becoming musicians who would have their own styles. '
     },
     {
       id: 9,
@@ -75,7 +61,7 @@ const teachers = {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Victor%20Noskov.jpeg',
       name: 'Viktor Noskov',
       role: 'Drums Instructor',
-      bio: 'Viktor, an Ukrainian drummer, graduated from the National University of Culture and Arts in Kiev (Ukraine) and has earned a Master degree in Percussion and Drums Performing with teaching certificate. He is also the co-founder of several percussion and drums projects and group such a modern drumming group “Fire Beat” and an ethnical percussion project “Mama-Africana”. Viktor is also an experienced drum teacher and has the experience of helping his students to prepare for Rockschool examination.  '
+      bio: 'Viktor, an Ukrainian drummer, graduated from the National University of Culture and Arts in Kiev (Ukraine) and has earned a Master degree in Percussion and Drums Performing with teaching certificate. He is also the co-founder of several percussion and drums projects and group such a modern drumming group “Fire Beat” and an ethnical percussion project “Mama-Africana”. Viktor is also an experienced drum teacher and has the experience of helping his students to prepare for Rockschool examination. '
     },
     {
       id: 10,
@@ -94,19 +80,19 @@ const teachers = {
     {
       id: 15,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Kevin.jpeg',
-      name: 'Kevin Marsh', 
+      name: 'Kevin Marsh',
       role: 'Guitar Instructor',
       bio: 'Canadian guitarist Kevin Marsh is an exquisite performer, teacher and composer. He formed the Rosette Guitar Duo and began composing, recording and performing their unique style of Canadian guitar music. He has also performed in notable venues such as the Chan Center for the Arts in Vancouver, British Columbia, The EPCOR Center in Calgary, Alberta and the Francis Ford Winspear Center in Edmonton. Kevin is a master teacher who has been joyfully educating students of the guitar for nearly twenty years. His passion for music and the guitar is exemplified through the success and accomplishments of his students. In 2013, Kevin was recognised and awarded by the Royal Conservatory of Music as an outstanding teacher, having one of his pupils receive a gold medal for highest marks on a performance exam.'
-    }, 
+    },
     {
       id: 16,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/beely.jpeg',
-      name: 'Beely Lee', 
+      name: 'Beely Lee',
       role: 'Head of Administration & Branch Manager',
       bio: 'Lee leads Concord team as the Head of Administration and Branch Manager. With her previous experience as a language teacher and as the principal’s senior assistant of a 2000-students school, she is an experienced leader in team management and in education administration. Lee helps each customer with understanding and offers fluent communication in Cantonese, Mandarin and English. She enjoys her work and being a great chef is her secret talent.'
     },
     {
-      id: 18, 
+      id: 18,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Leon.jpeg',
       name: 'Leon Chen',
       role: 'Admissions Advisor & Marketing Manager',
@@ -129,7 +115,7 @@ const teachers = {
       bio: '胡老师是搿艺音乐的创始人和总监。她毕业于曼哈顿音乐学院（音乐学士）和纽约大学（音乐硕士）。她不仅是一名充满激情的钢琴教育家，同时也是世界级的钢琴演奏家,并在多国国际音乐厅演奏过（美国、欧洲、菲律宾和马来西亚）。胡老师撰写并出版的钢琴启蒙教材《我的音乐宠物》迎合4-6岁儿童集体课和一对一学习的钢琴启蒙。她给予搿艺的老师们进行培训，并监督教学和课程质量，持续不断地坚持搿艺最初创办的理念：以专业的精神培养学生们对音乐的兴趣'
     },
     {
-      id: 2, 
+      id: 2,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Diane%20Kim.jpeg',
       name: '金度延',
       role: '钢琴教学部主任',
@@ -141,13 +127,6 @@ const teachers = {
       name: '何永威',
       role: '小提琴／中提琴老师',
       bio: '出生于马来西亚，何永威于2010年至2011年曾担任马来西亚爱乐附属交响乐团中提琴演奏员。留学期间，永威的导师们包含王意权教授、张睿洲教授、王弈萱教授。永威也曾任教学助教的工作，其中教学科目包含西洋音乐史。永威于2017年获选为泰国爱乐乐团中提琴演奏员，同年随甫福尔摩沙爱乐管弦乐团到法国演出。留台期间与国内外音乐家合作，包括钢琴家Sandra Wright Shen、Daniel Petrica Ciobanu，低音管演奏家小山昭雄 (Akio Koyama)、小山莉绘 (Rie Koyama)、Sergio Azzolini等音乐家。永威老师因他耐心的态度和良好的教学体系深受学生们喜爱，并时刻保持着热诚，给予学生们鼓励。 '
-    },
-    {
-      id: 5,
-      photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__annie.jpg',
-      name: 'Xixi',
-      role: '小提琴老师',
-      bio: 'Xixi（希希）老师是一位来自马来西亚的华裔小提琴家，毕业于上海音乐学院（音乐硕士），马来西亚爱乐青年管弦乐团成员，师从Maestro Kevin Field。她在上海拥有自己的弦乐四重奏室内乐团，活跃在沪上进行各类演出。她以优异的成绩通过三一学院的ATCL考试。Xixi老师非常喜欢教授小提琴并分享她在小提琴方面学习的经验。由于她充满温暖的个性和活力十足的教学风格，她的学生们非常喜欢与她一起学习和进步。由于Xixi老师的国籍背景，她能够用流利的英文或中文进行教学。'
     },
     {
       id: 20,
@@ -164,18 +143,11 @@ const teachers = {
       bio: '作为⼀个非常有经验的教学者和演奏者，肖杰予老师于2018年五月从纽约曼尼斯⾳乐学院取得钢琴演奏硕⼠学位，她在2014⾄2015年期间被武汉⾳乐学院选拔前往⽪博迪音乐学院进⾏交换学习。肖老师在中美两地有多年的教学经验。她曾教授钢琴及声乐一对⼀课程，幼儿⾳乐启蒙课程以及乐理课程。她的学⽣包含各个年龄阶层。在她的辅导下，⼀些⼀对⼀学⽣在英国皇家⾳乐学院考级和加拿⼤皇家音乐学院考级中取得杰出的好成绩。对于音乐教学，她有⾃⼰理解。她善于因材施教，以及⽤兴趣作为⿎励去启发每⼀个学⽣。肖老师⽬前是搿艺⾳乐的全职老师，授课⾳乐启蒙课和⼀对⼀钢琴和声乐课。Jessa老师目前在Concord教学钢琴、声乐及幼儿启蒙课。'
     },
     {
-      id: 22, 
+      id: 22,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_max.png',
       name: '高兴',
       role: '长笛教师',
       bio: '他曾先后受到过茱莉亚音乐学院（The Juilliard School）教授 Carol Wencenc，巴伐利亚歌剧院交响乐团（Bayerische Staatsoper）长笛首席 Paolo Taballion，法兰克福广播交响乐团（hr-Sinfonieorchester Frankfurt）长笛首席 Sarah Louvion，著名瑞士长笛家 Philippe Jundt，中国台湾长笛家林薏蕙（Yihui Lin）老师，以及韩国长笛家 JooHee Lee 等长笛名家的指导。个人方面曾在何声奇长笛夏季训练营去的团体第一，个人独奏第一以及总分第三的成绩高兴老师在长岛中学，华东政法大学附属小学以及，莘城实验学校，担任集体课教师一年。同时也有三年一对一长笛课程的教学经验。'
-    },
-    {
-      id: 3,
-      photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/about__michi.jpg',
-      name: 'Michi',
-      role: '声乐老师 / 合唱指挥',
-      bio: 'Michi老师曾出台参与音乐会和歌剧的表演。他是上海音乐学院陈琦连教授的学生，曾在上海音乐厅和上海交响乐大厅以主唱的身份参与表演。2017他以最佳成绩毕业于维也纳音乐和表演艺术大学，获取学士学位双专业文凭（专业为音乐史和音乐分析）。Michi老师也是合唱指挥，曾带领“小小分贝”少儿法语合唱在上海进行多次演出。'
     },
     {
       id: 9,
@@ -215,19 +187,19 @@ const teachers = {
     {
       id: 15,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Kevin.jpeg',
-      name: 'Kevin Marsh', 
+      name: 'Kevin Marsh',
       role: '吉他老师',
       bio: 'Kevin Marsh来自加拿大，是一位技艺精湛的吉他演奏家、老师和作曲家。他创立“Rosette Guitar”乐队，进行创作、录制和表演风格独特的加拿大吉他音乐。他曾在著名的演出场所进行演出，比如温哥华的Chan Center for the Arts，卡尔加里的EPCOR中心, 埃德蒙德的Francis Ford Winspear Center等。Kevin老师是一位优秀的吉他老师，具有近20年的吉他教学经验，他非常热爱音乐和吉他，教授出一批又一批具有成就的学生。2013年，Kevin老师被英国皇家音乐学院评为优秀教师，并且他的学生在以演奏最高分的成绩获得演出金牌。'
-    }, 
+    },
     {
       id: 16,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/beely.jpeg',
-      name: '吕率瑄', 
+      name: '吕率瑄',
       role: '行政主管',
       bio: '吕老师以行政主管和分公司经理的身份领导着搿艺团队。吕老师曾是位语言老师，也曾担任2000多学生学校的校长特助，因此她在团队管理和教育行政管理方面是一位经验丰富的领导者。吕老师负责帮助每一位客户理解所需要的内容，并可以提供流利的粤语、普通话和英文进行沟通。她非常热爱她的工作，励志成为一名伟大的厨师是她隐藏多年的秘密。'
-    }, 
+    },
     {
-      id: 18, 
+      id: 18,
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Leon.jpeg',
       name: '陈旭',
       role: '招生顾问 & 市场部经理',

@@ -36,7 +36,7 @@ export default {
     },
     infoWindowClose () {
       this.show = false
-    }, 
+    },
     scrollToSection (e) {
       let target = document.getElementById(e.target.dataset.id)
       let rects = target.getClientRects()
@@ -153,9 +153,9 @@ export default {
       </baidu-map>
     </div>
 
-    
 
-    
+
+
   </div>
 </template>
 
@@ -306,7 +306,7 @@ export default {
 }
 
 .about__OPA-right-image {
-  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/partnerships.png');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/partner-group.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

@@ -111,12 +111,6 @@ export default {
           </video>
         </div>
         <div class="experience_video-box">
-          <div class="experience_video-box-title">{{translation.video_david}}</div>
-          <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_img_david.png" class="experience_video">
-             <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_video_david_480.mov" type="video/mp4">
-          </video>
-        </div>
-        <div class="experience_video-box">
           <div class="experience_video-box-title">{{translation.video_linus}}</div>
           <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_img_linus.png" class="experience_video">
              <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_video_linus_480.mov" type="video/mp4">
@@ -281,7 +275,7 @@ export default {
 /* ---- Videos ----- */
 
 .video-swiper-slide {
-  height: 400px; 
+  height: 400px;
   width: 80%;
 }
 
