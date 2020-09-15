@@ -9,7 +9,7 @@ export default {
 
   data () {
     return {
-      center: { lng: 121.405962, lat: 31.21069 },
+      center: { lng: 121.38403, lat: 31.17601 },
       zoom: 13,
       show: false,
       showInfo: null,
@@ -136,16 +136,16 @@ export default {
           <bm-info-window :show="show" @close="infoWindowClose" @open="infoWindowOpen">
             <div class="about__map-title">Concord Music</div>
             <div class="about__map-content">
-              <div><strong>Address: </strong>Gubei Road 678, Tong Quan Building, Suite 803</div>
-              <div><strong>地址: </strong>古北路678号同诠大厦803室（近仙霞路）</div>
+              <div><strong>Address: </strong>Wu Zhong Road 1189, Suite 626, Minhang, Shanghai</div>
+              <div><strong>地址: </strong>上海市闵行区吴中路1189号德必易园626室</div>
             </div>
           </bm-info-window>
         </bm-marker>
         <div class="about__map-overlay">
           <div class="about__map-overlay-title">Concord Music</div>
           <div style="margin-top: 5px"><strong>Address / 地址 </strong></div>
-          <div>Gubei Road 678, Tong Quan Building, Suite 803</div>
-          <div>古北路678号同诠大厦803室（近仙霞路）</div>
+          <div>Wu Zhong Road 1189, Suite 626, Minhang, Shanghai</div>
+          <div>上海市闵行区吴中路1189号德必易园626室</div>
           <div><strong>Contact Us / 联系我们: </strong></div>
           <div>Wechat: concordmusicadmin </div>
           <div>Phone: 021-52357398</div>
