@@ -54,12 +54,24 @@ export default {
     <!-- Add our WeChat -->
     <div class="home__WX-content-wrapper">
       <div class="home__WX-container-left">
-        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/concord-qr.png" style="height: 100%;" alt="Concord QR">
+        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/we%20have%20moved.png" style="height: 100%;" alt="Concord QR">
       </div>
+      <div class="home__WX-container-right" style="align-items: flex-start;">
+        <div class="subtitle WX">{{translation.movedSubtitle}}</div>
+        <div class="title WX">{{translation.movedTitle}}</div>
+        <div class="content WX">{{translation.movedContent}}</div>
+      </div>
+    </div>
+
+    <!-- Add our WeChat -->
+    <div class="home__WX-content-wrapper">
       <div class="home__WX-container-right" style="align-items: flex-start;">
         <div class="subtitle WX">{{translation.wechatSubtitle}}</div>
         <div class="title WX">{{translation.wechatTitle}}</div>
         <div class="content WX">{{translation.wechatContent}}</div>
+      </div>
+      <div class="home__WX-container-left">
+        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/concord-qr.png" style="height: 100%;" alt="Concord QR">
       </div>
     </div>
 
@@ -253,6 +265,7 @@ export default {
 .WX {
   width: 100%;
   text-align: left;
+  white-space: pre-wrap;
 }
 
 
@@ -535,6 +548,7 @@ export default {
   .WX {
     width: 100%;
     text-align: left;
+    white-space: pre-wrap;
   }
 }
 

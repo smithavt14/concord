@@ -14,7 +14,10 @@ const home = {
     FOBtitle: 'FROM OUR WECHAT ACCOUNT',
     OPtitle: 'OUR PROGRAMS',
     loading: 'Loading...',
-    ourTeam: 'Check Out Our Team'
+    ourTeam: 'Check Out Our Team',
+    movedTitle: 'Concord has moved to a bigger and better space!',
+    movedSubtitle: 'WE HAVE MOVED!',
+    movedContent: 'Come experience our newly renovated space that is with artistic design, seven new classrooms with quality instru- ments, and a performance space. \n\n Wu Zhong Road 1189, Suite 626 , Minhang, Shanghai'
   },
   Chinese: {
     bannerMobileTitle: '搿艺音乐',
@@ -31,7 +34,10 @@ const home = {
     FOBtitle: '来自于我们微信账号',
     OPtitle: '我们课程',
     loading: '加载中...',
-    ourTeam: '了解师资团队'
+    ourTeam: '了解师资团队',
+    movedTitle: '搿艺空间已进行全面升级，给我们的学员更大更舒适的学习环境!',
+    movedSubtitle: '搿艺迁移新空间! ',
+    movedContent: '聚气和自由流动的空间设计，具备高质量乐器的7间教室和圆剧场设计的演奏厅，给您最好的体验。我们欢迎您!  \n\n 上海市闵行区吴中路1189号德必易园626室'
   }
 }
 export default home
