@@ -23,7 +23,7 @@ const programs = {
     recitalTitle: 'Regular Recitals and Camps',
     recitalDescription: 'Recitals and camps  are among those opportunities that student can take to create more learning motivation.',
     privateLessonsDifferenceTitle: 'HOW ARE WE DIFFERENT?',
-    privateLessonsDifferenceDescription: '* Our teaching philosophy which is that all students should be guided with much space given to follow their interest and passion  \n * Musicality is also cultivated from the very beginning of our trainings  \n * Foreign-published method books and learning materials are used at Concord  \n * Professional teachers who are excellent musicians themselves have the charisma and ways to inspire the students. \n  * Our creative teaching offers the perfect balance of studies which is right between “just-for-fun” and “dead-serious”.',
+    privateLessonsDifferenceDescription: '* Our teaching philosophy which is that all students should be guided with much space given to follow their interest and passion  \n * Musicality is also cultivated from the very beginning of our trainings  \n * Foreign-published method books and learning materials are used at Concord  \n * Professional teachers who are excellent musicians themselves have the charisma and ways to inspire the students. \n * Our creative teaching offers the perfect balance of studies which is right between “just-for-fun” and “dead-serious”.',
     privateLessonsRateTitle: 'RATE / MINUTES',
     privateLessonsRateDescription: 'Our rate is charged based on the minutes of the lesson. Every student has a different attention span, so the best way to determine a lesson length is to schedule a trial lesson with us and our teachers will recommend the lesson length based on their experience. We usually recommend the following length of lesson per week: ',
     age1: 'Ages 3 - 7 / Beginners',
@@ -45,7 +45,7 @@ const programs = {
     reasons: '5 REASONS TO CHOOSE CONCORD MUSIC CAMP',
     campsReasons: '1. Fun and interesting theme for each week’s camp \n2. Small-group personalized learning \n3. Professional foreign music teachers, lessons conducted in English or bilingual \n4. Compacted content that instills music interest and ensures high quality of learning \n5. Our teaching philosophy is to cultivate music interest as a life-long interest',
     campsSummer: 'Concord Music Summer Camp 2019',
-    campsWinter: 'Concord Music Winter Camp 2019',
+    campsWinter: 'Concord Music Winter Camp 2020',
     campsLearnMore: 'Scan to read more about Concord Music Winter Camp 2019',
     schedule: 'SCHEDULE',
     year: 'Year 2019 (March - June)',
@@ -98,10 +98,10 @@ const programs = {
     campsDescription: '搿艺在冬季，春季和夏季时提供音乐营。我们也有乐器营，如尤克里里营，小提琴营和钢琴营，还有季节性的工作坊。',
     campsReasons:'1. 每个营有不同的主题和不同的内容 \n 2. 小组学习模式  \n3. 专业音乐外教, 英语或双语授课  \n4. 丰富的音乐内容激发音乐兴趣的同时保证学习的质量  \n5. 以激发音乐兴趣为教学宗旨',
     campsSummer: '2019年搿艺音乐夏令营',
-    campsWinter: '2019年搿艺音乐圣诞⾳乐营', 
+    campsWinter: '2019年搿艺音乐圣诞⾳乐营',
     campsLearnMore: '扫描阅读有关2019搿艺音乐圣诞⾳乐营',
     schedule: '课表',
-    year: '2019年课表 (3-6月)', 
+    year: '2019年课表 (3-6月)',
     pocoTitle: '“小步点” 钢琴启蒙',
     schoolCalendar: '点击此处，了解搿艺音乐的校历'
   }

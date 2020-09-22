@@ -283,8 +283,7 @@ export default {
       <div class="programs__subtitle">{{translation.reasons}}</div>
       <div class="programs__lessons-description">{{translation.campsReasons}}</div>
       <div class="programs__subtitle">{{translation.campsWinter}}</div>
-      <img style="max-width: 60%; margin-bottom: 20px" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_winter_camp.png
-" alt="Concord Winter Program">
+      <img style="max-width: 60%; margin-bottom: 20px" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/christmas-2020.jpg" alt="Concord Winter Program">
     </div>
 
     <!-- Schedule -->
@@ -717,7 +716,7 @@ $animation-delay: .1s;
     background: white;
     color: $concord-orange;
     border: 2px solid $concord-orange;
-  }; 
+  };
   &:active {
     background: white;
     color: $concord-orange;
@@ -727,7 +726,7 @@ $animation-delay: .1s;
 
 .programs__curriculum-title {
   font-weight: bold;
-  white-space: pre-line;  
+  white-space: pre-line;
   .programs__curriculum-box:hover & {
     display: none;
   }

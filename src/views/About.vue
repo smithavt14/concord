@@ -152,10 +152,6 @@ export default {
         </div>
       </baidu-map>
     </div>
-
-
-
-
   </div>
 </template>
 
@@ -306,7 +302,7 @@ export default {
 }
 
 .about__OPA-right-image {
-  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/partner-group.png');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/partners-frame.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
