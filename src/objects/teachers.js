@@ -7,6 +7,12 @@ const teachers = {
       bio: 'Fei is the founder and Executive Director of Concord Music. As a graduate of New York’s Manhattan School of Music (Bachelor of Music) and New York University (Master of Music), Fei is not only a passionate piano pedagogue but also an active concert pianist who has performed across the globe (USA, Europe, the Philippines and Malaysia). She has written and published My Musical Animals; a unique method book for piano and keyboard group lessons catering to the needs of young children. She is the leader of Concord teaching team and provides trainings to teachers with the goal to carry out the school’s core belief which is to make the school a space where musical interests are nurtured by professionals.'
     },
     {
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/thomas.jpeg',
+      name: 'Thomas Späth',
+      role: 'Executive Director',
+      bio: 'Thomas is a professional opera singer, music teacher, choral conductor and as cultural project leader and manager. He has been teaching a lot of young singing students, conducting choir and singing both in opera choir and as a soloist. He also served as the managing director of the Danish Army Brass Band and as the Project Manager in renowned The House of Singing in Denmark; singing kindergartens has been one of his biggest projects. During the last four years they have developed more than 110 singing kindergartens all over Denmark.  Throughout his work life, he has always focused on children and young people. He strongly believes that children who engage in music activities will develop strong social and valuable professional skills that will help them to achieve their goals in life.'
+    },
+    {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Diane%20Kim.jpeg',
       name: 'Dr. Diane Kim',
       role: 'Head of Piano Program',
@@ -85,6 +91,12 @@ const teachers = {
       bio: "Shirley graduated from Shanghai Normal University majoring in art and preschool education. Choral singing was the reason she fell in love with music and it brought her infinite musical inspiration. Soon she achieved Bel Canto LEVEL 6, Piano Level 8 and clarinet Level 10. Shirley has been an outstanding musician since her college years. She served as the deputy head of the Chorus of Shanghai Normal University and won the gold medal of A cappella chorus competition sponsored by Shanghai Musicians Association. Year 2016, She graduated from Shanghai Normal University with excellent grades and started her music dream and life goal from then on.  Shirley’s passion of teaching lies in the early years music education. Over the years, she has devoted herself to helping children build a musical foundation, encouraging them to feel music, develop their music interests and guiding them to find their unique understanding of music so as to discover the subtle beauty of music. This exquisite beauty is pure and natural, which can not only enrich children's language ability, but also promote children's memory and creativity. These early abilities will benefit children for a lifetime."
     },
     {
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/vitalii.jpeg',
+      name: 'Vitalii Sodoma',
+      role: 'Drum / Percussion Instructor',
+      bio: "Vitalii, a professional drummer from Ukraine started learning classical percussion at the age of 15. He received his Master degree of Music from Ukrainian Music Academy M. Lysenko. During his studies, He studied drum set and had great interest in various styles such as fusion and jazz. Therefore, He exposed himself to a wide range of genre, including rock, pop, funky and Latin music. He took part in TV shows and music festival. Since 2012, he has been performing in China. Based on his skills and knowledge, he could make music more interesting and groovier. He also taught in the Khmelnitskii State College of Music in Ukraine. Vitalii believes that music is the only real magic in this world because it is not illusion; it can evoke emotion, giving the right feeling at the right moment. Vitalii is an experienced teacher with the British syllabus, Rock School. He uses the Rock School method books, with added pieces that are interest of students. He is also able to help ambitious students prepare for the Rock School examinations."
+    },
+    {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_evelyn.png',
       name: 'Evelyn Lee',
       role: 'Administration Manager',
@@ -103,6 +115,12 @@ const teachers = {
       name: '胡斐凡',
       role: '创始人 / 艺术总监',
       bio: '胡老师是搿艺音乐的创始人和总监。她毕业于曼哈顿音乐学院（音乐学士）和纽约大学（音乐硕士）。她不仅是一名充满激情的钢琴教育家，同时也是世界级的钢琴演奏家,并在多国国际音乐厅演奏过（美国、欧洲、菲律宾和马来西亚）。胡老师撰写并出版的钢琴启蒙教材《我的音乐宠物》迎合4-6岁儿童集体课和一对一学习的钢琴启蒙。她给予搿艺的老师们进行培训，并监督教学和课程质量，持续不断地坚持搿艺最初创办的理念：以专业的精神培养学生们对音乐的兴趣'
+    },
+    {
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/thomas.jpeg',
+      name: '托马斯 斯佩特',
+      role: '执行总监',
+      bio: '托马斯老师专业声乐，也是声乐和音乐老师，指挥家，同时也是文化项目的领导者和管理者。多年来，托马斯活跃于声乐授课和指挥合唱班，多数接触的学生群体是小孩，也活跃于演唱歌剧和独奏演出。曾担任丹麦皇家军队的音乐指挥，担任铜管乐队的项目经理。在这里，他尝试不同的声乐项目；幼儿园歌唱班是我一手做起的项目。过去的4年里，他在整个丹麦已经发展了超过110家的幼儿歌唱项目。在我的工作生涯中，托马斯老师一直专注于小孩和年轻人。我坚信参加音乐活动的孩子会在社交上有更好的发展以及专业的技能可以帮助他们实现人生目'
     },
     {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Diane%20Kim.jpeg',
@@ -181,6 +199,12 @@ const teachers = {
       name: '徐丽烨 ',
       role: '声乐老师/ 合唱指挥家 ',
       bio: '徐丽烨毕业于上海师范大学，艺术和幼儿教育专业。作为一名艺术能力与教学能力都备受认可的老师。合唱让她爱上音乐，并带给她无限的音乐灵感，很快她获得了成人美声六级，钢琴八级，单簧管十级的目标。徐丽烨在音乐方面的才华，在大学期间就展露无疑。不单担任了上海师范大学合唱团副团长，更是带领团队，获得了上海音乐家协会主办的无伴奏合唱比赛金奖。徐老师并以优异的成绩毕业于上海师范大学，也自此开启了她的音乐梦想和人生目标。徐老师对教学的热情在于幼儿音乐启蒙。多年来，她致力于帮助孩子们建立音乐基础，鼓励他们去感受音乐，发展音乐兴趣，并引导他们找到对音乐的独特理解，从而发现音乐的微妙之美。这种精美的美是纯净自然的，不仅可以丰富儿童的语言表达能力，而且可以促进儿童的记忆力和创造力。这些早期能力将使儿童终生受益。'
+    },
+    {
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/vitalii.jpeg',
+      name: '维他利伊 索多玛',
+      role: '架子鼓 / 敲击乐老师',
+      bio: "Vitalii老师是一名来自乌克兰的鼓手和打击乐手。他从15岁开始学习打击乐，于乌克兰的M. Lysenko 音乐学院毕业并获得音乐硕士文凭。求学期间，他开始对不同的曲风有着浓厚的兴趣，如爵士、融合音乐。因此，他让自己接触大量的曲风，其中包含了摇滚、流行、放克音乐、拉丁音乐等。他也曾参加电视节目演出和音乐节，并从2012年迄已在中国演出。以他的能力与知识，他能够让音乐更有生命力。Vitalii老师也曾在乌克兰的赫梅利尼茨斯州音乐学院任教。  Vitalii老师相信⾳乐是这个世界上唯⼀真实存在的魔法, 因为⾳乐能触发出你⼼⾥最真实的情感，⽽不是虚幻的假象。Vitalii老师对英国考级系统Rock School具有一定的经验，教学上以Rock School大纲和教材为主，附加学生感兴趣的曲目, 兴趣结合系统学习。 Vitalii老师当然也可以帮愿意接受挑战的学生准备Rock School考级。"
     },
     {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_evelyn.png',
