@@ -51,10 +51,10 @@ export default {
       </div>
     </div>
 
-    <!-- Add our WeChat -->
+    <!-- We Have Moved -->
     <div class="home__WX-content-wrapper">
       <div class="home__WX-container-left">
-        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/we%20have%20moved.png" style="height: 100%;" alt="Concord QR">
+        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/home-space-1.jpg" style="height: 100%;" alt="Concord Space">
       </div>
       <div class="home__WX-container-right" style="align-items: flex-start;">
         <div class="subtitle WX">{{translation.movedSubtitle}}</div>
@@ -157,10 +157,10 @@ export default {
 }
 
 .home__banner {
-  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/home-banner-fei.jpg');
+  background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/homeBanner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 -30px;
+  background-position: 0 -160px;
   height: calc(100vh - 250px);
   max-height: 750px;
   width: 100%;
