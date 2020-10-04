@@ -17,13 +17,13 @@ const programs = {
         title: '"Little Notes" + ',
         age: '(Age 3 to 4) ',
         description: 'This course runs as workshop-setting classes based on the “Little Notes” Music Foundation course syllabus but as a condensed 12-14 weeks course. It not only gives children a start in music in the way of exploration, it also involves parents in the classes and gives parents some ideas about how to extend the music interest beyond classroom and continues the interest cultivation at home.This course runs as workshop-setting classes based on the “Little Notes” Music Foundation course syllabus but as a condensed 12-14 weeks course. It not only gives children a start in music in the way of exploration, it also involves parents in the classes and gives parents some ideas about how to extend the music interest beyond classroom and continues the interest cultivation at home. \n\n What’s the “+”? \n \n + more instrumental exploration \n + weekly parent-child home projects  \n+ instrument demonstration by teachers  \n+ selected favorite songs from “Little Notes” ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-notes.png'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/little-notes-3.jpeg'
       },
       {
         title: '“Little Beethoven” Ear Training ',
         age: '(Age 4 to 5)',
         description: 'This course is designed to be completed in 18 weeks to open up the sensitivity of children’s natural ability in listening and to increase interest and appreciation for music. Upon the completion of this course, children will have the ability to sight-read on staff line, sight-sing and to recognize the directions of melodies. This is a foundation class prior to starting 1-on-1 instrument lessons, and it can also be a supplement course to 1-on-1 instrument lessons. ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/little-beathoven.jpeg'
       }
     ],
     group: [
@@ -110,13 +110,13 @@ const programs = {
         title: '“小小音符” +',
         age: '3岁至4岁 ',
         description: '这课程是个工作坊性质的课程，也是“小小音符”音乐启蒙课程的浓缩课程。课程将在12-14周内完成，给予孩子在音乐上有个探索性和自由去发掘的开始。小小音符+ 在上课时也有爸妈一同参与进行的环节，宗旨是让兴趣培养作为是一家人一同去探索的一件事，让音乐的兴趣延伸到家庭中。\n\n ”+“ 了什么？\n\n+ 更多的乐器探索  \n+ 每周的亲子活动作业  \n+ 课堂里的live乐器示范和演奏  \n+ “小小音符”里最受孩子们喜爱的音乐 ',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-notes.png'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/little-notes-3.jpeg'
       },
       {
         title: '“小小贝多芬”听力课',
         age: '4岁至5岁',
         description: '为期18周的课程训练，有效地帮助孩子们开发听力潜能及培养音乐赏析和兴趣。课程训练核心为：视、听、唱。 在完成此课程后，学生将具备认识并视唱五线谱的能力，同时可以正确的辨别旋律及和弦。此课程可作为1对1乐器课之前的启蒙课程，也可与1对1乐器课同时进行学习，这样可以极大地辅助乐器的学习。',
-        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg'
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/little-beathoven.jpeg'
       }
     ],
     group: [

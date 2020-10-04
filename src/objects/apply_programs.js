@@ -40,7 +40,13 @@ const applyPrograms = {
       title: 'Private Lessons'
     },
     {
-      title: 'Concord Music Summer Camp 2019'
+      title: 'Concord Music Christmas Camp 2020'
+    },
+    {
+      title: 'Music Camp - Coco'
+    },
+    {
+      title: 'Choir Camp'
     },
   ],
   Chinese: [
@@ -87,7 +93,13 @@ const applyPrograms = {
       title: '一对一乐器专业课'
     },
     {
-      title: '2019年搿艺音乐夏令营'
+      title: '搿艺音乐2020年圣诞营'
+    },
+    {
+      title: '音乐营 “寻梦环游记“'
+    },
+    {
+      title: '合唱营'
     },
   ]
 }

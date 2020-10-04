@@ -109,7 +109,7 @@ export default {
 .apply__bottom-banner {
   height: 500px;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.30)), url('http://concord-assets.oss-cn-beijing.aliyuncs.com/apply__student-violen-teacher.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.30)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/6.jpg');
   background-size: cover;
   background-position: center;
   display: flex;

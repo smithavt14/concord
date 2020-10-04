@@ -32,7 +32,7 @@ const privateInstruments = [
     img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/trumpet.png'
   },
   {
-    name: 'Electric Drums',
+    name: 'Drums',
     img: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/drum.png'
   },
   {

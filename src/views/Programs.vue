@@ -13,7 +13,12 @@ export default {
   data () {
     return {
       instruments: instruments[globalData.language],
-      privateInstruments: privateInstruments
+      privateInstruments: privateInstruments,
+      video: {
+        active: 0,
+        videos: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/video-create.mp4'],
+        thumbnails: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/thumbnail-poco.png', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/thumbnail-create.png', ]
+      }
     }
   },
 
@@ -38,6 +43,11 @@ export default {
       let top = rects[0].top
 
       window.scrollTo(0, top)
+    },
+
+    toggleVideo (e) {
+      let active = e.srcElement.dataset.id;
+      this.video.active = active;
     }
   }
 }
@@ -59,11 +69,20 @@ export default {
 
   <!-- Video -->
   <div class="content-wrapper" id="new">
-    <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
-    <div class="content">{{translation.pocoTitle}}</div>
-    <video controls poster="https://concord-assets.oss-cn-beijing.aliyuncs.com/video-img-poco.png" style="height: 400px;">
-      <source src="https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov" type="video/mp4">
-    </video>
+    <div class="d-flex justify-content-between" style="width: 75%">
+
+      <div class="container-title">
+        <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
+        <div :class="video.active == 0 ? 'title active' : 'title'" data-id="0" @click="toggleVideo">{{translation.pocoTitle}}</div>
+        <div :class="video.active == 1 ? 'title active' : 'title'" data-id="1" @click="toggleVideo">{{translation.createTitle}}</div>
+      </div>
+
+      <div class="container-video">
+        <video controls v-bind:poster="video.thumbnails[video.active]"
+        v-bind:src="video.videos[video.active]">
+        </video>
+      </div>
+    </div>
   </div>
     <!-- Courses -->
     <div class="content-wrapper" id="programs">
@@ -249,6 +268,10 @@ export default {
           <div class="programs__curriculum-title">{{translation.recitalTitle}}</div>
           <div class="programs__curriculum-description">{{translation.recitalDescription}}</div>
         </div>
+        <div class="programs__curriculum-box">
+          <div class="programs__curriculum-title">{{translation.otherOpportunitiesTitle}}</div>
+          <div class="programs__curriculum-description">{{translation.otherOpportunitiesDescription}}</div>
+        </div>
       </div>
 
       <div class="programs__subtitle left">{{translation.privateLessonsDifferenceTitle}}</div>
@@ -282,22 +305,95 @@ export default {
       <div class="programs__lessons-description">{{translation.campsDescription}}</div>
       <div class="programs__subtitle">{{translation.reasons}}</div>
       <div class="programs__lessons-description">{{translation.campsReasons}}</div>
-      <div class="programs__subtitle">{{translation.campsWinter}}</div>
-      <img style="max-width: 60%; margin-bottom: 20px" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/christmas-2020.jpg" alt="Concord Winter Program">
+
+      <div class="d-flex" style="width: 75%">
+        <div class="schedule mx-3">
+          <div class="programs__subtitle">{{translation.campWinter}}</div>
+          <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/christmas-2020.jpg" alt="Concord Winter Program">
+        </div>
+        <div class="schedule mx-3">
+          <div class="programs__subtitle">{{translation.campChoir}}</div>
+          <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/2020%20camp%20posters/choir-camp.jpeg" alt="Concord Choir Camp">
+        </div>
+        <div class="schedule mx-3">
+          <div class="programs__subtitle">{{translation.campCoco}}</div>
+          <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/2020%20camp%20posters/coco-camp.jpg" alt="Concord Coco Camp">
+        </div>
+      </div>
     </div>
 
     <!-- Schedule -->
     <div class="content-wrapper" id="schedule">
       <div class="subtitle">{{translation.schedule}}</div>
       <div class="content">{{translation.year}}</div>
-      <img style="width: 90%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_calendar.png" alt="Concord Programs Schedule">
-      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/191111_calendar.png">{{translation.schoolCalendar}}</a>
+      <img style="width: 56%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/2020-schedule.png">
+      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/2020-schedule.png">{{translation.schoolCalendar}}</a>
     </div>
   </div>
 </template>
 
 <style lang="scss">
 @import '../assets/styles.scss';
+
+.container-video {
+  width: 64%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    width: 90%;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    border-radius: 4px;
+  }
+}
+
+.container-title {
+  width: 32%;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  p {
+    font-size: 16px;
+    text-align: left;
+    color: $half-black;
+  }
+
+  .active {
+    background: $concord-orange;
+    color: white !important;
+  };
+
+  .title {
+    text-align: left;
+    font-size: 16px;
+    padding: 16px 8px;
+    color: $concord-orange;
+    border-radius: 4px;
+    margin: 16px 0;
+    cursor: pointer;
+    transition: all .25s;
+
+    &:hover {
+      background: $concord-orange;
+      color: white;
+    };
+  }
+}
+
+.schedule {
+  margin: 0 32px;
+  flex-grow: 1;
+  flex-shrink: 0 !important;
+  position: relative;
+}
+
+.schedule img {
+  height: 320px;
+  object-fit: cover;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
 
 .top {
   background-position: top !important;
@@ -701,26 +797,31 @@ $animation-delay: .1s;
 }
 
 .programs__curriculum-box {
-  margin: 20px;
   height: 150px;
-  width: 150px;
+  width: 300px;
   background-color: $concord-orange;
-  border-radius: 5px;
+  border-radius: 4px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   transition: .2s linear;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  padding: 16px;
+  margin: 16px 0;
+  box-sizing: border-box;
   &:hover {
     background: white;
     color: $concord-orange;
-    border: 2px solid $concord-orange;
+    /*border: 1px solid $concord-orange;*/
+    border: none;
+    box-shadow: none;
   };
   &:active {
     background: white;
     color: $concord-orange;
-    border: 2px solid $concord-orange;
+    border: 1px solid $concord-orange;
   }
 }
 
@@ -734,7 +835,8 @@ $animation-delay: .1s;
 
 .programs__curriculum-description {
   display: none;
-  font-size: 12px;
+  font-size: 14px;
+
   .programs__curriculum-box:hover & {
     display: unset;
   };

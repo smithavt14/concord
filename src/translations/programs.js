@@ -15,7 +15,7 @@ const programs = {
     ocTitle: 'Early Years Music Programs',
     privateLessonsTitle: 'PRIVATE LESSONS',
     instruments: 'INSTRUMENTS',
-    privateLessonsDescription: 'Concord 1-on-1 lessons are suitable for students who are sure of their interests and have decided to begin the concentrated studies. The lessons are conducted by professional teachers who have graduated from the top music conservatories who are highly experienced in helping different levels of students to achieve their goals. This course allow students to interact with teachers in the most direct way. Our professional teachers will be able to personalize the learning experience according to each individual’s interest, character and learning goal. \n\n Our private lessons provide you a systematical training from building a strong foundation to a higher level of musicianship:',
+    privateLessonsDescription: 'Concord 1-on-1 lessons are suitable for students who are sure of their interests and have decided to begin the concentrated studies. The lessons are conducted by professional teachers who have graduated from the top music conservatories who are highly experienced in helping different levels of students to achieve their goals. This course allow students to interact with teachers in the most direct way. Our professional teachers will be able to personalize the learning experience according to each individual’s interest, character and learning goal. \n\n Our private lessons follow our own 1-on-1 Program Syllabus to provide a systematical training from building a strong foundation to a higher level of musicianship. With this syllabus, we know how to as- sess each student, promise a high standard of learning quality and able to place transfer students in the right level.  \n\n How do we follow through with the progress of our students? ',
     salpTitle: 'SALP \n(Student Annual Learning Report)',
     salpDescription: 'Provided after first month of learning to set clear learning goals for the year',
     sprTitle: 'SPR \n (Student Progress Report)',
@@ -48,9 +48,15 @@ const programs = {
     campsWinter: 'Concord Music Winter Camp 2020',
     campsLearnMore: 'Scan to read more about Concord Music Winter Camp 2019',
     schedule: 'SCHEDULE',
-    year: 'Year 2019 (March - June)',
+    year: 'Year 2020 (September - January)',
     pocoTitle: '"Poco A Poco" Piano Foundations & Musicianship Class',
-    schoolCalendar: "Click here to see our calendar"
+    schoolCalendar: "Click here to see our calendar",
+    otherOpportunitiesTitle: 'Other Opportunities',
+    otherOpportunitiesDescription: 'Masterclasses, workshops, and annual student competitions',
+    campWinter: 'Concord Music Christmas Camp 2020',
+    campChoir: 'Choir Camp',
+    campCoco: 'Music Camp \'Coco\'',
+    createTitle: '“I Can Create” Music Composition Online Course'
   },
   Chinese: {
     programs: '课程',
@@ -68,7 +74,7 @@ const programs = {
     ocTitle: '儿童团体课',
     privateLessonsTitle: '一对一乐器专业课',
     instruments: '乐器',
-    privateLessonsDescription: '我们的专业一对一课适于那些想接受系统化乐器训练的学生，并拥有稳固的兴趣去接受这样的训练。搿艺一对一课的老师毕业于著名的音乐学院，拥有一定的经验去帮助不同水平的孩子去创造成就。一对一课提供师生一个最直接的互动环境。老师可按照不同学生的兴趣方向，性格和目标去定制适合每位学生的学习计划。 \n\n 我们的专业一对一课可以提供你一个系统化的训练，从基础至高级的音乐修养：',
+    privateLessonsDescription: '我们的专业一对一课适于那些想接受系统化乐器训练的学生，并拥有稳固的兴趣去接受这样的训练。搿艺一对一课的老师毕业于著名的音乐学院，拥有一定的经验去帮助不同水平的孩子去创造成就。一对一课提供师生一个最直接的互动环境。老师可按照不同学生的兴趣方向，性格和目标去定制适合每位学生的学习计划。 \n\n 我们的一对一乐器课遵循搿艺音乐所设计的一对一课程大纲，以提供系统培训，从建立牢固的基础到更高的音 乐水平。通过本课程大纲，我们知道如何评估每个学生，保证高标准的学习质量，对于有基础的心学生我们也 可以更好的鉴定学生的水平并提供初步学习计划。',
     salpTitle: 'SALP',
     salpDescription: '年度学习计划报告 老师将在每位学生第一个月的学习后提供这个学习计划报告，让学生知道一年内的学习计划和目标 ',
     sprTitle: 'SPR',
@@ -101,9 +107,15 @@ const programs = {
     campsWinter: '2019年搿艺音乐圣诞⾳乐营',
     campsLearnMore: '扫描阅读有关2019搿艺音乐圣诞⾳乐营',
     schedule: '课表',
-    year: '2019年课表 (3-6月)',
+    year: '2020年课表 (9月到1月)',
     pocoTitle: '“小步点” 钢琴启蒙',
-    schoolCalendar: '点击此处，了解搿艺音乐的校历'
+    schoolCalendar: '点击此处，了解搿艺音乐的校历',
+    otherOpportunitiesTitle: ' 其余学习机会',
+    otherOpportunitiesDescription: '大师班，工作坊，年度学生比赛',
+    campWinter: '搿艺音乐2020年圣诞营 ',
+    campChoir: '合唱营 ',
+    campCoco: '音乐营 “寻梦环游记“',
+    createTitle: '“我能创” 线上音乐创作课程 '
   }
 }
 
