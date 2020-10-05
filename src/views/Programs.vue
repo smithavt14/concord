@@ -18,6 +18,10 @@ export default {
         active: 0,
         videos: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/video-create.mp4'],
         thumbnails: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/thumbnail-poco.png', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/thumbnail-create.png', ]
+      },
+      posters: {
+        active: 0,
+        src: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/christmas-2020.jpg','https://concord-assets.oss-cn-beijing.aliyuncs.com/2020%20camp%20posters/choir-camp.jpeg', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/2020%20camp%20posters/coco-camp.jpg']
       }
     }
   },
@@ -48,6 +52,11 @@ export default {
     toggleVideo (e) {
       let active = e.srcElement.dataset.id;
       this.video.active = active;
+    },
+
+    togglePoster (e) {
+      let active = e.srcElement.dataset.id;
+      this.posters.active = active;
     }
   }
 }
@@ -69,15 +78,14 @@ export default {
 
   <!-- Video -->
   <div class="content-wrapper" id="new">
-    <div class="d-flex justify-content-between" style="width: 75%">
-
+    <div class="container-media">
       <div class="container-title">
         <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
         <div :class="video.active == 0 ? 'title active' : 'title'" data-id="0" @click="toggleVideo">{{translation.pocoTitle}}</div>
         <div :class="video.active == 1 ? 'title active' : 'title'" data-id="1" @click="toggleVideo">{{translation.createTitle}}</div>
       </div>
 
-      <div class="container-video">
+      <div class="container-src">
         <video controls v-bind:poster="video.thumbnails[video.active]"
         v-bind:src="video.videos[video.active]">
         </video>
@@ -306,18 +314,16 @@ export default {
       <div class="programs__subtitle">{{translation.reasons}}</div>
       <div class="programs__lessons-description">{{translation.campsReasons}}</div>
 
-      <div class="d-flex" style="width: 75%">
-        <div class="schedule mx-3">
-          <div class="programs__subtitle">{{translation.campWinter}}</div>
-          <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/christmas-2020.jpg" alt="Concord Winter Program">
+      <div class="container-media my-5">
+        <div class="container-title">
+          <div class="subtitle">{{translation.campSubtitle}}</div>
+          <div :class="posters.active == 0 ? 'title active' : 'title'" data-id="0" @click="togglePoster">{{translation.campWinter}}</div>
+          <div :class="posters.active == 1 ? 'title active' : 'title'" data-id="1" @click="togglePoster">{{translation.campChoir}}</div>
+          <div :class="posters.active == 2 ? 'title active' : 'title'" data-id="2" @click="togglePoster">{{translation.campCoco}}</div>
         </div>
-        <div class="schedule mx-3">
-          <div class="programs__subtitle">{{translation.campChoir}}</div>
-          <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/2020%20camp%20posters/choir-camp.jpeg" alt="Concord Choir Camp">
-        </div>
-        <div class="schedule mx-3">
-          <div class="programs__subtitle">{{translation.campCoco}}</div>
-          <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/2020%20camp%20posters/coco-camp.jpg" alt="Concord Coco Camp">
+
+        <div class="container-src">
+          <img v-bind:src="posters.src[posters.active]">
         </div>
       </div>
     </div>
@@ -335,50 +341,68 @@ export default {
 <style lang="scss">
 @import '../assets/styles.scss';
 
-.container-video {
-  width: 64%;
-  flex-shrink: 0;
+.container-camp {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  video {
-    width: 90%;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    border-radius: 4px;
-  }
+  width: 75%;
 }
 
-.container-title {
+.container-media {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+
+  .container-src {
+    width: 64%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    video {
+      width: 90%;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      border-radius: 4px;
+    }
+
+    img {
+      width: 80%;
+      border-radius: 4px;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+
+    }
+  }
+
+  .container-title {
   width: 32%;
   flex-shrink: 0;
   flex-grow: 0;
 
-  p {
-    font-size: 16px;
-    text-align: left;
-    color: $half-black;
-  }
+    p {
+      font-size: 16px;
+      text-align: left;
+      color: $half-black;
+    }
 
-  .active {
-    background: $concord-orange;
-    color: white !important;
-  };
-
-  .title {
-    text-align: left;
-    font-size: 16px;
-    padding: 16px 8px;
-    color: $concord-orange;
-    border-radius: 4px;
-    margin: 16px 0;
-    cursor: pointer;
-    transition: all .25s;
-
-    &:hover {
+    .active {
       background: $concord-orange;
-      color: white;
+      color: white !important;
     };
+
+    .title {
+      text-align: left;
+      font-size: 16px;
+      padding: 16px 8px;
+      color: $concord-orange;
+      border-radius: 4px;
+      margin: 16px 0;
+      cursor: pointer;
+      transition: all .25s;
+
+      &:hover {
+        background: $concord-orange;
+        color: white;
+      };
+    }
   }
 }
 

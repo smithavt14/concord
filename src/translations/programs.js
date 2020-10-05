@@ -56,7 +56,8 @@ const programs = {
     campWinter: 'Concord Music Christmas Camp 2020',
     campChoir: 'Choir Camp',
     campCoco: 'Music Camp \'Coco\'',
-    createTitle: '“I Can Create” Music Composition Online Course'
+    createTitle: '“I Can Create” Music Composition Online Course',
+    campSubtitle: 'UPCOMING CAMPS'
   },
   Chinese: {
     programs: '课程',
@@ -115,7 +116,8 @@ const programs = {
     campWinter: '搿艺音乐2020年圣诞营 ',
     campChoir: '合唱营 ',
     campCoco: '音乐营 “寻梦环游记“',
-    createTitle: '“我能创” 线上音乐创作课程 '
+    createTitle: '“我能创” 线上音乐创作课程 ',
+    campSubtitle: 'UPCOMING CAMPS'
   }
 }
 
