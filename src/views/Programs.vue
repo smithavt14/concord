@@ -890,6 +890,25 @@ $animation-delay: .1s;
 /* ---------- Small Screen Styles ----------*/
 
 @media screen and (max-width: 750px) {
+  .container-media {
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+
+    .container-title {
+      width: 100%;
+    }
+
+    .container-src {
+      width: 100%;
+
+      video, img {
+        width: 100%;
+      }
+    }
+  }
+
+
   .programs__banner {
     background-position: unset;
   }
