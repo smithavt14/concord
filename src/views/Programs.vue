@@ -16,8 +16,8 @@ export default {
       privateInstruments: privateInstruments,
       video: {
         active: 0,
-        videos: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/video-create.mp4'],
-        thumbnails: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/thumbnail-poco.png', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/thumbnail-create.png', ]
+        videos: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/video_poco-poco.mov', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/video-create.mp4', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/CLAP%20%E5%AE%A3%E4%BC%A0%E7%89%87.mov'],
+        thumbnails: ['https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/thumbnail-poco.png', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/videos/thumbnail-create.png', 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/clap-thumbnail.png']
       },
       posters: {
         active: 0,
@@ -83,6 +83,7 @@ export default {
         <div class="subtitle">{{translation.newProgramsSubtitle}}</div>
         <div :class="video.active == 0 ? 'title active' : 'title'" data-id="0" @click="toggleVideo">{{translation.pocoTitle}}</div>
         <div :class="video.active == 1 ? 'title active' : 'title'" data-id="1" @click="toggleVideo">{{translation.createTitle}}</div>
+        <div :class="video.active == 2 ? 'title active' : 'title'" data-id="2" @click="toggleVideo">{{translation.clapTitle}}</div>
       </div>
 
       <div class="container-src">
@@ -332,8 +333,8 @@ export default {
     <div class="content-wrapper" id="schedule">
       <div class="subtitle">{{translation.schedule}}</div>
       <div class="content">{{translation.year}}</div>
-      <img style="width: 56%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/2020-schedule.png">
-      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/2020-schedule.png">{{translation.schoolCalendar}}</a>
+      <img style="width: 56%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/calendar-2021%20%28udpate%29.png">
+      <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/Concord%20Music%20Calendar%202021.pdf">{{translation.schoolCalendar}}</a>
     </div>
   </div>
 </template>

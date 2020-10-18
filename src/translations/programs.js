@@ -48,7 +48,7 @@ const programs = {
     campsWinter: 'Concord Music Winter Camp 2020',
     campsLearnMore: 'Scan to read more about Concord Music Winter Camp 2019',
     schedule: 'SCHEDULE',
-    year: 'Year 2020 (September - January)',
+    year: 'Year 2021 (January - December)',
     pocoTitle: '"Poco A Poco" Piano Foundations & Musicianship Class',
     schoolCalendar: "Click here to see our calendar",
     otherOpportunitiesTitle: 'Other Opportunities',
@@ -57,7 +57,8 @@ const programs = {
     campChoir: 'Choir Camp',
     campCoco: 'Music Camp \'Coco\'',
     createTitle: '“I Can Create” Music Composition Online Course',
-    campSubtitle: 'UPCOMING CAMPS'
+    campSubtitle: 'UPCOMING CAMPS',
+    clapTitle: 'CLAP - Creative Learning for Adults Piano'
   },
   Chinese: {
     programs: '课程',
@@ -108,7 +109,7 @@ const programs = {
     campsWinter: '2019年搿艺音乐圣诞⾳乐营',
     campsLearnMore: '扫描阅读有关2019搿艺音乐圣诞⾳乐营',
     schedule: '课表',
-    year: '2020年课表 (9月到1月)',
+    year: '2021年课表 (01月到12月)',
     pocoTitle: '“小步点” 钢琴启蒙',
     schoolCalendar: '点击此处，了解搿艺音乐的校历',
     otherOpportunitiesTitle: ' 其余学习机会',
@@ -117,7 +118,8 @@ const programs = {
     campChoir: '合唱营 ',
     campCoco: '音乐营 “寻梦环游记“',
     createTitle: '“我能创” 线上音乐创作课程 ',
-    campSubtitle: 'UPCOMING CAMPS'
+    campSubtitle: 'UPCOMING CAMPS',
+    clapTitle: 'CLAP - Creative Learning for Adults Piano'
   }
 }
 

@@ -28,6 +28,12 @@ const programs = {
     ],
     group: [
       {
+        title: 'CLAP',
+        age: '(Age 16+)',
+        description: 'CLAP is a creative piano learning course created for adults. This course is a ‘hybrid’ course which works for both online and onsite lessons. Onsite CLAP course consists of 18 lessons, 60 mins of weekly lesson with combined benefits you would get from a group class and from an individual lesson. For online course, it is 10 weeks of lessons with 30 minutes of online 1-1 lessons and 15 minutes of weekly learning video. In this course, you will not learn boring or childish music, part of the motivations would be to learn interesting music that you would enjoy playing and practicing, such as pieces from movie, famous classical, contemporary composer, OST, pop songs. Variety styles and techniques will be introduced with a wide range of repertoire given. This course is suitable for adults who is interested in piano learning, parents who would like to gain some knowledge so parents can guide the child’s practice at home while also pursuing his/her interest in piano learning, working-class adults who would like to have a hobby to destress or those who would like to learn piano under a small-group learning mode to gain more motivation for improvement.',
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/2.jpg'
+      },
+      {
         title: 'Songs Around the World ',
         age: '(Age 4 to 5)',
         description: 'This is a course created to build little global citizens who would discover their interest in singing and to appreciate different cultures. Music is a universal language and through singing, children will explore different countries, cul- tures, people and language. They will be singing songs from different countries and explore the music, instrument, musicians and culture from different countries. This is a good introductory class to begin singing appreciation and to get to know your voice. With the fun theme of going around the world, the course is able to capture young children’s interest and learning motivation.',
@@ -120,6 +126,12 @@ const programs = {
       }
     ],
     group: [
+      {
+        title: 'CLAP',
+        age: '16岁以上',
+        description: 'CLAP是为成人创意钢琴学习课程。这是一门“双栖”课程：可线上或线下模式进行。线下CLAP课程包括18节课，每周60分钟的课时，让您从小组课和个人课中获得的综合收益。对于线上课程，这是10周的课程，其中30分钟是在线1-1课程，和15分钟到每周自学视频。在本课程中，您将不会学习无聊或幼稚的音乐，而是有机会学习自己喜欢演奏和练习的有趣音乐，例如电影，著名古典，当代作曲家，电影音乐，流行歌曲中的曲目。课程将介绍不同的曲风。本课程适合对钢琴学习感兴趣的成年人，想获得音乐和钢琴知识的父母（可拥有基础可以更好的在家进行陪练，同时也可以追求孩子对钢琴学习的兴趣）想有个利于减压的嗜好的青少年或白领族，或想在小组学习模式下学习钢琴的人，以获得更大的学琴动力。',
+        photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/2.jpg'
+      },
       {
         title: '唱响世界',
         age: '4岁至5岁',
