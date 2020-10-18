@@ -58,7 +58,16 @@ const programs = {
     campCoco: 'Music Camp \'Coco\'',
     createTitle: '“I Can Create” Music Composition Online Course',
     campSubtitle: 'UPCOMING CAMPS',
-    clapTitle: 'CLAP - Creative Learning for Adults Piano'
+    clapTitle: 'CLAP - Creative Learning for Adults Piano',
+    onlineTitle: 'ONLINE LEARNING PROGRAM',
+    onlineSubtitle: 'CONCORD ANYWHERE',
+    onlineSubtitle2: 'ORIGINAL ONLINE COURSES ',
+    onlineContent2: 'We offer a variety of original online courses that would work well for the mode of online learning. Our courses are created to build our students’ musicianship skills by giving them both foundational and creative training. This also offers more learning opportunities that onsite learning is not able to pro- vide. Online learning is a good support to onsite lessons as its productivity and convenience will help students to achieve better in a shorter time.',
+    onlineContent: 'We now have Concord Online Learning Program! Gain access to high quality of Concord program no matter where you are.',
+    onlineInstrumental: 'INSTRUMENTAL LEARNING',
+    onlineFoundation: 'FOUNDATION COURSES ',
+    onlineCreative: 'CREATIVE LEARNING ',
+    onlineDistance: 'DISTANCE LEARNING PROGRAM ',
   },
   Chinese: {
     programs: '课程',
@@ -119,7 +128,16 @@ const programs = {
     campCoco: '音乐营 “寻梦环游记“',
     createTitle: '“我能创” 线上音乐创作课程 ',
     campSubtitle: 'UPCOMING CAMPS',
-    clapTitle: 'CLAP - Creative Learning for Adults Piano'
+    clapTitle: 'CLAP - Creative Learning for Adults Piano',
+    onlineTitle: '线上学习计划 ',
+    onlineSubtitle: '搿艺无所不在',
+    onlineSubtitle2: '原创线上课程 ',
+    onlineContent: '搿艺已经成功开发线上学习计划! 只要有稳定的网络，既可以随时随刻链接搿艺，无论人在何方，都 可以拥有我们的质量课程。',
+    onlineContent2: '我们的在线课程通过原创素材和创新想法提供适用于在线学习模式的各种课程。我们开设的课程旨在通过为学生提供 基础和创造性的学习培训来培养他们的音乐才能。不仅如此，我们还提供了线下学习无法提供的更多学习机会。先上 课也可以是线下课很好的辅助，帮助学生在短时间内快速进步。',
+    onlineInstrumental: '乐器学习 ',
+    onlineFoundation: '基础课程',
+    onlineCreative: '创意学习 ',
+    onlineDistance: '国际大师远程学习 ',
   }
 }
 

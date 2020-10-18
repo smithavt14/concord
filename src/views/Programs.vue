@@ -4,6 +4,7 @@ import globalData from '../main'
 import instruments from '../objects/instruments'
 import privateInstruments from '../objects/private_instruments'
 import programs from '../objects/programs_programs'
+import onlinePrograms from '../objects/online'
 
 export default {
   name: 'programs',
@@ -12,6 +13,7 @@ export default {
 
   data () {
     return {
+      onlinePrograms: onlinePrograms,
       instruments: instruments[globalData.language],
       privateInstruments: privateInstruments,
       video: {
@@ -71,6 +73,7 @@ export default {
       <div class="banner-bar-link" data-id="new" @click="scrollToSection">{{translation.newProgramsSubtitle}}</div>
       <div class="banner-bar-link" data-id="programs" @click="scrollToSection">{{translation.ourPrograms}}</div>
       <div class="banner-bar-link" data-id="camps" @click="scrollToSection">{{translation.campsTitle}}</div>
+      <div class="banner-bar-link" data-id="online" @click="scrollToSection">{{translation.onlineTitle}}</div>
       <div class="banner-bar-link" data-id="schedule" @click="scrollToSection">{{translation.schedule}}</div>
       <!-- Mobile Banner Title -->
       <div class="programs__mobile-banner-title">{{translation.programs}}</div>
@@ -329,11 +332,49 @@ export default {
       </div>
     </div>
 
+    <!-- Online Learning -->
+    <div class="content-wrapper" id="online">
+      <div class="content-banner" style="background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/4.jpg')">
+        <div class="programs__banner-content">{{translation.onlineTitle}}</div>
+      </div>
+
+      <div class="programs__subtitle">{{translation.onlineSubtitle}}</div>
+      <div class="programs__lessons-description">{{translation.onlineContent}}</div>
+      <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/Screen%20Shot%202020-10-18%20at%2011.10.58%20AM.png" alt="">
+
+      <div class="programs__subtitle">{{translation.onlineSubtitle2}}</div>
+      <div class="programs__lessons-description">{{translation.onlineContent2}}</div>
+
+      <!-- instrumental -->
+      <div class="programs__subtitle">{{translation.onlineInstrumental}}</div>
+      <div class="program__container-icons">
+        <img v-for="item in onlinePrograms.instrumental" :src="item" alt="">
+      </div>
+
+      <!-- foundation -->
+      <div class="programs__subtitle">{{translation.onlineFoundation}}</div>
+      <div class="program__container-icons">
+        <img v-for="item in onlinePrograms.foundation" :src="item" alt="">
+      </div>
+
+      <!-- creative -->
+      <div class="programs__subtitle">{{translation.onlineCreative}}</div>
+      <div class="program__container-icons">
+        <img v-for="item in onlinePrograms.creative" :src="item" alt="">
+      </div>
+
+      <!-- distance -->
+      <div class="programs__subtitle">{{translation.onlineDistance}}</div>
+      <div class="program__container-icons">
+        <img v-for="item in onlinePrograms.distance" :src="item" alt="">
+      </div>
+    </div>
+
     <!-- Schedule -->
     <div class="content-wrapper" id="schedule">
       <div class="subtitle">{{translation.schedule}}</div>
       <div class="content">{{translation.year}}</div>
-      <img style="width: 56%" src="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/calendar-2021%20%28udpate%29.png">
+      <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/calendar-2021%20%28udpate%29.png">
       <a class="content" style="text-decoration: underline; font-size: 16px; margin: 20px 0;" target="_blank" href="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/Concord%20Music%20Calendar%202021.pdf">{{translation.schoolCalendar}}</a>
     </div>
   </div>
@@ -341,6 +382,30 @@ export default {
 
 <style lang="scss">
 @import '../assets/styles.scss';
+
+#schedule > img {
+  width: 56%;
+}
+
+#online > img {
+  width: 56%;
+}
+
+.program__container-icons {
+  width: 75%;
+  display: flex;
+  overflow: scroll;
+}
+
+.program__container-icons img {
+  width: 240px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 16px 32px 16px 0;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
 
 .container-camp {
   display: flex;
@@ -446,6 +511,7 @@ export default {
   background: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/programs__little-beathoven-ear-training.jpg');
   background-size: cover;
   background-position: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
   height: 50vh;
   width: 100%;
   max-width: 1440px;
@@ -539,6 +605,7 @@ export default {
   height: 25vh;
   background: linear-gradient(rgba(0, 0, 0, 0.15)), url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Student%20Teacher%20Piano.jpeg');
   background-size: cover;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
   background-position: center;
   display: flex;
   align-items: center;
@@ -551,10 +618,26 @@ export default {
   background-image: url('https://concord-assets.oss-cn-beijing.aliyuncs.com/Boy%20Student%20Violen%202%20copy.jpg');
   background-size: cover;
   background-position: 0 55%;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+.content-banner {
+  width: 100%;
+  height: 25vh;
+  background-size: cover;
+  background-position: 0 55%;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ #online > img {
+  width: 40%;
+  margin: 16px 0;
 }
 
 .programs__supplemental-lessons-banner {
@@ -566,6 +649,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
 }
 
 .programs__group-lessons-banner {
@@ -578,6 +662,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
 }
 
 .programs__banner-content {
@@ -907,6 +992,23 @@ $animation-delay: .1s;
         width: 100%;
       }
     }
+  }
+
+  #schedule > img {
+    width: 90%;
+  }
+
+  #online > img {
+    width: 90%;
+  }
+
+  .program__container-icons {
+    width: 90%;
+    display: block;
+  }
+
+  .program__container-icons img {
+    width: 100%;
   }
 
 
