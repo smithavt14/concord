@@ -47,7 +47,7 @@ export default {
         <router-link to="/about?#team" class="home__WAW-container-left-signup" style="width: 200px;">{{translation.ourTeam}}</router-link>
       </div>
       <div class="home__WAW-container-right">
-        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/WAW-banner.jpeg" alt="instruments-icon" class="home__WAW-container-right-instruments">
+        <img src="https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/5.jpg" class="home__WAW-container-right-instruments">
       </div>
     </div>
 
@@ -98,6 +98,10 @@ export default {
 <style lang="scss">
 @import '../assets/styles.scss';
 @import '../assets/swiper.css';
+
+.home__WAW-container-right > img {
+  height: 64%;
+}
 
 .story_container {
   width: 90%;
@@ -412,7 +416,7 @@ export default {
     max-width: 450px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     position: relative;
   }
 

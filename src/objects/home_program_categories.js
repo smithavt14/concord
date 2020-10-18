@@ -10,20 +10,20 @@ const programCategories = {
     {
       title: 'Group Classes',
       age: '18 mos to 5 years',
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__group-classes.png',
-      description: 'Our group classes are suitable for young children who would like to get to know music or who have just begun exploring their interest in music. We have courses catered for specific age group to cultivate their natural appreciation for music, to create a good foundation in music and to connect with their senses and growth through music.', 
+      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/201003%20updates/6.jpg',
+      description: 'Our group classes are suitable for young children who would like to get to know music or who have just begun exploring their interest in music. We have courses catered for specific age group to cultivate their natural appreciation for music, to create a good foundation in music and to connect with their senses and growth through music.',
       route: '/programs#group'
-    }, 
+    },
     {
       title: 'Supplemental Courses',
-      age: 'Ages 4 to 5', 
+      age: 'Ages 4 to 5',
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/experience__drums.jpg',
       description: 'These courses are created as supplemental or add-on group courses that can be taken simultaneously with instrumental group lessons or private lessons. These courses will enhance the musicality of students, expand their knowledge and improve their understanding of music.',
       route: '/programs#supplemental'
     },
     {
       title: 'Private 1-on-1 Classes',
-      age: 'Ages 5+', 
+      age: 'Ages 5+',
       photo: 'http://concord-assets.oss-cn-beijing.aliyuncs.com/experience__fei-teaching.jpg',
       description: 'Concord 1-on-1 lessons are suitable for students who are sure of their interests and have decided to begin the concentrated studies. The lessons are conducted by professional teachers who have graduated from the top music conservatories who are highly experienced in helping different levels of students to achieve their goals. This course allow students to interact with teachers in the most direct way. Our professional teachers will be able to personalize the learning experience according to each individual’s interest, character and learning goal.',
       route: '/programs#private'
@@ -39,7 +39,7 @@ const programCategories = {
     },
     {
       title: '集体课',
-      age: '18个月至5岁', 
+      age: '18个月至5岁',
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/home__group-classes.png',
       description: '我们的集体课适用于刚开始接触音乐，或打算选择一门乐器的孩子。这些启蒙课程是为了培养孩子们的音乐兴趣，掌握音乐基础，学会通过音乐和自己的感官进行连接。',
       route: '/programs#group'
