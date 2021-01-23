@@ -7,12 +7,6 @@ const teachers = {
       bio: 'Fei is the founder and Executive Director of Concord Music. As a graduate of New York’s Manhattan School of Music (Bachelor of Music) and New York University (Master of Music), Fei is not only a passionate piano pedagogue but also an active concert pianist who has performed across the globe (USA, Europe, the Philippines and Malaysia). She has written and published My Musical Animals; a unique method book for piano and keyboard group lessons catering to the needs of young children. She is the leader of Concord teaching team and provides trainings to teachers with the goal to carry out the school’s core belief which is to make the school a space where musical interests are nurtured by professionals.'
     },
     {
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/thomas.jpeg',
-      name: 'Thomas Späth',
-      role: 'Executive Director',
-      bio: 'Thomas is a professional opera singer, music teacher, choral conductor and as cultural project leader and manager. He has been teaching a lot of young singing students, conducting choir and singing both in opera choir and as a soloist. He also served as the managing director of the Danish Army Brass Band and as the Project Manager in renowned The House of Singing in Denmark; singing kindergartens has been one of his biggest projects. During the last four years they have developed more than 110 singing kindergartens all over Denmark.  Throughout his work life, he has always focused on children and young people. He strongly believes that children who engage in music activities will develop strong social and valuable professional skills that will help them to achieve their goals in life.'
-    },
-    {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Diane%20Kim.jpeg',
       name: 'Dr. Diane Kim',
       role: 'Head of Piano Program',
@@ -115,12 +109,6 @@ const teachers = {
       name: '胡斐凡',
       role: '创始人 / 艺术总监',
       bio: '胡老师是搿艺音乐的创始人和总监。她毕业于曼哈顿音乐学院（音乐学士）和纽约大学（音乐硕士）。她不仅是一名充满激情的钢琴教育家，同时也是世界级的钢琴演奏家,并在多国国际音乐厅演奏过（美国、欧洲、菲律宾和马来西亚）。胡老师撰写并出版的钢琴启蒙教材《我的音乐宠物》迎合4-6岁儿童集体课和一对一学习的钢琴启蒙。她给予搿艺的老师们进行培训，并监督教学和课程质量，持续不断地坚持搿艺最初创办的理念：以专业的精神培养学生们对音乐的兴趣'
-    },
-    {
-      photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/thomas.jpeg',
-      name: '托马斯 斯佩特',
-      role: '执行总监',
-      bio: '托马斯老师专业声乐，也是声乐和音乐老师，指挥家，同时也是文化项目的领导者和管理者。多年来，托马斯活跃于声乐授课和指挥合唱班，多数接触的学生群体是小孩，也活跃于演唱歌剧和独奏演出。曾担任丹麦皇家军队的音乐指挥，担任铜管乐队的项目经理。在这里，他尝试不同的声乐项目；幼儿园歌唱班是我一手做起的项目。过去的4年里，他在整个丹麦已经发展了超过110家的幼儿歌唱项目。在我的工作生涯中，托马斯老师一直专注于小孩和年轻人。我坚信参加音乐活动的孩子会在社交上有更好的发展以及专业的技能可以帮助他们实现人生目'
     },
     {
       photo: 'https://concord-assets.oss-cn-beijing.aliyuncs.com/Diane%20Kim.jpeg',
