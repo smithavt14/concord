@@ -12,7 +12,7 @@
     "babel": "^6.23.0",
     "bootstrap-vue": "^2.0.4",
     "jquery": "^3.4.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "swiper": "^4.5.1",
     "vue": "^2.5.17",
     "vue-awesome-swiper": "^3.1.3",
